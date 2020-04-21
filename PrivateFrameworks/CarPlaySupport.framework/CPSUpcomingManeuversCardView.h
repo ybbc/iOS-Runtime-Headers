@@ -3,6 +3,7 @@
  */
 
 @interface CPSUpcomingManeuversCardView : CPSInheritedBackgroundColorView <CPSNavigationDisplaying> {
+    NSMutableDictionary * _currentTravelEstimatesForManeuverIdentifiers;
     CPSHairlineView * _hairlineView;
     NSArray * _maneuverStyles;
     NSMutableArray * _maneuverViewStack;
@@ -11,6 +12,7 @@
     NSMutableArray * _verticalConstraints;
 }
 
+@property (nonatomic, retain) NSMutableDictionary *currentTravelEstimatesForManeuverIdentifiers;
 @property (readonly, copy) NSString *debugDescription;
 @property (readonly, copy) NSString *description;
 @property (nonatomic, readonly) CPSHairlineView *hairlineView;
@@ -26,6 +28,7 @@
 - (void)_clearManeuvers;
 - (void)_updateVerticalConstraints;
 - (void)backgroundColorDidChange;
+- (id)currentTravelEstimatesForManeuverIdentifiers;
 - (id)hairlineView;
 - (id)init;
 - (struct CGSize { double x1; double x2; })intrinsicContentSize;
@@ -33,6 +36,7 @@
 - (id)maneuverStyles;
 - (id)maneuverViewStack;
 - (id)maneuvers;
+- (void)setCurrentTravelEstimatesForManeuverIdentifiers:(id)arg1;
 - (void)setMinimalMode:(bool)arg1;
 - (void)showManeuvers:(id)arg1 usingDisplayStyles:(id)arg2;
 - (void)updateEstimates:(id)arg1 forManeuver:(id)arg2;

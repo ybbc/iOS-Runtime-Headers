@@ -13,7 +13,7 @@
     NSObject<OS_dispatch_queue> * _previewProgressQueue;
     NSObject<OS_dispatch_queue> * _previewQueue;
     ICProgressIndicatorTracker * _progressTracker;
-    bool  _shouldGenerateAttachmentsWhenReachable;
+    _Atomic bool  _shouldGenerateAttachmentsWhenReachable;
 }
 
 @property (nonatomic, retain) ICAttachmentPreviewGeneratorOperationQueue *asyncGeneratorQueue;
@@ -29,7 +29,7 @@
 @property (nonatomic, retain) NSObject<OS_dispatch_queue> *previewProgressQueue;
 @property (nonatomic, retain) NSObject<OS_dispatch_queue> *previewQueue;
 @property (nonatomic, retain) ICProgressIndicatorTracker *progressTracker;
-@property (nonatomic) bool shouldGenerateAttachmentsWhenReachable;
+@property (nonatomic) _Atomic bool shouldGenerateAttachmentsWhenReachable;
 @property (readonly) Class superclass;
 
 + (id)sharedGenerator;

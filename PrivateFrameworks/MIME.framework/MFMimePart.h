@@ -32,6 +32,8 @@
 + (bool)parseContentTypeHeader:(id)arg1 type:(id*)arg2 subtype:(id*)arg3;
 + (bool)parseContentTypeHeader:(id)arg1 type:(id*)arg2 subtype:(id*)arg3 info:(id*)arg4;
 
+- (void)_clearNextAndSibling;
+- (void)_clearParent;
 - (void)_contents:(id*)arg1 toOffset:(unsigned long long)arg2 resultOffset:(unsigned long long*)arg3 downloadIfNecessary:(bool)arg4 asHTML:(bool)arg5 isComplete:(bool*)arg6;
 - (void)_ensureBodyDataToOffset:(unsigned long long)arg1 resultOffset:(unsigned long long*)arg2 downloadIfNecessary:(bool)arg3 isComplete:(bool*)arg4 decoded:(id*)arg5;
 - (id)_fullMimeTypeEvenInsideAppleDouble;

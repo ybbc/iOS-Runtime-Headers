@@ -165,7 +165,7 @@
 - (bool)_isImportContext;
 - (bool)_isPreflightSaveInProgress;
 - (bool)_isXPCServerContext;
-- (void)_managedObjectContextEditor:(id)arg1 didCommit:(bool)arg2 contextInfo:(struct { id x1; void *x2; }*)arg3;
+- (void)_managedObjectContextEditor:(id)arg1 didCommit:(bool)arg2 contextInfo:(struct { id x1; SEL x2; void *x3; }*)arg3;
 - (id)_mappedForParentStoreID:(id)arg1;
 - (void)_mergeChangesFromDidSaveDictionary:(id)arg1 usingObjectIDs:(bool)arg2;
 - (void)_mergeChangesFromRemoteContextSave:(id)arg1;
@@ -267,6 +267,7 @@
 - (bool)automaticallyMergesChangesFromParent;
 - (id)changeTrackingToken;
 - (bool)commitEditing;
+- (bool)commitEditingAndReturnError:(id*)arg1;
 - (void)commitEditingWithDelegate:(id)arg1 didCommitSelector:(SEL)arg2 contextInfo:(void*)arg3;
 - (unsigned long long)concurrencyType;
 - (unsigned long long)countForFetchRequest:(id)arg1 error:(id*)arg2;

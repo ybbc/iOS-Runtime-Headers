@@ -29,7 +29,7 @@
     }  _key;
     _GEOSimpleTileRequesterOperation * _localizationTile;
     NSObject<OS_os_activity> * _parentTileActivity;
-    unsigned int  _priority;
+    _Atomic unsigned int  _priority;
     GEODataRequest * _request;
     NSString * _responseEtag;
     unsigned long long  _signpostID;

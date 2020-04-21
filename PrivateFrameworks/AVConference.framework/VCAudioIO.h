@@ -36,6 +36,7 @@
     bool  _isGKVoiceChat;
     bool  _isMuted;
     <VCAudioIODelegate><VCAudioIOSource><VCAudioIOSink> * _loadedDelegate;
+    unsigned int  _pullAudioSamplesCount;
     struct _VCAudioEndpointData { 
         struct SoundDec_t {} *converter; 
         struct opaqueVCAudioBufferList {} *converterBuffer; 
@@ -71,6 +72,7 @@
 @property (nonatomic) bool isGKVoiceChat;
 @property (getter=isMuted, nonatomic) bool muted;
 @property (getter=isOutputMeteringEnabled, nonatomic) bool outputMeteringEnabled;
+@property (nonatomic, readonly) unsigned int pullAudioSamplesCount;
 @property (nonatomic, readonly) unsigned int samplesPerFrame;
 @property (nonatomic, readonly) unsigned int state;
 @property (readonly) Class superclass;
@@ -96,6 +98,7 @@
 - (bool)isMuted;
 - (bool)isOutputMeteringEnabled;
 - (void)pullAudioSamples:(struct opaqueVCAudioBufferList { }*)arg1 controllerTime:(const struct _VCAudioIOControllerTime { unsigned int x1; unsigned long long x2; }*)arg2;
+- (unsigned int)pullAudioSamplesCount;
 - (void)pushAudioSamples:(struct opaqueVCAudioBufferList { }*)arg1 controllerTime:(const struct _VCAudioIOControllerTime { unsigned int x1; unsigned long long x2; }*)arg2;
 - (bool)reconfigureWithOperatingMode:(int)arg1 deviceRole:(int)arg2 direction:(unsigned char)arg3 allowAudioRecording:(bool)arg4;
 - (void)releaseConverters;

@@ -15,8 +15,8 @@
 - (void)loadQueryCriteria:(void *)arg1 countOfItemsWithCompletionBlock:(void *)arg2; // needs 2 arg types, found 7: MPMediaQueryCriteria *, id /* block */, /* Warning: Unrecognized filer type: '<' using 'void*' */ void*, void, id /* block */, unsigned long long, void*
 - (void)loadQueryCriteria:(void *)arg1 hasCollectionsWithCompletionBlock:(void *)arg2; // needs 2 arg types, found 7: MPMediaQueryCriteria *, id /* block */, /* Warning: Unrecognized filer type: '<' using 'void*' */ void*, void, id /* block */, bool, void*
 - (void)loadQueryCriteria:(void *)arg1 hasItemsWithCompletionBlock:(void *)arg2; // needs 2 arg types, found 7: MPMediaQueryCriteria *, id /* block */, /* Warning: Unrecognized filer type: '<' using 'void*' */ void*, void, id /* block */, bool, void*
-- (void)loadValueForAggregateFunction:(void *)arg1 onCollectionsForProperty:(void *)arg2 queryCriteria:(void *)arg3 completionBlock:(void *)arg4; // needs 4 arg types, found 8: NSString *, NSString *, MPMediaQueryCriteria *, id /* block */, /* Warning: Unrecognized filer type: '<' using 'void*' */ void*, void, id /* block */, id
-- (void)loadValueForAggregateFunction:(void *)arg1 onItemsForProperty:(void *)arg2 queryCriteria:(void *)arg3 completionBlock:(void *)arg4; // needs 4 arg types, found 8: NSString *, NSString *, MPMediaQueryCriteria *, id /* block */, /* Warning: Unrecognized filer type: '<' using 'void*' */ void*, void, id /* block */, id
+- (void)loadValueForAggregateFunction:(void *)arg1 onCollectionsForProperty:(void *)arg2 queryCriteria:(void *)arg3 completionBlock:(void *)arg4; // needs 4 arg types, found 9: NSString *, NSString *, MPMediaQueryCriteria *, id /* block */, /* Warning: Unrecognized filer type: '<' using 'void*' */ void*, void, id /* block */, id, void*
+- (void)loadValueForAggregateFunction:(void *)arg1 onItemsForProperty:(void *)arg2 queryCriteria:(void *)arg3 completionBlock:(void *)arg4; // needs 4 arg types, found 9: NSString *, NSString *, MPMediaQueryCriteria *, id /* block */, /* Warning: Unrecognized filer type: '<' using 'void*' */ void*, void, id /* block */, id, void*
 - (NSString *)name;
 - (NSString *)uniqueIdentifier;
 

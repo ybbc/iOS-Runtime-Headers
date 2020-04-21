@@ -3,7 +3,7 @@
  */
 
 @interface PHAAutoloopAnalysisPerformer : NSObject {
-    bool  _cancelled;
+    _Atomic bool  _cancelled;
     int  _imageRequestID;
     NSObject<OS_dispatch_queue> * _workerQueue;
 }

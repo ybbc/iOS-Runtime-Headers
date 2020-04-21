@@ -4,7 +4,7 @@
 
 @interface NSXPCDecoder : NSXPCCoder {
     long long  _allowedClassesIndex;
-    /* Warning: unhandled array encoding: '[128@]' */ id  _allowedClassesList;
+    id  _allowedClassesList;
     unsigned int  _collectionPointer;
     struct { /* ? */ } * _collections;
     NSXPCConnection * _connection;

@@ -5,6 +5,7 @@
 @interface _DKPerformSyncDownPeerAdditionsOperation : _DKSyncCompositeOperation {
     unsigned long long  _batchNumber;
     bool  _foundAdditions;
+    bool  _hadAdditions;
     NSString * _hadAdditionsKey;
     bool  _highPriority;
     NSDate * _highWaterMark;
@@ -39,6 +40,7 @@
 - (bool)isAsynchronous;
 - (void)main;
 - (void)performSyncDownPeerAdditions;
+- (void)performSyncDownPeerAdditionsWithDidPrewarm:(bool)arg1 orError:(id)arg2;
 - (void)performSyncDownPeerAdditionsWithHighWaterMark:(id)arg1 orError:(id)arg2;
 - (void)performSyncDownPeerAdditionsWithPreviousWindow:(id)arg1;
 - (void)startPerfMetrics;

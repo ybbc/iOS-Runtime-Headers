@@ -3,6 +3,7 @@
  */
 
 @interface RPUICloudSession : NSObject <RPAuthenticatable> {
+    id /* block */  _authCompletionHandler;
     RPCloudSession * _cloudSession;
     NSString * _destinationID;
     NSObject<OS_dispatch_queue> * _dispatchQueue;
@@ -25,6 +26,7 @@
     RPPairingShowViewController * _vcShow;
 }
 
+@property (nonatomic, copy) id /* block */ authCompletionHandler;
 @property (nonatomic, retain) NSString *destinationID;
 @property (nonatomic, retain) NSObject<OS_dispatch_queue> *dispatchQueue;
 @property (nonatomic, copy) id /* block */ hidePasswordHandler;
@@ -46,6 +48,7 @@
 - (void)_promptForPasswordWithFlags:(unsigned int)arg1 throttleSeconds:(int)arg2;
 - (void)_showPassword:(id)arg1 flags:(unsigned int)arg2;
 - (void)activateWithCompletion:(id /* block */)arg1;
+- (id /* block */)authCompletionHandler;
 - (void)dealloc;
 - (id)description;
 - (id)destinationID;
@@ -63,6 +66,7 @@
 - (id)presentingViewController;
 - (id /* block */)promptForPasswordHandler;
 - (id)serviceIdentifier;
+- (void)setAuthCompletionHandler:(id /* block */)arg1;
 - (void)setDestinationID:(id)arg1;
 - (void)setDispatchQueue:(id)arg1;
 - (void)setHidePasswordHandler:(id /* block */)arg1;

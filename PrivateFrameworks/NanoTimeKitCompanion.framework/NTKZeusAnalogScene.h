@@ -38,6 +38,7 @@
 - (double)_digitAlphaForEditMode:(long long)arg1;
 - (void)_displayZoomScale:(double)arg1 fraction:(double)arg2;
 - (id)_hoursNodeForStyle:(unsigned long long)arg1 bleed:(unsigned long long)arg2;
+- (struct CGPoint { double x1; double x2; })_logoContainerPositionForStyle:(unsigned long long)arg1;
 - (double)_lowerComplicationAlphaForEditing:(bool)arg1;
 - (double)_secondHandAlphaForDensity:(unsigned long long)arg1 isEditing:(bool)arg2;
 - (void)_significantTimeChanged;
@@ -52,6 +53,7 @@
 - (void)applyTransitionFraction:(double)arg1 fromStyle:(unsigned long long)arg2 toStyle:(unsigned long long)arg3;
 - (id)auxiliaryScrubbingObscuredNodes;
 - (double)backgroundAlpha;
+- (struct CGPoint { double x1; double x2; })centerOf4NumeralForStyle:(unsigned long long)arg1;
 - (unsigned long long)currentDensity;
 - (void)dealloc;
 - (void)endScrubbingAnimated:(bool)arg1 withCompletion:(id /* block */)arg2;

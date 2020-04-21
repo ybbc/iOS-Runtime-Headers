@@ -4,7 +4,7 @@
 
 @interface SUBManager : NSObject {
     <SUBManagerDelegate> * _delegate;
-    bool  _hasQueriedStateOnceFlag;
+    _Atomic bool  _hasQueriedStateOnceFlag;
     NSObject<OS_dispatch_queue> * _queue;
     NSObject<OS_xpc_object> * _serverConnection;
 }

@@ -8,6 +8,7 @@
 + (id)addItem:(void*)arg1 toGroup:(id)arg2;
 + (id)addPrivateKeyData:(id)arg1 certificateData:(id)arg2 toGroup:(id)arg3;
 + (id)baseQueryAttributes;
++ (id)certificateCommonNamesFromPersistentID:(id)arg1;
 + (id)certificateDataFromPersistentId:(id)arg1;
 + (id)certificateExpirationDateFromPersistentId:(id)arg1;
 + (bool)certificateExpiredWithPersistentId:(id)arg1;

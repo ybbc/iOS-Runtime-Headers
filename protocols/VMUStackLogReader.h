@@ -23,7 +23,7 @@
 - (unsigned int)sourceLineNumberForPCaddress:(unsigned long long)arg1;
 - (NSString *)sourcePathForPCaddress:(unsigned long long)arg1;
 - (NSString *)symbolicatedBacktraceForFrames:(unsigned long long*)arg1 frameCount:(long long)arg2 options:(unsigned long long)arg3;
-- (NSString *)symbolicatedBacktraceForNode:(void *)arg1 nodeDetails:(void *)arg2 isLiteZone:(void *)arg3 options:(void *)arg4; // needs 4 arg types, found 2: unsigned int, struct { unsigned long long x1; unsigned int x2 : 60; unsigned int x3 : 4; id x4; /* Warning: Unrecognized filer type: '2' using 'void*' */ void*x5; void*x6; bool x7; void*x8; void*x9; unsigned long long x10; void*x11; void*x12; }
+- (NSString *)symbolicatedBacktraceForNode:(unsigned int)arg1 nodeDetails:(struct { unsigned long long x1; unsigned int x2 : 60; unsigned int x3 : 4; id x4; })arg2 isLiteZone:(bool)arg3 options:(unsigned long long)arg4;
 - (NSString *)symbolicatedBacktraceForStackID:(unsigned long long)arg1 isLiteZone:(bool)arg2 options:(unsigned long long)arg3;
 - (unsigned int)task;
 - (bool)usesLiteMode;

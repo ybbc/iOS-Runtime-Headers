@@ -3,7 +3,7 @@
  */
 
 @interface PFLoggerBackendAdapter : NSObject <PFLoggerBackend> {
-    unsigned long long  _pendingTransactionCount;
+    _Atomic unsigned long long  _pendingTransactionCount;
     bool  _runningUnderDebugger;
 }
 

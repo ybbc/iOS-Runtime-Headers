@@ -13,8 +13,10 @@
     bool  _receivedExit;
     bool  _receivedTransaction;
     NSMutableDictionary * _registeredExpressObservers;
+    unsigned long long  _resolutionCounter;
     bool  _showingAlert;
     bool  _showingResolution;
+    bool  _showingSuccessResolution;
     PKFooterTransactionView * _transactionView;
     NSDate * _visibleDate;
 }
@@ -25,6 +27,7 @@
 @property (readonly) Class superclass;
 
 - (void).cxx_destruct;
+- (void)_beginResolution;
 - (void)_disableActivityTimer;
 - (id)_expressNotificationNames;
 - (void)_handleExpressNotification:(id)arg1;
@@ -35,6 +38,7 @@
 - (void)_registerForExpressTransactionNotifications:(bool)arg1;
 - (void)_registerObserverForNotificationName:(id)arg1 center:(id)arg2 handler:(id /* block */)arg3;
 - (void)_resolveActivityIfNecessary;
+- (void)_resolveActivityIfNecessaryWithDelay;
 - (void)_updateContentViewsWithTransaction:(id)arg1;
 - (void)_updateContentViewsWithTransaction:(id)arg1 transitProperties:(id)arg2;
 - (void)_updateContentViewsWithTransitProperties:(id)arg1;

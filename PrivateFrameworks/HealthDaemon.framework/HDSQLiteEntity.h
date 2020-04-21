@@ -24,7 +24,7 @@
 + (id)allDatabaseColumnNames;
 + (id)anyInDatabase:(id)arg1 predicate:(id)arg2 error:(id*)arg3;
 + (id)checkConstraints;
-+ (const struct { id x1; unsigned char x2; }*)columnDefinitionsWithCount:(unsigned long long*)arg1;
++ (const struct { id x1; id x2; unsigned char x3; }*)columnDefinitionsWithCount:(unsigned long long*)arg1;
 + (id)columnsDefinition;
 + (id)countDistinctForProperty:(id)arg1 predicate:(id)arg2 database:(id)arg3 error:(id*)arg4;
 + (id)countValueForProperty:(id)arg1 predicate:(id)arg2 database:(id)arg3 error:(id*)arg4;

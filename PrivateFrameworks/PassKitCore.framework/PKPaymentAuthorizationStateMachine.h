@@ -135,6 +135,7 @@
 - (void)didAuthenticateWithAuthenticatorEvaluationResponse:(id)arg1;
 - (void)didAuthenticateWithCredential:(id)arg1;
 - (void)didBecomeActive:(bool)arg1;
+- (void)didBecomeOccluded:(bool)arg1;
 - (void)didCancel;
 - (void)didEncounterError:(id)arg1;
 - (void)didEncounterFatalError:(id)arg1;

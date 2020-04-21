@@ -3,17 +3,17 @@
  */
 
 @interface CFPrefsPlistSource : CFPrefsSource {
-    bool  _avoidsDaemonCache;
-    bool  _checkedInvalidHome;
-    bool  _disableBackup;
-    bool  _isByHost;
-    bool  _lastWriteFailed;
-    /* Warning: Unrecognized filer type: '^' using 'void*' */ void* _locallySetDict;
-    bool  _observing;
-    bool  _readonly;
-    bool  _restrictedAccess;
-    bool  _volatile;
-    char * accessPath;
+    _Atomic bool  _avoidsDaemonCache;
+    _Atomic bool  _checkedInvalidHome;
+    _Atomic bool  _disableBackup;
+    _Atomic bool  _isByHost;
+    _Atomic bool  _lastWriteFailed;
+    _Atomic struct __CFDictionary {} * _locallySetDict;
+    _Atomic bool  _observing;
+    _Atomic bool  _readonly;
+    _Atomic bool  _restrictedAccess;
+    _Atomic bool  _volatile;
+    _Atomic char * accessPath;
     struct __CFString { } * container;
     struct __CFString { } * domainIdentifier;
     struct __CFString { } * userIdentifier;

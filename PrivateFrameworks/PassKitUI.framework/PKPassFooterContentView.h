@@ -5,6 +5,7 @@
 @interface PKPassFooterContentView : UIView {
     PKLinkedAppIconView * _appIconView;
     UIView * _bottomRule;
+    long long  _coachingState;
     <PKPassFooterContentViewDelegate> * _delegate;
     UIButton * _infoButton;
     bool  _invalidated;
@@ -15,6 +16,7 @@
 
 @property (nonatomic, readonly) PKLinkedAppIconView *appIconView;
 @property (nonatomic, readonly) UIView *bottomRule;
+@property (nonatomic, readonly) long long coachingState;
 @property (nonatomic) <PKPassFooterContentViewDelegate> *delegate;
 @property (nonatomic, readonly) UIButton *infoButton;
 @property (nonatomic, readonly) bool invalidated;
@@ -27,9 +29,11 @@
 - (void).cxx_destruct;
 - (double)_bottomRulePadding;
 - (void)_infoButtonPressed:(id)arg1;
+- (void)_setCoachingState:(long long)arg1;
 - (void)_setUserIntentRequired:(bool)arg1;
 - (id)appIconView;
 - (id)bottomRule;
+- (long long)coachingState;
 - (void)dealloc;
 - (id)delegate;
 - (void)didBecomeHiddenAnimated:(bool)arg1;

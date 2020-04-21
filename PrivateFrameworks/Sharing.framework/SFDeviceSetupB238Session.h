@@ -136,8 +136,6 @@
     unsigned long long  _trAuthenticationStartTicks;
     int  _trAuthenticationState;
     bool  _trNeedsNetwork;
-    unsigned long long  _trNetworkStartTicks;
-    int  _trNetworkState;
     TROperationQueue * _trOperationQueue;
     NSMutableArray * _trOperations;
     TRSession * _trSession;
@@ -146,7 +144,6 @@
     unsigned long long  _trSetupConfigurationStartTicks;
     int  _trSetupConfigurationState;
     NSSet * _trUnauthServices;
-    bool  _wifiSetupEnabled;
     SFDeviceOperationWiFiSetup * _wifiSetupOperation;
     double  _wifiSetupSecs;
     int  _wifiSetupState;
@@ -244,7 +241,6 @@
 - (void)_runStereoPairUserInputPickColors:(bool)arg1;
 - (int)_runTRActivation;
 - (int)_runTRAuthentication;
-- (int)_runTRNetwork;
 - (int)_runTRSessionStart;
 - (int)_runTRSetupConfiguration;
 - (int)_runTerms;

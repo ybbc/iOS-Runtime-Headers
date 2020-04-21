@@ -301,9 +301,9 @@
 
 // Image: /System/Library/PrivateFrameworks/IOAccessoryManager.framework/IOAccessoryManager
 
-+ (id)valueWithDockState:(struct DockState { int x1; struct UnsignedWide { unsigned int x_2_1_1; unsigned int x_2_1_2; } x2; struct UnsignedWide { unsigned int x_3_1_1; unsigned int x_3_1_2; } x3; unsigned long long x4; unsigned char x5[6]; unsigned long long x6; unsigned char x7; unsigned long long x8; unsigned long long x9; bool x10; bool x11; double x12; double x13; bool x14; bool x15; id x16; /* Warning: Unrecognized filer type: '?' using 'void*' */ void*x17; void*x18; bool x19; unsigned int x20; unsigned int x21; })arg1;
++ (id)valueWithDockState:(struct DockState { int x1; struct UnsignedWide { unsigned int x_2_1_1; unsigned int x_2_1_2; } x2; struct UnsignedWide { unsigned int x_3_1_1; unsigned int x_3_1_2; } x3; unsigned long long x4; unsigned char x5[6]; unsigned long long x6; unsigned char x7; unsigned long long x8; unsigned long long x9; bool x10; bool x11; double x12; double x13; bool x14; bool x15; id x16; struct { bool x_17_1_1; unsigned int x_17_1_2; unsigned int x_17_1_3; } x17; unsigned int x18; unsigned int x19; bool x20; })arg1;
 
-- (struct DockState { int x1; struct UnsignedWide { unsigned int x_2_1_1; unsigned int x_2_1_2; } x2; struct UnsignedWide { unsigned int x_3_1_1; unsigned int x_3_1_2; } x3; unsigned long long x4; unsigned char x5[6]; unsigned long long x6; unsigned char x7; unsigned long long x8; unsigned long long x9; bool x10; bool x11; double x12; double x13; bool x14; bool x15; id x16; /* Warning: Unrecognized filer type: '?' using 'void*' */ void*x17; void*x18; bool x19; unsigned int x20; unsigned int x21; })dockStateValue;
+- (struct DockState { int x1; struct UnsignedWide { unsigned int x_2_1_1; unsigned int x_2_1_2; } x2; struct UnsignedWide { unsigned int x_3_1_1; unsigned int x_3_1_2; } x3; unsigned long long x4; unsigned char x5[6]; unsigned long long x6; unsigned char x7; unsigned long long x8; unsigned long long x9; bool x10; bool x11; double x12; double x13; bool x14; bool x15; id x16; struct { bool x_17_1_1; unsigned int x_17_1_2; unsigned int x_17_1_3; } x17; unsigned int x18; unsigned int x19; bool x20; })dockStateValue;
 
 // Image: /System/Library/PrivateFrameworks/LinkPresentation.framework/LinkPresentation
 
@@ -426,9 +426,9 @@
 
 // Image: /System/Library/PrivateFrameworks/iWorkImport.framework/iWorkImport
 
-+ (id)valueWithContentBlend:(struct _TSDContentBlend { id x1; double x2; })arg1;
++ (id)valueWithContentBlend:(struct _TSDContentBlend { id x1; id x2; double x3; })arg1;
 
-- (struct _TSDContentBlend { id x1; double x2; })TSDContentBlendValue;
+- (struct _TSDContentBlend { id x1; id x2; double x3; })TSDContentBlendValue;
 - (id)mixedObjectWithFraction:(double)arg1 ofObject:(id)arg2;
 - (long long)mixingTypeWithObject:(id)arg1 context:(id)arg2;
 

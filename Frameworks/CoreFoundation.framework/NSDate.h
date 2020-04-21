@@ -6,6 +6,7 @@
 
 @property (nonatomic, readonly) NSString *briefFormattedDate;
 @property (nonatomic, readonly) int chartGridValueType;
+@property (getter=crk_isInPast, readonly) bool crk_inPast;
 @property (readonly, copy) NSString *debugDescription;
 @property (readonly, copy) NSString *description;
 @property (nonatomic, readonly) bool fc_isWeekend;
@@ -306,6 +307,10 @@
 + (id)cat_dateWithObject:(id)arg1;
 
 - (id)cat_internetTimeString;
+
+// Image: /System/Library/PrivateFrameworks/ClassroomKit.framework/ClassroomKit
+
+- (bool)crk_isInPast;
 
 // Image: /System/Library/PrivateFrameworks/ClockKit.framework/ClockKit
 

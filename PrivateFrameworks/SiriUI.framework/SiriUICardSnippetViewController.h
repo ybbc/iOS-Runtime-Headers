@@ -44,6 +44,7 @@
 - (void)_updateContentSizeAndNotifyDelegateIfNecessary:(bool)arg1;
 - (void)_validateCardForParsecFeedbackDelivery:(id)arg1 validHandler:(id /* block */)arg2;
 - (void)_validateCardSectionForParsecFeedbackDelivery:(id)arg1 validHandler:(id /* block */)arg2;
+- (double)boundingWidthForPresentation:(id)arg1;
 - (bool)cardLoader:(id)arg1 loadCard:(id)arg2 withCompletionHandler:(id /* block */)arg3;
 - (bool)cardLoader:(id)arg1 shouldLoadCard:(id)arg2;
 - (void)cardLoadingMonitor:(id)arg1 didReceiveCardSnippet:(id)arg2;

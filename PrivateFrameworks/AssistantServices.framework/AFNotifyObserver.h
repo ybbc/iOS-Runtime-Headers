@@ -8,7 +8,6 @@
         unsigned int delegateRespondsToDidReceiveNotificationWithToken : 1; 
         unsigned int delegateRespondsToDidChangeStateFromTo : 1; 
     }  _flags;
-    NSString * _name;
     unsigned long long  _options;
     NSObject<OS_dispatch_queue> * _queue;
     int  _registrationToken;
@@ -18,7 +17,6 @@
 @property (readonly, copy) NSString *debugDescription;
 @property (readonly, copy) NSString *description;
 @property (readonly) unsigned long long hash;
-@property (nonatomic, readonly, copy) NSString *name;
 @property (nonatomic, readonly) unsigned long long state;
 @property (readonly) Class superclass;
 
@@ -29,7 +27,6 @@
 - (void)dealloc;
 - (id)initWithName:(id)arg1 options:(unsigned long long)arg2 queue:(id)arg3 delegate:(id)arg4;
 - (void)invalidate;
-- (id)name;
 - (unsigned long long)state;
 
 @end

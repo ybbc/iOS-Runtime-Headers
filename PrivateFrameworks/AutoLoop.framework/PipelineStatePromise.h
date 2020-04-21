@@ -5,7 +5,7 @@
 @interface PipelineStatePromise : NSObject {
     NSMapTable * errors;
     NSObject<OS_dispatch_group> * group;
-    bool  initialization_completed;
+    _Atomic bool  initialization_completed;
     NSMapTable * pipelineStates;
 }
 

@@ -46,7 +46,7 @@
     }  _extraStyle;
     struct CGColor { } * _fullBleedColor;
     struct atomic<bool> { 
-        bool __a_; 
+        _Atomic bool __a_; 
     }  _hasIcon;
     VKImage * _image;
     struct Style { 

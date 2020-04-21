@@ -5,7 +5,7 @@
 @interface ConversationKit.ConversationController : NSObject <AVCRemoteVideoClientDelegate, TUAudioFrequencyControllerDelegate> {
     void audioCallbackQueue;
     void audioFrequencyController;
-    void audioRouteDidChanged;
+    void audioRouteDidChange;
     void availableParticipantColors;
     void broadcastingState;
     void call;
@@ -26,6 +26,7 @@
     void participantAudioPowerDidChange;
     void participantMediaProviderCreator;
     void participantsMediaPrioritiesDidChange;
+    void recentPresentationContexts;
     void remoteParticipants;
     void visibleParticipantDidBecomeActive;
 }
@@ -33,7 +34,6 @@
 @property (nonatomic, readonly) NSString *description;
 
 - (id /* block */).cxx_destruct;
-- (void)dealloc;
 - (id)description;
 - (void)frequencyController:(id)arg1 audioPowerChanged:(float)arg2 forParticipantWithStreamToken:(unsigned long long)arg3;
 - (void)handleLocalVideoPreviewFirstFrameArrived:(id)arg1;

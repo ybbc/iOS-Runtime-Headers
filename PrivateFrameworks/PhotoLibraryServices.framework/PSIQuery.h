@@ -9,10 +9,10 @@
     NSArray * _datedParses;
     NSArray * _dedupedGroupResults;
     <PSIQueryDelegate> * _delegate;
-    bool  _didStart;
+    _Atomic bool  _didStart;
     NSMutableDictionary * _groupIdsByTokenKey;
     NSArray * _identifierTokens;
-    bool  _isCanceled;
+    _Atomic bool  _isCanceled;
     NSArray * _nextKeywordSuggestions;
     unsigned long long  _numberOfNextKeywordSuggestionToProcess;
     NSArray * _queryTokens;

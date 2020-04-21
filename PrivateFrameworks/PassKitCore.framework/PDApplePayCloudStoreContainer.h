@@ -15,7 +15,7 @@
 - (bool)_canFormTransactionFromCloudStoreRecord:(id)arg1;
 - (bool)_canSyncTransactionToCloudKit:(id)arg1;
 - (id)_cloudStoreSpecificKeysForItem:(id)arg1 paymentPass:(id)arg2;
-- (void)_fetchMissingRecordsFromModifiedRecords:(id)arg1 operationGroupName:(id)arg2 completion:(id /* block */)arg3;
+- (void)_fetchMissingRecordsFromModifiedRecords:(id)arg1 operationGroupName:(id)arg2 operationGroupNameSuffix:(id)arg3 completion:(id /* block */)arg4;
 - (void)_handlePeerPaymentAccountChanged:(id)arg1;
 - (id)_insertOrUpdatePaymentTransaction:(id)arg1 withOriginDeviceID:(id)arg2 forPassUniqueIdentifier:(id)arg3 paymentApplication:(id)arg4 withInsertionMode:(unsigned long long)arg5 performTruncation:(bool)arg6;
 - (bool)_isTransactionItemFromRecordType:(id)arg1;
@@ -35,17 +35,17 @@
 - (bool)canSyncTransactionToCloudKitWithBackingData:(bool)arg1 passUniqueIdentifier:(id)arg2 serviceIdentifier:(id)arg3;
 - (void)cloudStoreAccountChanged:(id)arg1;
 - (id)cloudStoreSpecificKeysForItem:(id)arg1;
-- (void)createZones:(id)arg1 completion:(id /* block */)arg2;
-- (void)createZones:(id)arg1 userInfo:(id)arg2 completion:(id /* block */)arg3;
+- (void)createZones:(id)arg1 operationGroupNameSuffix:(id)arg2 completion:(id /* block */)arg3;
+- (void)createZones:(id)arg1 operationGroupNameSuffix:(id)arg2 userInfo:(id)arg3 completion:(id /* block */)arg4;
 - (void)fetchAndStoreRecordsForPaymentPassWithUniqueIdentifier:(id)arg1 completion:(id /* block */)arg2;
 - (void)generateRandomTransactionForPassWithUniqueIdentifier:(id)arg1 completion:(id /* block */)arg2;
 - (id)initWithDataSource:(id)arg1 transactionProcessor:(id)arg2 paymentWebService:(id)arg3;
-- (void)processFetchedCloudStoreDataWithModifiedRecords:(id)arg1 deletedRecords:(id)arg2 operationGroupName:(id)arg3 shouldUpdateLocalDatabase:(bool)arg4 userInfo:(id)arg5 completion:(id /* block */)arg6;
-- (void)processResultWithError:(id)arg1 nextExpectedState:(unsigned long long)arg2 retryCount:(unsigned long long)arg3 shouldRetry:(bool)arg4 completion:(id /* block */)arg5;
+- (void)processFetchedCloudStoreDataWithModifiedRecords:(id)arg1 deletedRecords:(id)arg2 operationGroupName:(id)arg3 operationGroupNameSuffix:(id)arg4 shouldUpdateLocalDatabase:(bool)arg5 userInfo:(id)arg6 completion:(id /* block */)arg7;
+- (void)processResultWithError:(id)arg1 nextExpectedState:(unsigned long long)arg2 operationGroupNameSuffix:(id)arg3 retryCount:(unsigned long long)arg4 shouldRetry:(bool)arg5 completion:(id /* block */)arg6;
 - (void)readCachedContainerValues;
 - (id)recordTypeForRecordID:(id)arg1;
 - (void)requestUpdatesForPassUniqueIdentifier:(id)arg1;
 - (void)saveCachedContainerValues;
-- (void)setContainerState:(unsigned long long)arg1 retryCount:(unsigned long long)arg2 completion:(id /* block */)arg3;
+- (void)setContainerState:(unsigned long long)arg1 operationGroupNameSuffix:(id)arg2 retryCount:(unsigned long long)arg3 completion:(id /* block */)arg4;
 
 @end

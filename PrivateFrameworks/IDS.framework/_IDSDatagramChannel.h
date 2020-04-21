@@ -27,7 +27,7 @@
     id /* block */  _readHandler;
     id /* block */  _readHandlerWithOptions;
     NSObject<OS_dispatch_semaphore> * _readSema;
-    int  _readState;
+    _Atomic int  _readState;
     bool  _receivedPreConnectionData;
     NSMutableArray * _sendingMetadata;
     bool  _sentFirstReadLinkInfo;

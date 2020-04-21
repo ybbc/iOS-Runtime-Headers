@@ -4,6 +4,7 @@
 
 @interface PLAggdLogging : NSObject
 
++ (id)_addPrefix:(id)arg1 toKeysInDictionary:(id)arg2;
 + (void)performAnalysisStateLogging:(id)arg1;
 + (void)performCollectionsStaticsLogging:(id)arg1;
 + (void)performHyperionLocalResourcesLogging:(id /* block */)arg1;

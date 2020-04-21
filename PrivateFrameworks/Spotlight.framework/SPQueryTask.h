@@ -3,7 +3,7 @@
  */
 
 @interface SPQueryTask : NSObject {
-    /* Warning: Unrecognized filer type: '^' using 'void*' */ void* _deferredUpdate;
+    _Atomic struct WaitingResults_s {} * _deferredUpdate;
     SPQueryResponse * _delayedResponse;
     NSObject<SPQueryTaskDelegate> * _delegate;
     NSObject<OS_dispatch_queue> * _dispatchQueue;
@@ -18,7 +18,7 @@
     NSString * _sessionEntityString;
     int  _state;
     int  _unsafeState;
-    int  _updatesDisabled;
+    _Atomic int  _updatesDisabled;
     unsigned long long  _whyQuery;
 }
 

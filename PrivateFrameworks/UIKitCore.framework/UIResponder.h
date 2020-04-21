@@ -240,6 +240,7 @@
 - (void)beginSelectionChange;
 - (bool)canBecomeFirstResponder;
 - (bool)canPasteItemProviders:(id)arg1;
+- (bool)canPerformAction:(SEL)arg1 withSender:(id)arg2;
 - (bool)canResignFirstResponder;
 - (void)dealloc;
 - (void)decodeRestorableStateWithCoder:(id)arg1;
@@ -302,12 +303,6 @@
 
 + (id)fallback_debugHierarchyPropertyDescriptions;
 + (id)fallback_debugHierarchyValueForPropertyWithName:(id)arg1 onObject:(id)arg2 outOptions:(id*)arg3 outError:(id*)arg4;
-
-// Image: /System/Library/AccessibilityBundles/QuickSpeak.bundle/QuickSpeak
-
-+ (Class)safeCategoryBaseClass;
-
-- (bool)canPerformAction:(SEL)arg1 withSender:(id)arg2;
 
 // Image: /System/Library/PrivateFrameworks/ChatKit.framework/ChatKit
 

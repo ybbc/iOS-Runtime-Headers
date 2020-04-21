@@ -3,7 +3,7 @@
  */
 
 @interface PKMetalBuffer : NSObject <PKMetalResource> {
-    int  _isPurged;
+    _Atomic int  _isPurged;
     unsigned long long  _lockCount;
     <MTLBuffer> * _metalBuffer;
 }

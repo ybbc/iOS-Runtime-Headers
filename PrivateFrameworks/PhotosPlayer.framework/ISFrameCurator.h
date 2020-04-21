@@ -3,7 +3,7 @@
  */
 
 @interface ISFrameCurator : NSObject {
-    int  _nextRequestID;
+    _Atomic int  _nextRequestID;
     NSMutableDictionary * _requestsByID;
     NSObject<OS_dispatch_queue> * _requestsByIDQueue;
     NSObject<OS_dispatch_queue> * _workQueue;

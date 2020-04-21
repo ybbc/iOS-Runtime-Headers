@@ -17,8 +17,6 @@
 @property (nonatomic) unsigned long long tintStyle;
 @property (nonatomic, readonly) long long toolbarSize;
 
-+ (double)defaultHeight;
-
 - (void).cxx_destruct;
 - (double)URLFieldHorizontalMargin;
 - (id)_backdropInputSettings;
@@ -29,6 +27,7 @@
 - (long long)placement;
 - (void)setBackdropGroupName:(id)arg1;
 - (void)setTintStyle:(unsigned long long)arg1;
+- (struct CGSize { double x1; double x2; })sizeThatFits:(struct CGSize { double x1; double x2; })arg1;
 - (unsigned long long)tintStyle;
 - (long long)toolbarSize;
 - (void)updateBackdropSettings:(id)arg1;

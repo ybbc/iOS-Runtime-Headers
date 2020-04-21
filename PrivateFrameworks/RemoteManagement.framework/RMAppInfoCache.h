@@ -26,9 +26,11 @@
 - (void)_finishedFetchingAppInfoByBundleIdentifier:(id)arg1;
 - (void)_handleiTunesResponseForBundleIdentifiers:(id)arg1 response:(id)arg2 data:(id)arg3 error:(id)arg4 completionHandler:(id /* block */)arg5;
 - (id)_localAppNameForBundleIdentifier:(id)arg1;
+- (id)_placeholderAppInfoWithBundleIdentifier:(id)arg1;
 - (id)_preloadedAppInfoWithBundleIdentifier:(id)arg1;
 - (id)appInfoByBundleIdentifier;
 - (id)appInfoForBundleIdentifier:(id)arg1;
+- (id)appInfoForBundleIdentifier:(id)arg1 localOnly:(bool)arg2;
 - (id)bundleIdentifiersWithPendingRequests;
 - (id)completionHandlerQueue;
 - (void)dealloc;

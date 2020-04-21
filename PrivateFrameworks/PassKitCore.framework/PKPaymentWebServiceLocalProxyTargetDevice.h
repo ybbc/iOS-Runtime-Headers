@@ -17,6 +17,9 @@
 - (void)_invalidateConnection;
 - (id)_proxy;
 - (id)_proxyWithErrorHandler:(id /* block */)arg1;
+- (id)_synchronousProxy;
+- (id)_synchronousProxyWithErrorHandler:(id /* block */)arg1;
+- (id)appleAccountInformation;
 - (void)archiveBackgroundContext:(id)arg1;
 - (void)archiveContext:(id)arg1;
 - (id)bridgedClientInfo;
@@ -49,6 +52,7 @@
 - (void)paymentWebService:(id)arg1 provisioningDataWithCompletionHandler:(id /* block */)arg2;
 - (void)paymentWebService:(id)arg1 queueConnectionToTrustedServiceManagerForPushTopic:(id)arg2 withCompletion:(id /* block */)arg3;
 - (void)paymentWebService:(id)arg1 registrationDataWithAuthToken:(id)arg2 completionHandler:(id /* block */)arg3;
+- (void)paymentWebService:(id)arg1 registrationDataWithCompletionHandler:(id /* block */)arg2;
 - (void)paymentWebService:(id)arg1 removePass:(id)arg2 withCompletionHandler:(id /* block */)arg3;
 - (void)paymentWebService:(id)arg1 setNewAuthRandom:(id /* block */)arg2;
 - (void)paymentWebService:(id)arg1 setNewAuthRandomIfNecessaryReturningPairingState:(id /* block */)arg2;
@@ -57,6 +61,7 @@
 - (void)paymentWebService:(id)arg1 validateTransferPreconditionsWithCompletion:(id /* block */)arg2;
 - (void)paymentWebServiceDidUpdateConfiguration:(id)arg1;
 - (bool)paymentWebServiceSupportsPeerPaymentRegistration:(id)arg1;
+- (void)renewAccountWithCompletionHandler:(id /* block */)arg1;
 - (id)secureElementIdentifiers;
 - (unsigned long long)secureElementOwnershipStateForCurrentUser;
 - (bool)supportsAutomaticPassPresentation;

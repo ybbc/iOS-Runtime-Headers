@@ -10,7 +10,7 @@
     NSString * _intent;
     NSArray * _relinquishCallStack;
     double  _timeout;
-    int  _timeoutPauseCount;
+    _Atomic int  _timeoutPauseCount;
 }
 
 @property (nonatomic, readonly) NSArray *acquireCallStack;

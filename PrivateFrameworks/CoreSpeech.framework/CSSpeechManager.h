@@ -2,7 +2,7 @@
    Image: /System/Library/PrivateFrameworks/CoreSpeech.framework/CoreSpeech
  */
 
-@interface CSSpeechManager : NSObject <CSAssetManagerDelegate, CSAudioRecorderDelegate, CSAudioRouteChangeMonitorDelegate, CSAudioServerCrashMonitorGibraltarDelegate, CSLanguageCodeUpdateMonitorDelegate, CSSiriEnabledMonitorDelegate, CSSmartSiriVolumeDelegate, CSStateMachineDelegate, CSVoiceTriggerDelegate> {
+@interface CSSpeechManager : NSObject <CSAudioRecorderDelegate, CSAudioRouteChangeMonitorDelegate, CSAudioServerCrashMonitorGibraltarDelegate, CSLanguageCodeUpdateMonitorDelegate, CSSiriEnabledMonitorDelegate, CSSmartSiriVolumeDelegate, CSStateMachineDelegate, CSVoiceTriggerAssetDownloadMonitorDelegate, CSVoiceTriggerDelegate> {
     NSHashTable * _activeAudioProcessors;
     NSObject<OS_dispatch_queue> * _assetQueryQueue;
     CSAudioCircularBuffer * _audioBuffer;
@@ -77,12 +77,12 @@
 @property (nonatomic, retain) CSVoiceTriggerSecondPass *voiceTriggerSecondPass;
 
 - (void).cxx_destruct;
-- (void)CSAssetManagerDidDownloadNewAsset:(id)arg1;
 - (void)CSLanguageCodeUpdateMonitor:(id)arg1 didReceiveLanguageCodeChanged:(id)arg2;
 - (void)CSSiriEnabledMonitor:(id)arg1 didReceiveEnabled:(bool)arg2;
 - (void)CSSmartSiriVolumeDidReceiveAlarmChanged:(long long)arg1;
 - (void)CSSmartSiriVolumeDidReceiveMusicVolumeChanged:(float)arg1;
 - (void)CSSmartSiriVolumeDidReceiveTimerChanged:(long long)arg1;
+- (void)CSVoiceTriggerAssetDownloadMonitor:(id)arg1 didInstallNewAsset:(bool)arg2;
 - (void)_cancelPendingSetRecordModeToRecordingForReason:(id)arg1;
 - (void)_createCircularBuffer;
 - (void)_createClearLoggingFileTimer;
@@ -90,6 +90,7 @@
 - (bool)_createRecorderWithContextIfNeeded:(id)arg1 error:(id*)arg2;
 - (void)_destroyAudioRecorderIfNeeded;
 - (void)_destroyCircularBuffer;
+- (void)_enableMiniDucking:(bool)arg1;
 - (id)_eventName:(unsigned long long)arg1;
 - (id)_getClientRecordContext;
 - (void)_getVoiceTriggerAsset:(id /* block */)arg1;

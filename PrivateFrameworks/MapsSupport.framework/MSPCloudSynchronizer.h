@@ -7,7 +7,7 @@
     unsigned long long  _countOfInFlightMerges;
     <MSPCloudSynchronizerDelegate> * _delegate;
     struct atomic_flag { 
-        bool _Value; 
+        _Atomic bool _Value; 
     }  _didScheduleInitialMerge;
     unsigned long long  _failedResolutionAttempts;
     NSTimer * _identityRecheckTimer;

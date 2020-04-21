@@ -260,7 +260,7 @@
 + (id)URLWithString:(id)arg1 relativeToURL:(id)arg2;
 + (id)_URLWithData:(id)arg1 relativeToURL:(id)arg2;
 + (id)_URLWithDataAsString:(id)arg1 relativeToURL:(id)arg2;
-+ (id)_web_URLWithComponents:(/* Warning: unhandled struct encoding: '{?=@@@@q@@@}' */ struct { id x1; id x2; long long x3; id x4; id x5; })arg1;
++ (id)_web_URLWithComponents:(struct { id x1; id x2; id x3; id x4; long long x5; id x6; id x7; id x8; })arg1;
 + (id)_web_URLWithString:(id)arg1 relativeToURL:(id)arg2;
 + (id)absoluteURLWithDataRepresentation:(id)arg1 relativeToURL:(id)arg2;
 + (id)allocWithZone:(struct _NSZone { }*)arg1;
@@ -300,7 +300,7 @@
 - (id)_web_URLByRemovingLastPathComponent_nowarn;
 - (id)_web_URLByRemovingUserAndPath_nowarn;
 - (id)_web_URLByRemovingUserAndQueryAndFragment_nowarn;
-- (/* Warning: unhandled struct encoding: '{?=@@@@q@@@}' */ struct { id x1; id x2; long long x3; id x4; id x5; })_web_URLComponents;
+- (struct { id x1; id x2; id x3; id x4; long long x5; id x6; id x7; id x8; })_web_URLComponents;
 - (bool)_web_isJavaScriptURL;
 - (id)_web_scriptIfJavaScriptURL;
 - (id)_web_suggestedFilenameWithMIMEType:(id)arg1;
@@ -361,6 +361,8 @@
 
 // Image: /System/Library/Frameworks/HealthKit.framework/HealthKit
 
++ (id)_hk_urlForAtrialFibrillationEventType;
++ (id)_hk_urlForElectrocardiogramType;
 + (id)_hk_urlForViewHealthRecords;
 + (id)hk_safeURLWithString:(id)arg1;
 + (id)hk_tapToHealthRadarURLForComponent:(unsigned long long)arg1 title:(id)arg2 description:(id)arg3 classification:(long long)arg4 reproducibility:(long long)arg5 autoDiagnostics:(long long)arg6;
@@ -707,7 +709,7 @@
 
 // Image: /System/Library/PrivateFrameworks/ContactsUICore.framework/ContactsUICore
 
-+ (id)_cnui_dialRequestURLWithHandle:(id)arg1 contact:(id)arg2 faceTime:(bool)arg3 video:(bool)arg4 ttyType:(long long)arg5 senderIdentity:(id)arg6;
++ (id)_cnui_dialRequestURLWithHandle:(id)arg1 contact:(id)arg2 faceTime:(bool)arg3 video:(bool)arg4 ttyType:(long long)arg5 channelIdentifier:(id)arg6;
 + (id)_cnui_faceTimeAudioURLFutureWithHandle:(id)arg1 contact:(id)arg2;
 + (id)_cnui_faceTimeAudioURLWithHandle:(id)arg1 contact:(id)arg2;
 + (id)_cnui_faceTimeVideoURLFutureWithHandle:(id)arg1 contact:(id)arg2;
@@ -722,12 +724,18 @@
 + (id)_cnui_skypeVideoURLWithHandle:(id)arg1;
 + (id)_cnui_skypeVoiceURLFutureWithHandle:(id)arg1;
 + (id)_cnui_skypeVoiceURLWithHandle:(id)arg1;
-+ (id)_cnui_telephonyURLFutureWithHandle:(id)arg1 contact:(id)arg2 senderIdentity:(id)arg3;
-+ (id)_cnui_telephonyURLWithHandle:(id)arg1 contact:(id)arg2 senderIdentity:(id)arg3;
-+ (id)_cnui_ttyRelayURLFutureWithHandle:(id)arg1 contact:(id)arg2 senderIdentity:(id)arg3;
-+ (id)_cnui_ttyRelayURLWithHandle:(id)arg1 contact:(id)arg2 senderIdentity:(id)arg3;
-+ (id)_cnui_ttyURLFutureWithHandle:(id)arg1 contact:(id)arg2 senderIdentity:(id)arg3;
-+ (id)_cnui_ttyURLWithHandle:(id)arg1 contact:(id)arg2 senderIdentity:(id)arg3;
++ (id)_cnui_telephonyURLFutureWithHandle:(id)arg1 contact:(id)arg2;
++ (id)_cnui_telephonyURLFutureWithHandle:(id)arg1 contact:(id)arg2 channelIdentifier:(id)arg3;
++ (id)_cnui_telephonyURLWithHandle:(id)arg1 contact:(id)arg2;
++ (id)_cnui_telephonyURLWithHandle:(id)arg1 contact:(id)arg2 channelIdentifier:(id)arg3;
++ (id)_cnui_ttyRelayURLFutureWithHandle:(id)arg1 contact:(id)arg2;
++ (id)_cnui_ttyRelayURLFutureWithHandle:(id)arg1 contact:(id)arg2 channelIdentifier:(id)arg3;
++ (id)_cnui_ttyRelayURLWithHandle:(id)arg1 contact:(id)arg2;
++ (id)_cnui_ttyRelayURLWithHandle:(id)arg1 contact:(id)arg2 channelIdentifier:(id)arg3;
++ (id)_cnui_ttyURLFutureWithHandle:(id)arg1 contact:(id)arg2;
++ (id)_cnui_ttyURLFutureWithHandle:(id)arg1 contact:(id)arg2 channelIdentifier:(id)arg3;
++ (id)_cnui_ttyURLWithHandle:(id)arg1 contact:(id)arg2;
++ (id)_cnui_ttyURLWithHandle:(id)arg1 contact:(id)arg2 channelIdentifier:(id)arg3;
 + (id)_cnui_walletPayURLFutureWithHandle:(id)arg1;
 + (id)_cnui_walletPayURLWithHandle:(id)arg1;
 

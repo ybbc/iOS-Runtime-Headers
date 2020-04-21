@@ -63,6 +63,7 @@
 - (bool)setUserName:(id)arg1;
 - (void)startVoiceCommand;
 - (bool)supportsBatteryLevel;
+- (bool)supportsHS;
 - (id)syncGroups;
 - (struct { bool x1; bool x2; bool x3; bool x4; bool x5; })syncSettings;
 - (int)type;

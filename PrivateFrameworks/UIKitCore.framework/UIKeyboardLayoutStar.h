@@ -180,6 +180,7 @@
 - (bool)_shouldAttemptToAddSupplementaryControlKeys;
 - (bool)_shouldInheritScreenScaleAsContentScaleFactor;
 - (bool)_stringContainsCurrencyCharacters:(id)arg1;
+- (void)_swapGlobeAndMoreKeysIfNecessary;
 - (void)_updateSupplementaryKeys;
 - (id)_variantsByAppendingDualStringKey:(id)arg1 toVariants:(id)arg2;
 - (void)dealloc;
@@ -319,6 +320,7 @@
 - (bool)isAlphabeticPlane;
 - (bool)isDeadkeyInput:(id)arg1;
 - (bool)isEmojiKeyplane;
+- (bool)isKeyScriptSwitchKey:(id)arg1;
 - (bool)isLongPressedKey:(id)arg1;
 - (bool)isMultitapKey:(id)arg1;
 - (bool)isRotating;
@@ -487,6 +489,7 @@
 - (bool)supportsEmoji;
 - (void)swipeDetected:(id)arg1;
 - (id)synthesizeTouchUpEventForKey:(id)arg1;
+- (unsigned long long)targetEdgesForScreenGestureRecognition;
 - (void)tearDownSplitTransitionView;
 - (unsigned long long)textEditingKeyMask;
 - (void)touchCancelled:(id)arg1 executionContext:(id)arg2;

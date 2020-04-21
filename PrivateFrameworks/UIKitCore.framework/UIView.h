@@ -235,6 +235,7 @@
 @property (setter=_setLayoutDebuggingIdentifier:, nonatomic, copy) NSString *_layoutDebuggingIdentifier;
 @property (setter=_setLayoutEngine:, nonatomic, retain) NSISEngine *_layoutEngine;
 @property (setter=_setLayoutMarginsGuideIgnoresSystemMinimumMargins:, nonatomic) bool _layoutMarginsGuideIgnoresSystemMinimumMargins;
+@property (nonatomic, readonly) NSMapTable *_lfld_constraintsAffectingVariableValueChanges;
 @property (nonatomic, readonly) long long _lfld_count;
 @property (nonatomic, readonly) NSString *_lfld_currentLayoutMethodName;
 @property (nonatomic, readonly) NSMutableArray *_lfld_geometryChangeRecords;
@@ -256,6 +257,8 @@
 @property (getter=_presentationControllerToNotifyOnLayoutSubviews, setter=_setPresentationControllerToNotifyOnLayoutSubviews:, nonatomic, retain) UIPresentationController *_presentationControllerToNotifyOnLayoutSubviews;
 @property (nonatomic, readonly) CABasicAnimation *_pu_referenceBasicAnimationForCurrentAnimation;
 @property (setter=_setRawLayoutMargins:, nonatomic) struct UIEdgeInsets { double x1; double x2; double x3; double x4; } _rawLayoutMargins;
+@property (nonatomic, readonly) struct CGRect { struct CGPoint { double x_1_1_1; double x_1_1_2; } x1; struct CGSize { double x_2_1_1; double x_2_1_2; } x2; } _sf_bottomUnsafeAreaFrame;
+@property (nonatomic, readonly) struct CGRect { struct CGPoint { double x_1_1_1; double x_1_1_2; } x1; struct CGSize { double x_2_1_1; double x_2_1_2; } x2; } _sf_bottomUnsafeAreaFrameForToolbar;
 @property (nonatomic, readonly) bool _sf_hasLandscapeAspectRatio;
 @property (nonatomic, readonly) bool _sf_isFullScreenWidth;
 @property (nonatomic, readonly) struct CGRect { struct CGPoint { double x_1_1_1; double x_1_1_2; } x1; struct CGSize { double x_2_1_1; double x_2_1_2; } x2; } _sf_safeAreaBounds;
@@ -995,9 +998,11 @@
 - (id)_layoutVariablesWithAmbiguousValue;
 - (bool)_legacy_isEligibleForFocusInteraction;
 - (id)_legendEntryForDescriptionForLayout;
+- (void)_lfld_addConstraintsAffectingVariableValueChange:(id)arg1;
 - (void)_lfld_addGeometryChangeRecordWithPropertyName:(id)arg1 value:(id)arg2;
 - (void)_lfld_addSetNeedsLayoutCallStack:(id)arg1;
 - (void)_lfld_addVariableChangeRecordForVariable:(id)arg1 inLayoutEngine:(id)arg2;
+- (id)_lfld_constraintsAffectingVariableValueChanges;
 - (long long)_lfld_count;
 - (id)_lfld_currentLayoutMethodName;
 - (id)_lfld_description;
@@ -1337,7 +1342,7 @@
 - (double)_touchSloppinessFactor;
 - (bool)_touchesInsideShouldHideCalloutBar;
 - (bool)_tracksFocusedAncestors;
-- (void)_traitCollectionDidChangeInternal:(const struct _UIViewTraitCollectionChangeDescription { id x1; bool x2; bool x3; }*)arg1;
+- (void)_traitCollectionDidChangeInternal:(const struct _UIViewTraitCollectionChangeDescription { id x1; id x2; bool x3; bool x4; }*)arg1;
 - (id)_traitCollectionForChildEnvironment:(id)arg1;
 - (id)_traitStorageConstraints;
 - (id)_traitStorageSubviews;
@@ -1446,7 +1451,7 @@
 - (void)_withAutomaticEngineOptimizationDisabled:(id /* block */)arg1;
 - (void)_withAutomaticEngineOptimizationDisabledIfEngineExists:(id /* block */)arg1;
 - (void)_withUnsatisfiableConstraintsLoggingSuspendedIfEngineDelegateExists:(id /* block */)arg1;
-- (void)_wrappedProcessTraitCollectionDidChange:(const struct _UIViewTraitCollectionChangeDescription { id x1; bool x2; bool x3; }*)arg1 forceNotification:(bool)arg2;
+- (void)_wrappedProcessTraitCollectionDidChange:(const struct _UIViewTraitCollectionChangeDescription { id x1; id x2; bool x3; bool x4; }*)arg1 forceNotification:(bool)arg2;
 - (id)autorelease;
 - (void)dealloc;
 - (id)description;
@@ -1953,6 +1958,8 @@
 
 + (void)sf_animate:(bool)arg1 usingDefaultTimingWithOptions:(unsigned long long)arg2 animations:(id /* block */)arg3 completion:(id /* block */)arg4;
 
+- (struct CGRect { struct CGPoint { double x_1_1_1; double x_1_1_2; } x1; struct CGSize { double x_2_1_1; double x_2_1_2; } x2; })_sf_bottomUnsafeAreaFrame;
+- (struct CGRect { struct CGPoint { double x_1_1_1; double x_1_1_2; } x1; struct CGSize { double x_2_1_1; double x_2_1_2; } x2; })_sf_bottomUnsafeAreaFrameForToolbar;
 - (double)_sf_convertY:(double)arg1 toCoordinateSpace:(id)arg2;
 - (bool)_sf_hasLandscapeAspectRatio;
 - (bool)_sf_isFullScreenWidth;
@@ -2103,6 +2110,10 @@
 
 - (bool)bs_isHitTestingDisabled;
 - (void)bs_setHitTestingDisabled:(bool)arg1;
+
+// Image: /System/Library/PrivateFrameworks/BiometricKitUI.framework/BiometricKitUI
+
+- (id)bkui_debugBorder:(id)arg1 withWidth:(unsigned long long)arg2;
 
 // Image: /System/Library/PrivateFrameworks/CameraKit.framework/CameraKit
 
@@ -2309,13 +2320,36 @@
 - (id)hk_addEqualsConstraintWithItem:(id)arg1 attribute:(long long)arg2 relatedTo:(id)arg3 constant:(double)arg4;
 - (void)hk_alignCenterConstraintsWithView:(id)arg1;
 - (void)hk_alignConstraintsWithGuide:(id)arg1;
+- (void)hk_alignConstraintsWithLeadingAnchor:(id)arg1 trailingAnchor:(id)arg2 insets:(struct NSDirectionalEdgeInsets { double x1; double x2; double x3; double x4; })arg3;
+- (void)hk_alignConstraintsWithTopAnchor:(id)arg1 bottomAnchor:(id)arg2 insets:(struct NSDirectionalEdgeInsets { double x1; double x2; double x3; double x4; })arg3;
 - (void)hk_alignConstraintsWithView:(id)arg1;
+- (void)hk_alignConstraintsWithView:(id)arg1 insets:(struct NSDirectionalEdgeInsets { double x1; double x2; double x3; double x4; })arg2;
 - (void)hk_alignConstraintsWithViewController:(id)arg1;
+- (void)hk_alignHorizontalConstraintsWithGuide:(id)arg1 insets:(struct NSDirectionalEdgeInsets { double x1; double x2; double x3; double x4; })arg2;
+- (void)hk_alignHorizontalConstraintsWithView:(id)arg1 insets:(struct NSDirectionalEdgeInsets { double x1; double x2; double x3; double x4; })arg2;
 - (void)hk_alignHorizontalConstraintsWithView:(id)arg1 margin:(double)arg2;
+- (void)hk_alignVerticalConstraintsWithGuide:(id)arg1 insets:(struct NSDirectionalEdgeInsets { double x1; double x2; double x3; double x4; })arg2;
+- (void)hk_alignVerticalConstraintsWithView:(id)arg1 insets:(struct NSDirectionalEdgeInsets { double x1; double x2; double x3; double x4; })arg2;
 - (void)hk_alignVerticalConstraintsWithView:(id)arg1 margin:(double)arg2;
+- (void)hk_constraintAspectRatioFromSize:(struct CGSize { double x1; double x2; })arg1;
 - (bool)hk_isLeftToRight;
 - (double)hk_layoutHeightFittingWidth:(double)arg1;
+- (void)hk_maskAllCornersWithRadius:(double)arg1;
+- (void)hk_maskCorners:(unsigned long long)arg1 radius:(double)arg2;
 - (long long)hk_trailingTextAlignmentAtOrBelowSizeCategory:(id)arg1;
+
+// Image: /System/Library/PrivateFrameworks/HeartRhythmUI.framework/HeartRhythmUI
+
+- (void)hrui_alignConstraintsWithLeadingAnchor:(id)arg1 trailingAnchor:(id)arg2 insets:(struct NSDirectionalEdgeInsets { double x1; double x2; double x3; double x4; })arg3;
+- (void)hrui_alignConstraintsWithTopAnchor:(id)arg1 bottomAnchor:(id)arg2 insets:(struct NSDirectionalEdgeInsets { double x1; double x2; double x3; double x4; })arg3;
+- (void)hrui_alignConstraintsWithView:(id)arg1 insets:(struct NSDirectionalEdgeInsets { double x1; double x2; double x3; double x4; })arg2;
+- (void)hrui_alignHorizontalConstraintsWithGuide:(id)arg1 insets:(struct NSDirectionalEdgeInsets { double x1; double x2; double x3; double x4; })arg2;
+- (void)hrui_alignHorizontalConstraintsWithView:(id)arg1 insets:(struct NSDirectionalEdgeInsets { double x1; double x2; double x3; double x4; })arg2;
+- (void)hrui_alignVerticalConstraintsWithGuide:(id)arg1 insets:(struct NSDirectionalEdgeInsets { double x1; double x2; double x3; double x4; })arg2;
+- (void)hrui_alignVerticalConstraintsWithView:(id)arg1 insets:(struct NSDirectionalEdgeInsets { double x1; double x2; double x3; double x4; })arg2;
+- (void)hrui_constraintAspectRatioFromSize:(struct CGSize { double x1; double x2; })arg1;
+- (void)hrui_maskAllCornersWithRadius:(double)arg1;
+- (void)hrui_maskCorners:(unsigned long long)arg1 radius:(double)arg2;
 
 // Image: /System/Library/PrivateFrameworks/HomeUI.framework/HomeUI
 

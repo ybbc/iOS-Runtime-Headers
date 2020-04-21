@@ -8,9 +8,9 @@
     NSString * _urlString;
 }
 
-@property (nonatomic, retain) NSArray *childBookmarks;
-@property (nonatomic, retain) NSString *name;
-@property (nonatomic, retain) NSString *urlString;
+@property (nonatomic, copy) NSArray *childBookmarks;
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *urlString;
 
 + (bool)supportsSecureCoding;
 

@@ -13,6 +13,7 @@
     UIColor * _defaultTimeCellDetailTextColor;
     <STAllowanceDetailListControllerDelegate> * _delegate;
     bool  _didDeleteAllowance;
+    bool  _isEditItemsButtonHidden;
     bool  _isSetupController;
     PSSpecifier * _selectedTimeSpecifier;
     PSSpecifier * _timeGroupSpecifier;
@@ -33,6 +34,7 @@
 @property (readonly, copy) NSString *description;
 @property bool didDeleteAllowance;
 @property (readonly) unsigned long long hash;
+@property (nonatomic) bool isEditItemsButtonHidden;
 @property (nonatomic) bool isSetupController;
 @property (nonatomic, retain) PSSpecifier *selectedTimeSpecifier;
 @property (readonly) Class superclass;
@@ -68,6 +70,7 @@
 - (bool)hasSetBudgetTime;
 - (bool)hasSetBudgetTimeOrCustomSchedule;
 - (id)initWithCoordinator:(id)arg1;
+- (bool)isEditItemsButtonHidden;
 - (bool)isSetupController;
 - (void)loadView;
 - (void)saveButtonTapped:(id)arg1;
@@ -82,6 +85,7 @@
 - (void)setDefaultTimeCellDetailTextColor:(id)arg1;
 - (void)setDelegate:(id)arg1;
 - (void)setDidDeleteAllowance:(bool)arg1;
+- (void)setIsEditItemsButtonHidden:(bool)arg1;
 - (void)setIsSetupController:(bool)arg1;
 - (void)setSelectedTimeSpecifier:(id)arg1;
 - (void)setTimeGroupSpecifier:(id)arg1;

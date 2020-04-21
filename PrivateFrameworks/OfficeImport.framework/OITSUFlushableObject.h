@@ -5,8 +5,8 @@
 @interface OITSUFlushableObject : NSObject <TSUFlushable> {
     OITSUFlushingManager * _flushingManager;
     NSObject<NSLocking> * _flushingManagerIvarLock;
-    int  _ownerCount;
-    int  _retainCount;
+    _Atomic int  _ownerCount;
+    _Atomic int  _retainCount;
 }
 
 @property (readonly, copy) NSString *debugDescription;

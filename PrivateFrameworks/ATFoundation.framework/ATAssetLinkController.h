@@ -26,7 +26,7 @@
 - (void)_assetsDidChange;
 - (bool)_canEnqueueAsset:(id)arg1;
 - (bool)_canEnqueueAsset:(id)arg1 onLink:(id)arg2;
-- (void)_cancelAsset:(id)arg1 withError:(id)arg2;
+- (void)_cancelAssets:(id)arg1 withError:(id)arg2;
 - (void)_finishAsset:(id)arg1 withError:(id)arg2;
 - (void)_handleEnqueue:(id)arg1 onLink:(id)arg2 withPriority:(bool)arg3;
 - (void)_performSelectorOnObservers:(SEL)arg1 object:(id)arg2 object:(id)arg3;

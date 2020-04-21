@@ -9,7 +9,7 @@
     PPKVOObserver * _defaultsOverrideObserver;
     PPDeletionTracker * _deletionTracker;
     unsigned long long  _hardFetchLimit;
-    bool  _isCacheInvalidated;
+    _Atomic bool  _isCacheInvalidated;
     _PASLock * _lock;
     id  _remoteDeletionObserver;
 }

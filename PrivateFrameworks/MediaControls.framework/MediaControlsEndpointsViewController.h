@@ -92,6 +92,7 @@
 - (void)setSelectedRoute:(id)arg1;
 - (void)startPrewarming;
 - (void)stopPrewarming;
+- (void)updateContentInsets;
 - (void)viewDidDisappear:(bool)arg1;
 - (void)viewDidLayoutSubviews;
 - (void)viewDidLoad;

@@ -448,6 +448,17 @@
 - (unsigned long long)pk_unsignedIntegerForKey:(id)arg1;
 - (id)pk_urlForKey:(id)arg1;
 
+// Image: /System/Library/PrivateFrameworks/RTTUtilities.framework/RTTUtilities
+
+- (id)data;
+- (bool)hasLargeDataAsset;
+- (id)largeDataAsset;
+- (void)setData:(id)arg1;
+- (void)setHasLargeDataAsset:(bool)arg1;
+- (void)setLargeDataAsset:(id)arg1;
+- (void)setVersion:(id)arg1;
+- (id)version;
+
 // Image: /System/Library/PrivateFrameworks/SafariCore.framework/SafariCore
 
 - (id)safari_arrayForKey:(id)arg1;

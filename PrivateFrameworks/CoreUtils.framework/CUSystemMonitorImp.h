@@ -31,6 +31,7 @@
     int  _powerSourceToken;
     bool  _powerUnlimited;
     bool  _primaryAppleIDIsHSA2;
+    int  _primaryAppleIDNotifyToken;
     bool  _primaryAppleIDObserving;
     union { 
         struct sockaddr { 
@@ -92,6 +93,7 @@
             unsigned int sin6_scope_id; 
         } v6; 
     }  _primaryIPv6Addr;
+    NSString * _primaryNetworkSignature;
     struct { 
         unsigned char bytes[6]; 
     }  _rotatingIdentifier48;

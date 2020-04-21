@@ -4,6 +4,7 @@
 
 @interface PKPassFooterView : UIView <PKForegroundActiveArbiterObserver, PKPassFooterContentViewDelegate, PKUIForegroundActiveArbiterDeactivationObserver> {
     bool  _acquiringSession;
+    long long  _coachingState;
     PKPassFooterContentView * _contentView;
     unsigned char  _contentViewVisibility;
     <PKPassFooterViewDelegate> * _delegate;
@@ -21,6 +22,7 @@
     unsigned char  _visibility;
 }
 
+@property (nonatomic, readonly) long long coachingState;
 @property (readonly, copy) NSString *debugDescription;
 @property (nonatomic) <PKPassFooterViewDelegate> *delegate;
 @property (readonly, copy) NSString *description;
@@ -45,11 +47,13 @@
 - (void)_endSession;
 - (void)_endSessionStartTimer;
 - (void)_lostModeButtonTapped;
+- (void)_setCoachingState:(long long)arg1;
 - (void)_setContentView:(id)arg1 animated:(bool)arg2;
 - (void)_setUserIntentRequired:(bool)arg1;
 - (void)_startContactlessInterfaceSessionWithContext:(id)arg1 sessionAvailable:(id /* block */)arg2 sessionUnavailable:(id /* block */)arg3;
 - (void)_updateForForegroundActivePresentationIfNecessaryAnimated:(bool)arg1;
 - (void)_updateForNonForegroundActivePresentationAnimated:(bool)arg1;
+- (long long)coachingState;
 - (void)configureForState:(long long)arg1 context:(id)arg2 passView:(id)arg3;
 - (void)dealloc;
 - (id)delegate;
@@ -64,6 +68,7 @@
 - (bool)isUserIntentRequired;
 - (void)layoutSubviews;
 - (void)passFooterContentViewDidBeginAuthenticating:(id)arg1;
+- (void)passFooterContentViewDidChangeCoachingState:(id)arg1;
 - (void)passFooterContentViewDidChangeUserIntentRequirement:(id)arg1;
 - (void)passFooterContentViewDidEndAuthenticating:(id)arg1;
 - (void)passFooterContentViewRequestsSessionSuppression:(id)arg1;

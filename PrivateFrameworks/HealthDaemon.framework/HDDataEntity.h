@@ -25,7 +25,7 @@
 + (id)anyInDatabase:(id)arg1 predicate:(id)arg2 error:(id*)arg3;
 + (Class)baseDataEntityClass;
 + (id)codableObjectsFromObjectCollection:(id)arg1;
-+ (const struct { id x1; unsigned char x2; }*)columnDefinitionsWithCount:(unsigned long long*)arg1;
++ (const struct { id x1; id x2; unsigned char x3; }*)columnDefinitionsWithCount:(unsigned long long*)arg1;
 + (id)columnNameForSortIdentifier:(id)arg1;
 + (id)columnNamesForTimeOffset;
 + (long long)countOfObjectsWithPredicate:(id)arg1 healthDatabase:(id)arg2 error:(id*)arg3;

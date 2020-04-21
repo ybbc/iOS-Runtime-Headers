@@ -15,6 +15,7 @@
 @property (nonatomic, readonly) long long requiredForYouContentTypes;
 @property (readonly) Class superclass;
 
+- (bool)emitsSingleRefreshSessionGroups;
 - (id)emittableGroupTypes;
 - (id)groupEmitterIdentifier;
 - (bool)insertEveryRefreshSession;

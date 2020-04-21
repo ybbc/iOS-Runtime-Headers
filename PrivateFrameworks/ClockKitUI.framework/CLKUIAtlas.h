@@ -4,7 +4,7 @@
 
 @interface CLKUIAtlas : NSObject {
     unsigned long long  _height;
-    int  _instanceCount;
+    _Atomic int  _instanceCount;
     unsigned long long  _status;
     NSString * _uuid;
     unsigned long long  _width;

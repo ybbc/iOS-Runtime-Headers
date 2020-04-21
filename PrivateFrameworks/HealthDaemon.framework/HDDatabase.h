@@ -19,7 +19,7 @@
         struct DataStore {} *__ptr_; 
         struct __shared_weak_count {} *__cntrl_; 
     }  _highFrequencyDataStore;
-    bool  _invalidated;
+    _Atomic bool  _invalidated;
     bool  _isObservingContentProtection;
     HDDatabaseJournal * _journal;
     NSObject<OS_dispatch_group> * _journalGroup;

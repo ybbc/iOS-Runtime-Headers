@@ -20,6 +20,7 @@
 - (void)_accessOrEnqueueDataRequest:(id /* block */)arg1 error:(id /* block */)arg2;
 - (void)_clearConnection;
 - (void)_finishProcessingData;
+- (void)_invalidateConnection;
 - (void)_notifyObserver;
 - (void)_queue_fetchPredicitions;
 - (void)_queue_setupConnection;
@@ -28,7 +29,6 @@
 - (void)fetchFirstPerformedActionDate:(id /* block */)arg1;
 - (void)fetchPerformedTodayCountForActionWithBundleIdentifer:(id)arg1 actionIdentifier:(unsigned long long)arg2 completion:(id /* block */)arg3;
 - (void)fetchPredictedActions:(id /* block */)arg1;
-- (void)forceDonationsRefresh;
 - (id)init;
 - (id)observer;
 - (void)setObserver:(id)arg1;

@@ -35,7 +35,7 @@
 - (id)multisampleFBOResource;
 - (struct FramebufferAttributes { int x1; long long x2; int x3; int x4; int x5; bool x6; bool x7; })p_clampedAttributes;
 - (bool)p_createMultisampleFBOOnDemandInsideSession:(id)arg1 returningResolveFramebufferActivated:(bool*)arg2;
-- (struct SessionLoadResourceResult { bool x1; bool x2; bool x3; id x4; })p_loadFramebufferInSession:(id)arg1;
+- (struct SessionLoadResourceResult { bool x1; bool x2; bool x3; id x4; id x5; })p_loadFramebufferInSession:(id)arg1;
 - (bool)p_supportsMultisample;
 - (void)resolveInSession:(id)arg1;
 - (bool)resolved;

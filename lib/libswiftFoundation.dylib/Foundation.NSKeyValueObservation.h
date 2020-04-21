@@ -11,16 +11,16 @@
 @property (nonatomic) NSObject *object;
 @property (nonatomic, readonly) NSString *path;
 
-+ (void)setSwizzler;
++ (void)setSwizzler:(id)arg1;
 + (id)swizzler;
 
 - (id /* block */).cxx_destruct;
-- (void)_swizzle_me_observeValueForKeyPathofchangecontext;
+- (void)_swizzle_me_observeValueForKeyPath:(id)arg1 of:(id)arg2 change:(id)arg3 context:(void*)arg4;
 - (void)dealloc;
 - (id)init;
 - (void)invalidate;
 - (id)object;
 - (id)path;
-- (void)setObject;
+- (void)setObject:(id)arg1;
 
 @end

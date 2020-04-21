@@ -103,7 +103,6 @@
 - (void)_transitionToDisplayMode:(long long)arg1 usingTransitionCoordinator:(id)arg2 assumingSize:(struct CGSize { double x1; double x2; })arg3;
 - (void)_transitionToVisible:(bool)arg1;
 - (void)_transitionTopAndBottomViewControllersToVisible:(bool)arg1 completion:(id /* block */)arg2;
-- (void)_updateContentInsets;
 - (void)_updateContentSize;
 - (void)_updateFrameForViewController:(id)arg1 atIndex:(long long)arg2 withCoordinator:(id)arg3 assumingSize:(struct CGSize { double x1; double x2; })arg4;
 - (void)_updateFramesForActiveViewControllersWithCoordinator:(id)arg1 assumingSize:(struct CGSize { double x1; double x2; })arg2;
@@ -149,6 +148,7 @@
 - (void)setTapGestureRecognizer:(id)arg1;
 - (bool)shouldAutomaticallyForwardAppearanceMethods;
 - (id)tapGestureRecognizer;
+- (void)updateContentInsets;
 - (id)viewControllerForItemAtIndex:(long long)arg1;
 - (id)viewControllerForItemAtPoint:(struct CGPoint { double x1; double x2; })arg1;
 - (id)viewControllerForSelectedItem;

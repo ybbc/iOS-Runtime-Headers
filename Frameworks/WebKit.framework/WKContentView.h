@@ -358,7 +358,7 @@
             double scale; 
         } m_history[3]; 
     }  _historicalKinematicData;
-    /* Warning: unhandled struct encoding: '{WeakObjCPtr<id<UITextInputDelegate> >="m_weakReference"@}' */ struct WeakObjCPtr<id<UITextInputDelegate> > { 
+    struct WeakObjCPtr<id<UITextInputDelegate> > { 
         id m_weakReference; 
     }  _inputDelegate;
     struct RetainPtr<NSObject<WKFormPeripheral> > { 
@@ -390,7 +390,7 @@
     bool  _isExpectingFastSingleTapCommit;
     bool  _isPrintingToPDF;
     bool  _isTapHighlightIDValid;
-    id /* block */  _keyWebEventHandler;
+    struct BlockPtr<void (WebEvent *, bool)>="m_block"@? {}  _keyWebEventHandler;
     struct CGPoint { 
         double x; 
         double y; 
@@ -799,8 +799,6 @@
 @property (nonatomic) bool useInterfaceLanguageForLocalization;
 @property (nonatomic) struct _NSRange { unsigned long long x1; unsigned long long x2; } validTextRange;
 
-// Image: /System/Library/Frameworks/WebKit.framework/WebKit
-
 - (id).cxx_construct;
 - (void).cxx_destruct;
 - (void)_accessibilityClearSelection;
@@ -827,7 +825,7 @@
 - (unsigned int)_characterBeforeCaretSelection;
 - (unsigned int)_characterInRelationToCaretSelection:(int)arg1;
 - (void)_commitPotentialTapFailed;
-- (id)_commonInitializationWithProcessPool:(struct WebProcessPool { int (**x1)(); id x2; int (*x3)(); struct Ref<API::ProcessPoolConfiguration, WTF::DumbPtrTraits<API::ProcessPoolConfiguration> > { struct ProcessPoolConfiguration {} *x_4_1_1; } x4; struct MessageReceiverMap { struct HashMap<IPC::StringReference, IPC::MessageReceiver *, IPC::StringReference::Hash, WTF::HashTraits<IPC::StringReference>, WTF::HashTraits<IPC::MessageReceiver *> > { struct HashTable<IPC::StringReference, WTF::KeyValuePair<IPC::StringReference, IPC::MessageReceiver *>, WTF::KeyValuePairKeyExtractor<WTF::KeyValuePair<IPC::StringReference, IPC::MessageReceiver *> >, IPC::StringReference::Hash, WTF::HashMap<IPC::StringReference, IPC::MessageReceiver *, IPC::StringReference::Hash, WTF::HashTraits<IPC::StringReference>, WTF::HashTraits<IPC::MessageReceiver *> >::KeyValuePairTraits, WTF::HashTraits<IPC::StringReference> > { struct KeyValuePair<IPC::StringReference, IPC::MessageReceiver *> {} *x_1_3_1; unsigned int x_1_3_2; unsigned int x_1_3_3; unsigned int x_1_3_4; unsigned int x_1_3_5; } x_1_2_1; } x_5_1_1; struct HashMap<std::__1::pair<IPC::StringReference, unsigned long long>, IPC::MessageReceiver *, WTF::PairHash<IPC::StringReference, unsigned long long>, WTF::HashTraits<std::__1::pair<IPC::StringReference, unsigned long long> >, WTF::HashTraits<IPC::MessageReceiver *> > { struct HashTable<std::__1::pair<IPC::StringReference, unsigned long long>, WTF::KeyValuePair<std::__1::pair<IPC::StringReference, unsigned long long>, IPC::MessageReceiver *>, WTF::KeyValuePairKeyExtractor<WTF::KeyValuePair<std::__1::pair<IPC::StringReference, unsigned long long>, IPC::MessageReceiver *> >, WTF::PairHash<IPC::StringReference, unsigned long long>, WTF::HashMap<std::__1::pair<IPC::StringReference, unsigned long long>, IPC::MessageReceiver *, WTF::PairHash<IPC::StringReference, unsigned long long>, WTF::HashTraits<std::__1::pair<IPC::StringReference, unsigned long long> >, WTF::HashTraits<IPC::MessageReceiver *> >::KeyValuePairTraits, WTF::HashTraits<std::__1::pair<IPC::StringReference, unsigned long long> > > { struct KeyValuePair<std::__1::pair<IPC::StringReference, unsigned long long>, IPC::MessageReceiver *> {} *x_1_3_1; unsigned int x_1_3_2; unsigned int x_1_3_3; unsigned int x_1_3_4; unsigned int x_1_3_5; } x_2_2_1; } x_5_1_2; } x5; }*)arg1 configuration:(struct Ref<API::PageConfiguration, WTF::DumbPtrTraits<API::PageConfiguration> > { struct PageConfiguration {} *x1; }*)arg2;
+- (id)_commonInitializationWithProcessPool:(struct WebProcessPool { int (**x1)(); id x2; int (**x3)(); struct Ref<API::ProcessPoolConfiguration, WTF::DumbPtrTraits<API::ProcessPoolConfiguration> > { struct ProcessPoolConfiguration {} *x_4_1_1; } x4; struct MessageReceiverMap { struct HashMap<IPC::StringReference, IPC::MessageReceiver *, IPC::StringReference::Hash, WTF::HashTraits<IPC::StringReference>, WTF::HashTraits<IPC::MessageReceiver *> > { struct HashTable<IPC::StringReference, WTF::KeyValuePair<IPC::StringReference, IPC::MessageReceiver *>, WTF::KeyValuePairKeyExtractor<WTF::KeyValuePair<IPC::StringReference, IPC::MessageReceiver *> >, IPC::StringReference::Hash, WTF::HashMap<IPC::StringReference, IPC::MessageReceiver *, IPC::StringReference::Hash, WTF::HashTraits<IPC::StringReference>, WTF::HashTraits<IPC::MessageReceiver *> >::KeyValuePairTraits, WTF::HashTraits<IPC::StringReference> > { struct KeyValuePair<IPC::StringReference, IPC::MessageReceiver *> {} *x_1_3_1; unsigned int x_1_3_2; unsigned int x_1_3_3; unsigned int x_1_3_4; unsigned int x_1_3_5; } x_1_2_1; } x_5_1_1; struct HashMap<std::__1::pair<IPC::StringReference, unsigned long long>, IPC::MessageReceiver *, WTF::PairHash<IPC::StringReference, unsigned long long>, WTF::HashTraits<std::__1::pair<IPC::StringReference, unsigned long long> >, WTF::HashTraits<IPC::MessageReceiver *> > { struct HashTable<std::__1::pair<IPC::StringReference, unsigned long long>, WTF::KeyValuePair<std::__1::pair<IPC::StringReference, unsigned long long>, IPC::MessageReceiver *>, WTF::KeyValuePairKeyExtractor<WTF::KeyValuePair<std::__1::pair<IPC::StringReference, unsigned long long>, IPC::MessageReceiver *> >, WTF::PairHash<IPC::StringReference, unsigned long long>, WTF::HashMap<std::__1::pair<IPC::StringReference, unsigned long long>, IPC::MessageReceiver *, WTF::PairHash<IPC::StringReference, unsigned long long>, WTF::HashTraits<std::__1::pair<IPC::StringReference, unsigned long long> >, WTF::HashTraits<IPC::MessageReceiver *> >::KeyValuePairTraits, WTF::HashTraits<std::__1::pair<IPC::StringReference, unsigned long long> > > { struct KeyValuePair<std::__1::pair<IPC::StringReference, unsigned long long>, IPC::MessageReceiver *> {} *x_1_3_1; unsigned int x_1_3_2; unsigned int x_1_3_3; unsigned int x_1_3_4; unsigned int x_1_3_5; } x_2_2_1; } x_5_1_2; } x5; }*)arg1 configuration:(struct Ref<API::PageConfiguration, WTF::DumbPtrTraits<API::PageConfiguration> > { struct PageConfiguration {} *x1; }*)arg2;
 - (struct CGRect { struct CGPoint { double x_1_1_1; double x_1_1_2; } x1; struct CGSize { double x_2_1_1; double x_2_1_2; } x2; })_computeUnobscuredContentRectRespectingInputViewBounds:(struct CGRect { struct CGPoint { double x_1_1_1; double x_1_1_2; } x1; struct CGSize { double x_2_1_1; double x_2_1_2; } x2; })arg1 inputViewBounds:(struct CGRect { struct CGPoint { double x_1_1_1; double x_1_1_2; } x1; struct CGSize { double x_2_1_1; double x_2_1_2; } x2; })arg2;
 - (id)_contentsOfUserInterfaceItem:(id)arg1;
 - (void)_createAndConfigureDoubleTapGestureRecognizer;
@@ -931,6 +929,7 @@
 - (bool)_scrollToRect:(struct CGRect { struct CGPoint { double x_1_1_1; double x_1_1_2; } x1; struct CGSize { double x_2_1_1; double x_2_1_2; } x2; })arg1 withOrigin:(struct CGPoint { double x1; double x2; })arg2 minimumScrollDistance:(double)arg3;
 - (id)_scroller;
 - (bool)_selectionAtDocumentStart;
+- (void)_selectionChanged;
 - (struct CGRect { struct CGPoint { double x_1_1_1; double x_1_1_2; } x1; struct CGSize { double x_2_1_1; double x_2_1_2; } x2; })_selectionClipRect;
 - (void)_setAcceleratedCompositingRootView:(id)arg1;
 - (void)_setAccessibilityWebProcessToken:(id)arg1;
@@ -1083,7 +1082,7 @@
 - (bool)hasSelection;
 - (bool)hasText;
 - (id)hitTest:(struct CGPoint { double x1; double x2; })arg1 withEvent:(id)arg2;
-- (id)initWithFrame:(struct CGRect { struct CGPoint { double x_1_1_1; double x_1_1_2; } x1; struct CGSize { double x_2_1_1; double x_2_1_2; } x2; })arg1 processPool:(struct WebProcessPool { int (**x1)(); id x2; int (*x3)(); struct Ref<API::ProcessPoolConfiguration, WTF::DumbPtrTraits<API::ProcessPoolConfiguration> > { struct ProcessPoolConfiguration {} *x_4_1_1; } x4; struct MessageReceiverMap { struct HashMap<IPC::StringReference, IPC::MessageReceiver *, IPC::StringReference::Hash, WTF::HashTraits<IPC::StringReference>, WTF::HashTraits<IPC::MessageReceiver *> > { struct HashTable<IPC::StringReference, WTF::KeyValuePair<IPC::StringReference, IPC::MessageReceiver *>, WTF::KeyValuePairKeyExtractor<WTF::KeyValuePair<IPC::StringReference, IPC::MessageReceiver *> >, IPC::StringReference::Hash, WTF::HashMap<IPC::StringReference, IPC::MessageReceiver *, IPC::StringReference::Hash, WTF::HashTraits<IPC::StringReference>, WTF::HashTraits<IPC::MessageReceiver *> >::KeyValuePairTraits, WTF::HashTraits<IPC::StringReference> > { struct KeyValuePair<IPC::StringReference, IPC::MessageReceiver *> {} *x_1_3_1; unsigned int x_1_3_2; unsigned int x_1_3_3; unsigned int x_1_3_4; unsigned int x_1_3_5; } x_1_2_1; } x_5_1_1; struct HashMap<std::__1::pair<IPC::StringReference, unsigned long long>, IPC::MessageReceiver *, WTF::PairHash<IPC::StringReference, unsigned long long>, WTF::HashTraits<std::__1::pair<IPC::StringReference, unsigned long long> >, WTF::HashTraits<IPC::MessageReceiver *> > { struct HashTable<std::__1::pair<IPC::StringReference, unsigned long long>, WTF::KeyValuePair<std::__1::pair<IPC::StringReference, unsigned long long>, IPC::MessageReceiver *>, WTF::KeyValuePairKeyExtractor<WTF::KeyValuePair<std::__1::pair<IPC::StringReference, unsigned long long>, IPC::MessageReceiver *> >, WTF::PairHash<IPC::StringReference, unsigned long long>, WTF::HashMap<std::__1::pair<IPC::StringReference, unsigned long long>, IPC::MessageReceiver *, WTF::PairHash<IPC::StringReference, unsigned long long>, WTF::HashTraits<std::__1::pair<IPC::StringReference, unsigned long long> >, WTF::HashTraits<IPC::MessageReceiver *> >::KeyValuePairTraits, WTF::HashTraits<std::__1::pair<IPC::StringReference, unsigned long long> > > { struct KeyValuePair<std::__1::pair<IPC::StringReference, unsigned long long>, IPC::MessageReceiver *> {} *x_1_3_1; unsigned int x_1_3_2; unsigned int x_1_3_3; unsigned int x_1_3_4; unsigned int x_1_3_5; } x_2_2_1; } x_5_1_2; } x5; }*)arg2 configuration:(struct Ref<API::PageConfiguration, WTF::DumbPtrTraits<API::PageConfiguration> > { struct PageConfiguration {} *x1; }*)arg3 webView:(id)arg4;
+- (id)initWithFrame:(struct CGRect { struct CGPoint { double x_1_1_1; double x_1_1_2; } x1; struct CGSize { double x_2_1_1; double x_2_1_2; } x2; })arg1 processPool:(struct WebProcessPool { int (**x1)(); id x2; int (**x3)(); struct Ref<API::ProcessPoolConfiguration, WTF::DumbPtrTraits<API::ProcessPoolConfiguration> > { struct ProcessPoolConfiguration {} *x_4_1_1; } x4; struct MessageReceiverMap { struct HashMap<IPC::StringReference, IPC::MessageReceiver *, IPC::StringReference::Hash, WTF::HashTraits<IPC::StringReference>, WTF::HashTraits<IPC::MessageReceiver *> > { struct HashTable<IPC::StringReference, WTF::KeyValuePair<IPC::StringReference, IPC::MessageReceiver *>, WTF::KeyValuePairKeyExtractor<WTF::KeyValuePair<IPC::StringReference, IPC::MessageReceiver *> >, IPC::StringReference::Hash, WTF::HashMap<IPC::StringReference, IPC::MessageReceiver *, IPC::StringReference::Hash, WTF::HashTraits<IPC::StringReference>, WTF::HashTraits<IPC::MessageReceiver *> >::KeyValuePairTraits, WTF::HashTraits<IPC::StringReference> > { struct KeyValuePair<IPC::StringReference, IPC::MessageReceiver *> {} *x_1_3_1; unsigned int x_1_3_2; unsigned int x_1_3_3; unsigned int x_1_3_4; unsigned int x_1_3_5; } x_1_2_1; } x_5_1_1; struct HashMap<std::__1::pair<IPC::StringReference, unsigned long long>, IPC::MessageReceiver *, WTF::PairHash<IPC::StringReference, unsigned long long>, WTF::HashTraits<std::__1::pair<IPC::StringReference, unsigned long long> >, WTF::HashTraits<IPC::MessageReceiver *> > { struct HashTable<std::__1::pair<IPC::StringReference, unsigned long long>, WTF::KeyValuePair<std::__1::pair<IPC::StringReference, unsigned long long>, IPC::MessageReceiver *>, WTF::KeyValuePairKeyExtractor<WTF::KeyValuePair<std::__1::pair<IPC::StringReference, unsigned long long>, IPC::MessageReceiver *> >, WTF::PairHash<IPC::StringReference, unsigned long long>, WTF::HashMap<std::__1::pair<IPC::StringReference, unsigned long long>, IPC::MessageReceiver *, WTF::PairHash<IPC::StringReference, unsigned long long>, WTF::HashTraits<std::__1::pair<IPC::StringReference, unsigned long long> >, WTF::HashTraits<IPC::MessageReceiver *> >::KeyValuePairTraits, WTF::HashTraits<std::__1::pair<IPC::StringReference, unsigned long long> > > { struct KeyValuePair<std::__1::pair<IPC::StringReference, unsigned long long>, IPC::MessageReceiver *> {} *x_1_3_1; unsigned int x_1_3_2; unsigned int x_1_3_3; unsigned int x_1_3_4; unsigned int x_1_3_5; } x_2_2_1; } x_5_1_2; } x5; }*)arg2 configuration:(struct Ref<API::PageConfiguration, WTF::DumbPtrTraits<API::PageConfiguration> > { struct PageConfiguration {} *x1; }*)arg3 webView:(id)arg4;
 - (id)inputAccessoryView;
 - (id)inputDelegate;
 - (id)inputView;
@@ -1113,7 +1112,7 @@
 - (id)nextUnperturbedDictationResultBoundaryFromPosition:(id)arg1;
 - (void)observeValueForKeyPath:(id)arg1 ofObject:(id)arg2 change:(id)arg3 context:(void*)arg4;
 - (long long)offsetFromPosition:(id)arg1 toPosition:(id)arg2;
-- (struct WebPageProxy { int (**x1)(); id x2; int (*x3)(); int (**x4)(); int (**x5)(); struct WeakPtrFactory<WebKit::WebPageProxy> { struct RefPtr<WTF::WeakReference<WebKit::WebPageProxy>, WTF::DumbPtrTraits<WTF::WeakReference<WebKit::WebPageProxy> > > { struct WeakReference<WebKit::WebPageProxy> {} *x_1_2_1; } x_6_1_1; } x6; struct RetainPtr<NSArray> { void *x_7_1_1; } x7; struct PageClient {} *x8; struct Ref<API::PageConfiguration, WTF::DumbPtrTraits<API::PageConfiguration> > { struct PageConfiguration {} *x_9_1_1; } x9; struct unique_ptr<API::LoaderClient, std::__1::default_delete<API::LoaderClient> > { struct __compressed_pair<API::LoaderClient *, std::__1::default_delete<API::LoaderClient> > { struct LoaderClient {} *x_1_2_1; } x_10_1_1; } x10; struct unique_ptr<API::PolicyClient, std::__1::default_delete<API::PolicyClient> > { struct __compressed_pair<API::PolicyClient *, std::__1::default_delete<API::PolicyClient> > { struct PolicyClient {} *x_1_2_1; } x_11_1_1; } x11; struct unique_ptr<API::NavigationClient, std::__1::default_delete<API::NavigationClient> > { struct __compressed_pair<API::NavigationClient *, std::__1::default_delete<API::NavigationClient> > { struct NavigationClient {} *x_1_2_1; } x_12_1_1; } x12; }*)page;
+- (struct WebPageProxy { int (**x1)(); id x2; int (**x3)(); int (**x4)(); int (**x5)(); struct WeakPtrFactory<WebKit::WebPageProxy> { struct RefPtr<WTF::WeakReference<WebKit::WebPageProxy>, WTF::DumbPtrTraits<WTF::WeakReference<WebKit::WebPageProxy> > > { struct WeakReference<WebKit::WebPageProxy> {} *x_1_2_1; } x_6_1_1; } x6; struct RetainPtr<NSArray> { void *x_7_1_1; } x7; struct PageClient {} *x8; struct Ref<API::PageConfiguration, WTF::DumbPtrTraits<API::PageConfiguration> > { struct PageConfiguration {} *x_9_1_1; } x9; struct unique_ptr<API::LoaderClient, std::__1::default_delete<API::LoaderClient> > { struct __compressed_pair<API::LoaderClient *, std::__1::default_delete<API::LoaderClient> > { struct LoaderClient {} *x_1_2_1; } x_10_1_1; } x10; struct unique_ptr<API::PolicyClient, std::__1::default_delete<API::PolicyClient> > { struct __compressed_pair<API::PolicyClient *, std::__1::default_delete<API::PolicyClient> > { struct PolicyClient {} *x_1_2_1; } x_11_1_1; } x11; struct unique_ptr<API::NavigationClient, std::__1::default_delete<API::NavigationClient> > { struct __compressed_pair<API::NavigationClient *, std::__1::default_delete<API::NavigationClient> > { struct NavigationClient {} *x_1_2_1; } x_12_1_1; } x12; }*)page;
 - (void)paste:(id)arg1;
 - (void)pasteForWebView:(id)arg1;
 - (bool)pointIsNearMarkedText:(struct CGPoint { double x1; double x2; })arg1;
@@ -1177,6 +1176,7 @@
 - (void)setSizeChangedSinceLastVisibleContentRectUpdate:(bool)arg1;
 - (void)setSuppressAssistantSelectionView:(bool)arg1;
 - (void)setTimePickerValueToHour:(long long)arg1 minute:(long long)arg2;
+- (void)setUpTextSelectionAssistant;
 - (void)setupDataInteractionDelegates;
 - (void)setupInteraction;
 - (bool)shouldHideSelectionWhenScrolling;
@@ -1214,7 +1214,6 @@
 - (void)updatePositionInformationForActionSheetAssistant:(id)arg1;
 - (void)updateSelectionWithExtentPoint:(struct CGPoint { double x1; double x2; })arg1 completionHandler:(id /* block */)arg2;
 - (void)updateSelectionWithExtentPoint:(struct CGPoint { double x1; double x2; })arg1 withBoundary:(long long)arg2 completionHandler:(id /* block */)arg3;
-- (void)useSelectionAssistantWithGranularity:(long long)arg1;
 - (id)webSelectionAssistant;
 - (id)webSelectionRects;
 - (id)webSelectionRectsForSelectionRects:(const struct Vector<WebCore::SelectionRect, 0, WTF::CrashOnOverflow, 16> { struct SelectionRect {} *x1; unsigned int x2; unsigned int x3; }*)arg1;
@@ -1223,30 +1222,5 @@
 - (void)willStartZoomOrScroll;
 - (id)wordContainingCaretSelection;
 - (id)wordRangeContainingCaretSelection;
-
-// Image: /System/Library/AccessibilityBundles/QuickSpeak.bundle/QuickSpeak
-
-+ (Class)safeCategoryBaseClass;
-
-- (void)_accessibilityDidGetSelectionRects:(id)arg1 withGranularity:(long long)arg2 atOffset:(long long)arg3;
-- (id)_accessibilityQuickSpeakContent;
-- (id)_accessibilityRetrieveRectsForGuanularity:(long long)arg1 atSelectionOffset:(long long)arg2 wordText:(id)arg3;
-- (bool)_accessibilityShouldShowSpeakBubble;
-- (bool)_accessibilityShouldShowSpeakLanguageBubble;
-- (bool)_accessibilityShouldShowSpeakSpellOut;
-- (bool)_accessibilityShouldUpdateQuickSpeakContent;
-- (id)_accessibilitySpeakSelectionTextInputResponder;
-- (id)_accessibilitySpeakTextSelectionViews;
-- (bool)_accessibilitySystemShouldShowSpeakBubble;
-- (unsigned long long)_axSelectedTextLength;
-- (void)_axWaitForSpeakSelectionContentResults;
-- (void)_axWaitForSpeakSelectionRectResultsForGuanularity:(long long)arg1 atSelectionOffset:(long long)arg2 wordText:(id)arg3;
-- (void)_selectionChanged;
-- (id)_webTextRectsFromWKTextRects:(id)arg1;
-- (id)accessibilityQSSentenceRects;
-- (id)accessibilityQSWordRects;
-- (void)accessibilitySetQSSentenceRects:(id)arg1;
-- (void)accessibilitySetQSWordRects:(id)arg1;
-- (void)accessibilitySpeakSelectionSetContent:(id)arg1;
 
 @end

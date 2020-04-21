@@ -4,6 +4,7 @@
 
 @interface RPRemoteDisplaySession : NSObject <NSSecureCoding, RPAuthenticatable, RPMessageable, RPRemoteDisplayXPCClientInterface> {
     bool  _activateCalled;
+    id /* block */  _authCompletionHandler;
     CUBonjourDevice * _bonjourDevice;
     RPRemoteDisplayDevice * _daemonDevice;
     RPRemoteDisplayDevice * _destinationDevice;
@@ -29,6 +30,7 @@
     NSXPCConnection * _xpcCnx;
 }
 
+@property (nonatomic, copy) id /* block */ authCompletionHandler;
 @property (nonatomic, retain) CUBonjourDevice *bonjourDevice;
 @property (nonatomic, retain) RPRemoteDisplayDevice *daemonDevice;
 @property (nonatomic, retain) RPRemoteDisplayDevice *destinationDevice;
@@ -59,6 +61,7 @@
 - (void)_sendEventID:(id)arg1 event:(id)arg2 destinationID:(id)arg3 options:(id)arg4 completion:(id /* block */)arg5;
 - (void)_sendRequestID:(id)arg1 request:(id)arg2 destinationID:(id)arg3 options:(id)arg4 responseHandler:(id /* block */)arg5;
 - (void)activateWithCompletion:(id /* block */)arg1;
+- (id /* block */)authCompletionHandler;
 - (id)bonjourDevice;
 - (id)daemonDevice;
 - (void)deregisterEventID:(id)arg1;
@@ -83,6 +86,7 @@
 - (id /* block */)promptForPasswordHandler;
 - (void)registerEventID:(id)arg1 options:(id)arg2 handler:(id /* block */)arg3;
 - (void)registerRequestID:(id)arg1 options:(id)arg2 handler:(id /* block */)arg3;
+- (void)remoteDisplayAuthCompleted:(id)arg1;
 - (void)remoteDisplayPromptForPasswordWithFlags:(unsigned int)arg1 throttleSeconds:(int)arg2;
 - (void)remoteDisplayReceivedEventID:(id)arg1 event:(id)arg2 options:(id)arg3;
 - (void)remoteDisplayReceivedRequestID:(id)arg1 request:(id)arg2 options:(id)arg3 responseHandler:(id /* block */)arg4;
@@ -91,6 +95,7 @@
 - (void)sendRequestID:(id)arg1 request:(id)arg2 destinationID:(id)arg3 options:(id)arg4 responseHandler:(id /* block */)arg5;
 - (id)server;
 - (id)sessionID;
+- (void)setAuthCompletionHandler:(id /* block */)arg1;
 - (void)setBonjourDevice:(id)arg1;
 - (void)setDaemonDevice:(id)arg1;
 - (void)setDestinationDevice:(id)arg1;

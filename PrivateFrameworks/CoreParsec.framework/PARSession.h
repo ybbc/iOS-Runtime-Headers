@@ -9,7 +9,7 @@
     <PARSessionDelegate> * _delegate;
     NSFileManager * _fileManager;
     GEOSearchFoundationFeedbackListener * _mapsListener;
-    bool  _sampled;
+    _Atomic bool  _sampled;
 }
 
 @property (retain) PARBag *bag;

@@ -12,7 +12,7 @@
     MFModernComposeRecipientAtom * _atomPresentingCard;
     bool  _attachmentToMarkupIsLoaded;
     id  _autorotationDelegate;
-    unsigned int  _autosaveCount;
+    _Atomic unsigned int  _autosaveCount;
     NSString * _autosaveIdentifier;
     bool  _autosaveIsValid;
     MFLock * _autosaveLock;

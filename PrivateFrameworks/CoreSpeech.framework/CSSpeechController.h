@@ -58,6 +58,7 @@
 @property (readonly) Class superclass;
 @property (nonatomic) bool twoShotNotificationEnabled;
 
++ (bool)isSmartSiriVolumeAvailable;
 + (id)sharedController;
 
 - (void).cxx_destruct;
@@ -109,6 +110,7 @@
 - (bool)isOpus;
 - (bool)isRTSTriggered;
 - (bool)isRecording;
+- (bool)isSmartSiriVolumeAvailable;
 - (bool)isSoundPlaying;
 - (bool)isTimerPlaying;
 - (bool)isVoiceTriggered;

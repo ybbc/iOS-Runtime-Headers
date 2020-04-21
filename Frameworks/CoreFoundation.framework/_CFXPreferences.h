@@ -64,7 +64,7 @@
 - (void)setValue:(void*)arg1 forKey:(struct __CFString { }*)arg2 appIdentifier:(struct __CFString { }*)arg3 container:(struct __CFString { }*)arg4 configurationURL:(struct __CFURL { }*)arg5;
 - (void)setValue:(void*)arg1 forKey:(struct __CFString { }*)arg2 identifier:(struct __CFString { }*)arg3 user:(struct __CFString { }*)arg4 host:(struct __CFString { }*)arg5 container:(struct __CFString { }*)arg6;
 - (void)setValuesForKeys:(struct __CFDictionary { }*)arg1 removingValuesForKeys:(struct __CFArray { }*)arg2 identifier:(struct __CFString { }*)arg3 user:(struct __CFString { }*)arg4 host:(struct __CFString { }*)arg5 container:(struct __CFString { }*)arg6;
-- (/* Warning: Unrecognized filer type: '' using 'void*' */ void**)shmemForRole:(void *)arg1 name:(void *)arg2; // needs 2 arg types, found 3: SEL, int, const char *
+- (_Atomic /* Warning: Unrecognized filer type: '' using 'void*' */ void**)shmemForRole:(void *)arg1 name:(void *)arg2; // needs 2 arg types, found 3: SEL, int, const char *
 - (void)synchronizeEverything;
 - (unsigned char)synchronizeIdentifier:(struct __CFString { }*)arg1 user:(struct __CFString { }*)arg2 host:(struct __CFString { }*)arg3 container:(struct __CFString { }*)arg4;
 - (void)unregisterUserDefaultsInstance:(id)arg1;

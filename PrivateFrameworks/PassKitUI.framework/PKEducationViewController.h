@@ -13,6 +13,8 @@
     UILabel * _instructionLabel;
     bool  _invalidated;
     bool  _isFaceIDDevice;
+    bool  _isPad;
+    double  _maxHeight;
     PKMobileAssetManager * _mobileAssetManager;
     UIImageView * _passSnapshot;
     PKPaymentPass * _paymentPass;
@@ -20,6 +22,7 @@
     AVPlayerItem * _playerItem;
     bool  _playerStarted;
     AVPlayerLayer * _video;
+    UIView * _videoBoundingView;
 }
 
 @property (nonatomic, copy) id /* block */ continueHandler;
@@ -29,6 +32,7 @@
 @property (readonly) Class superclass;
 
 + (id)assetBackgroundColor;
++ (id)assetBackgroundColorPad;
 + (bool)shouldPresentForPass:(id)arg1 inEducationContext:(unsigned long long)arg2;
 
 - (void).cxx_destruct;
@@ -48,6 +52,7 @@
 - (void)setContinueHandler:(id /* block */)arg1;
 - (void)startPlayingVideo;
 - (void)viewDidAppear:(bool)arg1;
+- (void)viewDidLoad;
 - (void)viewWillLayoutSubviews;
 
 @end

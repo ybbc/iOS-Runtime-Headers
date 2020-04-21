@@ -5,10 +5,10 @@
 @interface PPNotificationHandler : NSObject {
     NSMapTable * _blockMap;
     struct atomic_flag { 
-        bool _Value; 
+        _Atomic bool _Value; 
     }  _hasWaiter;
     struct atomic_flag { 
-        bool _Value; 
+        _Atomic bool _Value; 
     }  _isFiring;
     NSString * _name;
     unsigned int  _waitTime;

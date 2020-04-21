@@ -3,6 +3,8 @@
  */
 
 @interface PKPaymentAuthorizationRemoteAlertViewController : SBUIRemoteAlertServiceViewController <PKCompactNavigationContainerControllerDelegate, PKPaymentAuthorizationHostProtocol, PKPaymentAuthorizationServiceViewControllerDelegate, PKPaymentSetupDelegate, SBSHardwareButtonEventConsuming> {
+    LAUIHorizontalArrowView * _cameraArrowView;
+    long long  _coachingState;
     bool  _didDismiss;
     bool  _didSendAuthorizationDidPresent;
     bool  _dismissAfterPaymentSetup;
@@ -73,6 +75,7 @@
 - (void)authorizationDidSelectShippingAddress:(id)arg1;
 - (void)authorizationDidSelectShippingMethod:(id)arg1;
 - (void)authorizationViewController:(id)arg1 didEncounterAuthorizationEvent:(unsigned long long)arg2;
+- (void)authorizationViewControllerDidChangeCoachingState:(id)arg1;
 - (void)authorizationViewControllerDidChangeUserIntentRequirement:(id)arg1;
 - (void)authorizationWillStart;
 - (void)compactNavigationContainerControllerReceivedExternalTap:(id)arg1;

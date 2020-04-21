@@ -92,6 +92,7 @@
 - (void)_showContactCardForEntity:(id)arg1 fromView:(id)arg2;
 - (void)_toggleSharingStateFromABCard;
 - (void)_updateDownloadFooterView;
+- (void)_updateSharedAssetsControllersForScrollView:(id)arg1 cell:(id)arg2;
 - (id)addRecipientsController;
 - (void)adjustContentOffsetReloadingSharedAssetsContentViewCell;
 - (void)alertView:(id)arg1 clickedButtonAtIndex:(long long)arg2;
@@ -182,6 +183,7 @@
 - (void)readReceiptsSwitchValueChanged:(id)arg1;
 - (long long)rowForAddMemberCell;
 - (long long)rowForShowMoreContactsCell;
+- (struct CGSize { double x1; double x2; })screenSize;
 - (void)scrollViewDidScroll:(id)arg1;
 - (void)scrollViewWillBeginDragging:(id)arg1;
 - (id)segmentedControlCellForIndexPath:(id)arg1;

@@ -118,7 +118,7 @@
     }  _owrdList;
     double  _packetLossRate;
     double  _pauseStartTime;
-    bool  _paused;
+    _Atomic bool  _paused;
     double  _previousPacketLossRate;
     int  _previousTierIndex;
     unsigned short  _previousTimestamp;

@@ -92,7 +92,7 @@
         } __ptr_; 
     }  _iconLoadingDelegate;
     double  _initialScaleFactor;
-    /* Warning: unhandled struct encoding: '{WeakObjCPtr<id<_WKInputDelegate> >="m_weakReference"@}' */ struct WeakObjCPtr<id<_WKInputDelegate> > { 
+    struct WeakObjCPtr<id<_WKInputDelegate> > { 
         id m_weakReference; 
     }  _inputDelegate;
     struct CGRect { 
@@ -522,7 +522,7 @@
 - (struct UIEdgeInsets { double x1; double x2; double x3; double x4; })_obscuredInsets;
 - (unsigned long long)_observedRenderingProgressEvents;
 - (void)_overrideLayoutParametersWithMinimumLayoutSize:(struct CGSize { double x1; double x2; })arg1 maximumUnobscuredSizeOverride:(struct CGSize { double x1; double x2; })arg2;
-- (struct WebPageProxy { int (**x1)(); id x2; int (*x3)(); int (**x4)(); int (**x5)(); struct WeakPtrFactory<WebKit::WebPageProxy> { struct RefPtr<WTF::WeakReference<WebKit::WebPageProxy>, WTF::DumbPtrTraits<WTF::WeakReference<WebKit::WebPageProxy> > > { struct WeakReference<WebKit::WebPageProxy> {} *x_1_2_1; } x_6_1_1; } x6; struct RetainPtr<NSArray> { void *x_7_1_1; } x7; struct PageClient {} *x8; struct Ref<API::PageConfiguration, WTF::DumbPtrTraits<API::PageConfiguration> > { struct PageConfiguration {} *x_9_1_1; } x9; struct unique_ptr<API::LoaderClient, std::__1::default_delete<API::LoaderClient> > { struct __compressed_pair<API::LoaderClient *, std::__1::default_delete<API::LoaderClient> > { struct LoaderClient {} *x_1_2_1; } x_10_1_1; } x10; struct unique_ptr<API::PolicyClient, std::__1::default_delete<API::PolicyClient> > { struct __compressed_pair<API::PolicyClient *, std::__1::default_delete<API::PolicyClient> > { struct PolicyClient {} *x_1_2_1; } x_11_1_1; } x11; struct unique_ptr<API::NavigationClient, std::__1::default_delete<API::NavigationClient> > { struct __compressed_pair<API::NavigationClient *, std::__1::default_delete<API::NavigationClient> > { struct NavigationClient {} *x_1_2_1; } x_12_1_1; } x12; }*)_page;
+- (struct WebPageProxy { int (**x1)(); id x2; int (**x3)(); int (**x4)(); int (**x5)(); struct WeakPtrFactory<WebKit::WebPageProxy> { struct RefPtr<WTF::WeakReference<WebKit::WebPageProxy>, WTF::DumbPtrTraits<WTF::WeakReference<WebKit::WebPageProxy> > > { struct WeakReference<WebKit::WebPageProxy> {} *x_1_2_1; } x_6_1_1; } x6; struct RetainPtr<NSArray> { void *x_7_1_1; } x7; struct PageClient {} *x8; struct Ref<API::PageConfiguration, WTF::DumbPtrTraits<API::PageConfiguration> > { struct PageConfiguration {} *x_9_1_1; } x9; struct unique_ptr<API::LoaderClient, std::__1::default_delete<API::LoaderClient> > { struct __compressed_pair<API::LoaderClient *, std::__1::default_delete<API::LoaderClient> > { struct LoaderClient {} *x_1_2_1; } x_10_1_1; } x10; struct unique_ptr<API::PolicyClient, std::__1::default_delete<API::PolicyClient> > { struct __compressed_pair<API::PolicyClient *, std::__1::default_delete<API::PolicyClient> > { struct PolicyClient {} *x_1_2_1; } x_11_1_1; } x11; struct unique_ptr<API::NavigationClient, std::__1::default_delete<API::NavigationClient> > { struct __compressed_pair<API::NavigationClient *, std::__1::default_delete<API::NavigationClient> > { struct NavigationClient {} *x_1_2_1; } x_12_1_1; } x12; }*)_page;
 - (unsigned long long)_pageCount;
 - (struct OpaqueWKPage { }*)_pageForTesting;
 - (double)_pageLength;
@@ -747,20 +747,6 @@
 - (bool)usesStandardContentView;
 - (id)viewForZoomingInScrollView:(id)arg1;
 - (struct FloatRect { struct FloatPoint { float x_1_1_1; float x_1_1_2; } x1; struct FloatSize { float x_2_1_1; float x_2_1_2; } x2; })visibleRectInViewCoordinates;
-
-// Image: /System/Library/AccessibilityBundles/QuickSpeak.bundle/QuickSpeak
-
-+ (Class)safeCategoryBaseClass;
-
-- (bool)_accessibilityQScanPerformAction:(SEL)arg1 withSender:(id)arg2;
-- (id)_accessibilityQuickSpeakContent;
-- (bool)_accessibilityShouldShowSpeakBubble;
-- (bool)_accessibilityShouldShowSpeakLanguageBubble;
-- (bool)_accessibilityShouldShowSpeakSpellOut;
-- (bool)_accessibilityShouldUpdateQuickSpeakContent;
-- (id)_accessibilitySpeakSelectionTextInputResponder;
-- (bool)_accessibilitySystemShouldShowSpeakBubble;
-- (id)_axContentView;
 
 // Image: /System/Library/Frameworks/SafariServices.framework/SafariServices
 

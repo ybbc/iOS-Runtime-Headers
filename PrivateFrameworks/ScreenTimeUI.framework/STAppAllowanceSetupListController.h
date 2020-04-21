@@ -15,6 +15,7 @@
 @property (nonatomic, copy) NSSet *installedBundleIDs;
 
 - (void).cxx_destruct;
+- (void)_selectInitialSelectedIdentifiersIfNeeded;
 - (void)addButtonTapped:(id)arg1;
 - (id)appSpecifiersForBundleIDs:(id)arg1;
 - (id)chooseAppsGroupSpecifier;

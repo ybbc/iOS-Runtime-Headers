@@ -9,7 +9,7 @@
     NSMutableDictionary * _coalescedJobResultsByAssetLocalIdentifier;
     NSObject<OS_dispatch_queue> * _commandDispatchQueue;
     NSMapTable * _jobToAssetsAnalyzingOperationMapTable;
-    unsigned long long  _lastPerformedJobScenario;
+    _Atomic unsigned long long  _lastPerformedJobScenario;
     NSNumber * _lastRecordedDarkWakeState;
     unsigned int  _visionAlgorithmUmbrellaVersion;
 }

@@ -17,14 +17,14 @@
     }  mVariables;
 }
 
-+ (id)effectWithPool:(id)arg1 material:(id)arg2 variables:(const struct MaterialShaderVariables { id x1; id x2; id x3; id x4; }*)arg3;
++ (id)effectWithPool:(id)arg1 material:(id)arg2 variables:(const struct MaterialShaderVariables { id x1; id x2; id x3; id x4; id x5; id x6; id x7; id x8; }*)arg3;
 + (id)stateSharingID;
 
 - (id).cxx_construct;
 - (void)addVariables:(id)arg1;
 - (void)affectStates:(id)arg1;
 - (void)dealloc;
-- (id)initWithPool:(id)arg1 material:(id)arg2 variables:(const struct MaterialShaderVariables { id x1; id x2; id x3; id x4; }*)arg3;
+- (id)initWithPool:(id)arg1 material:(id)arg2 variables:(const struct MaterialShaderVariables { id x1; id x2; id x3; id x4; id x5; id x6; id x7; id x8; }*)arg3;
 - (bool)isEqual:(id)arg1;
 - (id)stateSharingID;
 - (void)updateState:(id)arg1 effectsStates:(id)arg2;

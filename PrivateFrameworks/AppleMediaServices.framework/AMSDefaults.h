@@ -10,9 +10,12 @@
 + (long long)_integerForKey:(id)arg1 defaultValue:(long long)arg2 domain:(struct __CFString { }*)arg3;
 + (double)_randomDouble;
 + (void)_setBool:(bool)arg1 forKey:(id)arg2;
++ (void)_setBool:(bool)arg1 forKey:(id)arg2 domain:(struct __CFString { }*)arg3;
 + (void)_setInteger:(long long)arg1 forKey:(id)arg2;
 + (void)_setValue:(id)arg1 forKey:(id)arg2;
++ (void)_setValue:(id)arg1 forKey:(id)arg2 domain:(struct __CFString { }*)arg3;
 + (id)_valueForKey:(id)arg1;
++ (id)_valueForKey:(id)arg1 domain:(struct __CFString { }*)arg2;
 + (bool)alwaysSendCacheBuster;
 + (bool)alwaysSendGUID;
 + (id)bagURLCookies;
@@ -28,6 +31,7 @@
 + (id)metricsCanaryIdentifier;
 + (id)metricsTimingWindowStartTime;
 + (bool)migratedToNewCookieStorage;
++ (bool)perfomedDeviceOfferSetup;
 + (long long)reversePushEnabled;
 + (void)setAlwaysSendCacheBuster:(bool)arg1;
 + (void)setAlwaysSendGUID:(bool)arg1;
@@ -43,6 +47,7 @@
 + (void)setMetricsCanaryIdentifier:(id)arg1;
 + (void)setMetricsTimingWindowStartTime:(id)arg1;
 + (void)setMigratedToNewCookieStorage:(bool)arg1;
++ (void)setPerfomedDeviceOfferSetup:(bool)arg1;
 + (void)setReversePushEnabled:(long long)arg1;
 + (void)setShowSandboxAccountUI:(bool)arg1;
 + (void)setStorefrontSuffixes:(id)arg1;

@@ -10,7 +10,7 @@
     WBSPerSitePreferencesSQLiteStore * _perSitePreferencesStore;
     WBSCoalescedAsynchronousWriter * _saveUserMediaPermissionsWriter;
     struct atomic<LoadingStatus> { 
-        int __a_; 
+        _Atomic int __a_; 
     }  _savedStateLoadStatus;
     NSURL * _userMediaPermissionsFileURL;
 }

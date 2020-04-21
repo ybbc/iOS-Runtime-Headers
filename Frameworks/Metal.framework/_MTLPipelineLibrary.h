@@ -6,7 +6,7 @@
     <MTLDevice> * _device;
     bool  _disableRunTimeCompilation;
     NSString * _label;
-    struct PipelineLibraryData { struct shared_ptr<MTLPipelineDescriptions> { struct MTLPipelineDescriptions {} *x_1_1_1; struct __shared_weak_count {} *x_1_1_2; } x1; id x2; } * _pipelineLibraryData;
+    struct PipelineLibraryData { struct shared_ptr<MTLPipelineDescriptions> { struct MTLPipelineDescriptions {} *x_1_1_1; struct __shared_weak_count {} *x_1_1_2; } x1; id x2; id x3; } * _pipelineLibraryData;
     NSArray * _pipelineNames;
 }
 
@@ -25,7 +25,7 @@
 - (id)device;
 - (bool)disableRunTimeCompilation;
 - (id)functionCache;
-- (id)initWithDevice:(id)arg1 pipelineLibraryData:(struct PipelineLibraryData { struct shared_ptr<MTLPipelineDescriptions> { struct MTLPipelineDescriptions {} *x_1_1_1; struct __shared_weak_count {} *x_1_1_2; } x1; id x2; }*)arg2;
+- (id)initWithDevice:(id)arg1 pipelineLibraryData:(struct PipelineLibraryData { struct shared_ptr<MTLPipelineDescriptions> { struct MTLPipelineDescriptions {} *x_1_1_1; struct __shared_weak_count {} *x_1_1_2; } x1; id x2; id x3; }*)arg2;
 - (id)label;
 - (id)newComputePipelineDescriptorWithName:(id)arg1 error:(id*)arg2;
 - (id)newComputePipelineStateWithName:(id)arg1 options:(unsigned long long)arg2 reflection:(id*)arg3 error:(id*)arg4;

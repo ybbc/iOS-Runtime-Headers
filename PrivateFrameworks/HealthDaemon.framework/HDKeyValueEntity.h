@@ -32,7 +32,7 @@
 + (long long)_validateModificationDatePolicyWithKey:(id)arg1 domain:(id)arg2 category:(long long)arg3 modificationDate:(double)arg4 database:(id)arg5 error:(id*)arg6;
 + (id)_valuesForKeys:(id)arg1 domain:(id)arg2 category:(long long)arg3 profile:(id)arg4 error:(id*)arg5 handler:(id /* block */)arg6;
 + (id)allValuesForDomain:(id)arg1 category:(long long)arg2 profile:(id)arg3 error:(id*)arg4;
-+ (const struct { id x1; unsigned char x2; }*)columnDefinitionsWithCount:(unsigned long long*)arg1;
++ (const struct { id x1; id x2; unsigned char x3; }*)columnDefinitionsWithCount:(unsigned long long*)arg1;
 + (id)dataForKey:(id)arg1 domain:(id)arg2 category:(long long)arg3 profile:(id)arg4 entity:(id*)arg5 error:(id*)arg6;
 + (id)databaseTable;
 + (id)dateComponentsForKey:(id)arg1 domain:(id)arg2 category:(long long)arg3 profile:(id)arg4 entity:(id*)arg5 error:(id*)arg6;

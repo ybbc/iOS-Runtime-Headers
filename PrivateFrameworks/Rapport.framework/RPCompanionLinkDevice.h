@@ -8,7 +8,6 @@
     bool  _daemon;
     NSString * _deviceColor;
     unsigned int  _flags;
-    NSString * _groupID;
     NSUUID * _homeKitIdentifier;
     NSString * _idsPersonalDeviceIdentifier;
     NSUUID * _mediaSystemIdentifier;
@@ -26,7 +25,6 @@
     NSString * _role;
     NSString * _roomName;
     NSDictionary * _siriInfo;
-    NSString * _sourceVersion;
 }
 
 @property (nonatomic) bool btPipeConnected;
@@ -35,7 +33,6 @@
 @property (nonatomic, copy) NSString *deviceColor;
 @property (nonatomic, readonly, copy) NSString *effectiveIdentifier;
 @property (nonatomic) unsigned int flags;
-@property (nonatomic, readonly, copy) NSString *groupID;
 @property (nonatomic, copy) NSUUID *homeKitIdentifier;
 @property (nonatomic, copy) NSString *idsPersonalDeviceIdentifier;
 @property (nonatomic, copy) NSUUID *mediaSystemIdentifier;
@@ -53,7 +50,6 @@
 @property (nonatomic, copy) NSString *role;
 @property (nonatomic, copy) NSString *roomName;
 @property (nonatomic, copy) NSDictionary *siriInfo;
-@property (nonatomic, copy) NSString *sourceVersion;
 
 + (bool)supportsSecureCoding;
 
@@ -67,7 +63,6 @@
 - (id)effectiveIdentifier;
 - (void)encodeWithCoder:(id)arg1;
 - (unsigned int)flags;
-- (id)groupID;
 - (id)homeKitIdentifier;
 - (id)idsPersonalDeviceIdentifier;
 - (id)initWithCoder:(id)arg1;
@@ -107,9 +102,7 @@
 - (void)setRole:(id)arg1;
 - (void)setRoomName:(id)arg1;
 - (void)setSiriInfo:(id)arg1;
-- (void)setSourceVersion:(id)arg1;
 - (id)siriInfo;
-- (id)sourceVersion;
 - (unsigned int)updateWithBonjourDevice:(id)arg1;
 
 @end

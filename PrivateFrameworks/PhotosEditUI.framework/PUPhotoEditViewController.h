@@ -388,6 +388,7 @@
 - (void)_transitionToNewToolViewController:(id)arg1 oldToolViewController:(id)arg2 animationBlock:(id /* block */)arg3 completion:(id /* block */)arg4 animated:(bool)arg5;
 - (id)_uneditedPhotoEditModel;
 - (void)_updateAlternateToolbarAnimated:(bool)arg1;
+- (void)_updateApertureSliderLength;
 - (void)_updateAutoEnhanceButtonAnimated:(bool)arg1;
 - (void)_updateBackgroundColor;
 - (void)_updateDepthEffectAnimated:(bool)arg1;
@@ -432,6 +433,7 @@
 - (bool)_wantsTrimControl;
 - (long long)_workImageVersion;
 - (void)apertureToolbar:(id)arg1 didChangeValue:(double)arg2;
+- (bool)apertureToolbarShouldRotateLabelsWithOrientation:(id)arg1;
 - (id)childViewControllerForScreenEdgesDeferringSystemGestures;
 - (void)dealloc;
 - (void)didFinishWithAsset:(id)arg1 savedChanges:(bool)arg2;

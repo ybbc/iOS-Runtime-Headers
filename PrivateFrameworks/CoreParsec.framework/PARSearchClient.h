@@ -4,7 +4,7 @@
 
 @interface PARSearchClient : NSObject <PARClientXPC> {
     PARSessionConfiguration * _configuration;
-    bool  _configured;
+    _Atomic bool  _configured;
     NSXPCConnection * _connection;
     QueryIdMapper * _idMapper;
     NSObject<OS_dispatch_queue> * _idQueue;

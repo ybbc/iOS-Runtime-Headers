@@ -68,7 +68,7 @@
 - (bool)containsObjectIdenticalTo:(id)arg1 inRange:(struct _NSRange { unsigned long long x1; unsigned long long x2; })arg2;
 - (id)copyWithZone:(struct _NSZone { }*)arg1;
 - (unsigned long long)count;
-- (unsigned long long)countByEnumeratingWithState:(struct { unsigned long long x1; id *x2; unsigned long long x3; unsigned long long x4[5]; }*)arg1 objects:(id*)arg2 count:(unsigned long long)arg3;
+- (unsigned long long)countByEnumeratingWithState:(struct { unsigned long long x1; id *x2; unsigned long long *x3; unsigned long long x4[5]; }*)arg1 objects:(id*)arg2 count:(unsigned long long)arg3;
 - (unsigned long long)countForObject:(id)arg1;
 - (unsigned long long)countForObject:(id)arg1 inRange:(struct _NSRange { unsigned long long x1; unsigned long long x2; })arg2;
 - (id)description;
@@ -267,6 +267,7 @@
 - (id)_escapedComponentsJoinedByString:(id)arg1 forLocale:(id)arg2;
 - (void)_injectProxiesForImages:(id /* block */)arg1 completion:(id /* block */)arg2;
 - (id)_intents_cacheableObjects;
+- (id)_intents_indexingRepresentation;
 - (id)_intents_localizedCopyForLanguage:(id)arg1;
 - (id)_intents_readableDescriptionForLanguage:(id)arg1;
 - (void)_intents_updateContainerWithCache:(id)arg1;
@@ -354,6 +355,7 @@
 
 // Image: /System/Library/PrivateFrameworks/AXCoreUtilities.framework/AXCoreUtilities
 
+- (bool)ax_containsObjectUsingBlock:(id /* block */)arg1;
 - (id)ax_filteredArrayUsingBlock:(id /* block */)arg1;
 - (id)ax_flatMappedArrayUsingBlock:(id /* block */)arg1;
 - (id)ax_mappedArrayUsingBlock:(id /* block */)arg1;
@@ -364,11 +366,6 @@
 - (id)_axRecursivelyReconstitutedRepresentationFromPropertyListWithError:(id*)arg1;
 
 // Image: /System/Library/PrivateFrameworks/Accessibility.framework/Frameworks/AXHearingSupport.framework/AXHearingSupport
-
-- (id)programThatMatchesProgram:(id)arg1;
-- (void)setProgram:(id)arg1 withOtherSidePrograms:(id)arg2 selected:(bool)arg3;
-
-// Image: /System/Library/PrivateFrameworks/Accessibility.framework/Frameworks/TTYUtilities.framework/TTYUtilities
 
 - (id)programThatMatchesProgram:(id)arg1;
 - (void)setProgram:(id)arg1 withOtherSidePrograms:(id)arg2 selected:(bool)arg3;
@@ -447,6 +444,7 @@
 // Image: /System/Library/PrivateFrameworks/AvatarUI.framework/AvatarUI
 
 - (id)avt_description;
+- (id)avt_map:(id /* block */)arg1;
 
 // Image: /System/Library/PrivateFrameworks/BaseBoard.framework/BaseBoard
 
@@ -818,6 +816,11 @@
 - (id)secureDescriptionWithBlacklistKeys:(id)arg1;
 - (id)secureDescriptionWithIndent:(id)arg1 newLine:(bool)arg2 blacklistedKeys:(id)arg3;
 - (id)shortDescription;
+
+// Image: /System/Library/PrivateFrameworks/HearingUtilities.framework/HearingUtilities
+
+- (id)programThatMatchesProgram:(id)arg1;
+- (void)setProgram:(id)arg1 withOtherSidePrograms:(id)arg2 selected:(bool)arg3;
 
 // Image: /System/Library/PrivateFrameworks/Home.framework/Home
 

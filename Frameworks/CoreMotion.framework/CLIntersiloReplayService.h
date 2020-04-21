@@ -78,6 +78,11 @@
                 struct AccessoryWake {} *__value_; 
             } __ptr_; 
         } _accessoryWake; 
+        struct unique_ptr<CMMsl::AccessoryWakeDebug, std::__1::default_delete<CMMsl::AccessoryWakeDebug> > { 
+            struct __compressed_pair<CMMsl::AccessoryWakeDebug *, std::__1::default_delete<CMMsl::AccessoryWakeDebug> > { 
+                struct AccessoryWakeDebug {} *__value_; 
+            } __ptr_; 
+        } _accessoryWakeDebug; 
         struct unique_ptr<CMMsl::AirpodEvent, std::__1::default_delete<CMMsl::AirpodEvent> > { 
             struct __compressed_pair<CMMsl::AirpodEvent *, std::__1::default_delete<CMMsl::AirpodEvent> > { 
                 struct AirpodEvent {} *__value_; 
@@ -534,6 +539,11 @@
                 struct WorkoutRecorderOdometer {} *__value_; 
             } __ptr_; 
         } _workoutRecorderOdometer; 
+        struct unique_ptr<CMMsl::WorkoutRecorderPressure, std::__1::default_delete<CMMsl::WorkoutRecorderPressure> > { 
+            struct __compressed_pair<CMMsl::WorkoutRecorderPressure *, std::__1::default_delete<CMMsl::WorkoutRecorderPressure> > { 
+                struct WorkoutRecorderPressure {} *__value_; 
+            } __ptr_; 
+        } _workoutRecorderPressure; 
         struct unique_ptr<CMMsl::WorkoutRecorderRotationRate, std::__1::default_delete<CMMsl::WorkoutRecorderRotationRate> > { 
             struct __compressed_pair<CMMsl::WorkoutRecorderRotationRate *, std::__1::default_delete<CMMsl::WorkoutRecorderRotationRate> > { 
                 struct WorkoutRecorderRotationRate {} *__value_; 
@@ -544,6 +554,11 @@
                 struct WorkoutRecorderWatchOrientationSettings {} *__value_; 
             } __ptr_; 
         } _workoutRecorderWatchOrientationSettings; 
+        struct unique_ptr<CMMsl::WorkoutRecorderWifiScanResults, std::__1::default_delete<CMMsl::WorkoutRecorderWifiScanResults> > { 
+            struct __compressed_pair<CMMsl::WorkoutRecorderWifiScanResults *, std::__1::default_delete<CMMsl::WorkoutRecorderWifiScanResults> > { 
+                struct WorkoutRecorderWifiScanResults {} *__value_; 
+            } __ptr_; 
+        } _workoutRecorderWifiScanResults; 
         struct unique_ptr<CMMsl::WorkoutRecorderWorkoutEvent, std::__1::default_delete<CMMsl::WorkoutRecorderWorkoutEvent> > { 
             struct __compressed_pair<CMMsl::WorkoutRecorderWorkoutEvent *, std::__1::default_delete<CMMsl::WorkoutRecorderWorkoutEvent> > { 
                 struct WorkoutRecorderWorkoutEvent {} *__value_; 
@@ -593,6 +608,6 @@
 - (void)setOutboundTable:(id)arg1;
 - (void)tryToSendOnDeckMessage;
 - (void)useRecordingFileForPlayback:(id)arg1 expectedClasses:(id)arg2;
-- (void)useRecordingFileForPlayback:(void *)arg1 expectedClasses:(void *)arg2 coordinator:(void *)arg3 synchronousFilter:(void *)arg4; // needs 4 arg types, found 5: id, id, /* Warning: Unrecognized filer type: 'R' using 'void*' */ void*, id, int (*
+- (void)useRecordingFileForPlayback:(void *)arg1 expectedClasses:(void *)arg2 coordinator:(void *)arg3 synchronousFilter:(void *)arg4; // needs 4 arg types, found 5: id, id, byref /* Warning: Unrecognized filer type: '' using 'void*' */ void*, id, int (*
 
 @end

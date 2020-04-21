@@ -150,6 +150,7 @@
 @property (nonatomic, readonly, copy) NSString *identifier;
 @property (nonatomic, readonly) bool isArticleReadCountReportingEnabled;
 @property (nonatomic, readonly) bool isBlockedExplicitContent;
+@property (nonatomic, readonly) bool isDark;
 @property (nonatomic, readonly) bool isDeprecated;
 @property (nonatomic, readonly) bool isExplicitContent;
 @property (nonatomic, readonly) bool isHidden;
@@ -268,6 +269,7 @@
 - (bool)isArticleReadCountReportingEnabled;
 - (bool)isAuthenticationSetup;
 - (bool)isBlockedExplicitContent;
+- (bool)isDark;
 - (bool)isDeprecated;
 - (bool)isEqual:(id)arg1;
 - (bool)isEqualToTag:(id)arg1;

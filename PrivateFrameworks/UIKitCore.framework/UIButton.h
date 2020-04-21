@@ -448,6 +448,7 @@
 
 // Image: /System/Library/PrivateFrameworks/HealthUI.framework/HealthUI
 
++ (id)_hkecg_detailButton;
 + (double)hk_buddyButtonHorizontalMargin;
 + (id)hk_buddyButtonTintedWithColor:(id)arg1 title:(id)arg2 target:(id)arg3 action:(SEL)arg4;
 + (id)hk_buttonTintedWithColor:(id)arg1 title:(id)arg2 target:(id)arg3 action:(SEL)arg4;

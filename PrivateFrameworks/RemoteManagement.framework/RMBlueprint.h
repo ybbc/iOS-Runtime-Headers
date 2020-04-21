@@ -2,9 +2,7 @@
    Image: /System/Library/PrivateFrameworks/RemoteManagement.framework/RemoteManagement
  */
 
-@interface RMBlueprint : RMUniquedManagedObject <RMUniquelySerializableManagedObject> {
-    RMVersionVector * _cachedVersionVector;
-}
+@interface RMBlueprint : RMUniquedManagedObject <RMUniquelySerializableManagedObject>
 
 @property (nonatomic, retain) NSSet *configurations;
 @property (readonly, copy) NSString *debugDescription;
@@ -20,10 +18,9 @@
 @property (nonatomic, retain) RMBlueprintSchedule *schedule;
 @property (readonly) Class superclass;
 @property (nonatomic, copy) NSString *type;
-@property (nonatomic, readonly, copy) NSData *unmodeled_versionVector;
 @property (nonatomic, retain) RMBlueprintUsageLimit *usageLimit;
 @property (nonatomic, retain) NSSet *users;
-@property (nonatomic, copy) RMVersionVector *versionVector;
+@property (nonatomic, copy) NSData *versionVector;
 
 + (id)fetchOrCreateWithDictionaryRepresentation:(id)arg1 inContext:(id)arg2 error:(id*)arg3;
 + (id)fetchRequestMatchingBlueprintsForUserWithDSID:(id)arg1;
@@ -35,17 +32,12 @@
 + (id)fetchResultsRequestsForChangesToBlueprints;
 + (id)fetchResultsRequestsForChangesToBlueprintsForUserWithDSID:(id)arg1;
 
-- (void).cxx_destruct;
-- (void)awakeFromInsert;
 - (id)computeUniqueIdentifier;
 - (id)declarationsWithError:(id*)arg1;
 - (void)delete;
 - (id)dictionaryRepresentation;
 - (void)didChangeValueForKey:(id)arg1;
-- (void)setVersionVector:(id)arg1;
 - (void)tombstone;
-- (id)unmodeled_versionVector;
 - (bool)updateWithDictionaryRepresentation:(id)arg1;
-- (id)versionVector;
 
 @end

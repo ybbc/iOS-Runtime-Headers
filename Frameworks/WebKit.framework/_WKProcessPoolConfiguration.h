@@ -12,7 +12,7 @@
 }
 
 @property (nonatomic, copy) NSString *CTDataConnectionServiceType;
-@property (readonly) /* Warning: unhandled struct encoding: '{Object=^^?@}' */ struct Object { int (**x1)(); id x2; }*_apiObject;
+@property (readonly) struct Object { int (**x1)(); id x2; }*_apiObject;
 @property (nonatomic, copy) NSArray *additionalReadAccessAllowedURLs;
 @property (nonatomic) bool allowsCellularAccess;
 @property (nonatomic) bool alwaysKeepAndReuseSwappedProcesses;
@@ -40,7 +40,7 @@
 @property (nonatomic) unsigned long long wirelessContextIdentifier;
 
 - (id)CTDataConnectionServiceType;
-- (/* Warning: unhandled struct encoding: '{Object=^^?@}' */ struct Object { int (**x1)(); id x2; }*)_apiObject;
+- (struct Object { int (**x1)(); id x2; }*)_apiObject;
 - (id)additionalReadAccessAllowedURLs;
 - (bool)allowsCellularAccess;
 - (bool)alwaysKeepAndReuseSwappedProcesses;

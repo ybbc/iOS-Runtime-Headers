@@ -21,7 +21,7 @@
     bool  _shouldDeferActivity;
     PHASleepWakeMonitor * _sleepWakeMonitor;
     unsigned char  _state;
-    bool  _turboMode;
+    _Atomic bool  _turboMode;
     NSObject<OS_voucher> * _turboModeBoostVoucher;
 }
 

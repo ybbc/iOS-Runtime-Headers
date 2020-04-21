@@ -284,6 +284,7 @@
     id  _swipe;
     UIScrollViewDelayedTouchesBeganGestureRecognizer * _touchDelayGestureRecognizer;
     long long  _touchLevel;
+    CADisplayLink * _trackingHeartbeat;
     NSTimer * _trackingWatchdogTimer;
     bool  _useContentDimensionVariablesForConstraintLowering;
     double  _velocityScaleFactor;
@@ -580,6 +581,7 @@
 - (void)_handleLowFidelitySwipe:(id)arg1;
 - (void)_handlePanFailure;
 - (void)_handleSwipe:(id)arg1;
+- (void)_handleTrackingHeartbeat:(id)arg1;
 - (bool)_hasScrollViewWillEndDraggingInvocationsToPerform;
 - (double)_heightForFocusFastScrollingUI:(double)arg1;
 - (void)_hideScrollIndicators;
@@ -808,6 +810,8 @@
 - (double)_touchDelayForScrollDetection;
 - (bool)_touchMayChangeSelection;
 - (id)_touchesDelayedGestureRecognizer;
+- (void)_trackingDidBegin;
+- (void)_trackingDidEnd;
 - (bool)_transfersScrollToContainer;
 - (id)_uili_existingObservationEligibleLayoutVariables;
 - (void)_unregisterForSpringBoardBlankedScreenNotification;

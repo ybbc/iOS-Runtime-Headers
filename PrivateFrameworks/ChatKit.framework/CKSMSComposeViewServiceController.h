@@ -4,11 +4,15 @@
 
 @interface CKSMSComposeViewServiceController : UINavigationController <CKComposeChatControllerDelegate, CKSMSComposeViewServiceProtocol> {
     bool  _canEditRecipients;
+    NSArray * _cloudPhotoIDs;
     <CKSMSComposeViewServiceControllerDelegate> * _composeDelegate;
+    NSArray * _contentText;
+    NSArray * _contentURLs;
     bool  _disableCameraAttachments;
     bool  _forceMMS;
     id /* block */  _gameCenterPickerBlock;
     CKModalTranscriptController * _modalTranscriptController;
+    NSArray * _photoIDs;
     bool  _supportsAttachments;
     bool  _supportsMessageInspection;
     NSArray * _utiTypes;
@@ -44,7 +48,7 @@
 - (id)composeDelegate;
 - (void)dealloc;
 - (void)disableCameraAttachments;
-- (void)donateInteractionWithRecipients:(id)arg1;
+- (void)donateInteractionWithConversation:(id)arg1;
 - (void)forceCancelComposition;
 - (void)forceMMS;
 - (id /* block */)gameCenterPickerBlock;
@@ -57,12 +61,16 @@
 - (id)modalTranscriptController;
 - (void)prewarmCameraIfNecessaryForChatController:(id)arg1;
 - (void)setCanEditRecipients:(bool)arg1;
+- (void)setCloudPhotoIDs:(id)arg1;
 - (void)setComposeDelegate:(id)arg1;
+- (void)setContentText:(id)arg1;
+- (void)setContentURLs:(id)arg1;
 - (void)setGameCenterModeWithPickerBlock:(id /* block */)arg1;
 - (void)setGameCenterPickedHandles:(id)arg1 playerNames:(id)arg2;
 - (void)setGameCenterPickerBlock:(id /* block */)arg1;
 - (void)setModalTranscriptController:(id)arg1;
 - (void)setPendingAddresses:(id)arg1;
+- (void)setPhotoIDs:(id)arg1;
 - (void)setText:(id)arg1 subject:(id)arg2 addresses:(id)arg3;
 - (void)setTextEntryContentsVisible:(bool)arg1;
 - (void)setUICustomizationData:(id)arg1;

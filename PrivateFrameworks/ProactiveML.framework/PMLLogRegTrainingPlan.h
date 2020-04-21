@@ -70,7 +70,7 @@
 - (bool)intercept;
 - (bool)isMultiLabel;
 - (bool)isSynchronous;
-- (void)loadSessionsSince:(double)arg1 block:(id /* block */)arg2;
+- (void)loadSessionsWithBlock:(id /* block */)arg1;
 - (unsigned long long)localGradientIterations;
 - (float)localLearningRate;
 - (unsigned long long)localMinimumIterations;

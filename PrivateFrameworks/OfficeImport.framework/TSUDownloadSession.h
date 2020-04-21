@@ -11,7 +11,7 @@
     bool  _didFinishInitialization;
     NSError * _error;
     NSObject<OS_dispatch_group> * _initializationGroup;
-    bool  _isCancelled;
+    _Atomic bool  _isCancelled;
     double  _lastProgressValue;
     NSURLResponse * _lastResponse;
     TSUDownloadManager * _manager;

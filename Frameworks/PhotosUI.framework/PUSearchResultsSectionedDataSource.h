@@ -8,7 +8,7 @@
     PLSearchIndexDateFormatter * _dateFormatter;
     NSDateIntervalFormatter * _dateIntervalFormatter;
     NSDateComponents * _dateRangeFormattingComponents;
-    bool  _didMerge;
+    _Atomic bool  _didMerge;
     PHFetchResult * _homePersons;
     bool  _ignorePastResults;
     unsigned long long  _maxGroupedResultsCount;
@@ -25,6 +25,7 @@
     NSArray * _suggestions;
     unsigned long long  _uncommittedMaxGroupedResultsCount;
     NSArray * _uncommittedResults;
+    NSArray * _uncommittedSuggestions;
     unsigned long long  _unprocessedSearchResultsCount;
     bool  _wordEmbeddingsRequested;
 }
@@ -37,7 +38,7 @@
 @property (readonly, copy) NSString *debugDescription;
 @property (readonly) NSDictionary *debugDictionary;
 @property (readonly, copy) NSString *description;
-@property (nonatomic) bool didMerge;
+@property (nonatomic) _Atomic bool didMerge;
 @property (readonly) unsigned long long hash;
 @property (nonatomic, retain) PHFetchResult *homePersons;
 @property (nonatomic) bool ignorePastResults;
@@ -56,6 +57,7 @@
 @property (readonly) Class superclass;
 @property (nonatomic) unsigned long long uncommittedMaxGroupedResultsCount;
 @property (nonatomic, retain) NSArray *uncommittedResults;
+@property (nonatomic, retain) NSArray *uncommittedSuggestions;
 @property (nonatomic) unsigned long long unprocessedSearchResultsCount;
 @property (nonatomic) bool wordEmbeddingsRequested;
 
@@ -131,6 +133,7 @@
 - (void)setSuggestions:(id)arg1;
 - (void)setUncommittedMaxGroupedResultsCount:(unsigned long long)arg1;
 - (void)setUncommittedResults:(id)arg1;
+- (void)setUncommittedSuggestions:(id)arg1;
 - (void)setUnprocessedSearchResultsCount:(unsigned long long)arg1;
 - (void)setWordEmbeddingsRequested:(bool)arg1;
 - (id)stringWithStartDate:(id)arg1 endDate:(id)arg2;
@@ -139,6 +142,7 @@
 - (id)titleForHeaderInSection:(long long)arg1;
 - (unsigned long long)uncommittedMaxGroupedResultsCount;
 - (id)uncommittedResults;
+- (id)uncommittedSuggestions;
 - (unsigned long long)unprocessedSearchResultsCount;
 - (id)wordEmbeddingSubstitutions;
 - (bool)wordEmbeddingsRequested;

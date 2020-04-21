@@ -96,7 +96,7 @@
 @property (setter=__setHostViewUnderlapsStatusBar:, nonatomic) bool __hostViewUnderlapsStatusBar;
 @property (nonatomic, readonly) struct { long long x1; long long x2; } __sizeClassPair;
 @property (getter=_animationController, setter=_setAnimationController:, nonatomic, retain) _UIWindowAnimationController *_animationController;
-@property (nonatomic, readonly) struct { id x1; int x2; bool x3; bool x4; bool x5; bool x6; bool x7; bool x8; bool x9; bool x10; bool x11; bool x12; } _bindingDescription;
+@property (nonatomic, readonly) struct { id x1; bool x2; int x3; bool x4; bool x5; bool x6; bool x7; bool x8; bool x9; bool x10; bool x11; bool x12; bool x13; } _bindingDescription;
 @property (setter=_setBoundContext:, nonatomic) CAContext *_boundContext;
 @property (setter=_setContainedGestureRecognizersShouldRespectGestureServerInstructions:, nonatomic) bool _containedGestureRecognizersShouldRespectGestureServerInstructions;
 @property (setter=_setContextBinder:, nonatomic) _UIContextBinder *_contextBinder;
@@ -206,7 +206,7 @@
 - (void)_beginKeyWindowDeferral;
 - (void)_beginModalSession;
 - (double)_bindableLevel;
-- (struct { id x1; int x2; bool x3; bool x4; bool x5; bool x6; bool x7; bool x8; bool x9; bool x10; bool x11; bool x12; })_bindingDescription;
+- (struct { id x1; bool x2; int x3; bool x4; bool x5; bool x6; bool x7; bool x8; bool x9; bool x10; bool x11; bool x12; bool x13; })_bindingDescription;
 - (id)_bindingLayer;
 - (id)_boundContext;
 - (id)_boundingPath;

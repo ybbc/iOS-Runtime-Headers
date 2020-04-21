@@ -11,9 +11,9 @@
 @property (readonly) unsigned long long hash;
 @property (readonly) Class superclass;
 
-+ (id)bufferWithAllocatorInfo:(const /* Warning: unhandled struct encoding: '{RenderbufferAllocatorInfo=^{FramebufferAttributes}^{tvec2<int>}@}' */ struct RenderbufferAllocatorInfo { struct FramebufferAttributes {} *x1; struct tvec2<int> {} *x2; id x3; }*)arg1 internalFormat:(unsigned int)arg2 format:(unsigned int)arg3 attachment:(unsigned int)arg4;
-+ (id)colorbufferWithAllocatorInfo:(const /* Warning: unhandled struct encoding: '{RenderbufferAllocatorInfo=^{FramebufferAttributes}^{tvec2<int>}@}' */ struct RenderbufferAllocatorInfo { struct FramebufferAttributes {} *x1; struct tvec2<int> {} *x2; id x3; }*)arg1;
-+ (id)depthbufferWithAllocatorInfo:(const /* Warning: unhandled struct encoding: '{RenderbufferAllocatorInfo=^{FramebufferAttributes}^{tvec2<int>}@}' */ struct RenderbufferAllocatorInfo { struct FramebufferAttributes {} *x1; struct tvec2<int> {} *x2; id x3; }*)arg1;
++ (id)bufferWithAllocatorInfo:(const struct RenderbufferAllocatorInfo { struct FramebufferAttributes {} *x1; struct tvec2<int> {} *x2; id x3; }*)arg1 internalFormat:(unsigned int)arg2 format:(unsigned int)arg3 attachment:(unsigned int)arg4;
++ (id)colorbufferWithAllocatorInfo:(const struct RenderbufferAllocatorInfo { struct FramebufferAttributes {} *x1; struct tvec2<int> {} *x2; id x3; }*)arg1;
++ (id)depthbufferWithAllocatorInfo:(const struct RenderbufferAllocatorInfo { struct FramebufferAttributes {} *x1; struct tvec2<int> {} *x2; id x3; }*)arg1;
 + (bool)isEqual:(id)arg1;
 + (bool)isTexturable;
 

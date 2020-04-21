@@ -459,7 +459,6 @@
 - (void)_asyncGenerateRenderImageFileWithSize:(struct CGSize { double x1; double x2; })arg1 formatIdentifier:(id)arg2 formatVersion:(id)arg3 adjustmentDataBlob:(id)arg4 originalImageFilePath:(id)arg5 originalImageEXIFOrientation:(long long)arg6 renderedImageFilePath:(id)arg7 completionHandler:(id /* block */)arg8;
 - (id)_availableCloudResourcesForPhotosRequireUnadjusted:(bool)arg1 allowPenultimate:(bool)arg2;
 - (int)_avalancheTypeFromCplBurstFlags:(unsigned long long)arg1;
-- (id)_bestAvaliableAdjustedResource;
 - (id)_calculateCloudAdjustmentFingerprintFromAdjustmentPListAndCPLResources;
 - (int)_calculateStateForWorkerType:(short)arg1 flags:(int*)arg2;
 - (bool)_checkResource:(unsigned long long)arg1 onPath:(id)arg2 onMaster:(bool)arg3;
@@ -517,7 +516,6 @@
 - (void)_loadReverseGeoIfNeeded;
 - (bool)_location:(id)arg1 isEqualToLocationForUpdating:(id)arg2;
 - (id)_markDirtyChangeDictionaryForWorkerType:(short)arg1 workerFlags:(int)arg2;
-- (unsigned long long)_masterResourceTypeForAdjustedAssetResourceType:(unsigned long long)arg1 sourceAsset:(id)arg2 flattenLivePhoto:(bool)arg3;
 - (id)_mediaGroupUUIDForPersistence;
 - (id)_mediaGroupUUIDFromPersistence:(id)arg1;
 - (bool)_migrateKeyedArchiverAdjustmentsToPropertyListSerializationFormat;
@@ -605,6 +603,7 @@
 - (void)awakeFromInsert;
 - (void)awakeFromSnapshotEvents:(unsigned long long)arg1;
 - (bool)becomePhotoIrisWithMediaGroupUUID:(id)arg1 videoURL:(id)arg2 videoDuration:(struct { long long x1; int x2; unsigned int x3; long long x4; })arg3 stillDisplayTime:(struct { long long x1; int x2; unsigned int x3; long long x4; })arg4 createSidecar:(bool)arg5 options:(unsigned long long)arg6;
+- (id)bestAvailableAdjustedResource;
 - (unsigned long long)bestResourceTypeForAdjustedFingerPrint;
 - (id)cachedLocation;
 - (id)cachedNonPersistedVideoPlaybackURL;
@@ -802,6 +801,7 @@
 - (void)markForNeedingFaceDetection;
 - (id)masterFingerPrintCacheIfNecessaryAndAdjustedFingerPrint:(id*)arg1 error:(id*)arg2;
 - (id)masterResourceForCPLType:(unsigned long long)arg1;
+- (unsigned long long)masterResourceTypeForAdjustedAssetResourceType:(unsigned long long)arg1 sourceAsset:(id)arg2 flattenLivePhoto:(bool)arg3;
 - (bool)migrateLegacyPhotoAdjustments;
 - (bool)migrateLegacyVideoAdjustments;
 - (bool)migrateLocationDataIfNeededAfterOTARestore:(bool)arg1;

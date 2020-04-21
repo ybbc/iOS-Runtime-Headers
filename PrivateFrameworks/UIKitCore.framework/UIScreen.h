@@ -364,7 +364,6 @@
 - (id)traitCollection;
 - (void)traitCollectionDidChange:(id)arg1;
 - (void)updateFocusIfNeeded;
-- (id)valueForKey:(id)arg1;
 - (bool)wantsSoftwareDimming;
 
 // Image: /Developer/Library/PrivateFrameworks/DTDDISupport.framework/libViewDebuggerSupport.dylib
@@ -404,6 +403,14 @@
 
 + (bool)hk_currentDeviceHas4InchScreen;
 + (bool)hk_currentDeviceHas4Point7InchScreen;
++ (bool)hk_currentDeviceHas5Point8InchScreen;
+
+// Image: /System/Library/PrivateFrameworks/HeartRhythmUI.framework/HeartRhythmUI
+
++ (bool)hrui_currentDeviceHas5Point8InchScreen;
++ (bool)hrui_currentDeviceHasLargePhoneScreen;
++ (bool)hrui_currentDeviceHasMediumPhoneScreen;
++ (bool)hrui_currentDeviceHasSmallPhoneScreen;
 
 // Image: /System/Library/PrivateFrameworks/PhotosEditUI.framework/PhotosEditUI
 
@@ -444,6 +451,7 @@
 + (double)tsk_expectedScreenScale;
 + (bool)tsk_is3xScreenScale;
 + (bool)tsk_pad1112H;
++ (bool)tsk_pad1194H;
 + (bool)tsk_pad1366H;
 + (bool)tsk_pad1366HOrLarger;
 + (bool)tsk_phoneUI568H;

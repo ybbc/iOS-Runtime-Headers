@@ -28,7 +28,7 @@
     long long  _lastChromeVisibilityChangeReason;
     PUAssetReference * _leadingAssetReference;
     PUMediaProvider * _mediaProvider;
-    int  _ongoingEnumerations;
+    _Atomic int  _ongoingEnumerations;
     bool  _presentingOverOneUp;
     PUReviewScreenBarsModel * _reviewScreenBarsModel;
     struct CGSize { 

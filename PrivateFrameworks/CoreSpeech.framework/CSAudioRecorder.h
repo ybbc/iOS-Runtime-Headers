@@ -71,6 +71,7 @@
 - (void)dealloc;
 - (id)delegate;
 - (bool)duckOthersOption;
+- (void)enableMiniDucking:(bool)arg1;
 - (double)getRecordBufferDuration;
 - (id)initWithContext:(id)arg1 error:(id*)arg2;
 - (bool)isNarrowBand;

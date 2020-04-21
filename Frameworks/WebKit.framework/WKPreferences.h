@@ -14,7 +14,7 @@
 @property (setter=_setAllowFileAccessFromFileURLs:, nonatomic) bool _allowFileAccessFromFileURLs;
 @property (setter=_setAllowsPictureInPictureMediaPlayback:, nonatomic) bool _allowsPictureInPictureMediaPlayback;
 @property (setter=_setAnimatedImageAsyncDecodingEnabled:, nonatomic) bool _animatedImageAsyncDecodingEnabled;
-@property (readonly) /* Warning: unhandled struct encoding: '{Object=^^?@}' */ struct Object { int (**x1)(); id x2; }*_apiObject;
+@property (readonly) struct Object { int (**x1)(); id x2; }*_apiObject;
 @property (setter=_setApplePayCapabilityDisclosureAllowed:, nonatomic) bool _applePayCapabilityDisclosureAllowed;
 @property (setter=_setAVFoundationEnabled:, nonatomic) bool _avFoundationEnabled;
 @property (setter=_setColorFilterEnabled:, nonatomic) bool _colorFilterEnabled;
@@ -79,7 +79,7 @@
 - (bool)_allowFileAccessFromFileURLs;
 - (bool)_allowsPictureInPictureMediaPlayback;
 - (bool)_animatedImageAsyncDecodingEnabled;
-- (/* Warning: unhandled struct encoding: '{Object=^^?@}' */ struct Object { int (**x1)(); id x2; }*)_apiObject;
+- (struct Object { int (**x1)(); id x2; }*)_apiObject;
 - (bool)_applePayCapabilityDisclosureAllowed;
 - (bool)_avFoundationEnabled;
 - (bool)_colorFilterEnabled;

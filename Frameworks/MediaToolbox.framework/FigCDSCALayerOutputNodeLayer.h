@@ -3,7 +3,7 @@
  */
 
 @interface FigCDSCALayerOutputNodeLayer : FigBaseCALayer {
-    /* Warning: unhandled struct encoding: '{OpaqueFigCDSCALayerOutputNodeLayerInternal=@@@}' */ struct OpaqueFigCDSCALayerOutputNodeLayerInternal { id x1; id x2; } * layerInternal;
+    struct OpaqueFigCDSCALayerOutputNodeLayerInternal { id x1; id x2; id x3; } * layerInternal;
 }
 
 - (id)actionForLayer:(id)arg1 forKey:(id)arg2;

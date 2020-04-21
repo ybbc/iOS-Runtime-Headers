@@ -5,6 +5,7 @@
 @interface _DKPerformSyncDownPeerDeletionsOperation : _DKSyncCompositeOperation {
     unsigned long long  _batchNumber;
     bool  _foundDeletions;
+    bool  _hadDeletions;
     NSString * _hadDeletionsKey;
     bool  _highPriority;
     NSDate * _highWaterMark;
@@ -34,6 +35,7 @@
 - (bool)isAsynchronous;
 - (void)main;
 - (void)performSyncDownPeerDeletions;
+- (void)performSyncDownPeerDeletionsWithDidPrewarm:(bool)arg1 orError:(id)arg2;
 - (void)performSyncDownPeerDeletionsWithHighWaterMark:(id)arg1 orError:(id)arg2;
 - (void)performSyncDownPeerDeletionsWithPreviousUntilDate:(id)arg1;
 - (void)startPerfMetrics;

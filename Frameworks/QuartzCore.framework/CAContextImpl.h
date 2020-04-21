@@ -3,7 +3,7 @@
  */
 
 @interface CAContextImpl : CAContext {
-    struct Context { unsigned int x1; struct Context {} *x2; struct Mutex { struct _opaque_pthread_mutex_t { long long x_1_2_1; BOOL x_1_2_2[56]; } x_3_1_1; } x3; struct Weak<const void *> { id x_4_1_1; } x4; unsigned int x5; unsigned int x6; unsigned int x7; id x8; struct Context {} x9; struct CGColorSpace {} *x10; int x11; struct __CFDictionary {} *x12; unsigned int x13; unsigned int x14; unsigned int x15; unsigned int x16; struct ObjectCache {} *x17; id x18; unsigned int x19; float x20; struct Commit {} *x21; struct Generic { int (**x_22_1_1)(); struct Context {} *x_22_1_2; } x22; unsigned int x23 : 1; unsigned int x24 : 1; unsigned int x25 : 1; unsigned int x26 : 1; unsigned int x27 : 1; } * _impl;
+    struct Context { unsigned int x1; struct Context {} *x2; struct Mutex { struct _opaque_pthread_mutex_t { long long x_1_2_1; BOOL x_1_2_2[56]; } x_3_1_1; } x3; struct Weak<const void *> { id x_4_1_1; bool x_4_1_2; } x4; unsigned int x5; unsigned int x6; unsigned int x7; id x8; struct Context {} *x9; struct CGColorSpace {} *x10; int x11; struct __CFDictionary {} *x12; unsigned int x13; unsigned int x14; unsigned int x15; unsigned int x16; struct ObjectCache {} *x17; id x18; id x19; unsigned int x20; float x21; struct Commit {} *x22; struct Generic { int (**x_23_1_1)(); struct Context {} *x_23_1_2; } x23; unsigned int x24 : 1; unsigned int x25 : 1; unsigned int x26 : 1; unsigned int x27 : 1; unsigned int x28 : 1; } * _impl;
 }
 
 - (bool)colorMatchUntaggedContent;

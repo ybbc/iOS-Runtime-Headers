@@ -5,10 +5,10 @@
 @interface PPEventKitNotificationHandler : PPNotificationHandler {
     NSMutableSet * _events;
     struct atomic_flag { 
-        bool _Value; 
+        _Atomic bool _Value; 
     }  _hasWaiter;
     struct atomic_flag { 
-        bool _Value; 
+        _Atomic bool _Value; 
     }  _isFiring;
     NSObject<OS_dispatch_queue> * _serialQueue;
 }

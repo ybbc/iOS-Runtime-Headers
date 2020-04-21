@@ -3,7 +3,7 @@
  */
 
 @interface FigSubtitleBackdropCALayer : FigBaseCALayer {
-    /* Warning: unhandled struct encoding: '{OpaqueFigSubtitleBackdropCALayerInternal=@@BBd@@@}' */ struct OpaqueFigSubtitleBackdropCALayerInternal { id x1; bool x2; bool x3; double x4; id x5; id x6; } * bdLayerInternal;
+    struct OpaqueFigSubtitleBackdropCALayerInternal { id x1; id x2; bool x3; bool x4; double x5; id x6; id x7; id x8; } * bdLayerInternal;
 }
 
 - (void)_addBoundsAnimationToLayer:(id)arg1 usingAnimation:(id)arg2 forKey:(id)arg3;

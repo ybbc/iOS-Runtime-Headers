@@ -3,7 +3,7 @@
  */
 
 @interface WKProcessPool : NSObject <NSSecureCoding, WKObject> {
-    /* Warning: unhandled struct encoding: '{WeakObjCPtr<id<_WKAutomationDelegate> >="m_weakReference"@}' */ struct WeakObjCPtr<id<_WKAutomationDelegate> > { 
+    struct WeakObjCPtr<id<_WKAutomationDelegate> > { 
         id m_weakReference; 
     }  _automationDelegate;
     struct RetainPtr<_WKAutomationSession> { 
@@ -12,7 +12,7 @@
     struct RetainPtr<id<_WKGeolocationCoreLocationProvider> > { 
         void *m_ptr; 
     }  _coreLocationProvider;
-    /* Warning: unhandled struct encoding: '{WeakObjCPtr<id<_WKDownloadDelegate> >="m_weakReference"@}' */ struct WeakObjCPtr<id<_WKDownloadDelegate> > { 
+    struct WeakObjCPtr<id<_WKDownloadDelegate> > { 
         id m_weakReference; 
     }  _downloadDelegate;
     struct RetainPtr<WKGeolocationProviderIOS> { 
@@ -25,7 +25,7 @@
     }  _processPool;
 }
 
-@property (readonly) /* Warning: unhandled struct encoding: '{Object=^^?@}' */ struct Object { int (**x1)(); id x2; }*_apiObject;
+@property (readonly) struct Object { int (**x1)(); id x2; }*_apiObject;
 @property (setter=_setAutomationDelegate:, nonatomic) <_WKAutomationDelegate> *_automationDelegate;
 @property (nonatomic, readonly) _WKProcessPoolConfiguration *_configuration;
 @property (getter=_isCookieStoragePartitioningEnabled, setter=_setCookieStoragePartitioningEnabled:, nonatomic) bool _cookieStoragePartitioningEnabled;
@@ -50,7 +50,7 @@
 - (id).cxx_construct;
 - (void).cxx_destruct;
 - (void)_addSupportedPlugin:(id)arg1 named:(id)arg2 withMimeTypes:(id)arg3 withExtensions:(id)arg4;
-- (/* Warning: unhandled struct encoding: '{Object=^^?@}' */ struct Object { int (**x1)(); id x2; }*)_apiObject;
+- (struct Object { int (**x1)(); id x2; }*)_apiObject;
 - (void)_automationCapabilitiesDidChange;
 - (id)_automationDelegate;
 - (void)_clearSupportedPlugins;
@@ -102,7 +102,7 @@
 
 // Image: /System/Library/Frameworks/iAd.framework/iAd
 
-+ (id)_createProcessPoolWithPriority:(bool)arg1 video:(bool)arg2;
++ (id)_newProcessPoolWithPriority:(bool)arg1 video:(bool)arg2;
 + (id)advertisingProcessPool:(bool)arg1;
 + (id)advertisingProcessPoolForVideo:(bool)arg1;
 

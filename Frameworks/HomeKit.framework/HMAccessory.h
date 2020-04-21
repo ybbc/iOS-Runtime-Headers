@@ -48,6 +48,7 @@
     bool  _supportsTargetControl;
     bool  _supportsTargetController;
     HMSymptomsHandler * _symptomsHandler;
+    bool  _targetControllerHardwareSupport;
     unsigned long long  _transportTypes;
     NSUUID * _uniqueIdentifier;
     NSArray * _uniqueIdentifiersForBridgedAccessories;
@@ -83,6 +84,7 @@
 @property (nonatomic, copy) NSString *firmwareVersion;
 @property (readonly) unsigned long long hash;
 @property (nonatomic, readonly) long long hf_appPunchOutReason;
+@property (nonatomic, readonly) NSArray *hf_bridgedAccessories;
 @property (nonatomic, readonly, copy) NSSet *hf_componentServices;
 @property (nonatomic, readonly, copy) NSDate *hf_dateAdded;
 @property (nonatomic, readonly, copy) NSString *hf_defaultName;
@@ -156,6 +158,7 @@
 @property (nonatomic) bool supportsTargetControl;
 @property (nonatomic) bool supportsTargetController;
 @property (copy) HMSymptomsHandler *symptomsHandler;
+@property (nonatomic) bool targetControllerHardwareSupport;
 @property (nonatomic) unsigned long long transportTypes;
 @property (nonatomic, readonly, copy) NSUUID *uniqueIdentifier;
 @property (nonatomic, copy) NSArray *uniqueIdentifiersForBridgedAccessories;
@@ -336,6 +339,7 @@
 - (void)setSupportsTargetControl:(bool)arg1;
 - (void)setSupportsTargetController:(bool)arg1;
 - (void)setSymptomsHandler:(id)arg1;
+- (void)setTargetControllerHardwareSupport:(bool)arg1;
 - (void)setTransportTypes:(unsigned long long)arg1;
 - (void)setUniqueIdentifiersForBridgedAccessories:(id)arg1;
 - (void)setUuid:(id)arg1;
@@ -349,6 +353,7 @@
 - (bool)supportsTargetControl;
 - (bool)supportsTargetController;
 - (id)symptomsHandler;
+- (bool)targetControllerHardwareSupport;
 - (id)targetControllers;
 - (unsigned long long)transportTypes;
 - (id)uniqueIdentifier;
@@ -366,6 +371,7 @@
 - (void)_pushSymptomUpdate;
 - (id)accessories;
 - (long long)hf_appPunchOutReason;
+- (id)hf_bridgedAccessories;
 - (id)hf_componentServices;
 - (id)hf_dateAdded;
 - (id)hf_defaultName;

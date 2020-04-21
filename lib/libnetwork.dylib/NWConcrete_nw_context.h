@@ -4,7 +4,7 @@
 
 @interface NWConcrete_nw_context : NSObject <OS_nw_context> {
     struct atomic_flag { 
-        bool _Value; 
+        _Atomic bool _Value; 
     }  activated;
     struct nw_hash_table { } * address_endpoints;
     struct nw_mem_buffer_manager { } * buffer_manager_128;

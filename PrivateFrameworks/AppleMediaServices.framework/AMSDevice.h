@@ -9,6 +9,8 @@
 + (id)_compatibleProductType;
 + (id)_dataForNVRAMKey:(id)arg1;
 + (id)_followUpItemWithIdentifier:(id)arg1 account:(id)arg2 priority:(long long)arg3 bagContract:(id)arg4 logKey:(id)arg5;
++ (id)_notificationIdFromFollowUpId:(id)arg1 account:(id)arg2;
++ (void)_performAuth;
 + (void)_startListeningForDeviceLanguageChangeWithBagContract:(id)arg1 callback:(id /* block */)arg2;
 + (id)_systemVersionDictionary;
 + (id)buildVersion;

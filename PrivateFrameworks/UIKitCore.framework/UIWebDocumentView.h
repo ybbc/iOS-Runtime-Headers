@@ -112,7 +112,7 @@
     UIView * _initialDropSnapshotView;
     <UITextInputDelegate> * _inputDelegate;
     unsigned int  _inspectorSearchingForNode;
-    /* Warning: unhandled struct encoding: '{?="timer"@"NSTimer""location"{CGPoint="x"d"y"d}"isBlocked"B"isCancelled"B"isOnWebThread"B"isDisplayingHighlight"B"attemptedClick"B"lastPanTranslation"{CGPoint="x"d"y"d}"element"@"DOMNode""delegate"@"interactionSheet"@"UIWebRotatingAlertController""allowsImageSheet"B"allowsDataDetectorsSheet"B"allowsLinkSheet"B"acceptsFirstResponder"B"documentScale"d"previewHintRects"@"NSArray""previewHintImage"@"UIImage"}' */ struct { 
+    struct { 
         NSTimer *timer; 
         struct CGPoint { 
             double x; 
@@ -129,6 +129,14 @@
         } lastPanTranslation; 
         DOMNode *element; 
         id delegate; 
+        UIWebRotatingAlertController *interactionSheet; 
+        bool allowsImageSheet; 
+        bool allowsDataDetectorsSheet; 
+        bool allowsLinkSheet; 
+        bool acceptsFirstResponder; 
+        double documentScale; 
+        NSArray *previewHintRects; 
+        UIImage *previewHintImage; 
     }  _interaction;
     bool  _isPerformingDrop;
     unsigned int  _isSettingRedrawFrame;

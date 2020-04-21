@@ -5,7 +5,7 @@
 @interface SGSuggestHistory : NSObject {
     NSUbiquitousKeyValueStore * _backingKVStore;
     SGNoCloudNSUbiquitousKeyValueStore * _noCloudFakeBackingKVStore;
-    struct SGHistorySharedData { id x1; id x2; id x3; id x4; } * _privateShared;
+    struct SGHistorySharedData { id x1; id x2; id x3; id x4; id x5; id x6; id x7; id x8; } * _privateShared;
     struct SGMutexSynchronizedObject<SGHistorySharedData> { struct SGHistorySharedData {} *x1; struct _opaque_pthread_mutex_t { long long x_2_1_1; BOOL x_2_1_2[56]; } x2; } * _shared;
 }
 

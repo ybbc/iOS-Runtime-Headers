@@ -11,6 +11,8 @@
     NSString * _adapterName;
     bool  _adapterSharedSource;
     long long  _adapterSourceID;
+    bool  _added;
+    unsigned int  _changes;
     double  _chargeLevel;
     bool  _charging;
     long long  _familyCode;
@@ -32,9 +34,6 @@
     bool  _showChargingUI;
     long long  _sourceID;
     NSString * _state;
-    SFPowerSource * _subCase;
-    SFPowerSource * _subLeft;
-    SFPowerSource * _subRight;
     long long  _temperature;
     NSString * _transportType;
     NSString * _type;
@@ -49,8 +48,8 @@
 @property (nonatomic, copy) NSString *adapterName;
 @property (nonatomic) bool adapterSharedSource;
 @property (nonatomic) long long adapterSourceID;
-@property (nonatomic, readonly) bool aggregate;
-@property (nonatomic, readonly) bool aggregateComponent;
+@property (nonatomic) bool added;
+@property (nonatomic) unsigned int changes;
 @property (nonatomic) double chargeLevel;
 @property (nonatomic) bool charging;
 @property (nonatomic) long long familyCode;
@@ -60,6 +59,7 @@
 @property (nonatomic, copy) NSDictionary *ioKitDescription;
 @property (getter=isLowPowerModeEnabled, nonatomic, readonly) bool lowPowerModeEnabled;
 @property (nonatomic) double lowWarnLevel;
+@property (nonatomic, readonly) long long matID;
 @property (nonatomic) double maxCapacity;
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *partID;
@@ -71,13 +71,11 @@
 @property (nonatomic) bool showChargingUI;
 @property (nonatomic) long long sourceID;
 @property (nonatomic, copy) NSString *state;
-@property (nonatomic, retain) SFPowerSource *subCase;
-@property (nonatomic, retain) SFPowerSource *subLeft;
-@property (nonatomic, retain) SFPowerSource *subRight;
 @property (nonatomic) long long temperature;
 @property (nonatomic, copy) NSString *transportType;
 @property (nonatomic, copy) NSString *type;
 @property (nonatomic) long long vendorID;
+@property (nonatomic, readonly) bool wirelessCharging;
 
 + (bool)supportsSecureCoding;
 
@@ -91,8 +89,8 @@
 - (id)adapterName;
 - (bool)adapterSharedSource;
 - (long long)adapterSourceID;
-- (bool)aggregate;
-- (bool)aggregateComponent;
+- (bool)added;
+- (unsigned int)changes;
 - (double)chargeLevel;
 - (bool)charging;
 - (void)dealloc;
@@ -101,7 +99,6 @@
 - (void)encodeWithCoder:(id)arg1;
 - (long long)familyCode;
 - (id)groupID;
-- (void)handleSubComponentsUpdated;
 - (unsigned long long)hash;
 - (id)init;
 - (id)initWithCoder:(id)arg1;
@@ -113,6 +110,7 @@
 - (bool)isLowPowerModeEnabled;
 - (void)lowPowerModeChanged:(int)arg1;
 - (double)lowWarnLevel;
+- (long long)matID;
 - (double)maxCapacity;
 - (id)name;
 - (id)partID;
@@ -129,6 +127,8 @@
 - (void)setAdapterName:(id)arg1;
 - (void)setAdapterSharedSource:(bool)arg1;
 - (void)setAdapterSourceID:(long long)arg1;
+- (void)setAdded:(bool)arg1;
+- (void)setChanges:(unsigned int)arg1;
 - (void)setChargeLevel:(double)arg1;
 - (void)setCharging:(bool)arg1;
 - (void)setFamilyCode:(long long)arg1;
@@ -148,9 +148,6 @@
 - (void)setShowChargingUI:(bool)arg1;
 - (void)setSourceID:(long long)arg1;
 - (void)setState:(id)arg1;
-- (void)setSubCase:(id)arg1;
-- (void)setSubLeft:(id)arg1;
-- (void)setSubRight:(id)arg1;
 - (void)setTemperature:(long long)arg1;
 - (void)setTransportType:(id)arg1;
 - (void)setType:(id)arg1;
@@ -159,9 +156,6 @@
 - (long long)sourceID;
 - (void)startLowPowerMonitoringIfAppropriate;
 - (id)state;
-- (id)subCase;
-- (id)subLeft;
-- (id)subRight;
 - (long long)temperature;
 - (id)transportType;
 - (id)type;
@@ -169,5 +163,6 @@
 - (void)updateWithPowerSource:(id)arg1;
 - (unsigned int)updateWithPowerSourceDescription:(id)arg1;
 - (long long)vendorID;
+- (bool)wirelessCharging;
 
 @end

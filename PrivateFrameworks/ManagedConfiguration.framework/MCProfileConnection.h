@@ -72,6 +72,7 @@
 - (void)addUserBookmark:(id)arg1;
 - (void)addWebContentFilterAutoPermittedURLString:(id)arg1;
 - (id)allClientUUIDsForClientType:(id)arg1;
+- (void)allProfilesOutMDMProfileInfo:(id*)arg1 outConfigurationProfilesInfo:(id*)arg2 outUninstalledProfilesInfo:(id*)arg3 forDeviceType:(unsigned long long)arg4;
 - (id)allowedAppBundleIDsForBidirectionalDataMovementAfterApplyingFilterToBundleIDs:(id)arg1 localAppBundleID:(id)arg2 localAccountIsManaged:(bool)arg3;
 - (id)allowedImportFromAppBundleIDsAfterApplyingFilterToBundleIDs:(id)arg1 importingAppBundleID:(id)arg2 importingAccountIsManaged:(bool)arg3;
 - (void)allowedKeyboardBundleIDsAfterApplyingFilterToBundleIDs:(id)arg1 hostAppBundleID:(id)arg2 accountIsManaged:(bool)arg3 completion:(id /* block */)arg4;
@@ -312,6 +313,7 @@
 - (bool)isPredictiveKeyboardAllowed;
 - (void)isProfileInstalledWithIdentifier:(id)arg1 completion:(id /* block */)arg2;
 - (bool)isProfileUIInstallationAllowed;
+- (bool)isProfileUIInstallationEffectivelyAllowed;
 - (bool)isProvisionallyEnrolled;
 - (bool)isProximitySetupToNewDeviceAllowed;
 - (bool)isRemoteAppPairingAllowed;
@@ -439,6 +441,7 @@
 - (void)removeProtectedProfileAsyncWithIdentifier:(id)arg1 installationType:(long long)arg2;
 - (void)removeProtectedProfileAsyncWithIdentifier:(id)arg1 installationType:(long long)arg2 completion:(id /* block */)arg3;
 - (bool)removeProvisioningProfileWithUUID:(id)arg1 outError:(id*)arg2;
+- (void)removeUninstalledProfileWithIdentifier:(id)arg1 installationType:(long long)arg2 targetDeviceType:(unsigned long long)arg3 completion:(id /* block */)arg4;
 - (void)removeValueSetting:(id)arg1;
 - (void)removeWebContentFilterUserBlacklistedURLString:(id)arg1;
 - (id)removedSystemAppBundleIDs;
@@ -499,7 +502,6 @@
 - (void)setConferenceRoomDisplayModeEnabled:(bool)arg1 ask:(bool)arg2 completion:(id /* block */)arg3;
 - (void)setConferenceRoomDisplaySettingsUIAllowed:(bool)arg1 ask:(bool)arg2 completion:(id /* block */)arg3;
 - (void)setDelegate:(id)arg1;
-- (void)setDictationAllowed:(bool)arg1;
 - (void)setDriverDoNotDisturbModificationsAllowed:(bool)arg1;
 - (void)setExplicitContentAllowed:(bool)arg1 ask:(bool)arg2 completion:(id /* block */)arg3;
 - (void)setFeatureM1Allowed:(bool)arg1;
@@ -571,6 +573,8 @@
 - (void)submitUserInputResponses:(id)arg1;
 - (id)trustedCodeSigningIdentities;
 - (void)unenrollWithCompletionBlock:(id /* block */)arg1;
+- (id)uninstalledProfileDataWithIdentifier:(id)arg1 targetDevice:(unsigned long long)arg2;
+- (id)uninstalledProfileIdentifiersForDevice:(unsigned long long)arg1;
 - (bool)unlockDeviceWithPasscode:(id)arg1 outError:(id*)arg2;
 - (int)unlockScreenType;
 - (int)unlockScreenTypeWithOutSimplePasscodeType:(int*)arg1;

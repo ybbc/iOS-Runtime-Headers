@@ -128,14 +128,17 @@
 - (void)un_safeAddObject:(id)arg1 class:(Class)arg2;
 - (void)un_safeAddObject:(id)arg1 classes:(id)arg2;
 
-// Image: /System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities
+// Image: /System/Library/PrivateFrameworks/AXCoreUtilities.framework/AXCoreUtilities
 
-- (void)axSafelyAddObject:(id)arg1;
-- (void)axSafelyAddObjectsFromArray:(id)arg1;
 - (id)ax_dequeueObject;
 - (void)ax_enqueueObject:(id)arg1;
 - (id)ax_lastEnqueuedObject;
 - (id)ax_nextDequeuedObject;
+
+// Image: /System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities
+
+- (void)axSafelyAddObject:(id)arg1;
+- (void)axSafelyAddObjectsFromArray:(id)arg1;
 
 // Image: /System/Library/PrivateFrameworks/AppleAccount.framework/AppleAccount
 

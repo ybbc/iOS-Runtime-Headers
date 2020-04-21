@@ -3,7 +3,7 @@
  */
 
 @interface FxHostCapabilities : NSObject {
-    struct FxHostCapabilitiesPriv { id x1; id x2; } * _hostCapPriv;
+    struct FxHostCapabilitiesPriv { id x1; unsigned int x2; id x3; id x4; } * _hostCapPriv;
 }
 
 - (void)dealloc;

@@ -69,6 +69,7 @@
 + (id)_pauseDataOnPath:(id)arg1;
 + (id)_rebuildingPersonsIndicatorFilePath;
 + (void)_setIsRebuildingPersons:(bool)arg1;
++ (void)_setSqliteErrorAndExitIfNecessaryForReason:(int)arg1;
 + (id)_statusDescriptionForQueue:(id)arg1;
 + (void)_updateAssetCountKeyPath:(id)arg1 withPendingCountKeyPath:(id)arg2 inContext:(id)arg3;
 + (void)_updateMemoryCountKeyPath:(id)arg1 withPendingCountKeyPath:(id)arg2 inContext:(id)arg3;
@@ -156,6 +157,7 @@
 + (void)setLibraryAvailableIndicatorState:(bool)arg1;
 + (void)setMomentAnalysisNeeded:(bool)arg1;
 + (void)setPhotoStreamEnabled:(bool)arg1;
++ (void)setSqliteErrorAndExitIfNecessaryForDemoContentInstallation;
 + (void)setSqliteErrorAndExitIfNecessaryForSimulatedCorruption:(bool)arg1;
 + (void)setStreamsLibraryUpdatingExpired:(bool)arg1;
 + (void)setTakingPhotoIsBusy:(bool)arg1;
@@ -196,6 +198,7 @@
 - (bool)_hasPendingAssetsIgnoreiTunes:(bool)arg1;
 - (bool)_isHeifUTI:(struct __CFString { }*)arg1;
 - (bool)_isOTARestoreInProgress;
+- (void)_legacyCleanupForStoreDemoMode;
 - (void)_linkAsideAlbumMetadataForOTARestore;
 - (void)_loadDatabase:(const char *)arg1;
 - (void)_photoLibraryCorruptNotification;
@@ -209,6 +212,7 @@
 - (void)_safeSave:(id)arg1;
 - (bool)_safeSave:(id)arg1 error:(id*)arg2;
 - (bool)_shouldCreateDatabase;
+- (bool)_stageDemoLibraryContentForStoreDemoMode;
 - (void)_updateWithInsertedAssetsCount:(unsigned long long)arg1 deletedCount:(unsigned long long)arg2;
 - (void)_userApplyTrashedState:(short)arg1 toAlbums:(id)arg2;
 - (void)_userApplyTrashedState:(short)arg1 toAssets:(id)arg2;

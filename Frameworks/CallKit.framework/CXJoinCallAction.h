@@ -11,6 +11,7 @@
     NSSet * _remoteMembers;
     bool  _shouldSuppressInCallUI;
     bool  _upgrade;
+    bool  _uplinkMuted;
     bool  _videoEnabled;
     bool  _wantsStagingArea;
 }
@@ -23,6 +24,7 @@
 @property (nonatomic, copy) NSSet *remoteMembers;
 @property (nonatomic) bool shouldSuppressInCallUI;
 @property (getter=isUpgrade, nonatomic) bool upgrade;
+@property (getter=isUplinkMuted, nonatomic) bool uplinkMuted;
 @property (getter=isVideoEnabled, nonatomic) bool videoEnabled;
 @property (nonatomic) bool wantsStagingArea;
 
@@ -39,6 +41,7 @@
 - (id)initWithCallUUID:(id)arg1 groupUUID:(id)arg2;
 - (id)initWithCoder:(id)arg1;
 - (bool)isUpgrade;
+- (bool)isUplinkMuted;
 - (bool)isVideoEnabled;
 - (id)messagesGroupName;
 - (id)messagesGroupUUID;
@@ -52,6 +55,7 @@
 - (void)setRemoteMembers:(id)arg1;
 - (void)setShouldSuppressInCallUI:(bool)arg1;
 - (void)setUpgrade:(bool)arg1;
+- (void)setUplinkMuted:(bool)arg1;
 - (void)setVideoEnabled:(bool)arg1;
 - (void)setWantsStagingArea:(bool)arg1;
 - (bool)shouldSuppressInCallUI;

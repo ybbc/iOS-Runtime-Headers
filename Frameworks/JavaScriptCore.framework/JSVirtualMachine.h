@@ -7,7 +7,7 @@
     struct Lock { 
         struct Atomic<unsigned char> { 
             struct atomic<unsigned char> { 
-                unsigned char __a_; 
+                _Atomic unsigned char __a_; 
             } value; 
         } m_byte; 
     }  m_externalDataMutex;
@@ -26,7 +26,7 @@
 - (void)addManagedReference:(id)arg1 withOwner:(id)arg2;
 - (id)contextForGlobalContextRef:(struct OpaqueJSContext { }*)arg1;
 - (void)dealloc;
-- (struct Lock { struct Atomic<unsigned char> { struct atomic<unsigned char> { unsigned char x_1_2_1; } x_1_1_1; } x1; }*)externalDataMutex;
+- (struct Lock { struct Atomic<unsigned char> { struct atomic<unsigned char> { _Atomic unsigned char x_1_2_1; } x_1_1_1; } x1; }*)externalDataMutex;
 - (id)externalObjectGraph;
 - (id)externalRememberedSet;
 - (id)init;

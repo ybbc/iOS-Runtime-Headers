@@ -19,7 +19,7 @@
     PHAManager * _manager;
     double  _maxIntervalSinceLastJobReport;
     bool  _newConstraintsPending;
-    int  _pendingAsyncTasksCount;
+    _Atomic int  _pendingAsyncTasksCount;
     NSObject<OS_dispatch_queue> * _queue;
     NSObject<OS_os_transaction> * _runningJobTransaction;
     bool  _shouldIgnoreConstraintChanges;

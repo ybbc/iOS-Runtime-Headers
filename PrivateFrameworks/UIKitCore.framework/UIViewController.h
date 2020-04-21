@@ -233,6 +233,7 @@
 @property (setter=_setRightContentMargin:, nonatomic) double _rightContentMargin;
 @property (setter=_setSegueResponsibleForModalPresentation:, nonatomic, retain) UIStoryboardSegue *_segueResponsibleForModalPresentation;
 @property (nonatomic, readonly) struct CGRect { struct CGPoint { double x_1_1_1; double x_1_1_2; } x1; struct CGSize { double x_2_1_1; double x_2_1_2; } x2; } _sf_bottomUnsafeAreaFrame;
+@property (nonatomic, readonly) struct CGRect { struct CGPoint { double x_1_1_1; double x_1_1_2; } x1; struct CGSize { double x_2_1_1; double x_2_1_2; } x2; } _sf_bottomUnsafeAreaFrameForToolbar;
 @property (nonatomic, readonly) bool _sf_isMFMailComposeViewController;
 @property (nonatomic, readonly) bool _sf_isPKAddPassesViewController;
 @property (nonatomic, readonly) UIViewController *_sf_viewControllerToPresentFrom;
@@ -1441,6 +1442,7 @@
 
 - (void)_sf_animateAlongsideTransitionOrPerform:(id /* block */)arg1;
 - (struct CGRect { struct CGPoint { double x_1_1_1; double x_1_1_2; } x1; struct CGSize { double x_2_1_1; double x_2_1_2; } x2; })_sf_bottomUnsafeAreaFrame;
+- (struct CGRect { struct CGPoint { double x_1_1_1; double x_1_1_2; } x1; struct CGSize { double x_2_1_1; double x_2_1_2; } x2; })_sf_bottomUnsafeAreaFrameForToolbar;
 - (bool)_sf_isMFMailComposeViewController;
 - (bool)_sf_isPKAddPassesViewController;
 - (void)_sf_presentViewControllerOnTopOfPresentedViewController:(id)arg1 animated:(bool)arg2 completion:(id /* block */)arg3;
@@ -1489,6 +1491,20 @@
 - (bool)bs_removeChildViewController:(id)arg1;
 - (bool)bs_removeChildViewController:(id)arg1 animated:(bool)arg2 transitionBlock:(id /* block */)arg3;
 - (id)bs_topPresentedViewController;
+
+// Image: /System/Library/PrivateFrameworks/BiometricKitUI.framework/BiometricKitUI
+
++ (unsigned long long)bkui_getState:(int)arg1;
++ (long long)bkui_reverseLeftRight:(long long)arg1;
+
+- (long long)bkui_deviceOrientationForIterfaceOrientation:(long long)arg1;
+- (long long)bkui_rawDeviceOrientationIgnoringOrientationLocks;
+- (id)bkui_registerRotationLockObserver:(id /* block */)arg1;
+- (id)bkui_registerRotationObserver:(id /* block */)arg1;
+- (long long)bkui_reverseLeftRight:(long long)arg1;
+- (void)bkui_rotateView:(id)arg1 fromOrientation:(long long)arg2 toOrientation:(long long)arg3 animatedDuration:(double)arg4 alongSide:(id /* block */)arg5 completion:(id /* block */)arg6;
+- (bool)bkui_rotationLockStatus;
+- (long long)bkui_uiforDeviceOrientation:(long long)arg1;
 
 // Image: /System/Library/PrivateFrameworks/CameraEffectsKit.framework/CameraEffectsKit
 
@@ -1723,6 +1739,16 @@
 - (id)pk_childrenForAppearance;
 - (void)pk_paymentSetupPreflight:(id /* block */)arg1;
 - (void)pk_paymentSetupSetHideSetupLaterButton:(bool)arg1;
+
+// Image: /System/Library/PrivateFrameworks/PencilKit.framework/PencilKit
+
++ (void)_pk_blockSerialTransitionsOnQueue:(id)arg1 semaphore:(id)arg2;
++ (void)_pk_unblockSerialTransitionsUsingSemaphore:(id)arg1;
+
+- (bool)_pk_canDismissViewController;
+- (bool)_pk_canPresentViewController:(id)arg1;
+- (void)_pk_seriallyDismissViewControllerOnQueue:(id)arg1 animated:(bool)arg2 willDismiss:(id /* block */)arg3 completion:(id /* block */)arg4;
+- (void)_pk_seriallyPresentViewController:(id)arg1 queue:(id)arg2 animated:(bool)arg3 willPresent:(id /* block */)arg4 completion:(id /* block */)arg5;
 
 // Image: /System/Library/PrivateFrameworks/PhotoLibrary.framework/PhotoLibrary
 

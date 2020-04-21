@@ -7,6 +7,7 @@
     NSDictionary * _dictionary;
     NSString * _path;
     FCHeadlineThumbnail * _thumbnail;
+    bool  _webEmbedsEnabled;
 }
 
 @property (nonatomic, readonly) <FCChannelProviding> *channel;
@@ -51,5 +52,6 @@
 - (id)topicIDs;
 - (double)videoDuration;
 - (id)videoURL;
+- (bool)webEmbedsEnabled;
 
 @end

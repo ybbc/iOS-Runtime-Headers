@@ -69,6 +69,7 @@
 @property (nonatomic, retain) SFFormattedText *trailingMiddleText;
 @property (nonatomic, retain) SFFormattedText *trailingTopText;
 @property (nonatomic, copy) NSString *type;
+@property (nonatomic, retain) SFUserReportRequest *userReportRequest;
 
 // Image: /System/Library/PrivateFrameworks/SearchFoundation.framework/SearchFoundation
 

@@ -4,6 +4,7 @@
 
 @interface ConversationKit.StagingAreaViewControllerLayout : SwiftObject {
     void currentConstraints;
+    void effectsConstraintManagers;
     void stateConstraints;
 }
 

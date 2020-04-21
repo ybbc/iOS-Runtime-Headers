@@ -37,7 +37,7 @@
 @property (nonatomic, readonly) bool vipSenderMatchesQuery;
 
 + (id)contextWithFeatureOrder:(id)arg1 withInflation:(unsigned long long)arg2 withInflatedIndexToSize:(id)arg3;
-+ (struct FeatureInfo { id x1; unsigned char x2; }*)featureForName:(id)arg1;
++ (struct FeatureInfo { id x1; unsigned short x2; unsigned char x3; }*)featureForName:(id)arg1;
 + (struct __CFSet { }*)getL2FeatureSet;
 + (void)initialize;
 

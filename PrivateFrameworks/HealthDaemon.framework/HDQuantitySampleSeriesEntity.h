@@ -18,7 +18,7 @@
 + (void)_setStatistics:(id)arg1 discreteQuantitySeriesSample:(id)arg2;
 + (bool)_updateFrozenEntityToMatchReplacedUnfrozenEntity:(id)arg1 unfrozenSeriesUUID:(id)arg2 unfrozenSeriesHFDKey:(long long)arg3 database:(id)arg4 error:(id*)arg5;
 + (id)additionalPredicateForEnumeration;
-+ (const struct { id x1; unsigned char x2; }*)columnDefinitionsWithCount:(unsigned long long*)arg1;
++ (const struct { id x1; id x2; unsigned char x3; }*)columnDefinitionsWithCount:(unsigned long long*)arg1;
 + (id)databaseTable;
 + (bool)deleteSeriesFromHFDWithKey:(long long)arg1 database:(id)arg2 error:(id*)arg3;
 + (bool)deleteSeriesWithID:(id)arg1 deleteHFDData:(bool)arg2 profile:(id)arg3 database:(id)arg4 error:(id*)arg5;

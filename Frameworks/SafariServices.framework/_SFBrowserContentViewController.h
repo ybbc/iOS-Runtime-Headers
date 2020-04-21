@@ -256,6 +256,7 @@
 - (bool)gestureRecognizer:(id)arg1 shouldReceiveTouch:(id)arg2;
 - (bool)hasFailedURL;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
+- (bool)isPageEligibileToShowNotSecureWarning;
 - (bool)isSafariRestricted;
 - (bool)isShowingErrorPage;
 - (id)keyCommands;
@@ -377,6 +378,7 @@
 - (void)webViewControllerDidChangeURL:(id)arg1;
 - (void)webViewControllerDidDetermineReaderAvailability:(id)arg1 dueToSameDocumentNavigation:(bool)arg2;
 - (void)webViewControllerDidFirstVisuallyNonEmptyLayout:(id)arg1;
+- (void)webViewControllerUpdateNavigationBar:(id)arg1;
 - (void)webViewControllerWebProcessDidBecomeResponsive:(id)arg1;
 - (void)webViewControllerWebProcessDidBecomeUnresponsive:(id)arg1;
 - (void)webViewControllerWebProcessDidCrash:(id)arg1;

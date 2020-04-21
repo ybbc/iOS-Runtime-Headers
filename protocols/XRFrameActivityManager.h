@@ -6,6 +6,6 @@
 @required
 
 - (void)_activityYielded:(XRFrameActivity *)arg1;
-- (bool*)_shouldYieldFlag;
+- (_Atomic bool*)_shouldYieldFlag;
 
 @end

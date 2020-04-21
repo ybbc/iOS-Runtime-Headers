@@ -9,7 +9,7 @@
     _ATXAppInfoManager * _appInfoManager;
     _ATXAppInstallMonitor * _appInstallMonitor;
     APRAppIntentMonitor * _appIntentMonitor;
-    bool  _appLaunchAndInstallMonitorsInitialized;
+    _Atomic bool  _appLaunchAndInstallMonitorsInitialized;
     _ATXAppLaunchLocation * _appLaunchLocation;
     _ATXAppLaunchMonitor * _appLaunchMonitor;
     _APRParzenModel * _appNonSiriKitIntentParzen;
@@ -45,7 +45,7 @@
 - (void)_addZeroDayAppIntentKeysToBundleIdTable:(id)arg1;
 - (id)_appPredictionsSeedAppsGivenSBAppList:(id)arg1 consumerSubType:(unsigned char)arg2;
 - (id)_appsToPredictWithConsumerSubType:(unsigned char)arg1 intent:(id)arg2 candidateBundleIdentifiers:(id)arg3 allSBApps:(id)arg4 appPredictionBlacklist:(id)arg5 digitalHealthBlacklist:(id)arg6;
-- (void)_copyValidScoreInputsFromPredictionItem:(const struct ATXPredictionItem { id x1; float x2[259]; float x3; }*)arg1 toPredictionItem:(struct ATXPredictionItem { id x1; float x2[259]; float x3; }*)arg2;
+- (void)_copyValidScoreInputsFromPredictionItem:(const struct ATXPredictionItem { id x1; unsigned long long x2; float x3[259]; float x4; }*)arg1 toPredictionItem:(struct ATXPredictionItem { id x1; unsigned long long x2; float x3[259]; float x4; }*)arg2;
 - (struct unordered_map<NSString *, const ATXPredictionItem *, ATXNSStringHash, ATXNSStringEqual, std::__1::allocator<std::__1::pair<NSString *const, const ATXPredictionItem *> > > { struct __hash_table<std::__1::__hash_value_type<NSString *, const ATXPredictionItem *>, std::__1::__unordered_map_hasher<NSString *, std::__1::__hash_value_type<NSString *, const ATXPredictionItem *>, ATXNSStringHash, true>, std::__1::__unordered_map_equal<NSString *, std::__1::__hash_value_type<NSString *, const ATXPredictionItem *>, ATXNSStringEqual, true>, std::__1::allocator<std::__1::__hash_value_type<NSString *, const ATXPredictionItem *> > > { struct unique_ptr<std::__1::__hash_node_base<std::__1::__hash_node<std::__1::__hash_value_type<NSString *, const ATXPredictionItem *>, void *> *> *[], std::__1::__bucket_list_deallocator<std::__1::allocator<std::__1::__hash_node_base<std::__1::__hash_node<std::__1::__hash_value_type<NSString *, const ATXPredictionItem *>, void *> *> *> > > { struct __compressed_pair<std::__1::__hash_node_base<std::__1::__hash_node<std::__1::__hash_value_type<NSString *, const ATXPredictionItem *>, void *> *> **, std::__1::__bucket_list_deallocator<std::__1::allocator<std::__1::__hash_node_base<std::__1::__hash_node<std::__1::__hash_value_type<NSString *, const ATXPredictionItem *>, void *> *> *> > > { struct __hash_node_base<std::__1::__hash_node<std::__1::__hash_value_type<NSString *, const ATXPredictionItem *>, void *> *> {} **x_1_3_1; struct __bucket_list_deallocator<std::__1::allocator<std::__1::__hash_node_base<std::__1::__hash_node<std::__1::__hash_value_type<NSString *, const ATXPredictionItem *>, void *> *> *> > { struct __compressed_pair<unsigned long, std::__1::allocator<std::__1::__hash_node_base<std::__1::__hash_node<std::__1::__hash_value_type<NSString *, const ATXPredictionItem *>, void *> *> *> > { unsigned long long x_1_5_1; } x_2_4_1; } x_1_3_2; } x_1_2_1; } x_1_1_1; } x1; })_createMapOfKeyToItemForPredictionItems:(const struct vector<ATXPredictionItem, std::__1::allocator<ATXPredictionItem> > { struct ATXPredictionItem {} *x1; struct ATXPredictionItem {} *x2; struct __compressed_pair<ATXPredictionItem *, std::__1::allocator<ATXPredictionItem> > { struct ATXPredictionItem {} *x_3_1_1; } x3; }*)arg1;
 - (struct vector<ATXPredictionItem, std::__1::allocator<ATXPredictionItem> > { struct ATXPredictionItem {} *x1; struct ATXPredictionItem {} *x2; struct __compressed_pair<ATXPredictionItem *, std::__1::allocator<ATXPredictionItem> > { struct ATXPredictionItem {} *x_3_1_1; } x3; })_evalFeaturesForActions:(id)arg1 scoreLogger:(id)arg2;
 - (struct vector<ATXPredictionItem, std::__1::allocator<ATXPredictionItem> > { struct ATXPredictionItem {} *x1; struct ATXPredictionItem {} *x2; struct __compressed_pair<ATXPredictionItem *, std::__1::allocator<ATXPredictionItem> > { struct ATXPredictionItem {} *x_3_1_1; } x3; })_evalFeaturesForAppForAllIntents:(id)arg1 scoreLogger:(id)arg2;
@@ -54,7 +54,7 @@
 - (struct vector<ATXPredictionItem, std::__1::allocator<ATXPredictionItem> > { struct ATXPredictionItem {} *x1; struct ATXPredictionItem {} *x2; struct __compressed_pair<ATXPredictionItem *, std::__1::allocator<ATXPredictionItem> > { struct ATXPredictionItem {} *x_3_1_1; } x3; })_getPredictionForItems:(id)arg1 consumerSubType:(unsigned char)arg2 intent:(id)arg3 scoreLogger:(id)arg4;
 - (bool)_initAppLaunchAndInstallMonitors;
 - (id)_phoneAppsForWatchBundleIds:(id)arg1;
-- (double)_predictionScoreForItem:(const struct ATXPredictionItem { id x1; float x2[259]; float x3; }*)arg1 consumerSubType:(unsigned char)arg2 scoreLogger:(id)arg3 intentType:(id)arg4;
+- (double)_predictionScoreForItem:(const struct ATXPredictionItem { id x1; unsigned long long x2; float x3[259]; float x4; }*)arg1 consumerSubType:(unsigned char)arg2 scoreLogger:(id)arg3 intentType:(id)arg4;
 - (void)_setActionBlacklist:(id)arg1;
 - (void)_updateFromAppPreferencePredictorAsset;
 - (void)_updateFromAsset;
@@ -73,7 +73,7 @@
 - (void)observeValueForKeyPath:(id)arg1 ofObject:(id)arg2 change:(id)arg3 context:(void*)arg4;
 - (id)predictWithLimit:(unsigned long long)arg1 consumerSubType:(unsigned char)arg2 intent:(id)arg3 candidateBundleIdentifiers:(id)arg4 candidateActiontypes:(id)arg5 scoreLogger:(id)arg6;
 - (id)predictWithLimit:(unsigned long long)arg1 consumerSubType:(unsigned char)arg2 intent:(id)arg3 candidateBundleIdentifiers:(id)arg4 candidateActiontypes:(id)arg5 scoreLogger:(id)arg6 predictionItemsToKeep:(struct vector<ATXPredictionItem, std::__1::allocator<ATXPredictionItem> > { struct ATXPredictionItem {} *x1; struct ATXPredictionItem {} *x2; struct __compressed_pair<ATXPredictionItem *, std::__1::allocator<ATXPredictionItem> > { struct ATXPredictionItem {} *x_3_1_1; } x3; }*)arg7;
-- (double)predictionScoreForItem:(const struct ATXPredictionItem { id x1; float x2[259]; float x3; }*)arg1 consumerSubType:(unsigned char)arg2;
+- (double)predictionScoreForItem:(const struct ATXPredictionItem { id x1; unsigned long long x2; float x3[259]; float x4; }*)arg1 consumerSubType:(unsigned char)arg2;
 - (void)receiveFeedbackForConsumerType:(unsigned long long)arg1 consumerSubType:(unsigned char)arg2 atxResponse:(id)arg3 aprResponse:(id)arg4 engagementType:(unsigned long long)arg5 engagedBundleId:(id)arg6 bundleIdsShown:(id)arg7;
 - (void)resetRecentInstallCache;
 - (void)restoreSerializedState:(id)arg1;

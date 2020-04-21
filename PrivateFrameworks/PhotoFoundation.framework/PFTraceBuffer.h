@@ -10,7 +10,7 @@
     bool  _collectTimestamp;
     void ** _data;
     unsigned long long  _length;
-    unsigned int  _next;
+    _Atomic unsigned int  _next;
     bool  _pause;
     unsigned long long  _width;
 }

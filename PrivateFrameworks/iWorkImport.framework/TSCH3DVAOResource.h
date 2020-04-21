@@ -18,7 +18,7 @@
 @property (nonatomic, retain) NSIndexSet *enabledArrays;
 @property (nonatomic) bool failed;
 
-+ (id)resourceWithObjectState:(const struct ObjectState { struct ObjcSharedPtr<NSSet> { id x_1_1_1; struct vector<TSCH3D::ObjectState::Lookup, std::__1::allocator<TSCH3D::ObjectState::Lookup> > { struct Lookup {} *x_2_2_1; struct Lookup {} *x_2_2_2; struct __compressed_pair<TSCH3D::ObjectState::Lookup *, std::__1::allocator<TSCH3D::ObjectState::Lookup> > { struct Lookup {} *x_3_3_1; } x_2_2_3; } x_1_1_2; struct array<SFUtility::ObjcSharedPtr<NSObject>, 8> { struct ObjcSharedPtr<NSObject> { id x_1_3_1; /* Warning: Unrecognized filer type: ']' using 'void*' */ void*x_1_3_2; } x_3_2_1[8]; } x_1_1_3; } x1; }*)arg1 indices:(id)arg2;
++ (id)resourceWithObjectState:(const struct ObjectState { struct ObjcSharedPtr<NSSet> { id x_1_1_1; } x1; struct vector<TSCH3D::ObjectState::Lookup, std::__1::allocator<TSCH3D::ObjectState::Lookup> > { struct Lookup {} *x_2_1_1; struct Lookup {} *x_2_1_2; struct __compressed_pair<TSCH3D::ObjectState::Lookup *, std::__1::allocator<TSCH3D::ObjectState::Lookup> > { struct Lookup {} *x_3_2_1; } x_2_1_3; } x2; struct array<SFUtility::ObjcSharedPtr<NSObject>, 8> { struct ObjcSharedPtr<NSObject> { id x_1_2_1; } x_3_1_1[8]; } x3; struct array<TSCH3D::TextureAttributes, 8> { struct TextureAttributes { int x_1_2_1; int x_1_2_2; bool x_1_2_3; bool x_1_2_4; bool x_1_2_5; long long x_1_2_6; struct TextureSizeHint { int x_7_3_1; struct tvec2<int> { union { int x_1_5_1; int x_1_5_2; int x_1_5_3; } x_2_4_1; union { int x_2_5_1; int x_2_5_2; int x_2_5_3; } x_2_4_2; } x_7_3_2; } x_1_2_7; bool x_1_2_8; } x_4_1_1[8]; } x4; }*)arg1 indices:(id)arg2;
 
 - (id).cxx_construct;
 - (void).cxx_destruct;
@@ -27,7 +27,7 @@
 - (bool)failed;
 - (id)get;
 - (unsigned long long)hash;
-- (id)initWithObjectState:(const struct ObjectState { struct ObjcSharedPtr<NSSet> { id x_1_1_1; struct vector<TSCH3D::ObjectState::Lookup, std::__1::allocator<TSCH3D::ObjectState::Lookup> > { struct Lookup {} *x_2_2_1; struct Lookup {} *x_2_2_2; struct __compressed_pair<TSCH3D::ObjectState::Lookup *, std::__1::allocator<TSCH3D::ObjectState::Lookup> > { struct Lookup {} *x_3_3_1; } x_2_2_3; } x_1_1_2; struct array<SFUtility::ObjcSharedPtr<NSObject>, 8> { struct ObjcSharedPtr<NSObject> { id x_1_3_1; /* Warning: Unrecognized filer type: ']' using 'void*' */ void*x_1_3_2; } x_3_2_1[8]; } x_1_1_3; } x1; }*)arg1 indices:(id)arg2;
+- (id)initWithObjectState:(const struct ObjectState { struct ObjcSharedPtr<NSSet> { id x_1_1_1; } x1; struct vector<TSCH3D::ObjectState::Lookup, std::__1::allocator<TSCH3D::ObjectState::Lookup> > { struct Lookup {} *x_2_1_1; struct Lookup {} *x_2_1_2; struct __compressed_pair<TSCH3D::ObjectState::Lookup *, std::__1::allocator<TSCH3D::ObjectState::Lookup> > { struct Lookup {} *x_3_2_1; } x_2_1_3; } x2; struct array<SFUtility::ObjcSharedPtr<NSObject>, 8> { struct ObjcSharedPtr<NSObject> { id x_1_2_1; } x_3_1_1[8]; } x3; struct array<TSCH3D::TextureAttributes, 8> { struct TextureAttributes { int x_1_2_1; int x_1_2_2; bool x_1_2_3; bool x_1_2_4; bool x_1_2_5; long long x_1_2_6; struct TextureSizeHint { int x_7_3_1; struct tvec2<int> { union { int x_1_5_1; int x_1_5_2; int x_1_5_3; } x_2_4_1; union { int x_2_5_1; int x_2_5_2; int x_2_5_3; } x_2_4_2; } x_7_3_2; } x_1_2_7; bool x_1_2_8; } x_4_1_1[8]; } x4; }*)arg1 indices:(id)arg2;
 - (bool)isEqual:(id)arg1;
 - (void)setEnabledArrays:(id)arg1;
 - (void)setFailed:(bool)arg1;

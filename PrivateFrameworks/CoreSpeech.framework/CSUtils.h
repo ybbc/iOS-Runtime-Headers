@@ -8,9 +8,9 @@
 + (id)_contentsOfDirectoryAtURL:(id)arg1 matchingPattern:(id)arg2 includingPropertiesForKeys:(id)arg3 error:(id*)arg4;
 + (void)_sortedURLsInDirectory:(id)arg1 matchingPattern:(id)arg2 completion:(id /* block */)arg3;
 + (struct AudioStreamBasicDescription { double x1; unsigned int x2; unsigned int x3; unsigned int x4; unsigned int x5; unsigned int x6; unsigned int x7; unsigned int x8; unsigned int x9; })aiffFileASBD;
++ (id)alertMuteBehaviorDict;
 + (id)alertMuteSettings;
 + (id)assetHashInResourcePath:(id)arg1;
-+ (bool)canLookupVoiceTriggerModelFromMobileAsset;
 + (void)clearLogFilesInDirectory:(id)arg1 matchingPattern:(id)arg2 exceedNumber:(unsigned long long)arg3;
 + (id)convertToFloatLPCMBufFromShortLPCMBuf:(id)arg1;
 + (id)convertToShortLPCMBufFromFloatLPCMBuf:(id)arg1;
@@ -25,6 +25,7 @@
 + (double)getHostClockFrequency;
 + (unsigned int)getNumElementInBitset:(unsigned long long)arg1;
 + (id)getSiriLanguageWithFallback:(id)arg1;
++ (bool)hasRemoteBuiltInMic;
 + (bool)hasRemoteCoreSpeech;
 + (unsigned long long)hostTimeFromSampleCount:(unsigned long long)arg1 anchorHostTime:(unsigned long long)arg2 anchorSampleCount:(unsigned long long)arg3;
 + (unsigned long long)hostTimeFromSampleCount:(unsigned long long)arg1 anchorHostTime:(unsigned long long)arg2 anchorSampleCount:(unsigned long long)arg3;

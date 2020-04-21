@@ -252,6 +252,11 @@
 - (void)wipeAllCachesAndDie;
 - (id)xpcConnection;
 
+// Image: /System/Library/PrivateFrameworks/RemoteManagement.framework/RemoteManagement
+
++ (id)remotemanagement_mirroringContainer;
++ (id)remotemanagement_mirroringContainerIdentifier;
+
 // Image: /System/Library/PrivateFrameworks/Stocks.framework/Stocks
 
 - (void)addDatabaseOperation:(id)arg1;

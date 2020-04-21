@@ -9,7 +9,7 @@
     NSObject<OS_dispatch_queue> * _compilerQueue;
     _MTLDevice * _device;
     NSString * _pluginPath;
-    struct MTLCompilerCache { int (**x1)(); id x2; int x3; } * _shaderCache;
+    struct MTLCompilerCache { int (**x1)(); id x2; int x3; int x4; } * _shaderCache;
 }
 
 @property (readonly) struct MTLCompilerConnectionManager { int (**x1)(); }*compilerConnectionManager;

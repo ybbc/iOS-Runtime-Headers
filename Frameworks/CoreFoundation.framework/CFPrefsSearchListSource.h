@@ -7,7 +7,7 @@
     struct __CFArray { } * _cloudPrefixKeys;
     CFPrefsCloudSource * _cloudSetTarget;
     struct __CFString { } * _identifier;
-    bool  _isRebuildingCache;
+    _Atomic bool  _isRebuildingCache;
     struct __CFDictionary { } * _keysToSources;
     struct __CFArray { } * _sourceList;
     CFPrefsPlistSource * _standardSetTarget;

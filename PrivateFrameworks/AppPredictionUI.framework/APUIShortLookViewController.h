@@ -19,6 +19,7 @@
     APUILongLookViewController<PLPreviewInteractionPresentable> * _presentableViewController;
     PLPreviewInteractionManager * _previewInteractionManager;
     bool  _representsVoiceShortcut;
+    bool  _safeToReleaseLongLookViewController;
     SFSearchResult * _searchResult;
     NSUserActivity * _userActivity;
     NSUserDefaults * _userDefaults;

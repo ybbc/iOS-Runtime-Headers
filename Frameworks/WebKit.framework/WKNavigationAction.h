@@ -10,7 +10,7 @@
     }  _navigationAction;
 }
 
-@property (readonly) /* Warning: unhandled struct encoding: '{Object=^^?@}' */ struct Object { int (**x1)(); id x2; }*_apiObject;
+@property (readonly) struct Object { int (**x1)(); id x2; }*_apiObject;
 @property (nonatomic, readonly) bool _canHandleRequest;
 @property (nonatomic, readonly) struct CGPoint { double x1; double x2; } _clickLocationInRootViewCoordinates;
 @property (nonatomic, readonly) bool _isRedirect;
@@ -30,7 +30,7 @@
 @property (readonly) Class superclass;
 @property (nonatomic, readonly, copy) WKFrameInfo *targetFrame;
 
-- (/* Warning: unhandled struct encoding: '{Object=^^?@}' */ struct Object { int (**x1)(); id x2; }*)_apiObject;
+- (struct Object { int (**x1)(); id x2; }*)_apiObject;
 - (bool)_canHandleRequest;
 - (struct CGPoint { double x1; double x2; })_clickLocationInRootViewCoordinates;
 - (bool)_isRedirect;

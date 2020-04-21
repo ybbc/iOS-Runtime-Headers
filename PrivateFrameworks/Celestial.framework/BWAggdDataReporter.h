@@ -35,6 +35,7 @@
 - (void)reportCameraLaunchWithPrewarm:(int)arg1 reason:(id)arg2;
 - (void)reportCameraLaunchWithoutPrewarm:(int)arg1;
 - (void)reportCameraStreamingTimeInMilliseconds:(unsigned long long)arg1 deviceType:(int)arg2 devicePosition:(int)arg3;
+- (void)reportCriticalFocusErrorOccurredForPortType:(id)arg1;
 - (void)reportFaceCount:(unsigned int)arg1 frontCamera:(bool)arg2;
 - (void)reportGNRSampleBufferProcessorProcessingStatus:(int)arg1;
 - (void)reportISPCreateDuration:(int)arg1;

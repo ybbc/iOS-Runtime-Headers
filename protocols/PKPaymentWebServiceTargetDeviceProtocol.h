@@ -39,14 +39,17 @@
 
 @optional
 
+- (PKAppleAccountInformation *)appleAccountInformation;
 - (bool)felicaSecureElementIsAvailable;
 - (unsigned long long)maximumPaymentCards;
 - (void)noteForegroundVerificationObserverActive:(bool)arg1;
 - (void)paymentWebService:(void *)arg1 addPaymentPass:(void *)arg2 withCompletionHandlerV2:(void *)arg3; // needs 3 arg types, found 8: PKPaymentWebService *, PKPaymentPass *, id /* block */, /* Warning: Unrecognized filer type: '<' using 'void*' */ void*, void, id /* block */, PKPaymentPass *, void*
 - (void)paymentWebService:(void *)arg1 handlePotentialExpressPass:(void *)arg2 withCompletionHandler:(void *)arg3; // needs 3 arg types, found 8: PKPaymentWebService *, PKPaymentPass *, id /* block */, /* Warning: Unrecognized filer type: '<' using 'void*' */ void*, void, id /* block */, NSSet *, void*
 - (NSArray *)paymentWebService:(PKPaymentWebService *)arg1 passesOfType:(unsigned long long)arg2;
+- (void)paymentWebService:(void *)arg1 registrationDataWithCompletionHandler:(void *)arg2; // needs 2 arg types, found 8: PKPaymentWebService *, id /* block */, /* Warning: Unrecognized filer type: '<' using 'void*' */ void*, void, id /* block */, PKPaymentDeviceRegistrationData *, NSError *, void*
 - (void)paymentWebService:(void *)arg1 removePass:(void *)arg2 withCompletionHandler:(void *)arg3; // needs 3 arg types, found 9: PKPaymentWebService *, PKPass *, id /* block */, /* Warning: Unrecognized filer type: '<' using 'void*' */ void*, void, id /* block */, bool, NSError *, void*
 - (bool)paymentWebServiceSupportsPeerPaymentRegistration:(PKPaymentWebService *)arg1;
+- (void)renewAppleAccountWithCompletionHandler:(void *)arg1; // needs 1 arg types, found 7: id /* block */, /* Warning: Unrecognized filer type: '<' using 'void*' */ void*, void, id /* block */, long long, PKAppleAccountInformation *, void*
 - (bool)secureElementIsAvailable;
 - (void)setMaximumPaymentCards:(unsigned long long)arg1;
 - (void)startBackgroundVerificationObserverForPass:(PKPaymentPass *)arg1 verificationMethod:(PKVerificationChannel *)arg2;

@@ -16,8 +16,8 @@
     TPFootnoteLayoutController * _footnoteLayoutController;
     double  _horizontalGapBetweenPages;
     bool  _isObservingNotifications;
-    int  _isScrolling;
-    int  _isZooming;
+    _Atomic int  _isScrolling;
+    _Atomic int  _isZooming;
     unsigned long long  _lastKnownPageCount;
     TSUMutablePointerSet * _layoutObservers;
     TPPageLayoutState * _layoutState;

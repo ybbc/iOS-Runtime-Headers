@@ -384,6 +384,17 @@
 
 - (void)_gkUpdateShadowForFocusChange:(bool)arg1;
 
+// Image: /System/Library/PrivateFrameworks/HealthUI.framework/HealthUI
+
++ (id)_hkecg_bodyLabel;
++ (id)_hkecg_heartRateLabel;
++ (id)_hkecg_titleLabel;
++ (id)hk_fontAdjustingLabel;
+
+// Image: /System/Library/PrivateFrameworks/HeartRhythmUI.framework/HeartRhythmUI
+
++ (id)hrui_fontAdjustingLabel;
+
 // Image: /System/Library/PrivateFrameworks/MPUFoundation.framework/MPUFoundation
 
 - (bool)MPU_automaticallyUpdatesTextStyleFontsToPreferredTextStyleFonts;

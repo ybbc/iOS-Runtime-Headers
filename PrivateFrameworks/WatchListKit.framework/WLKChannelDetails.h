@@ -7,7 +7,7 @@
     NSArray * _appBundleIDs;
     bool  _appInstalled;
     NSString * _appName;
-    NSURL * _appStoreURL;
+    NSString * _appStoreURLString;
     NSString * _channelID;
     bool  _firstParty;
     WLKArtworkVariantListing * _images;
@@ -28,6 +28,7 @@
 @property (getter=isAppInstalled, nonatomic, readonly) bool appInstalled;
 @property (nonatomic, readonly, copy) NSString *appName;
 @property (nonatomic, readonly, copy) NSURL *appStoreURL;
+@property (nonatomic, copy) NSString *appStoreURLString;
 @property (nonatomic, readonly, copy) NSString *channelID;
 @property (readonly, copy) NSString *debugDescription;
 @property (readonly, copy) NSString *description;
@@ -52,6 +53,7 @@
 - (id)appIconURLForSize:(struct CGSize { double x1; double x2; })arg1;
 - (id)appName;
 - (id)appStoreURL;
+- (id)appStoreURLString;
 - (id)channelID;
 - (id)description;
 - (id)images;
@@ -66,6 +68,7 @@
 - (id)rateLimit;
 - (bool)requiresAccountLevelConsent;
 - (bool)requiresSubscriptionForConsent;
+- (void)setAppStoreURLString:(id)arg1;
 - (bool)shouldIncludeInConsent;
 - (bool)shouldPromptForConsentOnSubscriptionChange;
 - (bool)shouldTrackPlayActivity;

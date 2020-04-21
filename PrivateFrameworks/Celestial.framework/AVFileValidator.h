@@ -3,7 +3,7 @@
  */
 
 @interface AVFileValidator : NSObject {
-    /* Warning: unhandled struct encoding: '{AVFileValidatorPrivate=@@^{FigOpaqueMediaValidator}{FigMediaValidatorDataLocation=QQ}^{OpaqueCMByteStream}BB@}' */ struct AVFileValidatorPrivate { id x1; struct FigOpaqueMediaValidator {} *x2; struct FigMediaValidatorDataLocation { unsigned long long x_3_1_1; unsigned long long x_3_1_2; } x3; struct OpaqueCMByteStream {} *x4; bool x5; bool x6; id x7; } * _priv;
+    struct AVFileValidatorPrivate { id x1; id x2; struct FigOpaqueMediaValidator {} *x3; struct FigMediaValidatorDataLocation { unsigned long long x_4_1_1; unsigned long long x_4_1_2; } x4; struct OpaqueCMByteStream {} *x5; bool x6; bool x7; id x8; } * _priv;
     NSString * _validationRules;
 }
 

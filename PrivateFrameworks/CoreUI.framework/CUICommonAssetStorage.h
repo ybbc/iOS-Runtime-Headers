@@ -19,7 +19,7 @@
     struct os_unfair_lock_s { 
         unsigned int _os_unfair_lock_opaque; 
     }  _lock;
-    /* Warning: unhandled array encoding: '[20@]' */ id  _renditionInfoCache;
+    id  _renditionInfoCache;
     struct os_unfair_lock_s { 
         unsigned int _os_unfair_lock_opaque; 
     }  _renditionInfoCacheLock;

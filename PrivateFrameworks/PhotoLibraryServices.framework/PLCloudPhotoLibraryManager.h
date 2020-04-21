@@ -80,7 +80,6 @@
 + (id)sharedManager;
 
 - (void).cxx_destruct;
-- (id)_addPrefix:(id)arg1 toKeysInDictionary:(id)arg2;
 - (id)_assetResourceForAsset:(id)arg1 resourceType:(unsigned long long)arg2 masterResourceOnly:(bool)arg3 isPhoto:(bool*)arg4;
 - (id)_calculateUnpauseTimeForPauseTime:(id)arg1;
 - (bool)_canExternallyTransitionToNewLibraryModeIgnoringPause:(bool)arg1 ignoringBatterySaver:(bool)arg2;
@@ -213,8 +212,7 @@
 - (id)readMigrationMarker;
 - (id)readTokenObject;
 - (void)registerPlaceholderAssetAvailabilityHandler:(id /* block */)arg1 forAssetUUID:(id)arg2;
-- (void)reportDeviceData:(id)arg1;
-- (void)reportLibrarySizeIfNeeded;
+- (void)reportMiscInformation:(id)arg1;
 - (void)resetSyncDueToMigrationMarker;
 - (void)saveLastKnownChangeTrackerTokenToDisk;
 - (void)saveTokenObject:(id)arg1;

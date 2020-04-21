@@ -80,9 +80,9 @@
 - (id)_inqDequeueGroupObjectWithId:(unsigned long long)arg1 isCachedGroup:(bool*)arg2;
 - (void)_inqExecutePreparedStatement:(struct sqlite3_stmt { }*)arg1 allowError:(int)arg2 withStatementBlock:(id /* block */)arg3;
 - (void)_inqExecutePreparedStatement:(struct sqlite3_stmt { }*)arg1 withStatementBlock:(id /* block */)arg2;
-- (void)_inqGetTokensFromString:(id)arg1 forIndexing:(bool)arg2 useWildcard:(bool)arg3 tokenOutput:(struct tokenOutput_t { id x1; id x2; struct { /* ? */ } x3; long long x4; long long x5; struct { /* ? */ } *x6; long long x7; long long x8; }*)arg4;
+- (void)_inqGetTokensFromString:(id)arg1 forIndexing:(bool)arg2 useWildcard:(bool)arg3 tokenOutput:(struct tokenOutput_t { id x1; id x2; id x3; struct { /* ? */ } *x4; long long x5; long long x6; struct { /* ? */ } *x7; long long x8; long long x9; }*)arg4;
 - (id)_inqGroupArraysFromGroupIdSets:(id)arg1 dateFilter:(id)arg2 progressBlock:(id /* block */)arg3;
-- (unsigned long long)_inqGroupIdForCategory:(short)arg1 owningGroupId:(unsigned long long)arg2 contentString:(id)arg3 identifier:(id)arg4 insertIfNeeded:(bool)arg5 tokenOutput:(const struct tokenOutput_t { id x1; id x2; struct { /* ? */ } x3; long long x4; long long x5; struct { /* ? */ } *x6; long long x7; long long x8; }*)arg6 shouldUpdateOwningGroupId:(bool)arg7 didUpdateGroup:(out bool*)arg8;
+- (unsigned long long)_inqGroupIdForCategory:(short)arg1 owningGroupId:(unsigned long long)arg2 contentString:(id)arg3 identifier:(id)arg4 insertIfNeeded:(bool)arg5 tokenOutput:(const struct tokenOutput_t { id x1; id x2; id x3; struct { /* ? */ } *x4; long long x5; long long x6; struct { /* ? */ } *x7; long long x8; long long x9; }*)arg6 shouldUpdateOwningGroupId:(bool)arg7 didUpdateGroup:(out bool*)arg8;
 - (id)_inqGroupResultWithDateFilter:(id)arg1;
 - (id)_inqGroupWithMatchingGroupId:(unsigned long long)arg1 dateFilter:(id)arg2;
 - (id)_inqGroupWithStatement:(struct sqlite3_stmt { }*)arg1 dateFilter:(id)arg2 includeObjects:(bool)arg3;
@@ -119,7 +119,7 @@
 - (unsigned long long)_inqUpdateGroupForText:(id)arg1 identifier:(id)arg2 category:(short)arg3 owningGroupId:(unsigned long long)arg4 didUpdateGroup:(out bool*)arg5;
 - (unsigned long long)_inqUpdateGroupForText:(id)arg1 identifier:(id)arg2 category:(short)arg3 owningGroupId:(unsigned long long)arg4 shouldUpdateOwningGroupId:(bool)arg5 didUpdateGroup:(out bool*)arg6;
 - (void)_inqUpdateSearchTermsWithSearchableTermsByGroupIds:(id)arg1;
-- (void)_prepareTokenOutput:(struct tokenOutput_t { id x1; id x2; struct { /* ? */ } x3; long long x4; long long x5; struct { /* ? */ } *x6; long long x7; long long x8; }*)arg1 forIndexing:(bool)arg2;
+- (void)_prepareTokenOutput:(struct tokenOutput_t { id x1; id x2; id x3; struct { /* ? */ } *x4; long long x5; long long x6; struct { /* ? */ } *x7; long long x8; long long x9; }*)arg1 forIndexing:(bool)arg2;
 - (void)_processNextKeywordSuggestionsForQuery:(id)arg1 groupResults:(id)arg2 allowIdentifiers:(bool)arg3;
 - (void)_removeUUIDs:(id)arg1 objectType:(unsigned long long)arg2 completion:(id /* block */)arg3;
 - (void)addAsset:(id)arg1 withCompletion:(id /* block */)arg2;

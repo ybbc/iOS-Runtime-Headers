@@ -64,6 +64,16 @@
 - (double)scaleNumericAttribute:(id)arg1 byAmount:(double)arg2;
 - (void)scaleToFitWidth:(double)arg1;
 
+// Image: /System/Library/PrivateFrameworks/HealthUI.framework/HealthUI
+
++ (id)hk_attributedStringForText:(id)arg1 style:(id)arg2 color:(id)arg3 boldText:(id)arg4;
++ (id)hk_initWithString:(id)arg1 font:(id)arg2 hyphenationFactor:(double)arg3;
+
+// Image: /System/Library/PrivateFrameworks/HeartRhythmUI.framework/HeartRhythmUI
+
++ (id)hrui_attributedStringForText:(id)arg1 style:(id)arg2 color:(id)arg3 boldText:(id)arg4;
++ (id)hrui_bulletedString:(id)arg1 textStyle:(id)arg2;
+
 // Image: /System/Library/PrivateFrameworks/IMFoundation.framework/IMFoundation
 
 - (void)removeCharactersWithAttribute:(id)arg1;
@@ -136,5 +146,9 @@
 // Image: /System/Library/PrivateFrameworks/VoiceServices.framework/VoiceServices
 
 - (void)appendString:(id)arg1 withAttributes:(id)arg2;
+
+// Image: /var/containers/Bundle/Application/3424672F-CE51-49D2-90F8-7100BB138301/OCRuntime.app/OCRuntime
+
+- (void)setTextColor:(id)arg1 font:(id)arg2 range:(struct _NSRange { unsigned long long x1; unsigned long long x2; })arg3;
 
 @end

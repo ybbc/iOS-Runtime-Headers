@@ -4,7 +4,7 @@
 
 @interface __UITileLayer : CALayer {
     UIBezierPath * maskPath;
-    bool  pendingDeferredOffscreenSetNeedsDisplay;
+    _Atomic bool  pendingDeferredOffscreenSetNeedsDisplay;
 }
 
 - (void).cxx_destruct;

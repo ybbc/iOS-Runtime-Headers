@@ -85,7 +85,7 @@
 - (bool)_shouldMarkAttachmentsAsNeedingReupload;
 - (void)_updateAllAttachmentsAsNotNeedingReUpload;
 - (id)_updateAttachmentGUIDIfNeededAndReturnTransfersToForceMarkAsSync:(id)arg1 transfersToSyncRowIDs:(id)arg2;
-- (void)_updateDeviceCondictionsToCheckIfNeededForCurrentBatchCount:(long long)arg1 maxBatchCount:(long long)arg2;
+- (void)_updateDeviceConditionsToCheckIfNeededForCurrentBatchCount:(long long)arg1 maxBatchCount:(long long)arg2;
 - (void)_updateTransferUsingCKRecord:(id)arg1 wasFetched:(bool)arg2;
 - (void)_validateTransferFromCloudKit:(id)arg1 localTransfer:(id)arg2 validateCompletion:(id /* block */)arg3;
 - (void)_writeAttachmentsToCloudKit:(id /* block */)arg1;

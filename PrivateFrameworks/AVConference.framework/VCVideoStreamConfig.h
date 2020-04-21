@@ -16,7 +16,7 @@
     unsigned long long  _txMaxBitrate;
     unsigned long long  _txMinBitrate;
     long long  _type;
-    unsigned char * _videoPriorityPointer;
+    _Atomic unsigned char * _videoPriorityPointer;
     long long  _videoResolution;
 }
 
@@ -33,7 +33,7 @@
 @property (nonatomic) unsigned long long txMaxBitrate;
 @property (nonatomic) unsigned long long txMinBitrate;
 @property (nonatomic) long long type;
-@property (nonatomic) unsigned char*videoPriorityPointer;
+@property (nonatomic) _Atomic unsigned char*videoPriorityPointer;
 @property (nonatomic) long long videoResolution;
 
 + (bool)validateClientDictionary:(id)arg1;
@@ -63,14 +63,14 @@
 - (void)setTxMaxBitrate:(unsigned long long)arg1;
 - (void)setTxMinBitrate:(unsigned long long)arg1;
 - (void)setType:(long long)arg1;
-- (void)setVideoPriorityPointer:(void *)arg1; // needs 1 arg types, found 2: /* Warning: Unrecognized filer type: '' using 'void*' */ void**, unsigned char
+- (void)setVideoPriorityPointer:(void *)arg1; // needs 1 arg types, found 2: _Atomic /* Warning: Unrecognized filer type: '' using 'void*' */ void**, unsigned char
 - (void)setVideoResolution:(long long)arg1;
 - (unsigned long long)sourceFramerate;
 - (unsigned long long)txMaxBitrate;
 - (unsigned long long)txMinBitrate;
 - (long long)type;
 - (bool)updateWithClientDictionary:(id)arg1;
-- (/* Warning: Unrecognized filer type: '' using 'void*' */ void**)videoPriorityPointer:(SEL)arg1;
+- (_Atomic /* Warning: Unrecognized filer type: '' using 'void*' */ void**)videoPriorityPointer:(SEL)arg1;
 - (long long)videoResolution;
 
 @end

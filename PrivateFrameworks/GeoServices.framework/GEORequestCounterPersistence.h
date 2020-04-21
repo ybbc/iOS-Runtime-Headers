@@ -6,7 +6,7 @@
     GEOSQLiteDB * _db;
     bool  _enabled;
     double  _maxAge;
-    long long  _nextId;
+    _Atomic long long  _nextId;
 }
 
 @property (nonatomic) bool enabled;

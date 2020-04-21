@@ -30,7 +30,7 @@
 - (void)setWorkIntervalPort:(void *)arg1 reply:(void *)arg2; // needs 2 arg types, found 7: CAXPCObject *, id /* block */, /* Warning: Unrecognized filer type: '<' using 'void*' */ void*, void, id /* block */, NSError *, void*
 - (void)supportedViewConfigurations:(void *)arg1 reply:(void *)arg2; // needs 2 arg types, found 8: NSArray *, id /* block */, /* Warning: Unrecognized filer type: '<' using 'void*' */ void*, void, id /* block */, NSError *, NSIndexSet *, void*
 - (void)uninitialize:(void *)arg1; // needs 1 arg types, found 6: id /* block */, /* Warning: Unrecognized filer type: '<' using 'void*' */ void*, void, id /* block */, NSError *, void*
-- (void)valueForKey:(void *)arg1 reply:(void *)arg2; // needs 2 arg types, found 7: NSString *, id /* block */, /* Warning: Unrecognized filer type: '<' using 'void*' */ void*, void, id /* block */, NSError *, id
-- (void)valueForProperty:(void *)arg1 reply:(void *)arg2; // needs 2 arg types, found 7: AUAudioUnitProperty *, id /* block */, /* Warning: Unrecognized filer type: '<' using 'void*' */ void*, void, id /* block */, NSError *, id
+- (void)valueForKey:(void *)arg1 reply:(void *)arg2; // needs 2 arg types, found 8: NSString *, id /* block */, /* Warning: Unrecognized filer type: '<' using 'void*' */ void*, void, id /* block */, NSError *, id, void*
+- (void)valueForProperty:(void *)arg1 reply:(void *)arg2; // needs 2 arg types, found 8: AUAudioUnitProperty *, id /* block */, /* Warning: Unrecognized filer type: '<' using 'void*' */ void*, void, id /* block */, NSError *, id, void*
 
 @end

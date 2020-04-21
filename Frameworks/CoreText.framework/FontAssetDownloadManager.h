@@ -6,13 +6,13 @@
     NSMutableDictionary * fAssetToDescriptors;
     struct TCFRef<const __CFArray *> { 
         struct TAtomicPtr<const __CFArray *> { 
-            /* Warning: Unrecognized filer type: '^' using 'void*' */ void*__a_; 
+            _Atomic struct __CFArray {} *__a_; 
         } fRef; 
     }  fDescriptors;
     NSMutableDictionary * fDownloadOptions;
     struct TCFRef<const __CFSet *> { 
         struct TAtomicPtr<const __CFSet *> { 
-            /* Warning: Unrecognized filer type: '^' using 'void*' */ void*__a_; 
+            _Atomic struct __CFSet {} *__a_; 
         } fRef; 
     }  fMandatoryAttributes;
     id /* block */  fProgressCallbackBlock;

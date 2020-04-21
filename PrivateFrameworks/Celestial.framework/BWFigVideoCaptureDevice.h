@@ -92,6 +92,7 @@
     struct OpaqueCMClock { } * _clock;
     bool  _collectAPSStatistics;
     int (* _createAutofocusSampleBufferProcessorFunction;
+    NSMutableSet * _criticalFocusErrorOccurredByPortType;
     int  _currentBiasedExposureCompletedID;
     int  _currentExifOrientation;
     struct { 
@@ -248,6 +249,7 @@
     NSDictionary * _sensorIDDictionaryByPortType;
     bool  _shallowDepthOfFieldEffectEnabled;
     NSMutableSet * _shouldCheckAPSOffsetEstimatorByPortType;
+    NSMutableSet * _shouldCheckCriticalFocusErrorByPortType;
     int  _sisModeForSceneMonitoring;
     bool  _sisScene;
     int  _skippedFramesCountForStillImageCaptureRetry;
@@ -408,6 +410,7 @@
 - (void)_addExifMetadata:(struct opaqueCMSampleBuffer { }*)arg1;
 - (void)_addFeature1ToMetadata:(struct opaqueCMSampleBuffer { }*)arg1;
 - (void)_addLensMakersFocusDistanceMetadata:(struct opaqueCMSampleBuffer { }*)arg1 captureStream:(id)arg2;
+- (void)_addPortraitSceneMonitoringMetadataToSampleBuffer:(struct opaqueCMSampleBuffer { }*)arg1;
 - (void)_addStillImageSettingsToStillImageSampleBuffer:(struct opaqueCMSampleBuffer { }*)arg1;
 - (int)_attachMetadataFlatDictionaryToSampleBuffer:(struct opaqueCMSampleBuffer { }*)arg1;
 - (struct OpaqueFigSampleBufferProcessor { }*)_autofocusProcessor;
@@ -418,6 +421,7 @@
 - (int)_captureTypeOverride;
 - (void)_checkAPSOffsetEstimatorInfo:(struct opaqueCMSampleBuffer { }*)arg1;
 - (void)_checkAPSOffsetEstimatorInfoForPortType:(id)arg1 metadataDict:(id)arg2;
+- (void)_checkCriticalFocusError:(struct opaqueCMSampleBuffer { }*)arg1;
 - (void)_collectAPSStatistics:(struct opaqueCMSampleBuffer { }*)arg1;
 - (void)_convertNoiseReductionAndSharpeningConfiguration:(id)arg1 toStillImageCaptureOptions:(id)arg2 captureStreamSettings:(id)arg3 forMasterStream:(bool)arg4 isBurstCapture:(bool)arg5;
 - (int)_convertStillImageCaptureSettings:(id)arg1 masterCaptureStreamPortType:(id)arg2 synchronizedStreamsEnabled:(bool)arg3 toStillImageCaptureNowOptions:(id*)arg4 captureStreamPropertyValues:(id*)arg5;

@@ -4,6 +4,7 @@
 
 @interface RPCloudSession : NSObject <NSSecureCoding, RPAuthenticatable, RPCloudXPCClientInterface, RPMessageable> {
     bool  _activateCalled;
+    id /* block */  _authCompletionHandler;
     NSString * _destinationID;
     NSString * _destinationIDMulticast;
     NSString * _destinationIDUnicast;
@@ -35,6 +36,7 @@
     NSXPCConnection * _xpcCnx;
 }
 
+@property (nonatomic, copy) id /* block */ authCompletionHandler;
 @property (nonatomic, retain) NSString *destinationID;
 @property (nonatomic, copy) NSString *destinationIDMulticast;
 @property (nonatomic, copy) NSString *destinationIDUnicast;
@@ -78,6 +80,7 @@
 - (void)_serverPairSetupStart;
 - (void)_serverRun;
 - (void)activateWithCompletion:(id /* block */)arg1;
+- (id /* block */)authCompletionHandler;
 - (void)dealloc;
 - (void)deregisterEventID:(id)arg1;
 - (void)deregisterRequestID:(id)arg1;
@@ -106,6 +109,7 @@
 - (void)sendRequestID:(id)arg1 request:(id)arg2 destinationID:(id)arg3 options:(id)arg4 responseHandler:(id /* block */)arg5;
 - (id)serverXPCCnx;
 - (id)serviceIdentifier;
+- (void)setAuthCompletionHandler:(id /* block */)arg1;
 - (void)setDestinationID:(id)arg1;
 - (void)setDestinationIDMulticast:(id)arg1;
 - (void)setDestinationIDUnicast:(id)arg1;

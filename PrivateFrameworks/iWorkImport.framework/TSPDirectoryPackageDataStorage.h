@@ -3,7 +3,7 @@
  */
 
 @interface TSPDirectoryPackageDataStorage : TSPFileDataStorage {
-    unsigned long long  _cachedEncodedLength;
+    _Atomic unsigned long long  _cachedEncodedLength;
     <TSPCryptoInfo> * _decryptionInfo;
     bool  _gilligan_isRemote;
     bool  _isMissingData;

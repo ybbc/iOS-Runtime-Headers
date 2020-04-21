@@ -4,16 +4,16 @@
 
 @interface __NSOperationInternal : NSObject {
     id  __activity;
-    bool  __cached_isReady;
+    _Atomic bool  __cached_isReady;
     id /* block */  __completion;
     NSMutableArray * __dependencies;
     NSHashTable * __down_dependencies;
     void * __implicitObsInfo;
-    bool  __isCancelled;
-    unsigned char  __isCancelledObserverCount;
-    unsigned char  __isExecutingObserverCount;
-    unsigned char  __isFinishedObserverCount;
-    unsigned char  __isReadyObserverCount;
+    _Atomic bool  __isCancelled;
+    _Atomic unsigned char  __isCancelledObserverCount;
+    _Atomic unsigned char  __isExecutingObserverCount;
+    _Atomic unsigned char  __isFinishedObserverCount;
+    _Atomic unsigned char  __isReadyObserverCount;
     struct os_unfair_lock_s { 
         unsigned int _os_unfair_lock_opaque; 
     }  __lock;
@@ -23,10 +23,10 @@
     void * __obsInfo;
     NSOperation * __prevOp;
     BOOL  __prio;
-    unsigned char  __propertyQoS;
+    _Atomic unsigned char  __propertyQoS;
     NSOperationQueue * __queue;
     id /* block */  __schedule;
-    unsigned char  __state;
+    _Atomic unsigned char  __state;
     double  __thread_prio;
     long long  __unfinished_deps;
     struct _opaque_pthread_cond_t { 

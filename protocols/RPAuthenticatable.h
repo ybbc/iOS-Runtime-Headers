@@ -5,6 +5,7 @@
 
 @required
 
+- (id /* block */)authCompletionHandler:(void *)arg1; // needs 1 arg types, found 5: id /* block */, NSError *, void*, id, SEL
 - (NSObject<OS_dispatch_queue> *)dispatchQueue;
 - (id /* block */)hidePasswordHandler:(void *)arg1; // needs 1 arg types, found 5: id /* block */, unsigned int, void*, id, SEL
 - (unsigned int)pairSetupFlags;
@@ -12,6 +13,7 @@
 - (NSString *)password;
 - (int)passwordType;
 - (id /* block */)promptForPasswordHandler:(void *)arg1; // needs 1 arg types, found 6: id /* block */, unsigned int, int, void*, id, SEL
+- (void)setAuthCompletionHandler:(void *)arg1; // needs 1 arg types, found 6: id /* block */, /* Warning: Unrecognized filer type: '<' using 'void*' */ void*, void, id /* block */, NSError *, void*
 - (void)setHidePasswordHandler:(void *)arg1; // needs 1 arg types, found 6: id /* block */, /* Warning: Unrecognized filer type: '<' using 'void*' */ void*, void, id /* block */, unsigned int, void*
 - (void)setPairSetupFlags:(unsigned int)arg1;
 - (void)setPairVerifyFlags:(unsigned int)arg1;

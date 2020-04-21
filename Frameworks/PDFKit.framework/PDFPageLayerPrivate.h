@@ -9,7 +9,7 @@
     int  generationCount;
     NSObject<PDFPageLayerGeometryInterface> * geometryInterface;
     bool  isForcingUpdate;
-    bool  isTiling;
+    _Atomic bool  isTiling;
     struct CGRect { 
         struct CGPoint { 
             double x; 
@@ -36,7 +36,7 @@
     PDFPage * page;
     NSMutableDictionary * pageLayerEffects;
     PDFRenderingProperties * renderingProperties;
-    bool  requestedTiling;
+    _Atomic bool  requestedTiling;
     bool  tileLayerHidden;
     NSMutableArray * tiles;
     CALayer * tilesLayer;

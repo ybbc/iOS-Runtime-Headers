@@ -13,10 +13,12 @@
     bool  _leftFlippedY;
     _GCControllerButtonInput * _leftShoulder;
     _GCControllerDirectionPad * _leftThumbstick;
+    _GCControllerButtonInput * _leftThumbstickButton;
     _GCControllerButtonInput * _leftTrigger;
     bool  _rightFlippedY;
     _GCControllerButtonInput * _rightShoulder;
     _GCControllerDirectionPad * _rightThumbstick;
+    _GCControllerButtonInput * _rightThumbstickButton;
     _GCControllerButtonInput * _rightTrigger;
     id /* block */  _valueChangedHandler;
 }
@@ -40,13 +42,15 @@
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithController:(id)arg1;
-- (id)initWithController:(id)arg1 dpadFlippedY:(bool)arg2 leftFlippedY:(bool)arg3 rightFlippedY:(bool)arg4;
+- (id)initWithController:(id)arg1 dpadFlippedY:(bool)arg2 leftFlippedY:(bool)arg3 rightFlippedY:(bool)arg4 l3r3andDigitalSupported:(bool)arg5;
 - (id)leftShoulder;
 - (id)leftThumbstick;
+- (id)leftThumbstickButton;
 - (id)leftTrigger;
 - (id)name;
 - (id)rightShoulder;
 - (id)rightThumbstick;
+- (id)rightThumbstickButton;
 - (id)rightTrigger;
 - (void)setController:(id)arg1;
 - (void)setPlayerIndex:(long long)arg1;

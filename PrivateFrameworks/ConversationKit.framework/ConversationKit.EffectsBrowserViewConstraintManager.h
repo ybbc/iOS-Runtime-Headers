@@ -3,7 +3,8 @@
  */
 
 @interface ConversationKit.EffectsBrowserViewConstraintManager : SwiftObject {
-    void constraints;
+    void constantConstraints;
+    void effectsBrowserViewTopAnchor;
 }
 
 @end

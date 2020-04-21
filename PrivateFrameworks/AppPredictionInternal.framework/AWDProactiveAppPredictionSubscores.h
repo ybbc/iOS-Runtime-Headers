@@ -120,6 +120,7 @@
     int  _appIntentTotalNumberOfTrendingLaunches;
     int  _appIntentTrendingPopularity;
     int  _appIntentUnlockTime;
+    int  _appIntentValueScore;
     int  _appPreferenceBundleBoost;
     int  _averageSecondsBetweenLaunches;
     int  _coarseTimeOfDayPopularity;
@@ -270,6 +271,7 @@
         unsigned int appIntentTotalNumberOfTrendingLaunches : 1; 
         unsigned int appIntentTrendingPopularity : 1; 
         unsigned int appIntentUnlockTime : 1; 
+        unsigned int appIntentValueScore : 1; 
         unsigned int appPreferenceBundleBoost : 1; 
         unsigned int averageSecondsBetweenLaunches : 1; 
         unsigned int coarseTimeOfDayPopularity : 1; 
@@ -640,6 +642,7 @@
 @property (nonatomic) int appIntentTotalNumberOfTrendingLaunches;
 @property (nonatomic) int appIntentTrendingPopularity;
 @property (nonatomic) int appIntentUnlockTime;
+@property (nonatomic) int appIntentValueScore;
 @property (nonatomic) int appPreferenceBundleBoost;
 @property (nonatomic) int averageSecondsBetweenLaunches;
 @property (nonatomic) int coarseTimeOfDayPopularity;
@@ -788,6 +791,7 @@
 @property (nonatomic) bool hasAppIntentTotalNumberOfTrendingLaunches;
 @property (nonatomic) bool hasAppIntentTrendingPopularity;
 @property (nonatomic) bool hasAppIntentUnlockTime;
+@property (nonatomic) bool hasAppIntentValueScore;
 @property (nonatomic) bool hasAppPreferenceBundleBoost;
 @property (nonatomic) bool hasAverageSecondsBetweenLaunches;
 @property (nonatomic) bool hasCoarseTimeOfDayPopularity;
@@ -1157,6 +1161,7 @@
 - (int)appIntentTotalNumberOfTrendingLaunches;
 - (int)appIntentTrendingPopularity;
 - (int)appIntentUnlockTime;
+- (int)appIntentValueScore;
 - (int)appPreferenceBundleBoost;
 - (int)averageSecondsBetweenLaunches;
 - (int)coarseTimeOfDayPopularity;
@@ -1309,6 +1314,7 @@
 - (bool)hasAppIntentTotalNumberOfTrendingLaunches;
 - (bool)hasAppIntentTrendingPopularity;
 - (bool)hasAppIntentUnlockTime;
+- (bool)hasAppIntentValueScore;
 - (bool)hasAppPreferenceBundleBoost;
 - (bool)hasAverageSecondsBetweenLaunches;
 - (bool)hasCoarseTimeOfDayPopularity;
@@ -1591,6 +1597,7 @@
 - (void)setAppIntentTotalNumberOfTrendingLaunches:(int)arg1;
 - (void)setAppIntentTrendingPopularity:(int)arg1;
 - (void)setAppIntentUnlockTime:(int)arg1;
+- (void)setAppIntentValueScore:(int)arg1;
 - (void)setAppPreferenceBundleBoost:(int)arg1;
 - (void)setAverageSecondsBetweenLaunches:(int)arg1;
 - (void)setCoarseTimeOfDayPopularity:(int)arg1;
@@ -1739,6 +1746,7 @@
 - (void)setHasAppIntentTotalNumberOfTrendingLaunches:(bool)arg1;
 - (void)setHasAppIntentTrendingPopularity:(bool)arg1;
 - (void)setHasAppIntentUnlockTime:(bool)arg1;
+- (void)setHasAppIntentValueScore:(bool)arg1;
 - (void)setHasAppPreferenceBundleBoost:(bool)arg1;
 - (void)setHasAverageSecondsBetweenLaunches:(bool)arg1;
 - (void)setHasCoarseTimeOfDayPopularity:(bool)arg1;

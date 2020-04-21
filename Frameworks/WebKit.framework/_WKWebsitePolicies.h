@@ -10,7 +10,7 @@
     }  _websitePolicies;
 }
 
-@property (readonly) /* Warning: unhandled struct encoding: '{Object=^^?@}' */ struct Object { int (**x1)(); id x2; }*_apiObject;
+@property (readonly) struct Object { int (**x1)(); id x2; }*_apiObject;
 @property (nonatomic) unsigned long long allowedAutoplayQuirks;
 @property (nonatomic) long long autoplayPolicy;
 @property (nonatomic) bool contentBlockersEnabled;
@@ -22,7 +22,7 @@
 @property (readonly) Class superclass;
 @property (nonatomic, retain) WKWebsiteDataStore *websiteDataStore;
 
-- (/* Warning: unhandled struct encoding: '{Object=^^?@}' */ struct Object { int (**x1)(); id x2; }*)_apiObject;
+- (struct Object { int (**x1)(); id x2; }*)_apiObject;
 - (unsigned long long)allowedAutoplayQuirks;
 - (long long)autoplayPolicy;
 - (bool)contentBlockersEnabled;

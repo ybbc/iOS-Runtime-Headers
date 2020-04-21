@@ -14,7 +14,7 @@
     unsigned int  _vodkaVersion;
 }
 
-- (void)authorizeItemCompletionHandler_objc:(struct { id x1; id /* block */ x2; }*)arg1 picData:(struct __CFData { }*)arg2 playerGUID:(struct __CFString { }*)arg3 error:(int)arg4;
+- (void)authorizeItemCompletionHandler_objc:(struct { id x1; id x2; id /* block */ x3; }*)arg1 picData:(struct __CFData { }*)arg2 playerGUID:(struct __CFString { }*)arg3 error:(int)arg4;
 - (void)beginSessionWithCompletionQueue:(id)arg1 completionHandler:(id /* block */)arg2;
 - (id)createPicRequestWithError:(id*)arg1;
 - (void)dealloc;

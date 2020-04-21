@@ -3,7 +3,7 @@
  */
 
 @interface __NSArrayM : NSMutableArray {
-    /* Warning: Unrecognized filer type: '^' using 'void*' */ void* cow;
+    _Atomic struct __cow_state_t {} * cow;
     /* Warning: unhandled struct encoding: '{?="list"^@"offset"I"size"I"state"(?="mutations"Q""{?="muts"I"used"I})}' */ struct { 
         offset **list; 
     }  storage;
@@ -18,7 +18,7 @@
 - (void)addObject:(id)arg1;
 - (id)copyWithZone:(struct _NSZone { }*)arg1;
 - (unsigned long long)count;
-- (unsigned long long)countByEnumeratingWithState:(struct { unsigned long long x1; id *x2; unsigned long long x3; unsigned long long x4[5]; }*)arg1 objects:(id*)arg2 count:(unsigned long long)arg3;
+- (unsigned long long)countByEnumeratingWithState:(struct { unsigned long long x1; id *x2; unsigned long long *x3; unsigned long long x4[5]; }*)arg1 objects:(id*)arg2 count:(unsigned long long)arg3;
 - (void)dealloc;
 - (void)enumerateObjectsWithOptions:(unsigned long long)arg1 usingBlock:(id /* block */)arg2;
 - (void)exchangeObjectAtIndex:(unsigned long long)arg1 withObjectAtIndex:(unsigned long long)arg2;

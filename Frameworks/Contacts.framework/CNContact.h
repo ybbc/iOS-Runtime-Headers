@@ -497,6 +497,12 @@
 
 + (id)pl_findBestMatchingContactFromMatchingContacts:(id)arg1 firstName:(id)arg2 lastName:(id)arg3 contactFormatter:(id)arg4;
 
+// Image: /System/Library/PrivateFrameworks/RTTUtilities.framework/RTTUtilities
+
++ (id)contactForPhoneNumber:(id)arg1;
+
+- (bool)ttyIsMe;
+
 // Image: /System/Library/PrivateFrameworks/SafariShared.framework/SafariShared
 
 + (id)safari_defaultDescriptors;

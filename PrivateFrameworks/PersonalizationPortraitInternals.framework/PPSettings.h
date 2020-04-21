@@ -31,7 +31,7 @@
 - (void)_refreshDisabledBundleIds;
 - (void)_rewriteSyncStateToDisableBundleId:(id)arg1;
 - (void)_triggerDelayedBundleIdPurge;
-- (void)_triggerDelayedOperationWithCoalescingToken:(void *)arg1 operation:(void *)arg2; // needs 2 arg types, found 3: /* Warning: Unrecognized filer type: '' using 'void*' */ void**, int, id /* block */
+- (void)_triggerDelayedOperationWithCoalescingToken:(void *)arg1 operation:(void *)arg2; // needs 2 arg types, found 3: _Atomic /* Warning: Unrecognized filer type: '' using 'void*' */ void**, int, id /* block */
 - (void)_updateAppConnectionsSettings;
 - (bool)bundleIdentifierIsEnabledForCloudKit:(id)arg1;
 - (bool)bundleIdentifierIsEnabledForDonation:(id)arg1;

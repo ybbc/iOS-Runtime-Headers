@@ -79,7 +79,7 @@
 - (id)eventStore;
 - (id)existingMeltedObject;
 - (bool)existsInStore;
-- (struct EKPersistentObject { Class x1; struct _opaque_pthread_mutex_t { long long x_2_1_1; BOOL x_2_1_2[56]; } x2; id x3; id x4; id x5; }*)frozenObject;
+- (struct EKPersistentObject { Class x1; struct _opaque_pthread_mutex_t { long long x_2_1_1; BOOL x_2_1_2[56]; } x2; id x3; id x4; id x5; unsigned int x6; id x7; id x8; }*)frozenObject;
 - (id)init;
 - (id)initWithObject:(id)arg1;
 - (bool)isCompletelyEqual:(id)arg1;

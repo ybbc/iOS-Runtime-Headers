@@ -189,7 +189,8 @@
 
 // Image: /System/Library/PrivateFrameworks/News/Tea.framework/Tea
 
-- (void)setDisplayMode:(long long)arg1 animated:(bool)arg2;
+- (void)hidePrimaryOverlayWithAnimated:(bool)arg1;
+- (void)showPrimaryViewWithAnimated:(bool)arg1;
 
 // Image: /System/Library/PrivateFrameworks/News/TeaUI.framework/TeaUI
 

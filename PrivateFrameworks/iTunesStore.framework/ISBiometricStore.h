@@ -17,6 +17,9 @@
 + (id)keychainLabelForKeyWithAccountID:(id)arg1 purpose:(long long)arg2;
 + (id)sharedInstance;
 + (bool)shouldUseX509;
++ (void)tokenUpdateDidFinishWithLogKey:(id)arg1;
++ (bool)tokenUpdateShouldStartWithLogKey:(id)arg1;
++ (long long)tokenUpdateState;
 
 - (void).cxx_destruct;
 - (void)addContextToCache:(id)arg1 withToken:(id)arg2;

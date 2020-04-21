@@ -12,11 +12,11 @@
     <PKContactlessInterfaceSessionDelegate> * _delegate;
     unsigned long long  _expressActivity;
     bool  _felicaStateChanged;
-    bool  _fieldPresent;
+    _Atomic bool  _fieldPresent;
     PKFieldProperties * _fieldProperties;
     PKFieldProperties * _fieldPropertiesToLookup;
     bool  _handlingExpress;
-    bool  _persistentCardEmulation;
+    _Atomic bool  _persistentCardEmulation;
     bool  _prioritySessionExists;
     unsigned long long  _state;
     unsigned long long  _transactionStartTime;

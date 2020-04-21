@@ -6,7 +6,7 @@
     unsigned long long  _highIndex;
     unsigned long long  _lowIndex;
     unsigned long long  _objectCount;
-    /* Warning: unhandled array encoding: '[7@]' */ id  _objects;
+    id  _objects;
     Class  _objectsClasses;
     unsigned long long  _releaseCounts;
 }

@@ -37,7 +37,7 @@
     unsigned int  npn_enabled;
     unsigned int  ocsp_enable;
     struct __CFArray { } * peer_cert_chain;
-    struct __SecKey { struct __CFRuntimeBase { unsigned long long x_1_1_1; unsigned long long x_1_1_2; } x1; struct __SecKeyDescriptor {} *x2; void *x3; } * peer_public_key;
+    struct __SecKey { struct __CFRuntimeBase { unsigned long long x_1_1_1; _Atomic unsigned long long x_1_1_2; } x1; struct __SecKeyDescriptor {} *x2; void *x3; } * peer_public_key;
     int  peer_trust;
     struct __SecTrust { } * peer_trust_ref;
     unsigned int  peer_verification_in_progress;
@@ -85,7 +85,7 @@
         int (*sign)(); 
         int (*decrypt)(); 
     }  ssl_private_key_methods;
-    struct __SecKey { struct __CFRuntimeBase { unsigned long long x_1_1_1; unsigned long long x_1_1_2; } x1; struct __SecKeyDescriptor {} *x2; void *x3; } * ssl_private_key_ref;
+    struct __SecKey { struct __CFRuntimeBase { unsigned long long x_1_1_1; _Atomic unsigned long long x_1_1_2; } x1; struct __SecKeyDescriptor {} *x2; void *x3; } * ssl_private_key_ref;
     struct { 
         unsigned long long length; 
         char *data; 
@@ -94,7 +94,6 @@
         unsigned long long length; 
         char *data; 
     }  ssl_psk_secret;
-    struct tls_buffer_list_s { struct tls_buffer_list_s {} *x1; struct { unsigned long long x_2_1_1; char *x_2_1_2; } x2; } * ssl_sct_list;
     struct ssl_st { } * ssl_session;
     struct { 
         unsigned long long length; 

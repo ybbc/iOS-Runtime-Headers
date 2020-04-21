@@ -44,8 +44,6 @@
 @property (readonly) Class superclass;
 @property (nonatomic, readonly) NSArray *visiblePages;
 
-// Image: /System/Library/Frameworks/PDFKit.framework/PDFKit
-
 + (void)EnableAnnotationKit;
 
 - (void).cxx_destruct;
@@ -325,14 +323,5 @@
 - (id)visiblePages;
 - (void)zoomIn:(id)arg1;
 - (void)zoomOut:(id)arg1;
-
-// Image: /System/Library/AccessibilityBundles/QuickSpeak.bundle/QuickSpeak
-
-+ (Class)safeCategoryBaseClass;
-
-- (id)_accessibilityQuickSpeakContent;
-- (void)_accessibilityQuickSpeakTextRectsWithRange:(struct _NSRange { unsigned long long x1; unsigned long long x2; })arg1 string:(id)arg2 highlightRects:(id)arg3 sentenceRects:(id)arg4 singleTextRect:(struct CGRect { struct CGPoint { double x_1_1_1; double x_1_1_2; } x1; struct CGSize { double x_2_1_1; double x_2_1_2; } x2; }*)arg5;
-- (id)_accessibilitySpeakTextSelectionViews;
-- (void)_axConvertRange:(struct _NSRange { unsigned long long x1; unsigned long long x2; })arg1 toRects:(id)arg2 operatingPage:(id)arg3;
 
 @end

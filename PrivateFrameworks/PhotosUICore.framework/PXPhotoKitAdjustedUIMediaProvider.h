@@ -7,7 +7,7 @@
     bool  _delayRenders;
     PHCachingImageManager * _imageManager;
     NSObject<OS_dispatch_queue> * _ivarQueue;
-    int  _nextRequestID;
+    _Atomic int  _nextRequestID;
     NSObject<OS_dispatch_queue> * _renderQueue;
     NSMutableDictionary * _requestsByIdentifier;
     NSMutableDictionary * _unadjustedRequestIdentifiersByIdentifier;

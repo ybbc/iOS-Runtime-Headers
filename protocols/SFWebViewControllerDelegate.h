@@ -36,6 +36,7 @@
 - (void)webViewControllerDidChangeSafeAreaShouldAffectObscuredInsets:(SFWebViewController *)arg1;
 - (void)webViewControllerDidChangeURL:(SFWebViewController *)arg1;
 - (void)webViewControllerDidFirstVisuallyNonEmptyLayout:(SFWebViewController *)arg1;
+- (void)webViewControllerUpdateNavigationBar:(SFWebViewController *)arg1;
 - (void)webViewControllerWebProcessDidBecomeResponsive:(SFWebViewController *)arg1;
 - (void)webViewControllerWebProcessDidBecomeUnresponsive:(SFWebViewController *)arg1;
 - (void)webViewControllerWebProcessDidCrash:(SFWebViewController *)arg1;

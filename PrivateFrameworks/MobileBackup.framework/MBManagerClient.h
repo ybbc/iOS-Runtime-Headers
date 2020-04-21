@@ -70,6 +70,7 @@
 - (bool)isBackupEnabledForDomainName:(id)arg1;
 - (bool)isLocalBackupPasswordSetWithError:(id*)arg1;
 - (id)journalForBackupUUID:(id)arg1 error:(id*)arg2;
+- (id)journalLastModifiedForBackupUUID:(id)arg1 error:(id*)arg2;
 - (void)keyBagIsLocking;
 - (void)keyBagIsUnlocked;
 - (bool)mergeSnapshots:(id)arg1 backupUUID:(id)arg2 error:(id*)arg3;

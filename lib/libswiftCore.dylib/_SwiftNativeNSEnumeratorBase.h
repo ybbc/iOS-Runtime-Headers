@@ -5,7 +5,7 @@
 @interface _SwiftNativeNSEnumeratorBase : NSEnumerator {
     struct RefCounts<swift::RefCountBitsT<swift::RefCountIsInline> > { 
         struct atomic<swift::RefCountBitsT<swift::RefCountIsInline> > { 
-            /* Warning: Unrecognized filer type: '{' using 'void*' */ void*__a_; 
+            _Atomic struct RefCountBitsT<swift::RefCountIsInline> {} __a_; 
         } refCounts; 
     }  refCounts;
 }

@@ -25,7 +25,7 @@
     }  _headerBackgroundVisibility;
     bool  _inFailForward;
     unsigned long long  _instanceFooterSuppressionCounter;
-    bool  _invalidated;
+    long long  _invalidationStatus;
     unsigned long long  _modalCardIndex;
     <PKPassLibraryDataProvider> * _passLibraryDataProvider;
     NSArray * _passUniqueIDsToExcludeFromFiltering;
@@ -79,6 +79,7 @@
 - (void)_handlePeerPaymentAccountDidChangeNotification:(id)arg1;
 - (void)_handleProvisioningError:(id)arg1;
 - (void)_handleStatusBarChange:(id)arg1;
+- (void)_invalidateForType:(long long)arg1;
 - (void)_localeDidChangeNotification:(id)arg1;
 - (id)_passFromGroupsControllerWithUniqueIdentifier:(id)arg1;
 - (id)_passPendingActivationToPresent;
@@ -119,6 +120,7 @@
 - (void)groupStackView:(id)arg1 wantsTopContentSeparatorWithVisibility:(double)arg2 animated:(bool)arg3;
 - (bool)groupStackView:(id)arg1 willHaveHeaderViewForPassType:(unsigned long long)arg2;
 - (void)groupStackViewDidBeginReordering:(id)arg1;
+- (void)groupStackViewDidChangeCoachingState:(id)arg1;
 - (void)groupStackViewDidEndReordering:(id)arg1;
 - (bool)groupStackViewShouldAllowReordering:(id)arg1;
 - (bool)groupStackViewShouldShowHeaderViews:(id)arg1;
@@ -139,6 +141,7 @@
 - (bool)isWelcomeStateEnabled;
 - (void)loadView;
 - (unsigned long long)numberOfGroups;
+- (void)partiallyInvalidate;
 - (void)passPersonalizationViewController:(id)arg1 didFinishPersonalizingPass:(id)arg2;
 - (bool)passesAreOutdated;
 - (void)paymentDeviceDidEnterFieldWithProperties:(id)arg1;
@@ -195,7 +198,6 @@
 - (long long)style;
 - (unsigned long long)supportedInterfaceOrientations;
 - (unsigned long long)suppressedContent;
-- (void)terminateFieldDetect;
 - (void)updateLockscreenIdleTimer;
 - (void)updatePassesIfNecessaryWithCompletion:(id /* block */)arg1;
 - (void)updateRegionSupportIfNecessary;

@@ -8,7 +8,7 @@
     <MTLDeviceSPI> * _deviceWrapper;
     unsigned long long  _globalTraceObjectID;
     NSString * _librariesOutputDirectory;
-    struct MTLLibraryBuilder { id x1; /* Warning: Unrecognized filer type: 'm' using 'void*' */ void*x2; void*x3; void*x4; void*x5; void*x6; void*x7; unsigned long x8; unsigned long x9; int x10; unsigned int x11/* : ? */; const void*x12; const void*x13; unsigned int x14; double x15; void*x16; in void*x17; int x18; float x19; int x20; void*x21; const void*x22; void*x23; void*x24; void*x25; unsigned long x26; unsigned long x27; int x28; unsigned int x29/* : ? */; const void*x30; const void*x31; unsigned char x32; out in void*x33; void*x34; int x35; in void*x36; const void*x37; char *x38; void*x39; void*x40; short x41; void*x42; double x43; SEL x44; SEL x45; void*x46; void*x47; void*x48; SEL x49; SEL x50; long x51; void*x52; short x53; short x54; void*x55; void*x56; void*x57; unsigned long x58; unsigned long x59; int x60; unsigned int x61/* : ? */; const void*x62; const void*x63; unsigned int x64; double x65; void*x66; in void*x67; int x68; float x69; int x70; void*x71; const void*x72; void*x73; void*x74; short x75; void*x76; double x77; SEL x78; } * _libraryBuilder;
+    struct MTLLibraryBuilder { id x1; struct map<MTLLibraryIdentifier, MTLLibraryContainer *, std::__1::less<MTLLibraryIdentifier>, std::__1::allocator<std::__1::pair<const MTLLibraryIdentifier, MTLLibraryContainer *> > > { struct __tree<std::__1::__value_type<MTLLibraryIdentifier, MTLLibraryContainer *>, std::__1::__map_value_compare<MTLLibraryIdentifier, std::__1::__value_type<MTLLibraryIdentifier, MTLLibraryContainer *>, std::__1::less<MTLLibraryIdentifier>, true>, std::__1::allocator<std::__1::__value_type<MTLLibraryIdentifier, MTLLibraryContainer *> > > { struct __tree_end_node<std::__1::__tree_node_base<void *> *> {} *x_1_2_1; struct __compressed_pair<std::__1::__tree_end_node<std::__1::__tree_node_base<void *> *>, std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<MTLLibraryIdentifier, MTLLibraryContainer *>, void *> > > { struct __tree_end_node<std::__1::__tree_node_base<void *> *> { struct __tree_node_base<void *> {} *x_1_4_1; } x_2_3_1; } x_1_2_2; struct __compressed_pair<unsigned long, std::__1::__map_value_compare<MTLLibraryIdentifier, std::__1::__value_type<MTLLibraryIdentifier, MTLLibraryContainer *>, std::__1::less<MTLLibraryIdentifier>, true> > { unsigned long long x_3_3_1; } x_1_2_3; } x_2_1_1; } x2; } * _libraryBuilder;
     struct { 
         unsigned int maxColorAttachments; 
         unsigned int maxVertexAttributes; 
@@ -71,7 +71,7 @@
     MTLIOMemoryInfo * _memoryInfo;
     struct MTLPipelineCollection { struct unordered_map<_MTLLibrary *, MTLPipelineLibrarySerializer::LibraryDescriptor *, std::__1::hash<_MTLLibrary *>, std::__1::equal_to<_MTLLibrary *>, std::__1::allocator<std::__1::pair<_MTLLibrary *const, MTLPipelineLibrarySerializer::LibraryDescriptor *> > > { struct __hash_table<std::__1::__hash_value_type<_MTLLibrary *, MTLPipelineLibrarySerializer::LibraryDescriptor *>, std::__1::__unordered_map_hasher<_MTLLibrary *, std::__1::__hash_value_type<_MTLLibrary *, MTLPipelineLibrarySerializer::LibraryDescriptor *>, std::__1::hash<_MTLLibrary *>, true>, std::__1::__unordered_map_equal<_MTLLibrary *, std::__1::__hash_value_type<_MTLLibrary *, MTLPipelineLibrarySerializer::LibraryDescriptor *>, std::__1::equal_to<_MTLLibrary *>, true>, std::__1::allocator<std::__1::__hash_value_type<_MTLLibrary *, MTLPipelineLibrarySerializer::LibraryDescriptor *> > > { struct unique_ptr<std::__1::__hash_node_base<std::__1::__hash_node<std::__1::__hash_value_type<_MTLLibrary *, MTLPipelineLibrarySerializer::LibraryDescriptor *>, void *> *> *[], std::__1::__bucket_list_deallocator<std::__1::allocator<std::__1::__hash_node_base<std::__1::__hash_node<std::__1::__hash_value_type<_MTLLibrary *, MTLPipelineLibrarySerializer::LibraryDescriptor *>, void *> *> *> > > { struct __compressed_pair<std::__1::__hash_node_base<std::__1::__hash_node<std::__1::__hash_value_type<_MTLLibrary *, MTLPipelineLibrarySerializer::LibraryDescriptor *>, void *> *> **, std::__1::__bucket_list_deallocator<std::__1::allocator<std::__1::__hash_node_base<std::__1::__hash_node<std::__1::__hash_value_type<_MTLLibrary *, MTLPipelineLibrarySerializer::LibraryDescriptor *>, void *> *> *> > > { struct __hash_node_base<std::__1::__hash_node<std::__1::__hash_value_type<_MTLLibrary *, MTLPipelineLibrarySerializer::LibraryDescriptor *>, void *> *> {} **x_1_4_1; struct __bucket_list_deallocator<std::__1::allocator<std::__1::__hash_node_base<std::__1::__hash_node<std::__1::__hash_value_type<_MTLLibrary *, MTLPipelineLibrarySerializer::LibraryDescriptor *>, void *> *> *> > { struct __compressed_pair<unsigned long, std::__1::allocator<std::__1::__hash_node_base<std::__1::__hash_node<std::__1::__hash_value_type<_MTLLibrary *, MTLPipelineLibrarySerializer::LibraryDescriptor *>, void *> *> *> > { unsigned long long x_1_6_1; } x_2_5_1; } x_1_4_2; } x_1_3_1; } x_1_2_1; } x_1_1_1; } x1; } * _pipelineDescriptors;
     NSString * _pipelineDescriptorsOutputFile;
-    struct MTLPipelineLibraryBuilder { id x1; } * _pipelineLibraryBuilder;
+    struct MTLPipelineLibraryBuilder { id x1; id x2; } * _pipelineLibraryBuilder;
     NSObject<OS_dispatch_queue> * _serialQueue;
 }
 
@@ -147,7 +147,6 @@
 + (bool)featureProfile:(unsigned long long)arg1 supportsFeatureSet:(unsigned long long)arg2;
 + (bool)useNewPrimitiveRestartBehavior;
 
-- (void).cxx_destruct;
 - (void)_decrementCommandQueueCount;
 - (id)_deviceWrapper;
 - (void)_incrementCommandQueueCount;
@@ -290,7 +289,7 @@
 - (void)registerComputePipelineDescriptor:(id)arg1;
 - (void)registerRenderPipelineDescriptor:(id)arg1;
 - (void)registerTileRenderPipelineDescriptor:(id)arg1;
-- (void)releaseCacheEntry:(/* Warning: unhandled struct encoding: '{MTLLibraryContainer=i{?=[32C]}^{MTLLibraryData}@@@@@}' */ struct MTLLibraryContainer { int x1; struct { unsigned char x_2_1_1[32]; } x2; struct MTLLibraryData {} *x3; id x4; id x5; id x6; }*)arg1;
+- (void)releaseCacheEntry:(struct MTLLibraryContainer { int x1; struct { unsigned char x_2_1_1[32]; } x2; struct MTLLibraryData {} *x3; id x4; id x5; id x6; id x7; id x8; }*)arg1;
 - (id)serialQueue;
 - (void)startCollectingPipelineDescriptors;
 - (bool)supportsFeatureSet:(unsigned long long)arg1;

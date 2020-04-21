@@ -56,7 +56,7 @@
             struct TAtomicStack<AURenderEventStruct> { 
                 struct AURenderEventStruct {} *mHead; 
             } mAddedEventStack; 
-            union { /* Warning: Unrecognized filer type: 'U' using 'void*' */ void*x_0_2_1; void*x_0_2_2; void*x_0_2_3; in double x_0_2_4; void*x_0_2_5; const void*x_0_2_6; void x_0_2_7; void*x_0_2_8; in void*x_0_2_9; } *mScheduleHead; 
+            union { _Atomic /* Warning: Unrecognized filer type: 'U' using 'void*' */ void*x_0_2_1; byref void*x_0_2_2; in double x_0_2_3; void*x_0_2_4; const void*x_0_2_5; void x_0_2_6; void*x_0_2_7; in void*x_0_2_8; } *mScheduleHead; 
             AUAudioUnit *mOwningAU; 
         } eventSchedule; 
     }  _realtimeState;
@@ -140,7 +140,7 @@
 - (void)deallocateRenderResources;
 - (bool)disableProfile:(id)arg1 cable:(unsigned char)arg2 onChannel:(unsigned char)arg3 error:(id*)arg4;
 - (bool)enableProfile:(id)arg1 cable:(unsigned char)arg2 onChannel:(unsigned char)arg3 error:(id*)arg4;
-- (struct AUEventSchedule { struct AURenderEventAllocator {} *x1; struct TAtomicStack<AURenderEventStruct> { struct AURenderEventStruct {} *x_2_1_1; } x2; union { /* Warning: Unrecognized filer type: 'U' using 'void*' */ void*x_3_1_1; void*x_3_1_2; void*x_3_1_3; in double x_3_1_4; void*x_3_1_5; const void*x_3_1_6; void x_3_1_7; void*x_3_1_8; in void*x_3_1_9; } *x3; id x4; }*)eventSchedule;
+- (struct AUEventSchedule { struct AURenderEventAllocator {} *x1; struct TAtomicStack<AURenderEventStruct> { struct AURenderEventStruct {} *x_2_1_1; } x2; union { _Atomic /* Warning: Unrecognized filer type: 'U' using 'void*' */ void*x_3_1_1; byref void*x_3_1_2; in double x_3_1_3; void*x_3_1_4; const void*x_3_1_5; void x_3_1_6; void*x_3_1_7; in void*x_3_1_8; } *x3; id x4; }*)eventSchedule;
 - (id)factoryPresets;
 - (id)fullState;
 - (id)fullStateForDocument;

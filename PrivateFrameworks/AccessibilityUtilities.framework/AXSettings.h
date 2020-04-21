@@ -130,6 +130,7 @@
 @property (nonatomic) bool guidedAccessAllowsUnlockWithTouchID;
 @property (nonatomic, readonly) NSString *guidedAccessDefaultToneIdentifierForTimeRestrictionEvents;
 @property (nonatomic) bool guidedAccessDisallowDirectInactiveToActiveTransition;
+@property (nonatomic) bool guidedAccessOverrideIdleTime;
 @property (nonatomic, retain) NSNumber *guidedAccessOverrideTimeRestrictionDuration;
 @property (nonatomic) bool guidedAccessShouldSpeakForTimeRestrictionEvents;
 @property (nonatomic) long long guidedAccessTimeLimitsUsageCount;
@@ -540,6 +541,7 @@
 - (bool)guidedAccessAllowsUnlockWithTouchID;
 - (id)guidedAccessDefaultToneIdentifierForTimeRestrictionEvents;
 - (bool)guidedAccessDisallowDirectInactiveToActiveTransition;
+- (bool)guidedAccessOverrideIdleTime;
 - (id)guidedAccessOverrideTimeRestrictionDuration;
 - (bool)guidedAccessShouldSpeakForTimeRestrictionEvents;
 - (long long)guidedAccessTimeLimitsUsageCount;
@@ -713,6 +715,7 @@
 - (void)setGuidedAccessAXFeaturesEnabled:(bool)arg1;
 - (void)setGuidedAccessAllowsUnlockWithTouchID:(bool)arg1;
 - (void)setGuidedAccessDisallowDirectInactiveToActiveTransition:(bool)arg1;
+- (void)setGuidedAccessOverrideIdleTime:(bool)arg1;
 - (void)setGuidedAccessOverrideTimeRestrictionDuration:(id)arg1;
 - (void)setGuidedAccessShouldSpeakForTimeRestrictionEvents:(bool)arg1;
 - (void)setGuidedAccessTimeLimitsUsageCount:(long long)arg1;

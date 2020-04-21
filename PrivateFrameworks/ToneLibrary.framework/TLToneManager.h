@@ -26,9 +26,9 @@
 
 // Image: /System/Library/PrivateFrameworks/ToneLibrary.framework/ToneLibrary
 
-+ (bool)_checkForFileExistenceAtPath:(id)arg1 allowingTCCPreflight:(bool)arg2;
 + (id)_currentOverridePolicyPreferenceKeyForAlertType:(long long)arg1;
 + (id)_defaultToneIdentifierForAlertType:(long long)arg1 topic:(id)arg2;
++ (bool)_ensureTCCAccessPreflightAndCheckForFileExistenceAtPath:(id)arg1;
 + (bool)_migrateLegacyToneSettings;
 + (id)_systemWideTonePreferenceKeyForAlertType:(long long)arg1;
 + (id)sharedToneManager;

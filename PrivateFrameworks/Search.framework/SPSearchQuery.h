@@ -4,7 +4,7 @@
 
 @interface SPSearchQuery : NSObject <NSCopying> {
     double  _cancellationTime;
-    bool  _cancelled;
+    _Atomic bool  _cancelled;
     long long  _contentFilters;
     unsigned long long  _creationStamp;
     double  _creationTime;

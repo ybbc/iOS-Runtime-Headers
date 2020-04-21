@@ -2,7 +2,7 @@
    Image: /System/Library/Frameworks/CoreTelephony.framework/CoreTelephony
  */
 
-@interface CTXPCServiceSubscriptionContext : NSObject <NSCopying, NSSecureCoding, TUTelephonySubscription> {
+@interface CTXPCServiceSubscriptionContext : NSObject <NSCopying, NSSecureCoding, TUTelephonySubscription, VMTelephonySubscription> {
     bool  _isSimPresent;
     NSString * _label;
     NSString * _labelID;
@@ -17,17 +17,23 @@
 @property (readonly, copy) NSString *description;
 @property (readonly) unsigned long long hash;
 @property (nonatomic) bool isSimPresent;
+@property (nonatomic, readonly) NSString *label;
 @property (nonatomic, retain) NSString *label;
+@property (nonatomic, readonly) NSString *labelID;
 @property (nonatomic, retain) NSString *labelID;
+@property (nonatomic, readonly) NSString *phoneNumber;
 @property (nonatomic, retain) NSString *phoneNumber;
 @property (nonatomic, readonly) long long slotID;
 @property (readonly) Class superclass;
 @property (nonatomic, readonly, copy) NSString *tps_isoCountryCode;
 @property (nonatomic, readonly, copy) NSString *tps_localizedLabel;
 @property (nonatomic, readonly, copy) NSString *tps_localizedPhoneNumber;
+@property (nonatomic, readonly) NSNumber *userDataPreferred;
 @property (nonatomic, retain) NSNumber *userDataPreferred;
+@property (nonatomic, readonly) NSNumber *userDefaultVoice;
 @property (nonatomic, retain) NSNumber *userDefaultVoice;
 @property (nonatomic, readonly) NSUUID *uuid;
+@property (nonatomic, readonly) NSUUID *vm_labelUUID;
 
 // Image: /System/Library/Frameworks/CoreTelephony.framework/CoreTelephony
 
@@ -67,5 +73,9 @@
 - (id)tps_isoCountryCode;
 - (id)tps_localizedLabel;
 - (id)tps_localizedPhoneNumber;
+
+// Image: /System/Library/PrivateFrameworks/VisualVoicemail.framework/VisualVoicemail
+
+- (id)vm_labelUUID;
 
 @end

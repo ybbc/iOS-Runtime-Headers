@@ -95,6 +95,7 @@
 - (void)assistantConnection:(id)arg1 speechRecordingDidBeginOnAVRecordRoute:(id)arg2 audioSessionID:(unsigned int)arg3;
 - (void)assistantConnection:(id)arg1 speechRecordingDidChangeAVRecordRoute:(id)arg2;
 - (void)assistantConnection:(id)arg1 speechRecordingDidFail:(id)arg2;
+- (void)assistantConnection:(id)arg1 speechRecordingPerformTwoShotPromptWithType:(long long)arg2 completion:(id /* block */)arg3;
 - (void)assistantConnection:(id)arg1 startUIRequestWithText:(id)arg2 completion:(id /* block */)arg3;
 - (void)assistantConnection:(id)arg1 wantsToCacheImage:(id)arg2;
 - (void)assistantConnectionDidChangeAudioRecordingPower:(id)arg1;
@@ -115,6 +116,7 @@
 - (id)delegate;
 - (void)end;
 - (void)forceAudioSessionActive;
+- (void)forceAudioSessionActiveForReason:(long long)arg1;
 - (void)forceAudioSessionInactive;
 - (id)initWithConnection:(id)arg1 delegateQueue:(id)arg2;
 - (bool)isEyesFree;
@@ -153,7 +155,7 @@
 - (void)settingsConnectionDidChangeActiveAccount:(id)arg1;
 - (id)siriSessionInfo;
 - (id)speechSynthesis;
-- (void)speechSynthesis:(id)arg1 prepareForSpeakingWithCompletion:(id /* block */)arg2;
+- (void)speechSynthesis:(id)arg1 prepareForSpeakingWithOptions:(unsigned long long)arg2 completion:(id /* block */)arg3;
 - (bool)speechSynthesisConnectionIsRecording:(id)arg1;
 - (void)startCorrectedRequestWithText:(id)arg1 correctionIdentifier:(id)arg2 userSelectionResults:(id)arg3;
 - (void)startRequestWithOptions:(id)arg1;

@@ -80,11 +80,11 @@
 - (struct tmat4x4<float> { struct tvec4<float> { union { float x_1_2_1; float x_1_2_2; float x_1_2_3; } x_1_1_1; union { float x_2_2_1; float x_2_2_2; float x_2_2_3; } x_1_1_2; union { float x_3_2_1; float x_3_2_2; float x_3_2_3; } x_1_1_3; union { float x_4_2_1; float x_4_2_2; float x_4_2_3; } x_1_1_4; } x1[4]; }*)mv;
 - (struct tmat4x4<float> { struct tvec4<float> { union { float x_1_2_1; float x_1_2_2; float x_1_2_3; } x_1_1_1; union { float x_2_2_1; float x_2_2_2; float x_2_2_3; } x_1_1_2; union { float x_3_2_1; float x_3_2_2; float x_3_2_3; } x_1_1_3; union { float x_4_2_1; float x_4_2_2; float x_4_2_3; } x_1_1_4; } x1[4]; })mvp;
 - (id)objectStateProcessor;
-- (struct StateStack<TSCH3D::ObjectState, 6> { unsigned long long x1; struct ObjectState { struct ObjcSharedPtr<NSSet> { id x_1_2_1; struct vector<TSCH3D::ObjectState::Lookup, std::__1::allocator<TSCH3D::ObjectState::Lookup> > { struct Lookup {} *x_2_3_1; struct Lookup {} *x_2_3_2; struct __compressed_pair<TSCH3D::ObjectState::Lookup *, std::__1::allocator<TSCH3D::ObjectState::Lookup> > { struct Lookup {} *x_3_4_1; } x_2_3_3; } x_1_2_2; struct array<SFUtility::ObjcSharedPtr<NSObject>, 8> { struct ObjcSharedPtr<NSObject> { id x_1_4_1; /* Warning: Unrecognized filer type: ']' using 'void*' */ void*x_1_4_2; } x_3_3_1[8]; } x_1_2_3; } x_2_1_1; struct ObjectState { struct ObjcSharedPtr<NSSet> { id x_1_3_1; struct vector<TSCH3D::ObjectState::Lookup, std::__1::allocator<TSCH3D::ObjectState::Lookup> > { struct Lookup {} *x_2_4_1; struct Lookup {} *x_2_4_2; struct __compressed_pair<TSCH3D::ObjectState::Lookup *, std::__1::allocator<TSCH3D::ObjectState::Lookup> > { struct Lookup {} *x_3_5_1; } x_2_4_3; } x_1_3_2; struct array<SFUtility::ObjcSharedPtr<NSObject>, 8> { struct ObjcSharedPtr<NSObject> { id x_1_5_1; void*x_1_5_2; } x_3_4_1[8]; } x_1_3_3; } x_2_2_1; void*x_2_2_2; } x_2_1_2[6]; } x2; }*)objectStateStack;
-- (void)p_drawArrays:(const /* Warning: unhandled struct encoding: '{PrimitiveInfo=iii@}' */ struct PrimitiveInfo { int x1; int x2; int x3; id x4; }*)arg1;
-- (void)p_drawElements:(const /* Warning: unhandled struct encoding: '{PrimitiveInfo=iii@}' */ struct PrimitiveInfo { int x1; int x2; int x3; id x4; }*)arg1;
-- (void)p_drawPrimitive:(const /* Warning: unhandled struct encoding: '{PrimitiveInfo=iii@}' */ struct PrimitiveInfo { int x1; int x2; int x3; id x4; }*)arg1;
-- (unsigned int)p_modeFromPrimitiveInfo:(const /* Warning: unhandled struct encoding: '{PrimitiveInfo=iii@}' */ struct PrimitiveInfo { int x1; int x2; int x3; id x4; }*)arg1;
+- (struct StateStack<TSCH3D::ObjectState, 6> { unsigned long long x1; struct ObjectState { struct ObjcSharedPtr<NSSet> { id x_1_2_1; } x_2_1_1; struct vector<TSCH3D::ObjectState::Lookup, std::__1::allocator<TSCH3D::ObjectState::Lookup> > { struct Lookup {} *x_2_2_1; struct Lookup {} *x_2_2_2; struct __compressed_pair<TSCH3D::ObjectState::Lookup *, std::__1::allocator<TSCH3D::ObjectState::Lookup> > { struct Lookup {} *x_3_3_1; } x_2_2_3; } x_2_1_2; struct array<SFUtility::ObjcSharedPtr<NSObject>, 8> { struct ObjcSharedPtr<NSObject> { id x_1_3_1; } x_3_2_1[8]; } x_2_1_3; struct array<TSCH3D::TextureAttributes, 8> { struct TextureAttributes { int x_1_3_1; int x_1_3_2; bool x_1_3_3; bool x_1_3_4; bool x_1_3_5; long long x_1_3_6; struct TextureSizeHint { int x_7_4_1; struct tvec2<int> { union { int x_1_6_1; int x_1_6_2; int x_1_6_3; } x_2_5_1; union { int x_2_6_1; int x_2_6_2; int x_2_6_3; } x_2_5_2; } x_7_4_2; } x_1_3_7; bool x_1_3_8; } x_4_2_1[8]; } x_2_1_4; } x2; struct ObjectState { struct ObjcSharedPtr<NSSet> { id x_1_2_1; } x_3_1_1; struct vector<TSCH3D::ObjectState::Lookup, std::__1::allocator<TSCH3D::ObjectState::Lookup> > { struct Lookup {} *x_2_2_1; struct Lookup {} *x_2_2_2; struct __compressed_pair<TSCH3D::ObjectState::Lookup *, std::__1::allocator<TSCH3D::ObjectState::Lookup> > { struct Lookup {} *x_3_3_1; } x_2_2_3; } x_3_1_2; struct array<SFUtility::ObjcSharedPtr<NSObject>, 8> { struct ObjcSharedPtr<NSObject> { id x_1_3_1; } x_3_2_1[8]; } x_3_1_3; struct array<TSCH3D::TextureAttributes, 8> { struct TextureAttributes { int x_1_3_1; int x_1_3_2; bool x_1_3_3; bool x_1_3_4; bool x_1_3_5; long long x_1_3_6; struct TextureSizeHint { int x_7_4_1; struct tvec2<int> { union { int x_1_6_1; int x_1_6_2; int x_1_6_3; } x_2_5_1; union { int x_2_6_1; int x_2_6_2; int x_2_6_3; } x_2_5_2; } x_7_4_2; } x_1_3_7; bool x_1_3_8; } x_4_2_1[8]; } x_3_1_4; } x3[6]; }*)objectStateStack;
+- (void)p_drawArrays:(const struct PrimitiveInfo { int x1; int x2; int x3; id x4; }*)arg1;
+- (void)p_drawElements:(const struct PrimitiveInfo { int x1; int x2; int x3; id x4; }*)arg1;
+- (void)p_drawPrimitive:(const struct PrimitiveInfo { int x1; int x2; int x3; id x4; }*)arg1;
+- (unsigned int)p_modeFromPrimitiveInfo:(const struct PrimitiveInfo { int x1; int x2; int x3; id x4; }*)arg1;
 - (void)popRenderState;
 - (void)popState;
 - (void)postInject:(id)arg1;
@@ -96,7 +96,7 @@
 - (void)resetBuffers;
 - (void)setRenderHints:(const struct RenderHints { struct TextureSizeHint { int x_1_1_1; struct tvec2<int> { union { int x_1_3_1; int x_1_3_2; int x_1_3_3; } x_2_2_1; union { int x_2_3_1; int x_2_3_2; int x_2_3_3; } x_2_2_2; } x_1_1_2; } x1; }*)arg1;
 - (void)setRenderState:(const struct RenderState { bool x1; int x2; bool x3; bool x4; bool x5; bool x6; bool x7; float x8; float x9; struct EnableClipDistances { struct array<bool, 8> { bool x_1_2_1[8]; } x_10_1_1; } x10; }*)arg1;
-- (void)submit:(const /* Warning: unhandled struct encoding: '{PrimitiveInfo=iii@}' */ struct PrimitiveInfo { int x1; int x2; int x3; id x4; }*)arg1;
+- (void)submit:(const struct PrimitiveInfo { int x1; int x2; int x3; id x4; }*)arg1;
 - (bool)supportsClipDistances;
 - (long long)texture:(id)arg1 attributes:(const struct TextureAttributes { int x1; int x2; bool x3; bool x4; bool x5; long long x6; struct TextureSizeHint { int x_7_1_1; struct tvec2<int> { union { int x_1_3_1; int x_1_3_2; int x_1_3_3; } x_2_2_1; union { int x_2_3_1; int x_2_3_2; int x_2_3_3; } x_2_2_2; } x_7_1_2; } x7; bool x8; }*)arg2;
 - (void)uniform:(id)arg1 ivec1:(const struct tvec1<int> { union { int x_1_1_1; int x_1_1_2; int x_1_1_3; } x1; }*)arg2;
@@ -122,8 +122,8 @@
 - (void)updateRenderState;
 - (bool)updateShader;
 - (void)updateVertexShaderStates;
-- (bool)uploadShaderAttributes:(id)arg1 primitiveInfo:(const /* Warning: unhandled struct encoding: '{PrimitiveInfo=iii@}' */ struct PrimitiveInfo { int x1; int x2; int x3; id x4; }*)arg2;
-- (bool)uploadShaderData:(id)arg1 primitiveInfo:(const /* Warning: unhandled struct encoding: '{PrimitiveInfo=iii@}' */ struct PrimitiveInfo { int x1; int x2; int x3; id x4; }*)arg2;
+- (bool)uploadShaderAttributes:(id)arg1 primitiveInfo:(const struct PrimitiveInfo { int x1; int x2; int x3; id x4; }*)arg2;
+- (bool)uploadShaderData:(id)arg1 primitiveInfo:(const struct PrimitiveInfo { int x1; int x2; int x3; id x4; }*)arg2;
 - (bool)uploadShaderTextures;
 - (void)uploadShaderUniforms;
 

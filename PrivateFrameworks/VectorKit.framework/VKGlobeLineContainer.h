@@ -21,7 +21,7 @@
         } __tree_; 
     }  _polylinesToRoutes;
     <VKRouteMatchedAnnotationPresentation> * _routeLineSplitAnnotation;
-    /* Warning: unhandled struct encoding: '{VKGlobeRouteSplit=^^?@}' */ struct VKGlobeRouteSplit { int (**x1)(); id x2; } * _routeSplit;
+    struct VKGlobeRouteSplit { int (**x1)(); id x2; } * _routeSplit;
     VKPolylineOverlay * _selectedPolyline;
 }
 

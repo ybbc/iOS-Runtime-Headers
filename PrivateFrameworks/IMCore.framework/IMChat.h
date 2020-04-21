@@ -217,6 +217,7 @@
 - (bool)_isDuplicate:(id)arg1;
 - (void)_itemsDidChange:(id)arg1;
 - (id)_lastFinishedMessage;
+- (void)_launchAppForJoinRequest:(id)arg1;
 - (void)_leaveChat:(bool)arg1;
 - (void)_markItemAsPlayed:(id)arg1;
 - (void)_participant:(id)arg1 statusChanged:(int)arg2;
@@ -352,7 +353,7 @@
 - (bool)hasSurfRequestNotFromMe:(id)arg1;
 - (bool)hasUnhandledInvitation;
 - (id)init;
-- (void)initiateTUConversationWithVideo:(bool)arg1;
+- (void)initiateTUConversationWithVideoEnabled:(bool)arg1;
 - (id)invitationForPendingParticipants;
 - (void)inviteParticipants:(id)arg1 reason:(id)arg2;
 - (void)inviteParticipantsToiMessageChat:(id)arg1 reason:(id)arg2;
@@ -368,7 +369,7 @@
 - (bool)isReplyEnabled;
 - (bool)isVIP;
 - (void)join;
-- (void)joinExistingTUConversation;
+- (void)joinExistingTUConversationWithVideoEnabled:(bool)arg1;
 - (long long)joinState;
 - (id)lastAddressedHandleID;
 - (id)lastAddressedSIMID;
@@ -482,6 +483,7 @@
 - (void)updateIsFiltered:(bool)arg1;
 - (void)updateMessage:(id)arg1;
 - (void)updateMessage:(id)arg1 flags:(unsigned long long)arg2;
+- (void)updateShouldForceToSMS:(bool)arg1;
 - (void)updateWasDetectedAsSMSSpam:(bool)arg1;
 - (void)updateWatermarks;
 - (void)userToggledReadReceiptSwitch:(bool)arg1;

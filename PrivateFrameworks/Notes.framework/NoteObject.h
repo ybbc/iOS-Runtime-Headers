@@ -42,7 +42,7 @@
 
 // Image: /System/Library/PrivateFrameworks/Notes.framework/Notes
 
-+ (bool)didChooseToMigrateNote:(id)arg1 context:(/* Warning: unhandled struct encoding: '{NoteContext=#@@@@@@@@QBBBB@}' */ struct NoteContext { Class x1; id x2; id x3; id x4; id x5; unsigned long long x6; bool x7; bool x8; bool x9; bool x10; id x11; }*)arg2;
++ (bool)didChooseToMigrateNote:(id)arg1 context:(struct NoteContext { Class x1; id x2; id x3; id x4; id x5; id x6; id x7; id x8; id x9; unsigned long long x10; bool x11; bool x12; bool x13; bool x14; id x15; }*)arg2;
 
 - (id)accountName;
 - (id)authorsExcludingCurrentUser;

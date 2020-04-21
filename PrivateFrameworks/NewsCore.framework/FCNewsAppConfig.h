@@ -68,6 +68,7 @@
 @property (nonatomic, readonly) NSArray *hiddenFeedIDs;
 @property (nonatomic, readonly) FCIAdConfiguration *iAdConfig;
 @property (nonatomic, readonly) double interstitialAdLoadDelay;
+@property (nonatomic, readonly) bool isDefaultConfiguration;
 @property (nonatomic, readonly) bool isExpired;
 @property (nonatomic, readonly) bool isSpecialEventsMicaAnimationDisabled;
 @property (nonatomic, readonly) NSDictionary *languageConfigDictionary;
@@ -205,7 +206,9 @@
 - (id)iAdConfig;
 - (id)init;
 - (id)initWithConfigDictionary:(id)arg1 languageConfigDictionary:(id)arg2;
+- (id)initWithConfigDictionary:(id)arg1 languageConfigDictionary:(id)arg2 lastModificationDate:(id)arg3;
 - (double)interstitialAdLoadDelay;
+- (bool)isDefaultConfiguration;
 - (bool)isExpired;
 - (bool)isOrderFeedEndpointEnabled;
 - (bool)isPrivateDataEncryptionAllowed;

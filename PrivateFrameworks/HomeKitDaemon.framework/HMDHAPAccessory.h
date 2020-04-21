@@ -17,6 +17,7 @@
     HMDDataStreamController * _dataStreamController;
     HMDCharacteristic * _dayOfTheWeekCharacteristic;
     NSMutableArray * _discoveredServices;
+    bool  _hardwareSupport;
     NSMutableSet * _identifiersForBridgedAccessories;
     bool  _keyGenerationInProgress;
     unsigned char  _keyGenerationType;
@@ -61,6 +62,7 @@
 @property (readonly, copy) NSString *description;
 @property (nonatomic, retain) NSMutableArray *discoveredServices;
 @property (nonatomic, readonly, copy) NSNumber *hapInstanceId;
+@property (nonatomic) bool hardwareSupport;
 @property (readonly) unsigned long long hash;
 @property (nonatomic, retain) NSMutableSet *identifiersForBridgedAccessories;
 @property bool keyGenerationInProgress;
@@ -155,6 +157,7 @@
 - (bool)_resolveAudioAbility:(id)arg1;
 - (bool)_resolveSupportedSiriInputType:(id)arg1;
 - (void)_retrieveStateForTrackedAccessory:(id)arg1 withCompletion:(id /* block */)arg2;
+- (void)_saveHardwareSupport:(bool)arg1;
 - (void)_saveTargetUUIDs:(id)arg1;
 - (void)_setCurrentRelayAccessoryState:(unsigned long long)arg1;
 - (void)_setCurrentTimeCharacteristic:(id)arg1;
@@ -255,6 +258,7 @@
 - (void)handleUpdatedPassword:(id)arg1;
 - (id)hapCharacteristicWriteRequests:(id)arg1 hapAccessory:(id)arg2 hmdResponses:(id*)arg3 mapping:(id*)arg4;
 - (id)hapInstanceId;
+- (bool)hardwareSupport;
 - (bool)hasBLELinkConnected;
 - (bool)hasBTLELink;
 - (bool)hasIPLink;
@@ -297,6 +301,7 @@
 - (id)messageReceiverChildren;
 - (id)modelObjectWithChangeType:(unsigned long long)arg1;
 - (id)namesOfServicesShowingTilesInHomeApp;
+- (void)notifyClientsOfTargetControlSupportUpdate;
 - (void)notifyValue:(id)arg1 previousValue:(id)arg2 error:(id)arg3 forCharacteristic:(id)arg4 requestMessage:(id)arg5;
 - (void)notifyingCharacteristicStateNumberUpdated:(id)arg1;
 - (unsigned long long)pairingAttempts;
@@ -328,6 +333,7 @@
 - (void)requestResource:(id)arg1 queue:(id)arg2 completionHandler:(id /* block */)arg3;
 - (void)resetNotificationEnabledTime;
 - (id)retrieveUpdatedTransportInfoArray:(id)arg1;
+- (void)saveHardwareSupport:(bool)arg1;
 - (void)savePublicKeyToKeychain;
 - (void)saveTargetUUIDs:(id)arg1;
 - (void)sendTargetControlWhoAmIWithIdentifier:(unsigned int)arg1;
@@ -349,6 +355,7 @@
 - (void)setDataStreamController:(id)arg1;
 - (void)setDayOfTheWeekCharacteristic:(id)arg1;
 - (void)setDiscoveredServices:(id)arg1;
+- (void)setHardwareSupport:(bool)arg1;
 - (void)setIdentifiersForBridgedAccessories:(id)arg1;
 - (void)setKeyGenerationInProgress:(bool)arg1;
 - (void)setKeyGenerationType:(unsigned char)arg1;

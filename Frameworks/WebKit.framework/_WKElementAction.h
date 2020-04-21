@@ -4,7 +4,7 @@
 
 @interface _WKElementAction : NSObject {
     id /* block */  _actionHandler;
-    /* Warning: unhandled struct encoding: '{WeakObjCPtr<WKActionSheetAssistant>="m_weakReference"@}' */ struct WeakObjCPtr<WKActionSheetAssistant> { 
+    struct WeakObjCPtr<WKActionSheetAssistant> { 
         id m_weakReference; 
     }  _defaultActionSheetAssistant;
     id /* block */  _dismissalHandler;

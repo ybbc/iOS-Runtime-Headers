@@ -40,6 +40,7 @@
 @property (nonatomic, readonly, copy) NSString *currentDeviceManufacturer;
 @property (nonatomic, readonly, copy) NSString *currentDeviceName;
 @property (nonatomic, readonly, copy) NSString *currentDeviceProductType;
+@property (nonatomic, readonly, copy) NSString *currentDeviceRegionCode;
 @property (nonatomic, readonly) unsigned long long currentDiskSpaceAvailable;
 @property (nonatomic, readonly) NSDictionary *currentDiskUsage;
 @property (nonatomic, readonly, copy) NSString *currentInternalDeviceModel;
@@ -57,6 +58,7 @@
 @property (nonatomic) bool isAppleWatch;
 @property (nonatomic) bool isCompanionCapable;
 @property (nonatomic, readonly) bool isCurrentDeviceN2XA;
+@property (nonatomic, readonly) bool isCurrentDeviceSeries3OrOlder;
 @property (nonatomic) bool isDeviceSupported;
 @property (nonatomic, readonly) bool isRunningStoreDemoMode;
 @property (nonatomic) bool isTestingDevice;
@@ -84,6 +86,7 @@
 + (bool)_isAppleInternalInstall;
 + (bool)_isDeviceSupported;
 + (bool)_isForceBuddyEnabled;
++ (bool)_isProductTypeSeries3OrOlder:(id)arg1;
 + (bool)_isRunningStoreDemoMode;
 + (bool)_performsWorkoutCondensation;
 + (bool)_readEnableManateeForHSA2AccountsFromHealthdDefaults;
@@ -105,6 +108,7 @@
 + (id)currentDeviceManufacturer;
 + (id)currentDeviceName;
 + (id)currentDeviceProductType;
++ (id)currentDeviceRegionCode;
 + (id)currentOSBuild;
 + (id)currentOSVersion;
 + (struct { long long x1; long long x2; long long x3; })currentOSVersionStruct;
@@ -118,6 +122,8 @@
 + (bool)isManateeEnabledByDefault;
 + (bool)isRunningStoreDemoMode;
 + (bool)isTestingDevice;
++ (int)nanoSyncProtocolVersionForCompanionSystemBuildVersion:(id)arg1;
++ (int)nanoSyncProtocolVersionForWatchSystemBuildVersion:(id)arg1;
 + (void)resetSharedBehavior;
 + (bool)runningInStoreDemoModeF201;
 + (void)setSharedBehavior:(id)arg1;
@@ -125,7 +131,6 @@
 + (bool)shouldShowBuddy;
 + (bool)showSensitiveLogItems;
 + (int)syncProtocolVersionForNRDevice:(id)arg1;
-+ (int)syncProtocolVersionForSystemBuildVersion:(id)arg1;
 
 - (void).cxx_destruct;
 - (bool)collectsCalorimetry;
@@ -135,6 +140,7 @@
 - (id)currentDeviceManufacturer;
 - (id)currentDeviceName;
 - (id)currentDeviceProductType;
+- (id)currentDeviceRegionCode;
 - (unsigned long long)currentDiskSpaceAvailable;
 - (id)currentDiskUsage;
 - (id)currentInternalDeviceModel;
@@ -153,6 +159,7 @@
 - (bool)isAppleWatch;
 - (bool)isCompanionCapable;
 - (bool)isCurrentDeviceN2XA;
+- (bool)isCurrentDeviceSeries3OrOlder;
 - (bool)isDeviceSupported;
 - (bool)isManateeEnabledForHSA2Accounts;
 - (bool)isRunningStoreDemoMode;

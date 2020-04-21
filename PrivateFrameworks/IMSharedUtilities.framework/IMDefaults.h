@@ -4,6 +4,8 @@
 
 @interface IMDefaults : NSObject
 
++ (id)sharedInstance;
+
 - (bool)getBoolFromDomain:(id)arg1 forKey:(id)arg2;
 - (id)getValueFromDomain:(id)arg1 forKey:(id)arg2;
 - (void)setBool:(bool)arg1 forDomain:(id)arg2 forKey:(id)arg3;

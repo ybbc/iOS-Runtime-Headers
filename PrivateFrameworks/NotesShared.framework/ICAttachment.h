@@ -7,7 +7,7 @@
     ICAttachmentModel * _attachmentModel;
     short  _attachmentType;
     NSDictionary * _metadata;
-    /* Warning: unhandled struct encoding: '{AVAsset=#@}' */ struct AVAsset { Class x1; id x2; } * _movie;
+    struct AVAsset { Class x1; id x2; } * _movie;
     NSURL * _remoteFileURL;
     bool  settingMergeableData;
 }
@@ -199,7 +199,7 @@
 - (id)mergeDecryptedValue:(id)arg1 withOldValue:(id)arg2 forKey:(id)arg3;
 - (id)mergeableData;
 - (id)metadata;
-- (/* Warning: unhandled struct encoding: '{AVAsset=#@}' */ struct AVAsset { Class x1; id x2; }*)movie;
+- (struct AVAsset { Class x1; id x2; }*)movie;
 - (bool)needsToBePushedToCloud;
 - (bool)needsToBeRequested;
 - (id)newlyCreatedRecord;
@@ -243,7 +243,7 @@
 - (void)setMarkupModelData:(id)arg1;
 - (void)setMergeableData:(id)arg1;
 - (void)setMetadata:(id)arg1;
-- (void)setMovie:(/* Warning: unhandled struct encoding: '{AVAsset=#@}' */ struct AVAsset { Class x1; id x2; }*)arg1;
+- (void)setMovie:(struct AVAsset { Class x1; id x2; }*)arg1;
 - (void)setNote:(id)arg1;
 - (void)setOrientation:(short)arg1;
 - (void)setParentAttachment:(id)arg1;

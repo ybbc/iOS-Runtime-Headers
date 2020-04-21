@@ -102,6 +102,7 @@
 - (void)setPrepopulatedComposition:(id)arg1;
 - (void)setPrepopulatedRecipients:(id)arg1;
 - (bool)shouldUseNavigationBarCanvasView;
+- (id)textViewOnscreenWithEntryView;
 - (double)topInsetPadding;
 - (void)transcriptCollectionViewController:(id)arg1 balloonView:(id)arg2 tappedForChatItem:(id)arg3;
 - (bool)transcriptCollectionViewControllerPlaybackForOutgoingEffectsIsAllowed:(id)arg1;

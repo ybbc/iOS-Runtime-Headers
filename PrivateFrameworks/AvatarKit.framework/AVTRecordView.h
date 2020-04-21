@@ -13,7 +13,6 @@
     CAAnimation * _backedAnimation;
     CALayer * _backingLayer;
     int  _benchFrameCounter;
-    bool  _captureImageIsTooDark;
     bool  _checkDrawableAvailable;
     struct { 
         long long value; 
@@ -98,7 +97,6 @@
 - (void)cancelMovieExport;
 - (void)cancelRecording;
 - (void)cancelRecordingAudio;
-- (bool)captureImageIsTooDark;
 - (id)convertRecordedDataToAnimationGroup;
 - (struct opaqueCMSampleBuffer { }*)createSilentAudioAtFrame:(long long)arg1 nFrames:(int)arg2 sampleRate:(double)arg3 numChannels:(int)arg4;
 - (double)currentAudioTime;

@@ -4,6 +4,7 @@
 
 @interface RPRemoteDisplayServer : NSObject <NSSecureCoding, RPAuthenticatable> {
     bool  _activateCalled;
+    id /* block */  _authCompletionHandler;
     NSObject<OS_dispatch_queue> * _dispatchQueue;
     id /* block */  _hidePasswordHandler;
     unsigned int  _internalAuthFlags;
@@ -23,6 +24,7 @@
     NSXPCConnection * _xpcCnx;
 }
 
+@property (nonatomic, copy) id /* block */ authCompletionHandler;
 @property (nonatomic, retain) NSObject<OS_dispatch_queue> *dispatchQueue;
 @property (nonatomic, copy) id /* block */ hidePasswordHandler;
 @property (nonatomic, readonly) unsigned int internalAuthFlags;
@@ -45,6 +47,7 @@
 - (void)_interrupted;
 - (void)_invalidated;
 - (void)activateWithCompletion:(id /* block */)arg1;
+- (id /* block */)authCompletionHandler;
 - (id)description;
 - (id)dispatchQueue;
 - (void)encodeWithCoder:(id)arg1;
@@ -68,6 +71,7 @@
 - (void)remoteDisplayStartServerSessionID:(id)arg1 device:(id)arg2 completion:(id /* block */)arg3;
 - (id /* block */)sessionEndedHandler;
 - (id /* block */)sessionStartHandler;
+- (void)setAuthCompletionHandler:(id /* block */)arg1;
 - (void)setDispatchQueue:(id)arg1;
 - (void)setHidePasswordHandler:(id /* block */)arg1;
 - (void)setInterruptionHandler:(id /* block */)arg1;

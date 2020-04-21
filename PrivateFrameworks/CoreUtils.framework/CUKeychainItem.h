@@ -11,6 +11,7 @@
     NSDictionary * _metadata;
     NSString * _name;
     NSData * _persistentRef;
+    NSArray * _removedMetadata;
     NSDictionary * _secrets;
     int  _syncType;
     NSString * _type;
@@ -26,6 +27,7 @@
 @property (nonatomic, copy) NSDictionary *metadata;
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSData *persistentRef;
+@property (nonatomic, copy) NSArray *removedMetadata;
 @property (nonatomic, copy) NSDictionary *secrets;
 @property (nonatomic) int syncType;
 @property (nonatomic, copy) NSString *type;
@@ -49,6 +51,7 @@
 - (id)metadata;
 - (id)name;
 - (id)persistentRef;
+- (id)removedMetadata;
 - (id)secrets;
 - (void)setAccessGroup:(id)arg1;
 - (void)setAccessibleType:(int)arg1;
@@ -58,6 +61,7 @@
 - (void)setMetadata:(id)arg1;
 - (void)setName:(id)arg1;
 - (void)setPersistentRef:(id)arg1;
+- (void)setRemovedMetadata:(id)arg1;
 - (void)setSecrets:(id)arg1;
 - (void)setSyncType:(int)arg1;
 - (void)setType:(id)arg1;

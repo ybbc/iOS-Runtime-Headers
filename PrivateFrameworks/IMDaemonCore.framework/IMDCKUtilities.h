@@ -47,7 +47,6 @@
 - (bool)_checkEligibilityWithAccountInfo:(id)arg1;
 - (void)_checkEligibilityWithLoggedInAccountWithCompletion:(id /* block */)arg1;
 - (bool)_checkIfEnabledByServerBagOrDefault:(id)arg1;
-- (id)_ckStatisticCaluclations;
 - (id)_createAccountError:(id)arg1;
 - (bool)_deviceActive;
 - (id)_errorsFromPartialError:(id)arg1;
@@ -83,6 +82,7 @@
 - (bool)cacheDeleteEnabled;
 - (void)checkCloudkitEnabledStatusAndToggleiCloudSwitchIfNeeded;
 - (void)checkiCloudQuota:(id /* block */)arg1;
+- (id)ckStatisticCalculations;
 - (bool)cloudKitSyncDownloadAssetsOnly;
 - (bool)cloudKitSyncingEnabled;
 - (id)deviceActiveString;
@@ -128,12 +128,15 @@
 - (void)keyRollPendingStateDidChange;
 - (id)lastDeviceBackUpDate;
 - (id)lockdownManager;
+- (void)logCloudKitSyncToPowerLogForSyncType:(long long)arg1 isCoreDuetSync:(bool)arg2 didCompleteChatSync:(bool)arg3 didSucceedSyncingChats:(bool)arg4 didCompleteMessageSync:(bool)arg5 didSucceedSyncingMessages:(bool)arg6 didCompleteAttachmentSync:(bool)arg7 didSucceedSyncingAttachments:(bool)arg8 syncAttemptCount:(unsigned long long)arg9;
+- (void)logCloudKitSyncToPowerLogForSyncType:(long long)arg1 isCoreDuetSync:(bool)arg2 didStartSync:(bool)arg3 didFinishSync:(bool)arg4 didSucceedSyncing:(bool)arg5;
 - (id)logCollectorAddress;
 - (void)logDumpAndSendMessageTo:(id)arg1 forHours:(int)arg2 reason:(id)arg3;
 - (void)logDumpAndSendMessageTo:(id)arg1 forHours:(int)arg2 reason:(id)arg3 isInitialSync:(bool)arg4 requirePreviousPrompt:(bool)arg5 willSendBlock:(id /* block */)arg6;
 - (void)logDumpAndSendMessageTo:(id)arg1 forHours:(int)arg2 reason:(id)arg3 requirePreviousPrompt:(bool)arg4 willSendBlock:(id /* block */)arg5;
 - (bool)logDumpIsNecessaryAfterSync;
 - (id)logHandle;
+- (void)logToPowerLogForLogDumpGUID:(id)arg1 logDumpCompleted:(bool)arg2 logDumpSucceeded:(bool)arg3 logDumpSendingCompleted:(bool)arg4 logDumpSendingSucceeded:(bool)arg5 reason:(id)arg6;
 - (unsigned long long)messageDatabaseSize;
 - (id)metricForPCSReportManateeStatusWithReason:(id)arg1;
 - (id)newfilteredArrayRemovingCKRecordDupes:(id)arg1;
@@ -166,7 +169,7 @@
 - (bool)shouldSyncToSRContainer;
 - (bool)shouldUseDevContainer;
 - (void)submitPCSReportManateeStatuMetricWithPrefix:(id)arg1 andReason:(id)arg2;
-- (id)syncFailureMetricString:(id)arg1 error:(id)arg2;
+- (id)syncFailureMetricString:(id)arg1 isRecoverable:(bool)arg2 error:(id)arg3;
 - (id)syncState;
 - (void)syncStateWillUpdate:(id)arg1;
 - (bool)useDeprecatedApi;

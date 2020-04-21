@@ -10,7 +10,7 @@
 @property (nonatomic) long long credentialType;
 @property (nonatomic) bool includeMetadata;
 
-- (id)_urlRequestWithServiceURL:(id)arg1 deviceIdentifier:(id)arg2 account:(id)arg3;
+- (id)_urlRequestWithServiceURL:(id)arg1 deviceIdentifier:(id)arg2 appleAccountInformation:(id)arg3;
 - (long long)credentialType;
 - (bool)includeMetadata;
 - (void)setCredentialType:(long long)arg1;

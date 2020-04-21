@@ -8,7 +8,7 @@
     NSObject<OS_dispatch_queue> * _componentQueue;
     NSHashTable * _components;
     TSPObjectContext * _context;
-    int  _ignoreCachedObjectEvictionCount;
+    _Atomic int  _ignoreCachedObjectEvictionCount;
     bool  _isTornDown;
     TSPComponent * _packageMetadataComponent;
     NSObject<OS_dispatch_queue> * _readFlushedComponentQueue;

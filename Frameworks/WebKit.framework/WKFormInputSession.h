@@ -4,7 +4,9 @@
 
 @interface WKFormInputSession : NSObject <_WKFormInputSession> {
     bool  _accessoryViewShouldNotShow;
-    WKContentView * _contentView;
+    struct WeakObjCPtr<WKContentView> { 
+        id m_weakReference; 
+    }  _contentView;
     struct RetainPtr<UIView> { 
         void *m_ptr; 
     }  _customInputView;

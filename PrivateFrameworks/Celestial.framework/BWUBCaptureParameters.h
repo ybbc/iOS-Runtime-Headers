@@ -3,17 +3,20 @@
  */
 
 @interface BWUBCaptureParameters : NSObject {
+    double  _longWithoutSphereEffectiveIntegrationTimeThreshold;
     double  _lowLightEffectiveIntegrationTimeThreshold;
     float  _sifrGainThreshold;
     double  _sifrMainEffectiveIntegrationTimeThreshold;
 }
 
+@property (nonatomic, readonly) double longWithoutSphereEffectiveIntegrationTimeThreshold;
 @property (nonatomic, readonly) double lowLightEffectiveIntegrationTimeThreshold;
 @property (nonatomic, readonly) float sifrGainThreshold;
 @property (nonatomic, readonly) double sifrMainEffectiveIntegrationTimeThreshold;
 
 - (id)description;
 - (id)initWithSensorIDDictionary:(id)arg1;
+- (double)longWithoutSphereEffectiveIntegrationTimeThreshold;
 - (double)lowLightEffectiveIntegrationTimeThreshold;
 - (float)sifrGainThreshold;
 - (double)sifrMainEffectiveIntegrationTimeThreshold;

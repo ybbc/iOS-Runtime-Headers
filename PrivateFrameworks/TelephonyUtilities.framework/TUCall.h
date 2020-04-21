@@ -112,6 +112,7 @@
 @property (nonatomic, readonly) NSData *localFrequency;
 @property (nonatomic, readonly) float localMeterLevel;
 @property (nonatomic, readonly, copy) TUSenderIdentity *localSenderIdentity;
+@property (nonatomic, readonly, copy) NSUUID *localSenderIdentityAccountUUID;
 @property (nonatomic, readonly, copy) NSUUID *localSenderIdentityUUID;
 @property (nonatomic, readonly, copy) NSString *localizedLabel;
 @property (getter=isMediaStalled, nonatomic, readonly) bool mediaStalled;
@@ -291,6 +292,7 @@
 - (id)localFrequency;
 - (float)localMeterLevel;
 - (id)localSenderIdentity;
+- (id)localSenderIdentityAccountUUID;
 - (id)localSenderIdentityUUID;
 - (id)localizedLabel;
 - (id)model;

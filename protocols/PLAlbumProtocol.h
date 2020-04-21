@@ -38,7 +38,7 @@
 - (void)setSlideshowSettings:(NSDictionary *)arg1;
 - (bool)shouldDeleteWhenEmpty;
 - (NSDictionary *)slideshowSettings;
-- (id /* block */)sortingComparator:(void *)arg1; // needs 1 arg types, found 5: id /* block */, id, void*, id, SEL
+- (id /* block */)sortingComparator:(void *)arg1; // needs 1 arg types, found 6: id /* block */, id, id, void*, id, SEL
 
 @optional
 

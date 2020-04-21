@@ -6,7 +6,7 @@
     bool  _archiveSchedulingQueue_dirty;
     bool  _archiveSchedulingQueue_scheduled;
     NSMutableArray * _archiveSchedulingQueue_synchronizeCompletions;
-    unsigned long long  _bytesWaitingToWriteOut;
+    _Atomic unsigned long long  _bytesWaitingToWriteOut;
     unsigned long long  _clientCount;
     XBSnapshotContainerIdentity * _containerIdentity;
     XBSnapshotManifestIdentity * _identity;

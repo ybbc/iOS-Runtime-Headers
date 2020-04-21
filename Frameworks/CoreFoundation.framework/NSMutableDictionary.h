@@ -391,8 +391,8 @@
 
 // Image: /System/Library/PrivateFrameworks/Swift/libswiftFoundation.dylib
 
-- (void)_swift_objectForKeyedSubscript;
-- (void)_swift_setObjectforKeyedSubscript;
+/* MISSING HEADER DESCRIPTION FOR METHOD _swift_objectForKeyedSubscript: */
+/* MISSING HEADER DESCRIPTION FOR METHOD _swift_setObject:forKeyedSubscript: */
 
 // Image: /System/Library/PrivateFrameworks/Symptoms.framework/Frameworks/SymptomEvaluator.framework/SymptomEvaluator
 

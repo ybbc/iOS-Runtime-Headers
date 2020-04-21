@@ -3,7 +3,7 @@
  */
 
 @interface AVController : NSObject {
-    struct AVControllerPrivate { id x1; id x2; id x3; id x4; long long x5; float x6; float x7; long long x8; bool x9; id x10; struct __CFString {} *x11; id x12; bool x13; bool x14; id x15; struct OpaqueFigVisualContext {} x16; id x17; struct __CFRunLoop {} x18; unsigned long long x19; int x20; int x21; int x22; bool x23; bool x24; bool x25; bool x26; id x27; struct OpaqueFigPlayer {} x28; id x29; id x30; bool x31; id x32; bool x33; bool x34; bool x35; int x36; bool x37; } * _priv;
+    struct AVControllerPrivate { id x1; id x2; id x3; id x4; id x5; Class x6; id x7; long long x8; long long x9; float x10; float x11; long long x12; bool x13; id x14; float x15; struct __CFString {} *x16; id x17; bool x18; bool x19; bool x20; id x21; struct OpaqueFigVisualContext {} *x22; id x23; struct __CFRunLoop {} *x24; unsigned long long x25; int x26; int x27; int x28; bool x29; bool x30; bool x31; bool x32; id x33; struct OpaqueFigPlayer {} *x34; id x35; id x36; id x37; bool x38; bool x39; id x40; id x41; bool x42; bool x43; bool x44; int x45; bool x46; } * _priv;
 }
 
 + (id)avController;
@@ -73,7 +73,7 @@
 - (void)pause;
 - (bool)play:(id*)arg1;
 - (bool)playNextItem:(id*)arg1;
-- (struct AVControllerPrivate { id x1; id x2; id x3; id x4; long long x5; float x6; float x7; long long x8; bool x9; id x10; struct __CFString {} *x11; id x12; bool x13; bool x14; id x15; struct OpaqueFigVisualContext {} x16; id x17; struct __CFRunLoop {} x18; unsigned long long x19; int x20; int x21; int x22; bool x23; bool x24; bool x25; bool x26; id x27; struct OpaqueFigPlayer {} x28; id x29; id x30; bool x31; id x32; bool x33; bool x34; bool x35; int x36; bool x37; }*)privateStorage;
+- (struct AVControllerPrivate { id x1; id x2; id x3; id x4; id x5; Class x6; id x7; long long x8; long long x9; float x10; float x11; long long x12; bool x13; id x14; float x15; struct __CFString {} *x16; id x17; bool x18; bool x19; bool x20; id x21; struct OpaqueFigVisualContext {} *x22; id x23; struct __CFRunLoop {} *x24; unsigned long long x25; int x26; int x27; int x28; bool x29; bool x30; bool x31; bool x32; id x33; struct OpaqueFigPlayer {} *x34; id x35; id x36; id x37; bool x38; bool x39; id x40; id x41; bool x42; bool x43; bool x44; int x45; bool x46; }*)privateStorage;
 - (id)queue;
 - (id)queueFeeder;
 - (float)rate;

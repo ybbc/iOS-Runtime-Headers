@@ -119,10 +119,10 @@
     bool  _reversed;
     struct vector<(anonymous namespace)::buffer_group, std::__1::allocator<(anonymous namespace)::buffer_group> >="__begin_"^{buffer_group {}  _ring_buffer;
     struct atomic<unsigned char> { 
-        unsigned char __a_; 
+        _Atomic unsigned char __a_; 
     }  _ring_end;
     struct atomic<unsigned char> { 
-        unsigned char __a_; 
+        _Atomic unsigned char __a_; 
     }  _ring_start;
     struct renderer_shared_state { 
         <MTLDevice> *device; 
@@ -166,7 +166,7 @@
 @property (getter=viewTransform, setter=setViewTransform:, nonatomic) struct double4x4 { /* Warning: Unrecognized filer type: ']' using 'void*' */ void*x1[4]; } view_transform;
 @property (getter=isWireframeEnabled, setter=setWireframeEnabled:, nonatomic) bool wireframe_enabled;
 
-+ (struct renderer_shared_state { id x1; id x2; struct array<id<MTLRenderPipelineState>, 3> { /* Warning: unhandled array encoding: '[3@]}{array<id<MTLRenderPipelineState>, 3>=[3@]}@@@}' */ id x_3_1_1[3]; } x3; id x4; id x5; })sharedStateForDevice:(id)arg1;
++ (struct renderer_shared_state { id x1; id x2; id x3; id x4; struct array<id<MTLRenderPipelineState>, 3> { id x_5_1_1[3]; } x5; struct array<id<MTLRenderPipelineState>, 3> { id x_6_1_1[3]; } x6; id x7; id x8; id x9; })sharedStateForDevice:(id)arg1;
 
 - (id).cxx_construct;
 - (void).cxx_destruct;
@@ -178,7 +178,7 @@
 - (struct spline_instance_state { struct quatf { } x1; struct quatf { } x2; float x3; float x4; float x5; float x6; float x7; bool x8; float x9; int (*x10)(); })animationTargetForSpline:(unsigned long long)arg1 instance:(unsigned long long)arg2;
 - (void)dealloc;
 - (id)init;
-- (id)initWithMTKView:(id)arg1 sharedState:(const struct renderer_shared_state { id x1; id x2; struct array<id<MTLRenderPipelineState>, 3> { /* Warning: unhandled array encoding: '[3@]}{array<id<MTLRenderPipelineState>, 3>=[3@]}@@@}' */ id x_3_1_1[3]; } x3; id x4; id x5; }*)arg2;
+- (id)initWithMTKView:(id)arg1 sharedState:(const struct renderer_shared_state { id x1; id x2; id x3; id x4; struct array<id<MTLRenderPipelineState>, 3> { id x_5_1_1[3]; } x5; struct array<id<MTLRenderPipelineState>, 3> { id x_6_1_1[3]; } x6; id x7; id x8; id x9; }*)arg2;
 - (void)invalidateRenderPassDescriptor;
 - (bool)isWireframeEnabled;
 - (struct double4x4 { /* Warning: Unrecognized filer type: ']' using 'void*' */ void*x1[4]; })modelTransform;

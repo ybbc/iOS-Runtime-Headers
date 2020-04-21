@@ -5,14 +5,14 @@
 @interface CFPrefsSource : NSObject {
     _CFXPreferences * _containingPreferences;
     struct __CFDictionary { } * _dict;
-    long long  _generationCount;
+    _Atomic long long  _generationCount;
     bool  _isSearchList;
     struct os_unfair_lock_s { 
         unsigned int _os_unfair_lock_opaque; 
     }  _lock;
     __CFPrefsWeakObservers * _observers;
-    unsigned int  lastKnownShmemState;
-    /* Warning: Unrecognized filer type: '^' using 'void*' */ void* shmemEntry;
+    _Atomic unsigned int  lastKnownShmemState;
+    _Atomic _Atomic unsigned int * shmemEntry;
 }
 
 - (void)_notifyObserversOfChangeFromValuesForKeys:(id)arg1 toValuesForKeys:(id)arg2;

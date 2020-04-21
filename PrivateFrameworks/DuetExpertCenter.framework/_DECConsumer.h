@@ -4,15 +4,15 @@
 
 @interface _DECConsumer : NSObject {
     _DECResult * _cachedResult;
-    unsigned long long  _category;
+    _Atomic unsigned long long  _category;
     NSXPCConnection * _connection;
     PETScalarEventTracker * _consumerInitTracker;
-    unsigned long long  _consumerType;
+    _Atomic unsigned long long  _consumerType;
     id /* block */  _handler;
     unsigned long long  _limit;
     NSObject<OS_dispatch_queue> * _queue;
     bool  _startedMonitoring;
-    unsigned long long  _timeout;
+    _Atomic unsigned long long  _timeout;
 }
 
 @property unsigned long long category;

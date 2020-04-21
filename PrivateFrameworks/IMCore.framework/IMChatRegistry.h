@@ -215,7 +215,7 @@
 - (void)conversationManager:(id)arg1 removedActiveConversation:(id)arg2;
 - (void)conversationManager:(id)arg1 stateChangedForConversation:(id)arg2;
 - (id)copyForBatchProcessing;
-- (unsigned long long)countByEnumeratingWithState:(struct { unsigned long long x1; id *x2; unsigned long long x3; unsigned long long x4[5]; }*)arg1 objects:(id*)arg2 count:(unsigned long long)arg3;
+- (unsigned long long)countByEnumeratingWithState:(struct { unsigned long long x1; id *x2; unsigned long long *x3; unsigned long long x4[5]; }*)arg1 objects:(id*)arg2 count:(unsigned long long)arg3;
 - (void)dealloc;
 - (void)downloadedPurgedAssetBatchForChatIDs:(id)arg1 completedTransferGUIDs:(id)arg2;
 - (void)engroupParticipantsUpdatedForChat:(id)arg1;

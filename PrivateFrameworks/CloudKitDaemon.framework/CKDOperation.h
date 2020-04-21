@@ -19,7 +19,7 @@
     CKOperationInfo * _operationInfo;
     NSObject<OS_os_activity> * _osActivity;
     CKDOperation * _parentOperation;
-    int  _pcsWaitCount;
+    _Atomic int  _pcsWaitCount;
     <NSObject> * _powerAssertion;
     CKDClientProxy * _proxy;
     CKDURLRequest * _request;
@@ -71,7 +71,7 @@
 @property (nonatomic, readonly) CKOperationResult *operationResult;
 @property (nonatomic, readonly) NSObject<OS_os_activity> *osActivity;
 @property (nonatomic) CKDOperation *parentOperation;
-@property (nonatomic) int pcsWaitCount;
+@property (nonatomic) _Atomic int pcsWaitCount;
 @property (nonatomic, retain) <NSObject> *powerAssertion;
 @property (nonatomic, readonly) bool preferAnonymousRequests;
 @property (nonatomic) CKDClientProxy *proxy;

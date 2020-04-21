@@ -34,7 +34,7 @@
     struct __IOHIDEventSystemClient { } * hidSystemClient;
     bool  ignoreALSEvents;
     bool  ignoreBrightnessKey;
-    struct LegacyBacklightC { int (**x1)(); unsigned int x2; struct __Display {} *x3; unsigned int x4; int x5; struct __IOHIDServiceClient {} *x6; float x7; struct _ALS_Struct { float x_8_1_1; float x_8_1_2; float x_8_1_3; float x_8_1_4; int x_8_1_5; float x_8_1_6; float x_8_1_7; float x_8_1_8; float x_8_1_9; id x_8_1_10; /* Warning: Unrecognized filer type: '?' using 'void*' */ void*x_8_1_11; void*x_8_1_12; unsigned int x_8_1_13; bool x_8_1_14; bool x_8_1_15; float x_8_1_16; float x_8_1_17; float x_8_1_18; } x8; struct { int x_9_1_1; unsigned char x_9_1_2; float x_9_1_3; unsigned int x_9_1_4; id x_9_1_5; struct { unsigned char x_6_2_1; float x_6_2_2; id x_6_2_3; } x_9_1_6; struct __CFDictionary {} *x_9_1_7; float x_9_1_8; int (*x_9_1_9)(); void *x_9_1_10; } x9; } * legacyAutoBacklight;
+    struct LegacyBacklightC { int (**x1)(); unsigned int x2; struct __Display {} *x3; unsigned int x4; int x5; struct __IOHIDServiceClient {} *x6; float x7; struct _ALS_Struct { float x_8_1_1; float x_8_1_2; float x_8_1_3; float x_8_1_4; int x_8_1_5; float x_8_1_6; float x_8_1_7; float x_8_1_8; float x_8_1_9; id x_8_1_10; struct { unsigned int x_11_2_1; bool x_11_2_2; bool x_11_2_3; float x_11_2_4; float x_11_2_5; float x_11_2_6; } x_8_1_11; struct { int x_12_2_1; unsigned char x_12_2_2; float x_12_2_3; unsigned int x_12_2_4; id x_12_2_5; } x_8_1_12; struct { unsigned char x_13_2_1; float x_13_2_2; id x_13_2_3; } x_8_1_13; } x8; struct __CFDictionary {} *x9; float x10; int (*x11)(); void *x12; } * legacyAutoBacklight;
     bool  monitorALSOnly;
     struct __IOHIDServiceClient {} * otherClients;
     unsigned int  otherClientsCount;

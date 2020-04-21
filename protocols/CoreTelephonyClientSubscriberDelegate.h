@@ -5,6 +5,7 @@
 
 @optional
 
+- (void)authTokenChanged:(CTServiceDescriptor *)arg1;
 - (void)simLockSaveRequestDidComplete:(CTXPCServiceSubscriptionContext *)arg1 success:(bool)arg2;
 - (void)simPinChangeRequestDidComplete:(CTXPCServiceSubscriptionContext *)arg1 success:(bool)arg2;
 - (void)simPinEntryErrorDidOccur:(CTXPCServiceSubscriptionContext *)arg1 status:(NSString *)arg2;

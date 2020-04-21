@@ -85,6 +85,10 @@
 
 - (id)psy_safeDescription;
 
+// Image: /System/Library/PrivateFrameworks/Stocks/AppAnalytics.framework/AppAnalytics
+
++ (bool)aa_tryCatch:(id /* block */)arg1 error:(id*)arg2;
+
 // Image: /System/Library/PrivateFrameworks/Stocks/TeaFoundation.framework/TeaFoundation
 
 + (bool)tf_tryCatch:(id /* block */)arg1 error:(id*)arg2;

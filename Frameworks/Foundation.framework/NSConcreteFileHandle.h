@@ -8,7 +8,7 @@
     int  _error;
     int  _fd;
     NSObject<OS_dispatch_queue> * _fhQueue;
-    unsigned short  _flags;
+    _Atomic unsigned short  _flags;
     NSObject<OS_dispatch_queue> * _monitoringQueue;
     NSObject<OS_dispatch_io> * _readChannel;
     NSObject<OS_dispatch_source> * _readMonitoringSource;

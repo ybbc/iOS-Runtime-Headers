@@ -17,7 +17,7 @@
         unsigned int allocations[64]; 
         unsigned int count; 
     }  _bufferHeaps;
-    /* Warning: unhandled struct encoding: '{MTLIOAccelCommandBufferStoragePool={storageQueue=^{MTLIOAccelCommandBufferStorage}^^{MTLIOAccelCommandBufferStorage}}{os_unfair_lock_s=I}ii@}' */ struct MTLIOAccelCommandBufferStoragePool { struct storageQueue { struct MTLIOAccelCommandBufferStorage {} *x_1_1_1; struct MTLIOAccelCommandBufferStorage {} **x_1_1_2; } x1; struct os_unfair_lock_s { unsigned int x_2_1_1; } x2; int x3; int x4; id x5; } * _commandBufferStoragePool;
+    struct MTLIOAccelCommandBufferStoragePool { struct storageQueue { struct MTLIOAccelCommandBufferStorage {} *x_1_1_1; struct MTLIOAccelCommandBufferStorage {} **x_1_1_2; } x1; struct os_unfair_lock_s { unsigned int x_2_1_1; } x2; int x3; int x4; id x5; } * _commandBufferStoragePool;
     unsigned int  _configBits;
     unsigned int  _deviceBits;
     struct __IOAccelDevice { } * _deviceRef;

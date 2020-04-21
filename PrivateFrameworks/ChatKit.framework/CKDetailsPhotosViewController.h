@@ -109,7 +109,6 @@
 - (id)qlPreviewController;
 - (void)reloadData;
 - (id)saveButton;
-- (struct CGSize { double x1; double x2; })screenSize;
 - (void)selectAttachments:(id)arg1;
 - (id)selectedAttachmentIndexes;
 - (void)setCollectionView:(id)arg1;

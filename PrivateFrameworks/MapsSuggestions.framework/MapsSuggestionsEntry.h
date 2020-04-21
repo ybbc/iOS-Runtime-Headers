@@ -5,7 +5,7 @@
 @interface MapsSuggestionsEntry : NSObject <MapsSuggestionsObject, NSCopying, NSSecureCoding> {
     bool  _deleted;
     NSDate * _expires;
-    /* Warning: unhandled struct encoding: '{GEOMapItemStorage=#@@@@@@@@@}' */ struct GEOMapItemStorage { Class x1; id x2; id x3; id x4; id x5; id x6; } * _geoMapItem;
+    struct GEOMapItemStorage { Class x1; id x2; id x3; id x4; id x5; id x6; id x7; id x8; id x9; id x10; } * _geoMapItem;
     NSData * _iconData;
     struct NSString { Class x1; } * _originatingSourceName;
     NSMutableDictionary * _sourceSpecificInfo;
@@ -74,7 +74,7 @@
 - (id)expires;
 - (bool)expiresBeforeEntry:(id)arg1;
 - (id)fullDescription;
-- (/* Warning: unhandled struct encoding: '{GEOMapItemStorage=#@@@@@@@@@}' */ struct GEOMapItemStorage { Class x1; id x2; id x3; id x4; id x5; id x6; }*)geoMapItem;
+- (struct GEOMapItemStorage { Class x1; id x2; id x3; id x4; id x5; id x6; id x7; id x8; id x9; id x10; }*)geoMapItem;
 - (bool)hasEndTime;
 - (bool)hasExpired;
 - (bool)hasStartAndEndTime;
@@ -83,7 +83,7 @@
 - (id)iconData;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithType:(long long)arg1 title:(id)arg2;
-- (id)initWithType:(long long)arg1 title:(id)arg2 subtitle:(id)arg3 weight:(double)arg4 expires:(id)arg5 geoMapItem:(/* Warning: unhandled struct encoding: '{GEOMapItemStorage=#@@@@@@@@@}' */ struct GEOMapItemStorage { Class x1; id x2; id x3; id x4; id x5; id x6; }*)arg6 sourceSpecificInfo:(id)arg7;
+- (id)initWithType:(long long)arg1 title:(id)arg2 subtitle:(id)arg3 weight:(double)arg4 expires:(id)arg5 geoMapItem:(struct GEOMapItemStorage { Class x1; id x2; id x3; id x4; id x5; id x6; id x7; id x8; id x9; id x10; }*)arg6 sourceSpecificInfo:(id)arg7;
 - (id)initWithType:(long long)arg1 title:(id)arg2 subtitle:(id)arg3 weight:(double)arg4 expires:(id)arg5 sourceSpecificInfo:(id)arg6;
 - (long long)integerForKey:(id)arg1;
 - (bool)isEqual:(id)arg1;
@@ -104,7 +104,7 @@
 - (void)setDeleted:(bool)arg1;
 - (void)setETA:(id)arg1 forKey:(id)arg2;
 - (void)setExpires:(id)arg1;
-- (void)setGeoMapItem:(/* Warning: unhandled struct encoding: '{GEOMapItemStorage=#@@@@@@@@@}' */ struct GEOMapItemStorage { Class x1; id x2; id x3; id x4; id x5; id x6; }*)arg1;
+- (void)setGeoMapItem:(struct GEOMapItemStorage { Class x1; id x2; id x3; id x4; id x5; id x6; id x7; id x8; id x9; id x10; }*)arg1;
 - (void)setIconData:(id)arg1;
 - (void)setInteger:(long long)arg1 forKey:(id)arg2;
 - (void)setMapItemHandleData:(struct NSData { Class x1; }*)arg1;

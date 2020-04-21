@@ -6,7 +6,7 @@
     NSObject<OS_dispatch_queue> * _backgroundQueue;
     NSObject<OS_dispatch_queue> * _cacheIsolationQueue;
     long long  _cachedPeopleCount;
-    int  _currentRequestId;
+    _Atomic int  _currentRequestId;
     bool  _didInitiatePeopleCountFetchRequest;
     bool  _didInitiateReCacheRequest;
     bool  _didPrepareDataSource;
@@ -23,7 +23,7 @@
 }
 
 @property (nonatomic) long long cachedPeopleCount;
-@property int currentRequestId;
+@property _Atomic int currentRequestId;
 @property (readonly, copy) NSString *debugDescription;
 @property (readonly, copy) NSString *description;
 @property (readonly) unsigned long long hash;
@@ -41,7 +41,7 @@
 - (void).cxx_destruct;
 - (void)_appWillEnterForeground;
 - (void)_asyncAddImagesToCacheWithItems:(id)arg1 completion:(id /* block */)arg2;
-- (void)_handleRequestResult:(void *)arg1 forRequestID:(void *)arg2 person:(void *)arg3 atIndex:(void *)arg4 error:(void *)arg5 completion:(void *)arg6; // needs 6 arg types, found 7: id, /* Warning: Unrecognized filer type: '' using 'void*' */ void*, int, id, long long, id, id /* block */
+- (void)_handleRequestResult:(void *)arg1 forRequestID:(void *)arg2 person:(void *)arg3 atIndex:(void *)arg4 error:(void *)arg5 completion:(void *)arg6; // needs 6 arg types, found 7: id, _Atomic /* Warning: Unrecognized filer type: '' using 'void*' */ void*, int, id, long long, id, id /* block */
 - (void)_invalidateCache;
 - (id)_members;
 - (void)_prepareIfNeeded;

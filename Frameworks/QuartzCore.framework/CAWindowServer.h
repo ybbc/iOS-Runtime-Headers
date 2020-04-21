@@ -3,7 +3,7 @@
  */
 
 @interface CAWindowServer : NSObject {
-    /* Warning: unhandled struct encoding: '{CAWindowServerImpl=^{__CFArray}I@}' */ struct CAWindowServerImpl { struct __CFArray {} *x1; unsigned int x2; id x3; } * _impl;
+    struct CAWindowServerImpl { struct __CFArray {} *x1; unsigned int x2; id x3; } * _impl;
     bool  _mirroringEnabled;
 }
 

@@ -7,7 +7,7 @@
     struct sqlite3 { } * _db;
     NSString * _filename;
     struct atomic_flag { 
-        bool _Value; 
+        _Atomic bool _Value; 
     }  _isClosed;
     bool  _isInMemory;
     unsigned long long  _lastBusyWaitEnded;

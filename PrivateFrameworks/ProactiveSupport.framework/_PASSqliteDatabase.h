@@ -8,7 +8,7 @@
     NSObject<_PASSqliteErrorHandlerProtocol> * _errorHandler;
     NSString * _filename;
     struct atomic_flag { 
-        bool _Value; 
+        _Atomic bool _Value; 
     }  _isClosed;
     bool  _isInMemory;
     struct _opaque_pthread_mutex_t { 

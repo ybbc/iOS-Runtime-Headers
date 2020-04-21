@@ -37,15 +37,15 @@
 - (id)init;
 - (void)invalidate;
 - (id)localCacheWithFileName:(id)arg1;
-- (id)locallyCachedMPNs;
+- (id)locallyCachedMPNsForProductType:(id)arg1;
 - (id)locallyCachedProductMappings;
 - (id)locallyCachedQueryResults;
 - (void)logNetworkStatus;
 - (void)mappedProductTypeForProductType:(id)arg1 completionHandler:(id /* block */)arg2;
-- (id)mpnMappingTableFromPropertyList:(id)arg1;
+- (id)mpnMappingFileNameForProductType:(id)arg1;
 - (id)networkStatus;
 - (void)onqueue_activate;
-- (id)onqueue_assetMappedMPNForMPN:(id)arg1;
+- (id)onqueue_assetMappedMPNForMPN:(id)arg1 forProductType:(id)arg2;
 - (id)onqueue_assetMappedProductTypeForProductType:(id)arg1;
 - (void)onqueue_downloadAsset:(id)arg1 ucat:(struct LogCategory { int x1; int x2; char *x3; unsigned int x4; char *x5; char *x6; int x7; struct LogCategory {} *x8; struct LogOutput {} *x9; struct LogOutput {} *x10; unsigned long long x11; unsigned long long x12; unsigned int x13; unsigned int x14; char *x15; struct LogCategoryPrivate {} *x16; }*)arg2 queryLogString:(id)arg3 withCompletionHandler:(id /* block */)arg4;
 - (void)onqueue_findAssetBundleForAssetQuery:(id)arg1 ucat:(struct LogCategory { int x1; int x2; char *x3; unsigned int x4; char *x5; char *x6; int x7; struct LogCategory {} *x8; struct LogOutput {} *x9; struct LogOutput {} *x10; unsigned long long x11; unsigned long long x12; unsigned int x13; unsigned int x14; char *x15; struct LogCategoryPrivate {} *x16; }*)arg2 queryType:(id)arg3 fallback:(bool)arg4 retryAttempt:(bool)arg5 withCompletionHandler:(id /* block */)arg6;
@@ -66,7 +66,7 @@
 - (void)setDispatchQueue:(id)arg1;
 - (void)setUseProcessLocalCache:(bool)arg1;
 - (void)storeEntries:(id)arg1 inLocalCacheWithFileName:(id)arg2;
-- (void)storeMPNsInLocalCache:(id)arg1;
+- (void)storeMPNsInLocalCache:(id)arg1 forProductType:(id)arg2;
 - (void)storeProductMappingsInLocalCache:(id)arg1;
 - (void)storeQueryResultsInLocalCache:(id)arg1;
 - (bool)useProcessLocalCache;

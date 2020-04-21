@@ -33,7 +33,7 @@
 - (id)_copyRecordIDsToDeleteWithLimit:(unsigned long long)arg1;
 - (void)_deleteMessagesWithRecordIDs:(id)arg1 completion:(id /* block */)arg2;
 - (void)_deleteStingRaySyncToken;
-- (bool)_deviceConditionsAllowsMessageSync;
+- (bool)_deviceConditionsAllowsMessageSyncForActivity:(id)arg1 deviceConditionsToCheck:(unsigned long long)arg2 currentBatchCount:(long long)arg3 maxBatchCount:(long long)arg4;
 - (bool)_deviceConditionsAllowsMessageSyncForCurrentBatchCount:(long long)arg1 maxBatchCount:(long long)arg2;
 - (bool)_doesAnyRecordZoneIDHavePendingArchivedRecords:(long long)arg1;
 - (void)_fetchArchivedRecordsIfNeeded:(bool)arg1 currentBatchCount:(long long)arg2 maxNumberOfBatches:(long long)arg3 WithCompletionBlock:(id /* block */)arg4;
@@ -69,7 +69,7 @@
 - (bool)_shouldMarkAllMessagesAsNeedingSync;
 - (id)_syncOperationGroupName;
 - (void)_updateAllMessagesAsNotNeedingReUpload;
-- (void)_updateDeviceCondictionsToCheckIfNeededForCurrentBatchCount:(long long)arg1 maxBatchCount:(long long)arg2;
+- (void)_updateDeviceConditionsToCheckIfNeededForCurrentBatchCount:(long long)arg1 maxBatchCount:(long long)arg2;
 - (void)_writeDirtyMessagesToCloudKitWithCompletion:(id /* block */)arg1;
 - (id)activity;
 - (id)archivedRecordSyncToken;

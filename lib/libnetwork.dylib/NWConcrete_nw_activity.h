@@ -4,10 +4,10 @@
 
 @interface NWConcrete_nw_activity : NSObject <OS_nw_activity> {
     struct atomic_flag { 
-        bool _Value; 
+        _Atomic bool _Value; 
     }  activated;
     struct atomic_flag { 
-        bool _Value; 
+        _Atomic bool _Value; 
     }  completed;
     int  completion_reason;
     unsigned int  domain;

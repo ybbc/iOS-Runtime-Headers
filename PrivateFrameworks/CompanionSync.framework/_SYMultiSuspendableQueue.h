@@ -6,7 +6,7 @@
     NSMutableArray * _latestResumeBacktraces;
     NSMutableArray * _latestSuspendBacktraces;
     NSObject<OS_dispatch_queue> * _queue;
-    int  _resumeCount;
+    _Atomic int  _resumeCount;
     unsigned long long  _stateHandle;
     NSObject<OS_dispatch_queue> * _targetQueue;
 }

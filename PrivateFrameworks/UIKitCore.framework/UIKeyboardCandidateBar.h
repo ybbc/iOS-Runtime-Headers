@@ -93,6 +93,7 @@
 - (void)_scrollToFirstCandidateInSection:(long long)arg1 withAnimation:(bool)arg2;
 - (long long)_sectionForSectionIndex:(unsigned long long)arg1 candidateView:(id)arg2;
 - (unsigned long long)_sectionIndexForSection:(long long)arg1;
+- (bool)_selectedCellCloseToLeftBorder;
 - (bool)_shouldShowBorders;
 - (void)_showCandidateAtIndex:(unsigned long long)arg1 inSection:(long long)arg2 scrollCellToVisible:(bool)arg3 animated:(bool)arg4;
 - (void)_showPageAtIndexPath:(id)arg1;
@@ -159,6 +160,7 @@
 - (struct UIEdgeInsets { double x1; double x2; double x3; double x4; })scrollInsets;
 - (void)scrollViewDidEndDecelerating:(id)arg1;
 - (void)scrollViewDidEndDragging:(id)arg1 willDecelerate:(bool)arg2;
+- (void)scrollViewDidEndScrollingAnimation:(id)arg1;
 - (void)scrollViewDidScroll:(id)arg1;
 - (void)scrollViewWillBeginDragging:(id)arg1;
 - (void)scrollViewWillEndDragging:(id)arg1 withVelocity:(struct CGPoint { double x1; double x2; })arg2 targetContentOffset:(inout struct CGPoint { double x1; double x2; }*)arg3;

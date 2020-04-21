@@ -3,7 +3,7 @@
  */
 
 @interface ROCKRunLoopBlockSource : NSObject {
-    unsigned long long  _blockCount;
+    _Atomic unsigned long long  _blockCount;
     struct os_unfair_lock_s { 
         unsigned int _os_unfair_lock_opaque; 
     }  _lock;

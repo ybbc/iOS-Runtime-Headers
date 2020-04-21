@@ -11,7 +11,7 @@
 @property (nonatomic, retain) STUser *user;
 
 - (void).cxx_destruct;
-- (id)initWithPreferredFontTextStyle:(id)arg1 isWidget:(bool)arg2;
+- (id)initWithPreferredFontTextStyle:(id)arg1;
 - (id)noDataDetailTextLabel;
 - (void)setUser:(id)arg1;
 - (id)user;

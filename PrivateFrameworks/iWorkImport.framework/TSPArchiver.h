@@ -11,7 +11,7 @@
     NSObject<OS_dispatch_group> * _archiveGroup;
     TSPObject * _explicitComponentRootObject;
     NSMutableSet * _featureInfos;
-    BOOL  _flags;
+    _Atomic BOOL  _flags;
     NSUUID * _objectUUID;
     NSObject<OS_dispatch_group> * _serializeGroup;
     NSObject<OS_dispatch_data> * _serializedData;

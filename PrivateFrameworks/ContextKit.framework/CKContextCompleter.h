@@ -4,18 +4,18 @@
 
 @interface CKContextCompleter : NSObject {
     unsigned long long  _couldHaveShown;
-    bool  _discarded;
-    bool  _engaged;
+    _Atomic bool  _discarded;
+    _Atomic bool  _engaged;
     NSString * _ignorePrefix;
     NSString * _input;
-    unsigned int  _loggingCouldHaveShownMax;
-    unsigned int  _loggingInputLengthMax;
-    bool  _loggingServerOverride;
-    unsigned int  _loggingShownMax;
+    _Atomic unsigned int  _loggingCouldHaveShownMax;
+    _Atomic unsigned int  _loggingInputLengthMax;
+    _Atomic bool  _loggingServerOverride;
+    _Atomic unsigned int  _loggingShownMax;
     CKContextResponse * _response;
     NSLocale * _searchLocale;
-    bool  _shown;
-    bool  _transactionSuccessful;
+    _Atomic bool  _shown;
+    _Atomic bool  _transactionSuccessful;
 }
 
 - (void).cxx_destruct;

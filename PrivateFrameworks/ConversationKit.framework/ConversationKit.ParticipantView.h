@@ -19,6 +19,7 @@
     void labelState;
     void lastConfigurationHashValue;
     void loggingIdentifier;
+    void overallLayoutState;
     void overlayBackdropView;
     void overlayConstraints;
     void overlayIconView;

@@ -5,7 +5,7 @@
 @interface GEOTileLoaderInternal : GEOTileLoader <GEOExperimentConfigurationObserver, GEOPListStateCapturing, GEOResourceManifestTileGroupObserver, GEOTileServerProxyDelegate> {
     GEOTilePool * _cache;
     GEOTileLoaderConfiguration * _config;
-    int  _diskHits;
+    _Atomic int  _diskHits;
     GEOTilePool * _expiringCache;
     struct list<_CacheRequester<void (^)(unsigned long long)>, std::__1::allocator<_CacheRequester<void (^)(unsigned long long)> > >="__end_"{__list_node_base<_CacheRequester<void (^)(unsigned long long)>, void *>="__prev_"^{__list_node_base<_CacheRequester<void (^)(unsigned long long)>, void *> {}  _freeableSizeRequesters;
     <GEOTileLoaderInternalDelegate> * _internalDelegate;
@@ -21,10 +21,10 @@
         } __size_alloc_; 
     }  _loadItems;
     NSObject<OS_dispatch_queue> * _loadQ;
-    int  _memoryHits;
+    _Atomic int  _memoryHits;
     NSObject<OS_dispatch_source> * _memoryNotificationEventSource;
     bool  _networkActive;
-    int  _networkHits;
+    _Atomic int  _networkHits;
     NSMutableSet * _openers;
     NSObject<OS_dispatch_queue> * _openersIsolation;
     GEOTileServerProxy * _proxy;

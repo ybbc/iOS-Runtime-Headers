@@ -6,7 +6,7 @@
     <NUAVPlayerViewDelegate> * _delegate;
     AVPlayer * _player;
     bool  _readyForDisplay;
-    int  _updateReadyForDisplayID;
+    _Atomic int  _updateReadyForDisplayID;
 }
 
 @property (nonatomic) <NUAVPlayerViewDelegate> *delegate;
@@ -17,7 +17,7 @@
 
 - (void).cxx_destruct;
 - (void)_setReadyForDisplay:(bool)arg1;
-- (void)_updateReadyForDisplayWithID:(void *)arg1; // needs 1 arg types, found 2: /* Warning: Unrecognized filer type: '' using 'void*' */ void*, int
+- (void)_updateReadyForDisplayWithID:(void *)arg1; // needs 1 arg types, found 2: _Atomic /* Warning: Unrecognized filer type: '' using 'void*' */ void*, int
 - (void)dealloc;
 - (id)delegate;
 - (id)initWithCoder:(id)arg1;

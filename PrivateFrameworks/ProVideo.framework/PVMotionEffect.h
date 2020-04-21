@@ -17,7 +17,7 @@
     double  _docFrameRate;
     unsigned int  _docFrames;
     struct atomic<DocLoadStatus> { 
-        int __a_; 
+        _Atomic int __a_; 
     }  _docLoadStatus;
     double  _docPixelAspectRatio;
     void * _document;

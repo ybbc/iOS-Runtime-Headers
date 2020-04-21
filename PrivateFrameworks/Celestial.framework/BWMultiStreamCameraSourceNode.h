@@ -69,6 +69,7 @@
     struct opaqueCMFormatDescription { } * _focusPixelDataFormatDescription;
     bool  _focusPixelDataSupported;
     bool  _handlesHDRReferenceFrameReporting;
+    bool  _highlightRecoveryEnabled;
     int  _horizontalSensorBinningFactor;
     bool  _includeOverscanOnStillImageOutput;
     unsigned long long  _infraredProjectorUptimeInUsForHighPowerSparse;
@@ -177,7 +178,6 @@
     }  _sensorOverscanPercentage;
     bool  _shareStillImageBufferPool;
     bool  _shareStreamingBufferPools;
-    bool  _sifrSupported;
     struct { 
         struct { 
             float x; 
@@ -261,7 +261,7 @@
 - (struct { int x1; int x2; })_calculatePreviewDimensionsWithOverscanForZoom;
 - (struct { int x1; int x2; })_calculateVideoCaptureDimensionsWithOverscan;
 - (id)_colorInfoForOutputID:(id)arg1 videoOutputsColorInfo:(id)arg2;
-- (void)_computeRetainedBufferCountForOutputStorage:(struct BWStreamOutputStorage { int x1; unsigned int x2; bool x3; bool x4; id x5; struct opaqueCMSimpleQueue {} x6; id x7; /* Warning: Unrecognized filer type: '?' using 'void*' */ void*x8; struct opaqueCMFormatDescription {} *x9; int x10; int x11; id x12; struct { int x_13_1_1; int x_13_1_2; } x13; struct CGRect { struct CGPoint { double x_1_2_1; double x_1_2_2; } x_14_1_1; struct CGSize { double x_2_2_1; double x_2_2_2; } x_14_1_2; } x14; }*)arg1;
+- (void)_computeRetainedBufferCountForOutputStorage:(struct BWStreamOutputStorage { int x1; unsigned int x2; bool x3; bool x4; id x5; struct opaqueCMSimpleQueue {} *x6; id x7; int (*x8)(); struct opaqueCMFormatDescription {} *x9; int x10; int x11; id x12; bool x13; struct { int x_14_1_1; int x_14_1_2; } x14; struct CGRect { struct CGPoint { double x_1_2_1; double x_1_2_2; } x_15_1_1; struct CGSize { double x_2_2_1; double x_2_2_2; } x_15_1_2; } x15; }*)arg1;
 - (struct opaqueCMSampleBuffer { }*)_createDepthDataSampleBufferFromVideoSampleBuffer:(struct opaqueCMSampleBuffer { }*)arg1;
 - (struct opaqueCMSampleBuffer { }*)_createFocusPixelDataSampleBufferFromVideoSampleBuffer:(struct opaqueCMSampleBuffer { }*)arg1;
 - (id)_enabledNodeOutputsDrivenByThePrimaryStreamingOutput;
@@ -347,6 +347,7 @@
 - (int)formatIndex;
 - (bool)handlesHDRReferenceFrameReporting;
 - (bool)hasNonLiveConfigurationChanges;
+- (bool)highlightRecoveryEnabled;
 - (int)horizontalSensorBinningFactor;
 - (bool)includeOverscanOnStillImageOutput;
 - (unsigned long long)infraredProjectorUptimeInUsForHighPowerSparse;
@@ -417,6 +418,7 @@
 - (void)setFocusBlurMapEnabled:(bool)arg1;
 - (void)setFormatIndex:(int)arg1;
 - (void)setHandlesHDRReferenceFrameReporting:(bool)arg1;
+- (void)setHighlightRecoveryEnabled:(bool)arg1;
 - (void)setHorizontalSensorBinningFactor:(int)arg1;
 - (void)setIncludeOverscanOnStillImageOutput:(bool)arg1;
 - (void)setIspAPSDataEnabled:(bool)arg1;
@@ -452,7 +454,6 @@
 - (void)setSecondaryScalerIsNotAvailable:(bool)arg1;
 - (void)setSensorCropDimensions:(struct { int x1; int x2; })arg1;
 - (void)setSensorOverscanPercentage:(struct CGSize { double x1; double x2; })arg1;
-- (void)setSifrSupported:(bool)arg1;
 - (void)setStillImageKeypointDetectionEnabled:(bool)arg1;
 - (void)setStillImageOutputEnabled:(bool)arg1;
 - (void)setStillImageOutputFocusPixelDataAttachmentOptionRetainedBufferCount:(int)arg1;
@@ -470,7 +471,6 @@
 - (void)setVideoIsFullRange:(bool)arg1;
 - (void)setVideoStabilizationEnabled:(bool)arg1;
 - (void)setVisionDataConfiguration:(id)arg1;
-- (bool)sifrSupported;
 - (bool)start:(id*)arg1;
 - (bool)stillImageKeypointDetectionEnabled;
 - (id)stillImageOutput;

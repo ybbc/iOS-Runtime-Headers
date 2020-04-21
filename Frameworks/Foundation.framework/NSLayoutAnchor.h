@@ -35,7 +35,7 @@
 - (id)_equationDescriptionInParent;
 - (id)_equationDescriptionLegendEntries;
 - (id)_expressionForValueInItem:(id)arg1;
-- (id)_expressionInContext:(struct { long long x1; id x2; })arg1;
+- (id)_expressionInContext:(struct { long long x1; id x2; id x3; })arg1;
 - (id)_expressionInDefaultContextWithEngine:(id)arg1;
 - (bool)_isReferencedByConstraint:(id)arg1;
 - (id)_nearestAncestorLayoutItem;

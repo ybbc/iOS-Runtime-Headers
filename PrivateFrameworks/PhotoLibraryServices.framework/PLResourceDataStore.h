@@ -3,7 +3,7 @@
  */
 
 @interface PLResourceDataStore : NSObject <PLResourceDataStore> {
-    unsigned long long  _nextLocalAvailabilityRequestID;
+    _Atomic unsigned long long  _nextLocalAvailabilityRequestID;
 }
 
 @property (readonly, copy) NSString *debugDescription;

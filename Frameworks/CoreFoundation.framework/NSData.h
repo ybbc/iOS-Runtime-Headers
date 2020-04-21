@@ -44,7 +44,13 @@
 // Image: /Developer/Library/PrivateFrameworks/DebugHierarchyFoundation.framework/DebugHierarchyFoundation
 
 - (id)dbg_gzipDeflate;
+- (id)dbg_gzipDeflateRaw;
+- (id)dbg_gzipDeflateWithLevel:(int)arg1 windowBits:(int)arg2 memLevel:(int)arg3;
 - (id)dbg_gzipInflate;
+- (id)dbg_gzipInflateIfCompressed;
+- (id)dbg_gzipInflateRaw;
+- (id)dbg_gzipInflateWithWindowBits:(int)arg1;
+- (bool)dbg_isGzipped;
 
 // Image: /System/Library/Frameworks/CFNetwork.framework/CFNetwork
 

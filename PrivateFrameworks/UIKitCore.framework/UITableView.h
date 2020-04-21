@@ -857,7 +857,7 @@
 - (void)_reapTentativeViews;
 - (void)_rebaseExistingShadowUpdatesIfNecessaryWithItems:(id)arg1 insertItems:(id)arg2 deleteItems:(id)arg3 sortedInsertItems:(id)arg4 sortedDeleteItems:(id)arg5 sortedMoveItems:(id)arg6;
 - (void)_rebuildGeometry;
-- (void)_rebuildGeometryForcingRowDataUpdate:(bool)arg1;
+- (void)_rebuildGeometryForcingRowDataUpdate:(bool)arg1 skipContentOffsetAdjustment:(bool)arg2 updateImmediatelyIfPossible:(bool)arg3;
 - (void)_recomputeSectionIndexTitleIndex;
 - (void)_rectChangedWithNewSize:(struct CGSize { double x1; double x2; })arg1 oldSize:(struct CGSize { double x1; double x2; })arg2;
 - (struct CGRect { struct CGPoint { double x_1_1_1; double x_1_1_2; } x1; struct CGSize { double x_2_1_1; double x_2_1_2; } x2; })_rectForFooterInSection:(long long)arg1 usingPresentationValues:(bool)arg2;
@@ -974,6 +974,7 @@
 - (void)_setMarginWidth:(double)arg1;
 - (void)_setNeedsIndexBarInsetsUpdate;
 - (void)_setNeedsVisibleCellsUpdate:(bool)arg1 withFrames:(bool)arg2;
+- (void)_setNeedsVisibleCellsUpdate:(bool)arg1 withFrames:(bool)arg2 updateImmediatelyIfPossible:(bool)arg3;
 - (void)_setPinsTableHeaderView:(bool)arg1;
 - (void)_setPlaceholderContexts:(id)arg1;
 - (void)_setRemembersPreviouslyFocusedItem:(bool)arg1;
@@ -1104,6 +1105,7 @@
 - (void)_updateCell:(id)arg1 withValue:(id)arg2;
 - (void)_updateCellContentStringCallout:(id)arg1;
 - (void)_updateContentSize;
+- (void)_updateContentSizeSkippingContentOffsetAdjustment:(bool)arg1;
 - (void)_updateDragControllerEnabledState;
 - (void)_updateDragStateForCell:(id)arg1 atIndexPath:(id)arg2;
 - (void)_updateDropTargetAppearanceWithTargetIndexPath:(id)arg1 dropProposal:(id)arg2 dropSession:(id)arg3;
@@ -1334,6 +1336,7 @@
 - (void)setContentInset:(struct UIEdgeInsets { double x1; double x2; double x3; double x4; })arg1;
 - (void)setContentOffset:(struct CGPoint { double x1; double x2; })arg1;
 - (void)setContentSize:(struct CGSize { double x1; double x2; })arg1;
+- (void)setContentSize:(struct CGSize { double x1; double x2; })arg1 skipContentOffsetAdjustment:(bool)arg2;
 - (void)setCountString:(id)arg1;
 - (void)setCountStringInsignificantRowCount:(unsigned long long)arg1;
 - (void)setCurrentTouch:(id)arg1;

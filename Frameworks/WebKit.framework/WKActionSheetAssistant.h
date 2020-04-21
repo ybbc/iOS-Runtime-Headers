@@ -3,7 +3,7 @@
  */
 
 @interface WKActionSheetAssistant : NSObject <DDDetectionControllerInteractionDelegate, WKActionSheetDelegate> {
-    /* Warning: unhandled struct encoding: '{WeakObjCPtr<id<WKActionSheetAssistantDelegate> >="m_weakReference"@}' */ struct WeakObjCPtr<id<WKActionSheetAssistantDelegate> > { 
+    struct WeakObjCPtr<id<WKActionSheetAssistantDelegate> > { 
         id m_weakReference; 
     }  _delegate;
     struct RetainPtr<_WKActivatedElementInfo> { 
@@ -180,7 +180,7 @@
             } value_; 
         } storage_; 
     }  _positionInformation;
-    /* Warning: unhandled struct encoding: '{WeakObjCPtr<UIView>="m_weakReference"@}' */ struct WeakObjCPtr<UIView> { 
+    struct WeakObjCPtr<UIView> { 
         id m_weakReference; 
     }  _view;
 }

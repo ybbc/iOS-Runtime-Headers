@@ -457,6 +457,7 @@
 - (long long)hk_compareBuildVersionWithString:(id)arg1;
 - (id)hk_copyNonEmptyString;
 - (bool)hk_isBase64;
+- (bool)hk_isBetweenLowerBuildVersion:(id)arg1 upperBuildVersion:(id)arg2;
 - (bool)hk_isCaseInsensitiveSubstringInString:(id)arg1;
 - (bool)hk_isValidPurposeString;
 - (id)hk_stringByAppendingKeyPathComponent:(id)arg1;
@@ -605,10 +606,6 @@
 - (struct _NSRange { unsigned long long x1; unsigned long long x2; })ax_wordFromPosition:(long long)arg1 inDirection:(unsigned long long)arg2;
 
 // Image: /System/Library/PrivateFrameworks/Accessibility.framework/Frameworks/AXHearingSupport.framework/AXHearingSupport
-
-- (unsigned long long)unsignedLongLongValue;
-
-// Image: /System/Library/PrivateFrameworks/Accessibility.framework/Frameworks/TTYUtilities.framework/TTYUtilities
 
 - (unsigned long long)unsignedLongLongValue;
 
@@ -1331,6 +1328,18 @@
 - (id)hk_attributedStringPrefixedWithImage:(id)arg1 spacing:(double)arg2 attributes:(id)arg3;
 - (double)hk_boundingHeightWithWidth:(double)arg1 font:(id)arg2;
 - (double)hk_boundingWidthWithHeight:(double)arg1 font:(id)arg2;
+
+// Image: /System/Library/PrivateFrameworks/HearingUtilities.framework/HearingUtilities
+
+- (unsigned long long)unsignedLongLongValue;
+
+// Image: /System/Library/PrivateFrameworks/HeartRhythmUI.framework/HeartRhythmUI
+
++ (id)hrui_atrialFibrillationVideoPath;
++ (id)hrui_explanationVideoPath;
++ (id)hrui_highOrLowHeartRateVideoPath;
++ (id)hrui_inconclusiveVideoPath;
++ (id)hrui_sinusRhythmVideoPath;
 
 // Image: /System/Library/PrivateFrameworks/HelpKit.framework/HelpKit
 
@@ -2697,7 +2706,6 @@
 - (id)_stringByComposingDiacriticsLogicalOrder:(bool)arg1 allowedCharacters:(id /* block */)arg2;
 - (id)_stringByConvertingFromFullWidthToHalfWidth;
 - (id)_stringByConvertingFromHalfWidthToFullWidth;
-- (id)_stringByDeletingInteriorSentences;
 - (id)_stringByReplacingCharacter:(unsigned int)arg1 withCharacter:(unsigned int)arg2;
 - (id)_stringByReplacingCharactersInSet:(struct __CFCharacterSet { }*)arg1 withCharacter:(unsigned int)arg2;
 - (id)_stringByTranscribingFromLanguage:(id)arg1;
@@ -2710,8 +2718,6 @@
 - (id)_stringByTransliteratingToZhuyinAsFamilyName;
 - (id)_stringByTrimmingCharactersInCFCharacterSet:(struct __CFCharacterSet { }*)arg1;
 - (id)_stringByTrimmingLastCharacter;
-- (id)_stringByTrimmingPrecedingLines;
-- (id)_stringByTrimmingSuccedingLines;
 - (bool)containsSubstring:(id)arg1;
 - (unsigned long long)editDistanceFrom:(id)arg1;
 - (bool)endsSentence;
@@ -3231,5 +3237,10 @@
 + (id)newFromSqliteValue:(struct sqlite3_value { }*)arg1;
 
 - (void)sqliteBind:(struct sqlite3_stmt { }*)arg1 index:(int)arg2;
+
+// Image: /var/containers/Bundle/Application/3424672F-CE51-49D2-90F8-7100BB138301/OCRuntime.app/OCRuntime
+
+- (id)colorizeWithKeywords:(id)arg1 classes:(id)arg2 colorize:(bool)arg3;
+- (void)tryToColorizeWithTokens:(char **)arg1 nbTokens:(unsigned long long)arg2 ptr:(char *)arg3 text:(const char *)arg4 firstCharSet:(id)arg5 secondCharSet:(id)arg6 color:(id)arg7 font:(id)arg8 attributedString:(id)arg9;
 
 @end

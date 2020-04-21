@@ -18,7 +18,7 @@
         float y; 
         float z; 
     }  _lookAt;
-    struct { id x1; long long x2; } * _morphInfoFromARKitBlendShapeIndex;
+    struct { id x1; id x2; long long x3; } * _morphInfoFromARKitBlendShapeIndex;
     NSMutableArray * _morpherDrivenMaterialDescriptors;
     SCNNode * _neckNode;
     SCNNode * _neckPivotNode;
@@ -89,7 +89,7 @@
 - (id)lightingNode;
 - (void)lookAt:(struct SCNVector3 { float x1; float x2; float x3; })arg1;
 - (void)lookAt:(struct SCNVector3 { float x1; float x2; float x3; })arg1 withDuration:(double)arg2;
-- (struct { id x1; long long x2; })morphInfoForARKitBlendShapeIndex:(unsigned long long)arg1;
+- (struct { id x1; id x2; long long x3; })morphInfoForARKitBlendShapeIndex:(unsigned long long)arg1;
 - (bool)morphTargetNameIsDrivenByARKit:(id)arg1;
 - (id)neckNode;
 - (bool)optimizeForSnapshot;

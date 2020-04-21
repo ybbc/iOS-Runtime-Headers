@@ -5,7 +5,7 @@
 @interface CMPocketStateManager : NSObject {
     <CMPocketStateDelegate> * _delegate;
     int  fCachedState;
-    /* Warning: unhandled struct encoding: '{Dispatcher=^^?@}' */ struct Dispatcher { int (**x1)(); id x2; } * fDispatcher;
+    struct Dispatcher { int (**x1)(); id x2; } * fDispatcher;
     double  fMaxMonitorTime;
     NSObject<OS_dispatch_queue> * fPrivateQueue;
     NSMutableArray * fQueryBlocks;

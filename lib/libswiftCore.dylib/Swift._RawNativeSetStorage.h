@@ -12,13 +12,13 @@
 
 @property (nonatomic) long long count;
 
-- (id)copyWithZone;
+- (id)copyWithZone:(void*)arg1;
 - (long long)count;
-- (long long)countByEnumeratingWithStateobjectscount;
+- (long long)countByEnumeratingWithState:(struct { unsigned long long x1; id *x2; unsigned long long *x3; unsigned long long x4[5]; }*)arg1 objects:(id*)arg2 count:(long long)arg3;
 - (id)enumerator;
-- (id)initWithObjectscount;
-- (id)member;
+- (id)initWithObjects:(const id*)arg1 count:(long long)arg2;
+- (id)member:(id)arg1;
 - (id)objectEnumerator;
-- (void)setCount;
+- (void)setCount:(long long)arg1;
 
 @end

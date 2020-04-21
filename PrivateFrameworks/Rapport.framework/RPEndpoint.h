@@ -8,10 +8,12 @@
     NSString * _identifier;
     NSString * _idsDeviceIdentifier;
     NSString * _mediaRemoteIdentifier;
+    NSString * _mediaRouteIdentifier;
     NSString * _model;
     NSString * _name;
     bool  _present;
     int  _proximity;
+    NSString * _sourceVersion;
     unsigned long long  _statusFlags;
 }
 
@@ -20,10 +22,12 @@
 @property (nonatomic, copy) NSString *identifier;
 @property (nonatomic, copy) NSString *idsDeviceIdentifier;
 @property (nonatomic, copy) NSString *mediaRemoteIdentifier;
+@property (nonatomic, copy) NSString *mediaRouteIdentifier;
 @property (nonatomic, copy) NSString *model;
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic) bool present;
 @property (nonatomic, readonly) int proximity;
+@property (nonatomic, copy) NSString *sourceVersion;
 @property (nonatomic) unsigned long long statusFlags;
 
 + (id)nullEndpoint;
@@ -39,6 +43,7 @@
 - (id)idsDeviceIdentifier;
 - (id)initWithCoder:(id)arg1;
 - (id)mediaRemoteIdentifier;
+- (id)mediaRouteIdentifier;
 - (id)model;
 - (id)name;
 - (bool)present;
@@ -50,10 +55,13 @@
 - (void)setIdentifier:(id)arg1;
 - (void)setIdsDeviceIdentifier:(id)arg1;
 - (void)setMediaRemoteIdentifier:(id)arg1;
+- (void)setMediaRouteIdentifier:(id)arg1;
 - (void)setModel:(id)arg1;
 - (void)setName:(id)arg1;
 - (void)setPresent:(bool)arg1;
+- (void)setSourceVersion:(id)arg1;
 - (void)setStatusFlags:(unsigned long long)arg1;
+- (id)sourceVersion;
 - (unsigned long long)statusFlags;
 - (unsigned int)updateWithBonjourDevice:(id)arg1;
 - (unsigned int)updateWithSFDevice:(id)arg1;

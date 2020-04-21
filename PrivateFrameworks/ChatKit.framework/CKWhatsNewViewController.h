@@ -23,6 +23,7 @@
     NSLayoutConstraint * _descriptionLabelLastBaselineAnchorLayoutConstraint;
     UILabel * _paragraphTextLabel;
     NSLayoutConstraint * _paragraphTextLabelFirstBaselineAnchorLayoutConstraint;
+    UIVisualEffectView * _topBlurView;
     CKWelcomeView * _welcomeView;
     unsigned long long  _whatsNewLayout;
 }
@@ -60,6 +61,7 @@
 @property (nonatomic, retain) NSLayoutConstraint *paragraphTextLabelFirstBaselineAnchorLayoutConstraint;
 @property (nonatomic, readonly) double paragraphTextLabelFirstBaselineAnchorLayoutConstraintConstant;
 @property (readonly) Class superclass;
+@property (nonatomic, retain) UIVisualEffectView *topBlurView;
 @property (nonatomic, readonly) long long type;
 @property (nonatomic, readonly) CKWelcomeView *welcomeView;
 @property (nonatomic, readonly) unsigned long long whatsNewLayout;
@@ -114,6 +116,8 @@
 - (void)setDescriptionLabelFirstBaselineAnchorLayoutConstraint:(id)arg1;
 - (void)setDescriptionLabelLastBaselineAnchorLayoutConstraint:(id)arg1;
 - (void)setParagraphTextLabelFirstBaselineAnchorLayoutConstraint:(id)arg1;
+- (void)setTopBlurView:(id)arg1;
+- (id)topBlurView;
 - (long long)type;
 - (void)updateConstraints;
 - (void)viewDidAppear:(bool)arg1;

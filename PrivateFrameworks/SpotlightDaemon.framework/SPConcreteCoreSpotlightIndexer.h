@@ -15,7 +15,7 @@
     NSMutableSet * _knownClients;
     double  _lastPreheat;
     double  _lastTTLPass;
-    unsigned int  _maintenanceOperations;
+    _Atomic unsigned int  _maintenanceOperations;
     NSMutableArray * _outstandingMaintenance;
     SPCoreSpotlightIndexer * _owner;
     NSMutableSet * _reindexAllDelegateBundleIDs;

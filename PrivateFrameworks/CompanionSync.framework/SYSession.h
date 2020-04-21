@@ -11,11 +11,11 @@
     NSError * _error;
     double  _fullSessionTimeout;
     NSString * _identifier;
-    bool  _inTransaction;
+    _Atomic bool  _inTransaction;
     bool  _isSending;
     long long  _maxConcurrentMessages;
     NSDictionary * _options;
-    bool  _paused;
+    _Atomic bool  _paused;
     NSMutableDictionary * _peerGenerationIDs;
     NSMutableSet * _pendingMessageIDs;
     double  _perMessageTimeout;

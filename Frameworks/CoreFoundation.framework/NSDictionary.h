@@ -88,7 +88,7 @@
 - (bool)containsObject:(id)arg1;
 - (id)copyWithZone:(struct _NSZone { }*)arg1;
 - (unsigned long long)count;
-- (unsigned long long)countByEnumeratingWithState:(struct { unsigned long long x1; id *x2; unsigned long long x3; unsigned long long x4[5]; }*)arg1 objects:(id*)arg2 count:(unsigned long long)arg3;
+- (unsigned long long)countByEnumeratingWithState:(struct { unsigned long long x1; id *x2; unsigned long long *x3; unsigned long long x4[5]; }*)arg1 objects:(id*)arg2 count:(unsigned long long)arg3;
 - (unsigned long long)countForKey:(id)arg1;
 - (unsigned long long)countForObject:(id)arg1;
 - (id)description;
@@ -245,6 +245,7 @@
 
 // Image: /System/Library/Frameworks/Intents.framework/Intents
 
+- (id)_intents_indexingRepresentation;
 - (id)descriptionAtIndent:(unsigned long long)arg1;
 
 // Image: /System/Library/Frameworks/LocalAuthentication.framework/Support/DaemonUtils.framework/DaemonUtils
@@ -415,6 +416,8 @@
 
 // Image: /System/Library/PrivateFrameworks/AvatarUI.framework/AvatarUI
 
++ (id)_avtui_dictionaryByIndexingObjectsInArray:(id)arg1 by:(id /* block */)arg2;
+
 - (id)_avtui_deepCopy;
 
 // Image: /System/Library/PrivateFrameworks/BaseBoard.framework/BaseBoard
@@ -476,6 +479,10 @@
 // Image: /System/Library/PrivateFrameworks/CameraUI.framework/CameraUI
 
 - (bool)cam_compareKey:(id)arg1 withDictionary:(id)arg2;
+
+// Image: /System/Library/PrivateFrameworks/CarPlaySupport.framework/CarPlaySupport
+
+- (id)cps_mutableDictionaryWithValuesForKeys:(id)arg1;
 
 // Image: /System/Library/PrivateFrameworks/Catalyst.framework/Catalyst
 
@@ -1183,8 +1190,8 @@
 
 // Image: /System/Library/PrivateFrameworks/Swift/libswiftFoundation.dylib
 
-- (id)_swiftInitWithDictionary_NSDictionary;
-- (void)_swift_objectForKeyedSubscript;
+- (id)_swiftInitWithDictionary_NSDictionary:(id)arg1;
+/* MISSING HEADER DESCRIPTION FOR METHOD _swift_objectForKeyedSubscript: */
 
 // Image: /System/Library/PrivateFrameworks/TSUtility.framework/TSUtility
 

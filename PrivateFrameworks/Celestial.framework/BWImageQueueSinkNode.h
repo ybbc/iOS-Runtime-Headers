@@ -54,11 +54,12 @@
 - (unsigned long long)_bufferIDForSurface:(struct __IOSurface { }*)arg1;
 - (void)_cleanupIOSurfaces;
 - (void)_collectUnconsumedBuffersWithReason:(id)arg1;
-- (struct _EnqueuedBufferContext { struct opaqueCMSampleBuffer {} *x1; unsigned long long x2; id x3; /* Warning: Unrecognized filer type: '?' using 'void*' */ void*x4; void*x5; long long x6; int x7; unsigned int x8; long long x9; }*)_createContextForBuffer:(struct opaqueCMSampleBuffer { }*)arg1 bufferId:(unsigned long long)arg2 framePTS:(struct { long long x1; int x2; unsigned int x3; long long x4; })arg3;
+- (struct _EnqueuedBufferContext { struct opaqueCMSampleBuffer {} *x1; unsigned long long x2; id x3; struct { long long x_4_1_1; int x_4_1_2; unsigned int x_4_1_3; long long x_4_1_4; } x4; struct _CAImageQueueReleasedImageInfo { unsigned int x_5_1_1; double x_5_1_2; bool x_5_1_3; unsigned long long x_5_1_4; double x_5_1_5; } x5; int x6; }*)_createContextForBuffer:(struct opaqueCMSampleBuffer { }*)arg1 bufferId:(unsigned long long)arg2 framePTS:(struct { long long x1; int x2; unsigned int x3; long long x4; })arg3;
 - (double)_displayTimeSyncedWithFramePTS:(double)arg1;
+- (bool)_doesCaptureDeviceHaveISPJitter;
 - (void)_ensureImageQueue;
 - (id)_inputFormatRequirements;
-- (void)_processBufferContext:(struct _EnqueuedBufferContext { struct opaqueCMSampleBuffer {} *x1; unsigned long long x2; id x3; /* Warning: Unrecognized filer type: '?' using 'void*' */ void*x4; void*x5; long long x6; int x7; unsigned int x8; long long x9; }*)arg1;
+- (void)_processBufferContext:(struct _EnqueuedBufferContext { struct opaqueCMSampleBuffer {} *x1; unsigned long long x2; id x3; struct { long long x_4_1_1; int x_4_1_2; unsigned int x_4_1_3; long long x_4_1_4; } x4; struct _CAImageQueueReleasedImageInfo { unsigned int x_5_1_1; double x_5_1_2; bool x_5_1_3; unsigned long long x_5_1_4; double x_5_1_5; } x5; int x6; }*)arg1;
 - (void)_processReleasedContexts;
 - (void)_removeBufferFromInternalQueues:(struct opaqueCMSampleBuffer { }*)arg1 bufferId:(unsigned long long)arg2;
 - (void)_storePreviewPTS:(struct { long long x1; int x2; unsigned int x3; long long x4; })arg1 withHostTime:(unsigned long long)arg2;

@@ -37,7 +37,7 @@
 - (void)setShowDoneButton:(bool)arg1;
 - (bool)showCancelButton;
 - (bool)showDoneButton;
-- (void)viewDidLayoutSubviews;
 - (void)viewDidLoad;
+- (void)viewWillLayoutSubviews;
 
 @end

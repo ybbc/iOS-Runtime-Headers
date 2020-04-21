@@ -8,12 +8,12 @@
         double height; 
     }  _actualSize;
     NSObject<OS_dispatch_semaphore> * _canBeginRenderSemaphore;
-    int  _cancelAllRendering;
-    int  _cancelLongRunningRenderingCount;
+    _Atomic int  _cancelAllRendering;
+    _Atomic int  _cancelLongRunningRenderingCount;
     PKStrokeGenerator * _inputController;
     double  _inputScale;
     bool  _isTorndown;
-    double  _lastFrameDuration;
+    _Atomic double  _lastFrameDuration;
     PKLinedPaper * _linedPaper;
     struct CGAffineTransform { 
         double a; 
@@ -33,9 +33,9 @@
     double  _presentationDelayGrowth;
     CAEAGLLayer * _presentationLayer;
     double  _presentationMaxDelay;
-    int  _queuedRenders;
+    _Atomic int  _queuedRenders;
     struct atomic_flag { 
-        bool _Value; 
+        _Atomic bool _Value; 
     }  _readyToBeginRender;
     NSObject<OS_dispatch_queue> * _renderQueue;
     struct CGAffineTransform { 
@@ -162,7 +162,7 @@
 - (void)setStrokeTransform:(struct CGAffineTransform { double x1; double x2; double x3; double x4; double x5; double x6; })arg1;
 - (void)setViewScissor:(struct CGRect { struct CGPoint { double x_1_1_1; double x_1_1_2; } x1; struct CGSize { double x_2_1_1; double x_2_1_2; } x2; })arg1;
 - (void)setup;
-- (void)signalVSyncSemaphore:(double)arg1;
+- (void)signalVSyncSemaphore:(double)arg1 presentationTime:(unsigned long long)arg2;
 - (bool)solidColorBackboard;
 - (struct CGAffineTransform { double x1; double x2; double x3; double x4; double x5; double x6; })strokeTransform;
 - (void)teardown;

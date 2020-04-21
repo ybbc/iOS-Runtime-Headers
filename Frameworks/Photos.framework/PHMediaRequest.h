@@ -4,7 +4,7 @@
 
 @interface PHMediaRequest : NSObject <PHRecyclableObject> {
     PHAsset * _asset;
-    bool  _cancelled;
+    _Atomic bool  _cancelled;
     unsigned long long  _contextID;
     long long  _contextType;
     unsigned long long  _managerID;

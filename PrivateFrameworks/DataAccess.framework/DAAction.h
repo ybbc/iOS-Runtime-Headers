@@ -28,14 +28,14 @@
 - (void)_setChangedItem:(id)arg1;
 - (int)changeId;
 - (id)changedItem;
-- (/* Warning: unhandled struct encoding: '{ASContact=#@@ii@i@?i@}' */ struct ASContact { Class x1; id x2; int x3; int x4; id x5; id /* block */ x6; int x7; id x8; }*)contact;
+- (struct ASContact { Class x1; id x2; id x3; int x4; int x5; id x6; int x7; id /* block */ x8; int x9; id x10; }*)contact;
 - (id)deletedContactID;
 - (id)deletedEventID;
 - (id)deletedNoteID;
 - (id)deletedToDoID;
 - (id)description;
 - (void)encodeWithCoder:(id)arg1;
-- (/* Warning: unhandled struct encoding: '{ASEvent=#@@ii@i@?i@}' */ struct ASEvent { Class x1; id x2; int x3; int x4; id x5; id /* block */ x6; int x7; id x8; }*)event;
+- (struct ASEvent { Class x1; id x2; id x3; int x4; int x5; id x6; int x7; id /* block */ x8; int x9; id x10; }*)event;
 - (id)forwardedAttendeeUUIDs;
 - (id)forwardedAttendees;
 - (unsigned long long)hash;
@@ -46,7 +46,7 @@
 - (bool)isEqual:(id)arg1;
 - (unsigned long long)itemChangeType;
 - (id)message;
-- (/* Warning: unhandled struct encoding: '{ASNote=#@@ii@i@?i@}' */ struct ASNote { Class x1; id x2; int x3; int x4; id x5; id /* block */ x6; int x7; id x8; }*)note;
+- (struct ASNote { Class x1; id x2; id x3; int x4; int x5; id x6; int x7; id /* block */ x8; int x9; id x10; }*)note;
 - (id)serverId;
 - (void)setChangeId:(int)arg1;
 - (void)setForwardedAttendeeUUIDs:(id)arg1;
@@ -55,7 +55,7 @@
 - (void)setItemChangeType:(unsigned long long)arg1;
 - (void)setServerId:(id)arg1;
 - (id)stringForItemChangeType:(unsigned long long)arg1;
-- (/* Warning: unhandled struct encoding: '{ASToDo=#@@ii@i@?i@}' */ struct ASToDo { Class x1; id x2; int x3; int x4; id x5; id /* block */ x6; int x7; id x8; }*)toDo;
+- (struct ASToDo { Class x1; id x2; id x3; int x4; int x5; id x6; int x7; id /* block */ x8; int x9; id x10; }*)toDo;
 
 // Image: /System/Library/PrivateFrameworks/DataAccess.framework/Frameworks/DAEAS.framework/DAEAS
 

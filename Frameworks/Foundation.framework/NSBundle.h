@@ -189,6 +189,11 @@
 + (id)vs_bundleForProcessIdentifier:(int)arg1;
 + (id)vs_frameworkBundle;
 
+// Image: /System/Library/PrivateFrameworks/AppleMediaServices.framework/AppleMediaServices
+
++ (id)ams_AppleMediaServicesBundle;
++ (id)ams_iTunesBundle;
+
 // Image: /System/Library/PrivateFrameworks/AssistantUI.framework/AssistantUI
 
 + (id)afui_assistantUIFrameworkBundle;

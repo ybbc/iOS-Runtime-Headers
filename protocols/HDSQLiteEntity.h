@@ -7,7 +7,7 @@
 
 + (NSArray *)allDatabaseColumnNames;
 + (NSSet *)checkConstraints;
-+ (const struct { id x1; unsigned char x2; }*)columnDefinitionsWithCount:(unsigned long long*)arg1;
++ (const struct { id x1; id x2; unsigned char x3; }*)columnDefinitionsWithCount:(unsigned long long*)arg1;
 + (NSArray *)columnsDefinition;
 + (NSString *)databaseName;
 + (NSString *)databaseTable;

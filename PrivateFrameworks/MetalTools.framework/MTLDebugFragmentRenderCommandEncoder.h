@@ -20,23 +20,47 @@
     <MTLDepthStencilState> * _depthStencilState;
     MTLRenderPassDescriptor * _descriptor;
     unsigned int  _encoderState;
-    /* Warning: unhandled struct encoding: '{?="isValid"B"hasBeenUsed"B"type"Q"object"@"baseLevel"Q"bufferLength"Q"bufferOffset"Q"threadgroupMemoryLength"Q"threadgroupMemoryOffset"Q"hasLodClamp"B"lodMinClamp"f"lodMaxClamp"f}]' */ struct { 
+    struct { 
         bool isValid; 
         bool hasBeenUsed; 
         unsigned long long type; 
         id object; 
+        unsigned long long baseLevel; 
+        unsigned long long bufferLength; 
+        unsigned long long bufferOffset; 
+        unsigned long long threadgroupMemoryLength; 
+        unsigned long long threadgroupMemoryOffset; 
+        bool hasLodClamp; 
+        float lodMinClamp; 
+        float lodMaxClamp; 
     }  _fragmentBuffers;
-    /* Warning: unhandled struct encoding: '{?="isValid"B"hasBeenUsed"B"type"Q"object"@"baseLevel"Q"bufferLength"Q"bufferOffset"Q"threadgroupMemoryLength"Q"threadgroupMemoryOffset"Q"hasLodClamp"B"lodMinClamp"f"lodMaxClamp"f}]' */ struct { 
+    struct { 
         bool isValid; 
         bool hasBeenUsed; 
         unsigned long long type; 
         id object; 
+        unsigned long long baseLevel; 
+        unsigned long long bufferLength; 
+        unsigned long long bufferOffset; 
+        unsigned long long threadgroupMemoryLength; 
+        unsigned long long threadgroupMemoryOffset; 
+        bool hasLodClamp; 
+        float lodMinClamp; 
+        float lodMaxClamp; 
     }  _fragmentSamplers;
-    /* Warning: unhandled struct encoding: '{?="isValid"B"hasBeenUsed"B"type"Q"object"@"baseLevel"Q"bufferLength"Q"bufferOffset"Q"threadgroupMemoryLength"Q"threadgroupMemoryOffset"Q"hasLodClamp"B"lodMinClamp"f"lodMaxClamp"f}]' */ struct { 
+    struct { 
         bool isValid; 
         bool hasBeenUsed; 
         unsigned long long type; 
         id object; 
+        unsigned long long baseLevel; 
+        unsigned long long bufferLength; 
+        unsigned long long bufferOffset; 
+        unsigned long long threadgroupMemoryLength; 
+        unsigned long long threadgroupMemoryOffset; 
+        bool hasLodClamp; 
+        float lodMinClamp; 
+        float lodMaxClamp; 
     }  _fragmentTextures;
     unsigned int  _frontStencilRef;
     bool  _hasValidScissorRect;

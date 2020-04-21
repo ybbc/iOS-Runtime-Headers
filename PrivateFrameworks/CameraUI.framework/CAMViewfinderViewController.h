@@ -350,6 +350,7 @@
 @property (nonatomic, readonly) bool shouldHideQRCodeInstructionLabel;
 @property (nonatomic, readonly) bool shouldHideTimerButton;
 @property (nonatomic, readonly) bool shouldHideTopBar;
+@property (nonatomic, readonly) bool shouldLayoutLightingNameBadgeAtBottom;
 @property (nonatomic, readonly) bool shouldShiftPreviewForUtilityBar;
 @property (getter=isShowingStandardControls, nonatomic) bool showingStandardControls;
 @property (readonly) Class superclass;
@@ -626,7 +627,7 @@
 - (bool)_isHDRSupportedForGraphConfiguration:(id)arg1;
 - (bool)_isLivePhotoSupportedForGraphConfiguration:(id)arg1;
 - (bool)_isLivePhotoSupportedForMode:(long long)arg1 device:(long long)arg2;
-- (bool)_isMenuButtonConflictingWithBadge:(id)arg1;
+- (bool)_isMenuButtonConflictingWithView:(id)arg1;
 - (bool)_isModeDisabledForMultitasking;
 - (bool)_isOpeningViewfinder;
 - (bool)_isOutOfDiskSpace;
@@ -929,6 +930,7 @@
 - (void)_updateAGGDForVideoCaptureRequest:(id)arg1;
 - (void)_updateAGGDForVideoCaptureResponse:(id)arg1 request:(id)arg2;
 - (void)_updateAllControlsWithContentSize:(id)arg1;
+- (void)_updateApertureAggregateDictionariesForRequest:(id)arg1;
 - (void)_updateBadgeVisibilityAnimated:(bool)arg1;
 - (void)_updateBarBackgroundStyleForMode:(long long)arg1 animated:(bool)arg2;
 - (void)_updateCameraRollPreviewGestureRecognizer;
@@ -1123,6 +1125,7 @@
 - (void)pressStillDuringVideoForRemoteShutter;
 - (bool)previewViewController:(id)arg1 gestureRecognizer:(id)arg2 shouldRequireFailureOfGestureRecognizer:(id)arg3;
 - (void)previewViewControllerDidChangeFocusOrExposureLocked:(id)arg1 shouldAnimate:(bool)arg2;
+- (void)previewViewControllerDidChangeVideoFillAspectRatio:(id)arg1;
 - (void)remoteShutter:(id)arg1 focusOn:(struct CGPoint { double x1; double x2; })arg2;
 - (void)remoteShutter:(id)arg1 setCaptureDevice:(long long)arg2;
 - (void)remoteShutter:(id)arg1 setFlashMode:(long long)arg2;
@@ -1180,6 +1183,7 @@
 - (bool)shouldHideQRCodeInstructionLabel;
 - (bool)shouldHideTimerButton;
 - (bool)shouldHideTopBar;
+- (bool)shouldLayoutLightingNameBadgeAtBottom;
 - (bool)shouldShiftPreviewForUtilityBar;
 - (void)shutterButtonTouchAttemptedWhileDisabled:(id)arg1;
 - (void)simulateImageWellTap;

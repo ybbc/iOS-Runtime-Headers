@@ -3,7 +3,7 @@
  */
 
 @interface WebPreferences : NSObject <NSCoding> {
-    /* Warning: unhandled struct encoding: '{WebPreferencesPrivate={RetainPtr<NSMutableDictionary>=^v}B{RetainPtr<NSString>=^v}BBI@}' */ struct WebPreferencesPrivate { struct RetainPtr<NSMutableDictionary> { void *x_1_1_1; } x1; bool x2; struct RetainPtr<NSString> { void *x_3_1_1; } x3; bool x4; bool x5; unsigned int x6; id x7; } * _private;
+    struct WebPreferencesPrivate { struct RetainPtr<NSMutableDictionary> { void *x_1_1_1; } x1; bool x2; struct RetainPtr<NSString> { void *x_3_1_1; } x3; bool x4; bool x5; unsigned int x6; id x7; } * _private;
 }
 
 @property (nonatomic) bool accessibilityObjectModelEnabled;

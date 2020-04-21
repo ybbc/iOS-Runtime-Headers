@@ -138,7 +138,7 @@
 - (id)p_generateType:(struct TSCH3DShaderType { unsigned long long x1; })arg1;
 - (void)p_generateType:(struct TSCH3DShaderType { unsigned long long x1; })arg1 globalType:(struct TSCH3DShaderVariableScopeType { unsigned long long x1; })arg2 storageQualifier:(id)arg3;
 - (unsigned long long)processSection:(id)arg1 accumulate:(id)arg2 conclusions:(id)arg3;
-- (/* Warning: unhandled struct encoding: '{pair<bool, TSCH3DShaderVariableLinkage *>=B@}' */ struct pair<bool, TSCH3DShaderVariableLinkage *> { bool x1; id x2; })resultLinkageOfVariable:(id)arg1;
+- (struct pair<bool, TSCH3DShaderVariableLinkage *> { bool x1; id x2; })resultLinkageOfVariable:(id)arg1;
 - (struct TSCH3DShaderType { unsigned long long x1; })uniformLinkageFor:(id)arg1;
 - (id)usedAttributeNameForVariable:(id)arg1;
 - (id)usedNameForVariable:(id)arg1 type:(struct TSCH3DShaderType { unsigned long long x1; })arg2 scope:(struct TSCH3DShaderVariableScopeType { unsigned long long x1; })arg3;

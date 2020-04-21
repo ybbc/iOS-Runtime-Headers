@@ -3,7 +3,7 @@
  */
 
 @interface PDImageManager : NSObject <PHMediaRequestContextDelegate> {
-    int  _lastUsedRequestID;
+    _Atomic int  _lastUsedRequestID;
     struct os_unfair_lock_s { 
         unsigned int _os_unfair_lock_opaque; 
     }  _lock;

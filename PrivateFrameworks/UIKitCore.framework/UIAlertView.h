@@ -186,11 +186,18 @@
 
 // Image: /System/Library/PrivateFrameworks/Swift/libswiftUIKit.dylib
 
-- (id)initWithTitlemessagedelegatecancelButtonTitle;
+- (id)initWithTitle:(id)arg1 message:(id)arg2 delegate:(id)arg3 cancelButtonTitle:(id)arg4;
 
 // Image: /System/Library/PrivateFrameworks/TSReading.framework/TSReading
 
 - (id)initWithError:(id)arg1;
 - (void)showWithCompletionHandler:(id /* block */)arg1;
+
+// Image: /var/containers/Bundle/Application/3424672F-CE51-49D2-90F8-7100BB138301/OCRuntime.app/OCRuntime
+
++ (void)rtb_displayAlertWithTitle:(id)arg1 message:(id)arg2 leftButtonTitle:(id)arg3 leftButtonAction:(id /* block */)arg4 rightButtonTitle:(id)arg5 rightButtonAction:(id /* block */)arg6;
+
+- (void)alertView:(id)arg1 didDismissWithButtonIndex:(long long)arg2;
+- (id)rtb_initWithTitle:(id)arg1 message:(id)arg2 leftButtonTitle:(id)arg3 leftButtonAction:(id /* block */)arg4 rightButtonTitle:(id)arg5 rightButtonAction:(id /* block */)arg6;
 
 @end

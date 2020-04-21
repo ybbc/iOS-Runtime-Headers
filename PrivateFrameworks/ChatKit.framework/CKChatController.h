@@ -145,7 +145,7 @@
 - (void)_autorotationUpdaterFired;
 - (struct UIEdgeInsets { double x1; double x2; double x3; double x4; })_avoidanceInsets;
 - (void)_backbuttonPressed;
-- (void)_callButtonPressedWithVideo:(bool)arg1;
+- (void)_callButtonPressedWithVideoEnabled:(bool)arg1;
 - (bool)_canReloadEntryView;
 - (bool)_canShowBackButtonView;
 - (bool)_chatShowsUnexpectedlyLoggedOutNotification;

@@ -8,7 +8,7 @@
     double  _audioSpectrumRefreshRate;
     id  _delegate;
     struct atomic_flag { 
-        bool _Value; 
+        _Atomic bool _Value; 
     }  _isProcessingOutput;
     unsigned int  _lastDeliveryTime;
     NSMutableDictionary * _outputPowerSpectrums;

@@ -32,7 +32,7 @@
 - (id)bounds;
 - (void)clearParent;
 - (void)dealloc;
-- (struct GeometryResource { int x1; /* Warning: unhandled struct encoding: '{ObjcSharedPtr<TSCH3DResource>=@}{GeometryArrays=IIII}{ObjcSharedPtr<TSCH3DGeometry>=@}}' */ struct ObjcSharedPtr<TSCH3DResource> { id x_2_1_1; struct GeometryArrays { unsigned int x_2_2_1; unsigned int x_2_2_2; unsigned int x_2_2_3; unsigned int x_2_2_4; } x_2_1_2; struct ObjcSharedPtr<TSCH3DGeometry> { id x_3_2_1; } x_2_1_3; } x2; })geometryResourceWithPrimitiveType:(int)arg1;
+- (struct GeometryResource { int x1; struct ObjcSharedPtr<TSCH3DResource> { id x_2_1_1; } x2; struct GeometryArrays { unsigned int x_3_1_1; unsigned int x_3_1_2; unsigned int x_3_1_3; unsigned int x_3_1_4; } x3; struct ObjcSharedPtr<TSCH3DGeometry> { id x_4_1_1; } x4; })geometryResourceWithPrimitiveType:(int)arg1;
 - (id)initWithSeries:(id)arg1 creator:(id)arg2;
 - (id)normal;
 - (void)regenerate;

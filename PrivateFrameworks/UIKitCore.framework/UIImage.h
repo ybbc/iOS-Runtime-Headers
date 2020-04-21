@@ -538,6 +538,7 @@
 // Image: /System/Library/PrivateFrameworks/HealthUI.framework/HealthUI
 
 + (id)hk_disclosureChevronImage;
++ (id)hk_electrocardiogramHeartImage;
 + (id)hk_transparentInterfaceImageWithSize:(struct CGSize { double x1; double x2; })arg1;
 
 - (id)hk_croppedImageWithRect:(struct CGRect { struct CGPoint { double x_1_1_1; double x_1_1_2; } x1; struct CGSize { double x_2_1_1; double x_2_1_2; } x2; })arg1;
@@ -545,6 +546,19 @@
 - (id)hk_resizedInterfaceImageWithSize:(struct CGSize { double x1; double x2; })arg1;
 - (double)hk_scaledImageViewHeightWithScaledWidth:(double)arg1;
 - (id)hk_watchIconImage;
+
+// Image: /System/Library/PrivateFrameworks/HeartRhythmUI.framework/HeartRhythmUI
+
++ (id)hrui_ECGAppIconImage;
++ (id)hrui_ECGOnboardingWristImage;
++ (id)hrui_appleWatchSetupCompleteImage;
++ (id)hrui_atrialFibrillationDetectionIllustrationImage;
++ (id)hrui_cannotDoImage;
++ (id)hrui_fingerCrownImage;
++ (id)hrui_heartRateIconImage;
++ (id)hrui_screenWidthImageWithName:(id)arg1;
++ (id)hrui_warningImage;
++ (id)hrui_waveformImage;
 
 // Image: /System/Library/PrivateFrameworks/Home.framework/Home
 

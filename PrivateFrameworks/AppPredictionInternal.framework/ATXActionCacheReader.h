@@ -63,6 +63,6 @@
 - (id)init;
 - (id)initWithChunks:(id)arg1;
 - (id)initWithData:(id)arg1;
-- (struct ATXPredictionItem { id x1; float x2[259]; float x3; })predictionItemForAction:(id)arg1;
+- (struct ATXPredictionItem { id x1; unsigned long long x2; float x3[259]; float x4; })predictionItemForAction:(id)arg1;
 
 @end

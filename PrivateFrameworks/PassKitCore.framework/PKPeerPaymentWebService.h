@@ -28,6 +28,7 @@
 + (id)sharedService;
 
 - (void).cxx_destruct;
+- (id)_appleAccountInformation;
 - (void)_archiveContext;
 - (id)_createDeviceScorerForEndpoint:(id)arg1 recipientAddress:(id)arg2;
 - (id)_deviceIdentifier;
@@ -37,12 +38,14 @@
 - (void)_deviceScoreForEndpoint:(id)arg1 withCompletion:(id /* block */)arg2;
 - (void)_handleRetryAfterRegisterWithRequest:(id)arg1 completionHandler:(id /* block */)arg2;
 - (bool)_isValidResponse:(id)arg1 error:(id)arg2;
+- (void)_renewAppleAccountWithCompletionHandler:(id /* block */)arg1;
 - (void)_updateRequestWithCurrentTargetDevice:(id)arg1;
 - (id)archiver;
 - (id)badRequestErrorWithResponse:(id)arg1;
 - (bool)canBypassTrustExtendedValidation;
 - (id)context;
 - (id)forbiddenErrorWithResponse:(id)arg1;
+- (void)handleAuthenticationFailureWithCompletionHandler:(id /* block */)arg1;
 - (void)handleResponse:(id)arg1 withError:(id)arg2 data:(id)arg3 task:(id)arg4 completionHandler:(id /* block */)arg5;
 - (void)handleWillPerformHTTPRedirectionWithResponse:(id)arg1 redirectHandler:(id /* block */)arg2;
 - (id)init;

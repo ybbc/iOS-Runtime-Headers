@@ -422,7 +422,7 @@
 + (id)AVConferenceServiceError:(long long)arg1 detailedCode:(long long)arg2 filePath:(id)arg3 description:(id)arg4 reason:(id)arg5;
 + (id)AVConferenceServiceError:(long long)arg1 detailedCode:(long long)arg2 returnCode:(long long)arg3 filePath:(id)arg4 description:(id)arg5 reason:(id)arg6;
 
-// Image: /System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities
+// Image: /System/Library/PrivateFrameworks/AXCoreUtilities.framework/AXCoreUtilities
 
 + (id)ax_errorWithDomain:(id)arg1 code:(long long)arg2 description:(id)arg3;
 + (id)ax_errorWithDomain:(id)arg1 code:(long long)arg2 description:(id)arg3 arguments:(char *)arg4;
@@ -602,6 +602,7 @@
 - (bool)brc_isCloudKitErrorZoneMigrated;
 - (bool)brc_isCloudKitErrorZoneUndergoingMigration;
 - (bool)brc_isCloudKitOutOfQuota;
+- (bool)brc_isCloudKitPCSDecryptionFailure;
 - (bool)brc_isCloudKitUnknownItemError;
 - (bool)brc_isEverRetriable;
 - (bool)brc_isOutOfSpaceError;

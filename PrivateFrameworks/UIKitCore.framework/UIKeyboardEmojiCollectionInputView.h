@@ -26,6 +26,8 @@
 
 // Image: /System/Library/PrivateFrameworks/UIKitCore.framework/UIKitCore
 
++ (bool)shouldHighlightEmoji:(id)arg1;
+
 - (void)_setUserHasSelectedSkinToneEmoji:(bool)arg1;
 - (bool)_shouldReverseLayoutDirection;
 - (bool)_userHasSelectedSkinToneEmoji;

@@ -56,6 +56,7 @@
     bool  hadAssociatedOnscreenPlayerLayerWhenSuspended;
     NSMutableArray * handlersToCallWhenReadyToPlay;
     bool  hostApplicationInForeground;
+    bool  isConnectedToPhysicalSecondScreen;
     bool  isDisplayingClosedCaptions;
     NSMutableSet * items;
     NSArray * itemsInFigPlayQueue;

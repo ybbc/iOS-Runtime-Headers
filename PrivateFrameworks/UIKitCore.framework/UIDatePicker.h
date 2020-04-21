@@ -78,6 +78,7 @@
 - (bool)_useCurrentDateDuringDecoding;
 - (bool)_usesBlackChrome;
 - (bool)_usesModernStyle;
+- (void)setBackgroundColor:(id)arg1;
 
 // Image: /Developer/Library/PrivateFrameworks/DTDDISupport.framework/libViewDebuggerSupport.dylib
 
@@ -86,6 +87,7 @@
 
 // Image: /Developer/usr/lib/libMainThreadChecker.dylib
 
+- (void)_UIAppearance_setBackgroundColor:(id)arg1;
 - (void)awakeFromNib;
 - (id)calendar;
 - (double)countDownDuration;
@@ -105,7 +107,6 @@
 - (int)minute;
 - (long long)minuteInterval;
 - (int)second;
-- (void)setBackgroundColor:(id)arg1;
 - (void)setBounds:(struct CGRect { struct CGPoint { double x_1_1_1; double x_1_1_2; } x1; struct CGSize { double x_2_1_1; double x_2_1_2; } x2; })arg1;
 - (void)setCalendar:(id)arg1;
 - (void)setCountDownDuration:(double)arg1;

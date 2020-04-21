@@ -3,7 +3,7 @@
  */
 
 @interface VCAudioPowerSpectrum : NSObject <VCAudioIOSink> {
-    /* Warning: unhandled struct encoding: '{_VCAudioPowerSpectrumChannel=I^f^f^f^f^{vDSP_DFT_SetupStruct}{DSPSplitComplex=^f^f}^ff^f^f@}' */ struct _VCAudioPowerSpectrumChannel { unsigned int x1; float *x2; float *x3; float *x4; float *x5; struct vDSP_DFT_SetupStruct {} *x6; struct DSPSplitComplex { float *x_7_1_1; float *x_7_1_2; } x7; float *x8; float x9; float *x10; float *x11; id x12; } * _channelSettings;
+    struct _VCAudioPowerSpectrumChannel { unsigned int x1; float *x2; float *x3; float *x4; float *x5; struct vDSP_DFT_SetupStruct {} *x6; struct DSPSplitComplex { float *x_7_1_1; float *x_7_1_2; } x7; float *x8; float x9; float *x10; float *x11; id x12; } * _channelSettings;
     <VCAudioPowerSpectrumDelegate> * _delegate;
     float  _fftNormFactor;
     unsigned int  _fftSampleCount;
@@ -27,7 +27,7 @@
     unsigned int * _octave2IndexTable6;
     unsigned int  _octave2IndexTable6Count;
     unsigned int  _outputBinCount;
-    bool  _powerSpectrumConfigured;
+    _Atomic bool  _powerSpectrumConfigured;
     struct opaqueVCAudioBufferList { } * _sampleBuffer;
     unsigned int  _sampleRate;
     long long  _streamToken;
@@ -43,12 +43,12 @@
 
 - (void)cleanUp;
 - (void)cleanupBinInterpolation;
-- (void)cleanupBinsForChannel:(/* Warning: unhandled struct encoding: '{_VCAudioPowerSpectrumChannel=I^f^f^f^f^{vDSP_DFT_SetupStruct}{DSPSplitComplex=^f^f}^ff^f^f@}' */ struct _VCAudioPowerSpectrumChannel { unsigned int x1; float *x2; float *x3; float *x4; float *x5; struct vDSP_DFT_SetupStruct {} *x6; struct DSPSplitComplex { float *x_7_1_1; float *x_7_1_2; } x7; float *x8; float x9; float *x10; float *x11; id x12; }*)arg1;
-- (void)cleanupChannel:(/* Warning: unhandled struct encoding: '{_VCAudioPowerSpectrumChannel=I^f^f^f^f^{vDSP_DFT_SetupStruct}{DSPSplitComplex=^f^f}^ff^f^f@}' */ struct _VCAudioPowerSpectrumChannel { unsigned int x1; float *x2; float *x3; float *x4; float *x5; struct vDSP_DFT_SetupStruct {} *x6; struct DSPSplitComplex { float *x_7_1_1; float *x_7_1_2; } x7; float *x8; float x9; float *x10; float *x11; id x12; }*)arg1;
-- (void)cleanupFFTForChannel:(/* Warning: unhandled struct encoding: '{_VCAudioPowerSpectrumChannel=I^f^f^f^f^{vDSP_DFT_SetupStruct}{DSPSplitComplex=^f^f}^ff^f^f@}' */ struct _VCAudioPowerSpectrumChannel { unsigned int x1; float *x2; float *x3; float *x4; float *x5; struct vDSP_DFT_SetupStruct {} *x6; struct DSPSplitComplex { float *x_7_1_1; float *x_7_1_2; } x7; float *x8; float x9; float *x10; float *x11; id x12; }*)arg1;
+- (void)cleanupBinsForChannel:(struct _VCAudioPowerSpectrumChannel { unsigned int x1; float *x2; float *x3; float *x4; float *x5; struct vDSP_DFT_SetupStruct {} *x6; struct DSPSplitComplex { float *x_7_1_1; float *x_7_1_2; } x7; float *x8; float x9; float *x10; float *x11; id x12; }*)arg1;
+- (void)cleanupChannel:(struct _VCAudioPowerSpectrumChannel { unsigned int x1; float *x2; float *x3; float *x4; float *x5; struct vDSP_DFT_SetupStruct {} *x6; struct DSPSplitComplex { float *x_7_1_1; float *x_7_1_2; } x7; float *x8; float x9; float *x10; float *x11; id x12; }*)arg1;
+- (void)cleanupFFTForChannel:(struct _VCAudioPowerSpectrumChannel { unsigned int x1; float *x2; float *x3; float *x4; float *x5; struct vDSP_DFT_SetupStruct {} *x6; struct DSPSplitComplex { float *x_7_1_1; float *x_7_1_2; } x7; float *x8; float x9; float *x10; float *x11; id x12; }*)arg1;
 - (void)cleanupHanningWindow;
 - (void)cleanupOctave2IndexTable;
-- (void)cleanupOctave2IndexTableForChannel:(/* Warning: unhandled struct encoding: '{_VCAudioPowerSpectrumChannel=I^f^f^f^f^{vDSP_DFT_SetupStruct}{DSPSplitComplex=^f^f}^ff^f^f@}' */ struct _VCAudioPowerSpectrumChannel { unsigned int x1; float *x2; float *x3; float *x4; float *x5; struct vDSP_DFT_SetupStruct {} *x6; struct DSPSplitComplex { float *x_7_1_1; float *x_7_1_2; } x7; float *x8; float x9; float *x10; float *x11; id x12; }*)arg1;
+- (void)cleanupOctave2IndexTableForChannel:(struct _VCAudioPowerSpectrumChannel { unsigned int x1; float *x2; float *x3; float *x4; float *x5; struct vDSP_DFT_SetupStruct {} *x6; struct DSPSplitComplex { float *x_7_1_1; float *x_7_1_2; } x7; float *x8; float x9; float *x10; float *x11; id x12; }*)arg1;
 - (void)computeSpectrumForChannelIndex:(unsigned int)arg1;
 - (void)dealloc;
 - (id)delegate;
@@ -60,11 +60,11 @@
 - (void)pushAudioSamples:(struct opaqueVCAudioBufferList { }*)arg1;
 - (bool)setupAudioPowerSpectrumWithBinCount:(unsigned int)arg1 format:(const struct AudioStreamBasicDescription { double x1; unsigned int x2; unsigned int x3; unsigned int x4; unsigned int x5; unsigned int x6; unsigned int x7; unsigned int x8; unsigned int x9; }*)arg2;
 - (bool)setupBinInterpolationWithBinCount:(unsigned int)arg1;
-- (bool)setupBinsForChannel:(/* Warning: unhandled struct encoding: '{_VCAudioPowerSpectrumChannel=I^f^f^f^f^{vDSP_DFT_SetupStruct}{DSPSplitComplex=^f^f}^ff^f^f@}' */ struct _VCAudioPowerSpectrumChannel { unsigned int x1; float *x2; float *x3; float *x4; float *x5; struct vDSP_DFT_SetupStruct {} *x6; struct DSPSplitComplex { float *x_7_1_1; float *x_7_1_2; } x7; float *x8; float x9; float *x10; float *x11; id x12; }*)arg1;
-- (bool)setupChannel:(/* Warning: unhandled struct encoding: '{_VCAudioPowerSpectrumChannel=I^f^f^f^f^{vDSP_DFT_SetupStruct}{DSPSplitComplex=^f^f}^ff^f^f@}' */ struct _VCAudioPowerSpectrumChannel { unsigned int x1; float *x2; float *x3; float *x4; float *x5; struct vDSP_DFT_SetupStruct {} *x6; struct DSPSplitComplex { float *x_7_1_1; float *x_7_1_2; } x7; float *x8; float x9; float *x10; float *x11; id x12; }*)arg1;
-- (bool)setupFFTForChannel:(/* Warning: unhandled struct encoding: '{_VCAudioPowerSpectrumChannel=I^f^f^f^f^{vDSP_DFT_SetupStruct}{DSPSplitComplex=^f^f}^ff^f^f@}' */ struct _VCAudioPowerSpectrumChannel { unsigned int x1; float *x2; float *x3; float *x4; float *x5; struct vDSP_DFT_SetupStruct {} *x6; struct DSPSplitComplex { float *x_7_1_1; float *x_7_1_2; } x7; float *x8; float x9; float *x10; float *x11; id x12; }*)arg1;
+- (bool)setupBinsForChannel:(struct _VCAudioPowerSpectrumChannel { unsigned int x1; float *x2; float *x3; float *x4; float *x5; struct vDSP_DFT_SetupStruct {} *x6; struct DSPSplitComplex { float *x_7_1_1; float *x_7_1_2; } x7; float *x8; float x9; float *x10; float *x11; id x12; }*)arg1;
+- (bool)setupChannel:(struct _VCAudioPowerSpectrumChannel { unsigned int x1; float *x2; float *x3; float *x4; float *x5; struct vDSP_DFT_SetupStruct {} *x6; struct DSPSplitComplex { float *x_7_1_1; float *x_7_1_2; } x7; float *x8; float x9; float *x10; float *x11; id x12; }*)arg1;
+- (bool)setupFFTForChannel:(struct _VCAudioPowerSpectrumChannel { unsigned int x1; float *x2; float *x3; float *x4; float *x5; struct vDSP_DFT_SetupStruct {} *x6; struct DSPSplitComplex { float *x_7_1_1; float *x_7_1_2; } x7; float *x8; float x9; float *x10; float *x11; id x12; }*)arg1;
 - (bool)setupHanningWindow;
-- (bool)setupOctave2IndexTableForChannel:(/* Warning: unhandled struct encoding: '{_VCAudioPowerSpectrumChannel=I^f^f^f^f^{vDSP_DFT_SetupStruct}{DSPSplitComplex=^f^f}^ff^f^f@}' */ struct _VCAudioPowerSpectrumChannel { unsigned int x1; float *x2; float *x3; float *x4; float *x5; struct vDSP_DFT_SetupStruct {} *x6; struct DSPSplitComplex { float *x_7_1_1; float *x_7_1_2; } x7; float *x8; float x9; float *x10; float *x11; id x12; }*)arg1;
+- (bool)setupOctave2IndexTableForChannel:(struct _VCAudioPowerSpectrumChannel { unsigned int x1; float *x2; float *x3; float *x4; float *x5; struct vDSP_DFT_SetupStruct {} *x6; struct DSPSplitComplex { float *x_7_1_1; float *x_7_1_2; } x7; float *x8; float x9; float *x10; float *x11; id x12; }*)arg1;
 - (bool)setupOctave2IndexTableWithBinCount:(unsigned int)arg1;
 - (long long)streamToken;
 

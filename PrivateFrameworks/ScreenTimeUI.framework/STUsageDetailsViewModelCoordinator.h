@@ -33,7 +33,7 @@
 - (void).cxx_destruct;
 - (void)_refreshUsageDataAndReschedule;
 - (void)_refreshUsageDataWithCompletion:(id /* block */)arg1;
-- (id)_usageItemsWithUser:(id)arg1 device:(id)arg2 lastUpdatedDate:(id*)arg3 inManagedObjectContext:(id)arg4 error:(id*)arg5;
+- (id)_usageItemsWithUser:(id)arg1 device:(id)arg2 lastUpdatedDate:(id*)arg3 firstPickupOnReferenceDate:(id*)arg4 referenceDate:(id)arg5 inManagedObjectContext:(id)arg6 error:(id*)arg7;
 - (void)controllerDidChangeContent:(id)arg1;
 - (void)dealloc;
 - (id)devices;

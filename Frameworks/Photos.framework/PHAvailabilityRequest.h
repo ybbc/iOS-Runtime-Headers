@@ -6,7 +6,7 @@
     NSManagedObjectID * _assetObjectID;
     NSXPCConnection * _clientConnection;
     PLAssetsdClientServiceSender * _clientSender;
-    bool  _isCancelled;
+    _Atomic bool  _isCancelled;
     NSString * _taskIdentifier;
 }
 

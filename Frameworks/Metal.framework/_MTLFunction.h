@@ -9,7 +9,7 @@
     NSArray * _functionConstants;
     unsigned long long  _functionType;
     NSString * _label;
-    struct MTLLibraryData { int (**x1)(); int x2; id x3; } * _libraryData;
+    struct MTLLibraryData { int (**x1)(); int x2; id x3; id x4; } * _libraryData;
     NSString * _name;
     MTLType * _returnType;
     NSString * _unpackedFilePath;
@@ -30,7 +30,7 @@
 @property (readonly) unsigned long long functionType;
 @property (readonly) unsigned long long hash;
 @property (copy) NSString *label;
-@property (readonly) struct MTLLibraryData { int (**x1)(); int x2; id x3; }*libraryData;
+@property (readonly) struct MTLLibraryData { int (**x1)(); int x2; id x3; id x4; }*libraryData;
 @property long long lineNumber;
 @property (readonly) NSString *name;
 @property (readonly) bool needsFunctionConstantValues;
@@ -53,9 +53,9 @@
 - (id)formattedDescription:(unsigned long long)arg1;
 - (id)functionConstantsDictionary;
 - (unsigned long long)functionType;
-- (id)initWithName:(id)arg1 type:(unsigned long long)arg2 libraryData:(struct MTLLibraryData { int (**x1)(); int x2; id x3; }*)arg3 device:(id)arg4;
+- (id)initWithName:(id)arg1 type:(unsigned long long)arg2 libraryData:(struct MTLLibraryData { int (**x1)(); int x2; id x3; id x4; }*)arg3 device:(id)arg4;
 - (id)label;
-- (struct MTLLibraryData { int (**x1)(); int x2; id x3; }*)libraryData;
+- (struct MTLLibraryData { int (**x1)(); int x2; id x3; id x4; }*)libraryData;
 - (id)name;
 - (id)newArgumentEncoderWithBufferIndex:(unsigned long long)arg1;
 - (id)newArgumentEncoderWithBufferIndex:(unsigned long long)arg1 reflection:(id*)arg2;

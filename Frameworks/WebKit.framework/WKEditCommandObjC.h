@@ -10,7 +10,7 @@
 
 - (id).cxx_construct;
 - (void).cxx_destruct;
-- (struct WebEditCommandProxy { int (**x1)(); id x2; int x3; struct WebPageProxy {} *x4; }*)command;
+- (struct WebEditCommandProxy { int (**x1)(); id x2; unsigned long long x3; int x4; struct WebPageProxy {} *x5; }*)command;
 - (id)initWithWebEditCommandProxy:(struct Ref<WebKit::WebEditCommandProxy, WTF::DumbPtrTraits<WebKit::WebEditCommandProxy> > { struct WebEditCommandProxy {} *x1; }*)arg1;
 
 @end

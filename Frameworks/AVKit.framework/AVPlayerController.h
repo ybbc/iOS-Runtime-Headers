@@ -22,6 +22,7 @@
     bool  _didPreventSleepWhenStartingExternalPlayback;
     bool  _disablingAutomaticTermination;
     bool  _forceScanning;
+    bool  _handlesAudioSessionInterruptions;
     bool  _hasProtectedContent;
     bool  _ignoreRateKeyValueChange;
     bool  _inspectionSuspended;
@@ -105,8 +106,10 @@
 @property (getter=isDeviceBatteryChargingOrFull, nonatomic) bool deviceBatteryChargingOrFull;
 @property (getter=isDisablingAutomaticTermination, nonatomic) bool disablingAutomaticTermination;
 @property (nonatomic, readonly) NSError *error;
+@property (nonatomic) bool handlesAudioSessionInterruptions;
 @property (nonatomic) bool hasProtectedContent;
 @property (nonatomic, retain) AVValueTiming *maxTiming;
+@property (nonatomic, readonly) struct CGSize { double x1; double x2; } maximumVideoResolution;
 @property (nonatomic, retain) NSDictionary *metadata;
 @property (nonatomic, retain) AVValueTiming *minTiming;
 @property (nonatomic, readonly) AVObservationController *observationController;
@@ -168,11 +171,13 @@
 + (id)keyPathsForValuesAffectingHasVideo;
 + (id)keyPathsForValuesAffectingLoadedTimeRanges;
 + (id)keyPathsForValuesAffectingMaxTime;
++ (id)keyPathsForValuesAffectingMaximumVideoResolution;
 + (id)keyPathsForValuesAffectingMinTime;
 + (id)keyPathsForValuesAffectingMuted;
 + (id)keyPathsForValuesAffectingPictureInPicturePossible;
 + (id)keyPathsForValuesAffectingPlaying;
 + (id)keyPathsForValuesAffectingPlayingOnExternalScreen;
++ (id)keyPathsForValuesAffectingPreferredDisplayCriteria;
 + (id)keyPathsForValuesAffectingReadyToPlay;
 + (id)keyPathsForValuesAffectingReversePlaybackEndTime;
 + (id)keyPathsForValuesAffectingSeekableTimeRanges;
@@ -249,6 +254,7 @@
 - (long long)externalPlaybackType;
 - (struct { long long x1; int x2; unsigned int x3; long long x4; })forwardPlaybackEndTime;
 - (void)gotoEndOfSeekableRanges:(id)arg1;
+- (bool)handlesAudioSessionInterruptions;
 - (bool)hasAudioMediaSelectionOptions;
 - (bool)hasContent;
 - (bool)hasContentChapters;
@@ -296,6 +302,7 @@
 - (id)loadedTimeRanges;
 - (double)maxTime;
 - (id)maxTiming;
+- (struct CGSize { double x1; double x2; })maximumVideoResolution;
 - (id)mediaSelectionGroupForMediaCharacteristic:(id)arg1;
 - (id)metadata;
 - (double)minTime;
@@ -306,6 +313,7 @@
 - (void)pause:(id)arg1;
 - (void)play:(id)arg1;
 - (id)player;
+- (id)preferredDisplayCriteria;
 - (struct CGSize { double x1; double x2; })presentationSize;
 - (double)rate;
 - (double)rateBeforeScrubBegan;
@@ -351,6 +359,7 @@
 - (void)setDeviceBatteryChargingOrFull:(bool)arg1;
 - (void)setDisablingAutomaticTermination:(bool)arg1;
 - (void)setForwardPlaybackEndTime:(struct { long long x1; int x2; unsigned int x3; long long x4; })arg1;
+- (void)setHandlesAudioSessionInterruptions:(bool)arg1;
 - (void)setHasProtectedContent:(bool)arg1;
 - (void)setInspectionSuspended:(bool)arg1;
 - (void)setLegibleMediaSelectionOptions:(id)arg1;

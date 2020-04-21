@@ -11,9 +11,9 @@
     unsigned long long  _entityVersion;
     bool  _executeJournals;
     SGSuggestHistory * _history;
-    bool  _identityStoreDirty;
+    _Atomic bool  _identityStoreDirty;
     struct atomic_flag { 
-        bool _Value; 
+        _Atomic bool _Value; 
     }  _isClosed;
     bool  _isEphemeral;
     SGJournal * _journal;
@@ -36,7 +36,7 @@
     NSDictionary * _snippetsMigrations;
     unsigned long long  _snippetsVersion;
     SGSpotlightContactsAdapter * _spotlightContactsAdapter;
-    int  _spotlightReindexCount;
+    _Atomic int  _spotlightReindexCount;
     NSObject<OS_dispatch_queue> * _spotlightReindexQueue;
     bool  _waitForMigrations;
 }
@@ -327,7 +327,9 @@
 - (long long)migration_RebuildIdentityTables;
 - (long long)migration_RecreateFTSTableWithITS;
 - (long long)migration_RemoveEntityReferencesWithoutBundleIdentifier;
+- (long long)migration_deleteEmergencyExtractions;
 - (long long)migration_deleteInteractions;
+- (long long)migration_deleteSerializedContactsForEmergencyExtractions;
 - (long long)migration_rebuildFTSWithDetailEntityIDDocIDs;
 - (long long)migration_reimport;
 - (long long)migration_separateMessageEntities;

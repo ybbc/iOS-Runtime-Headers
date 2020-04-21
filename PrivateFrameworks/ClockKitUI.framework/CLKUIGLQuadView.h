@@ -10,6 +10,7 @@
     unsigned int  _defaultFramebuffer;
     unsigned int  _depthRenderbuffer;
     unsigned int  _isDepthBufferRequired;
+    unsigned int  _isTimeoutFixRequired;
     struct CGSize { 
         double width; 
         double height; 

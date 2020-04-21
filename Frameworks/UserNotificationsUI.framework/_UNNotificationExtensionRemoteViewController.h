@@ -7,7 +7,7 @@
     UIViewController<UNNotificationContentExtension> * _extensionViewController;
     <_UNNotificationExtensionHostInterface> * _hostService;
     struct atomic_flag { 
-        bool _Value; 
+        _Atomic bool _Value; 
     }  _invalidationOnceFlag;
     UIScrollViewDelayedTouchesBeganGestureRecognizer * _touchDelayGestureRecognizer;
 }

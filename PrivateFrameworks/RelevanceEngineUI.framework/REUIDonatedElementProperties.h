@@ -53,6 +53,7 @@
 - (void)_loadContentForUserActivity:(id)arg1 completion:(id /* block */)arg2;
 - (void)_loadContentForUserActivityOnShortcut:(id)arg1 completion:(id /* block */)arg2;
 - (id)_placeholderImageNameForBundleID:(id)arg1;
+- (id)_scaleImageForDisplay:(id)arg1;
 - (id)action;
 - (id)appIcon;
 - (id)appName;
@@ -76,7 +77,6 @@
 - (id)relevantShortcut;
 - (id)remoteBundleIdentifier;
 - (bool)requiresRemoteExecution;
-- (id)scaleImageForDisplay:(id)arg1;
 - (id)subtitle;
 - (bool)supportsLocalIntentExecution;
 - (id)title;

@@ -91,7 +91,7 @@
 - (void)stopHIDEventMonitor;
 - (void)threadHIDInputOffMain:(id)arg1;
 - (void)threadHIDInputOnMain:(id)arg1;
-- (void)updateControllerWithEvent:(struct __IOHIDEvent { struct __CFRuntimeBase { unsigned long long x_1_1_1; unsigned long long x_1_1_2; } x1; unsigned long long x2; unsigned long long x3; unsigned long long x4; unsigned int x5; char *x6; void *x7; void *x8; struct __CFArray {} *x9; struct __IOHIDEvent {} *x10; long long x11; long long x12; struct IOHIDEventData { unsigned int x_13_1_1; unsigned int x_13_1_2; unsigned int x_13_1_3; unsigned char x_13_1_4; unsigned char x_13_1_5[3]; } x13[0]; }*)arg1;
+- (void)updateControllerWithEvent:(struct __IOHIDEvent { struct __CFRuntimeBase { unsigned long long x_1_1_1; _Atomic unsigned long long x_1_1_2; } x1; unsigned long long x2; unsigned long long x3; unsigned long long x4; unsigned int x5; char *x6; void *x7; void *x8; struct __CFArray {} *x9; struct __IOHIDEvent {} *x10; long long x11; long long x12; struct IOHIDEventData { unsigned int x_13_1_1; unsigned int x_13_1_2; unsigned int x_13_1_3; unsigned char x_13_1_4; unsigned char x_13_1_5[3]; } x13[0]; }*)arg1;
 - (void)updateIdleTimer:(id)arg1;
 
 @end

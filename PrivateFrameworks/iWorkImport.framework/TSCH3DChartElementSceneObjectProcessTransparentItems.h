@@ -4,7 +4,7 @@
 
 @interface TSCH3DChartElementSceneObjectProcessTransparentItems : TSCH3DChartElementSceneObjectProcessItems
 
-- (void)processElementInfo:(const struct RenderElementInfo { id x1; id x2; /* Warning: Unrecognized filer type: 't' using 'void*' */ void*x3; void x4; void*x5; BOOL x6; void*x7; void*x8; int x9; in void*x10; void*x11; void*x12; union { int x_13_1_1; int x_13_1_2; int x_13_1_3; } x13; union { int x_14_1_1; int x_14_1_2; int x_14_1_3; } x14; }*)arg1 eachValue:(bool)arg2;
+- (void)processElementInfo:(const struct RenderElementInfo { id x1; id x2; id x3; struct tvec2<int> { union { int x_1_2_1; int x_1_2_2; int x_1_2_3; } x_4_1_1; union { int x_2_2_1; int x_2_2_2; int x_2_2_3; } x_4_1_2; } x4; bool x5; bool x6; bool x7; bool x8; }*)arg1 eachValue:(bool)arg2;
 - (bool)processEnumeratorSeries:(id)arg1;
 - (bool)pushStates;
 

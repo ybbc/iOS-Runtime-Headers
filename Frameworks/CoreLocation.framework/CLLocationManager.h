@@ -245,4 +245,8 @@
 + (id)regionDescription:(id)arg1;
 + (id)regionStateDescription:(long long)arg1;
 
+// Image: /System/Library/PrivateFrameworks/Stocks/StocksUI.framework/StocksUI
+
++ (void)su_enableSystemLocationAuthorization;
+
 @end

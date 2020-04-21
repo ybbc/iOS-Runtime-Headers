@@ -366,6 +366,14 @@
 - (id)hk_fontByAddingSymbolicTraits:(unsigned int)arg1;
 - (id)hk_fontByRemovingSymbolicTraits:(unsigned int)arg1;
 
+// Image: /System/Library/PrivateFrameworks/HeartRhythmUI.framework/HeartRhythmUI
+
++ (id)hr_roundedFontOfSize:(double)arg1;
++ (id)hr_roundedFontOfSize:(double)arg1 weight:(double)arg2;
++ (id)hr_roundedFontOfStyle:(id)arg1 weight:(double)arg2;
+
+- (id)hr_monospacedFont;
+
 // Image: /System/Library/PrivateFrameworks/LinkPresentation.framework/LinkPresentation
 
 - (id)_lp_CSSFontWeight;
@@ -439,6 +447,7 @@
 - (bool)fontHasSingleLineA;
 - (id)fontWithSingleLineA;
 - (id)fontWithTabularNumbers;
+- (id)ic_fontWithoutSingleLineA;
 
 // Image: /System/Library/PrivateFrameworks/PassKitUI.framework/PassKitUI
 

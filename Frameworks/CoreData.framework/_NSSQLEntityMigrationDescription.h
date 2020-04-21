@@ -22,11 +22,11 @@
 @property (nonatomic, readonly) NSSQLEntity *sourceEntity;
 
 - (void)_changeToCopyMigrationType;
-- (void)_generateSQLValueMappingsWithMigrationContext:(/* Warning: unhandled struct encoding: '{_NSSQLMigrationContext=@}' */ struct _NSSQLMigrationContext { id x1; })arg1;
-- (void)_populateSQLValuesByPropertyFromTransforms:(id)arg1 migrationContext:(/* Warning: unhandled struct encoding: '{_NSSQLMigrationContext=@}' */ struct _NSSQLMigrationContext { id x1; })arg2;
+- (void)_generateSQLValueMappingsWithMigrationContext:(struct _NSSQLMigrationContext { id x1; })arg1;
+- (void)_populateSQLValuesByPropertyFromTransforms:(id)arg1 migrationContext:(struct _NSSQLMigrationContext { id x1; })arg2;
 - (void)_populateSQLValuesForDestinationToOne:(id)arg1 fromSourceToOne:(id)arg2;
-- (void)_populateSQLValuesForVirtualToOnesWithMigrationContext:(/* Warning: unhandled struct encoding: '{_NSSQLMigrationContext=@}' */ struct _NSSQLMigrationContext { id x1; })arg1;
-- (id)_unmappedRelationshipForFormerlyVirtualToOne:(id)arg1 migrationContext:(/* Warning: unhandled struct encoding: '{_NSSQLMigrationContext=@}' */ struct _NSSQLMigrationContext { id x1; })arg2;
+- (void)_populateSQLValuesForVirtualToOnesWithMigrationContext:(struct _NSSQLMigrationContext { id x1; })arg1;
+- (id)_unmappedRelationshipForFormerlyVirtualToOne:(id)arg1 migrationContext:(struct _NSSQLMigrationContext { id x1; })arg2;
 - (id)addedManyToManys;
 - (void)dealloc;
 - (id)description;
@@ -38,7 +38,7 @@
 - (id)removedManyToManys;
 - (id)sourceEntitiesByToOneWithNewEntityKey;
 - (id)sourceEntity;
-- (id)sqlValueForColumnName:(id)arg1 migrationContext:(/* Warning: unhandled struct encoding: '{_NSSQLMigrationContext=@}' */ struct _NSSQLMigrationContext { id x1; })arg2;
+- (id)sqlValueForColumnName:(id)arg1 migrationContext:(struct _NSSQLMigrationContext { id x1; })arg2;
 - (id)transformedManyToManys;
 
 @end

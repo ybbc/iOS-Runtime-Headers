@@ -10,7 +10,7 @@
     }  _navigationResponse;
 }
 
-@property (readonly) /* Warning: unhandled struct encoding: '{Object=^^?@}' */ struct Object { int (**x1)(); id x2; }*_apiObject;
+@property (readonly) struct Object { int (**x1)(); id x2; }*_apiObject;
 @property (nonatomic, readonly) WKFrameInfo *_frame;
 @property (nonatomic, readonly) NSURLRequest *_request;
 @property (nonatomic, readonly) bool canShowMIMEType;
@@ -21,7 +21,7 @@
 @property (nonatomic, readonly, copy) NSURLResponse *response;
 @property (readonly) Class superclass;
 
-- (/* Warning: unhandled struct encoding: '{Object=^^?@}' */ struct Object { int (**x1)(); id x2; }*)_apiObject;
+- (struct Object { int (**x1)(); id x2; }*)_apiObject;
 - (id)_frame;
 - (id)_request;
 - (bool)canShowMIMEType;

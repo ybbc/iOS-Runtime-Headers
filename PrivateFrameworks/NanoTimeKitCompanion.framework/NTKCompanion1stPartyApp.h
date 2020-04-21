@@ -12,7 +12,7 @@
 @property (nonatomic, copy) NSString *iconName;
 
 + (id)allApps;
-+ (id)companionAppWithAppInfo:(/* Warning: unhandled struct encoding: '{_NTKCompanion1stPartyInfo=@@Q@}' */ struct _NTKCompanion1stPartyInfo { id x1; unsigned long long x2; id x3; })arg1;
++ (id)companionAppWithAppInfo:(struct _NTKCompanion1stPartyInfo { id x1; id x2; unsigned long long x3; id x4; })arg1;
 + (bool)complicationTypeMapsToRemovedSystemApp:(unsigned long long)arg1;
 
 - (void).cxx_destruct;
@@ -20,7 +20,7 @@
 - (unsigned long long)complicationType;
 - (id)icon;
 - (id)iconName;
-- (id)initWithAppInfo:(/* Warning: unhandled struct encoding: '{_NTKCompanion1stPartyInfo=@@Q@}' */ struct _NTKCompanion1stPartyInfo { id x1; unsigned long long x2; id x3; })arg1;
+- (id)initWithAppInfo:(struct _NTKCompanion1stPartyInfo { id x1; id x2; unsigned long long x3; id x4; })arg1;
 - (void)setComplicationType:(unsigned long long)arg1;
 - (void)setIcon:(id)arg1;
 - (void)setIconName:(id)arg1;

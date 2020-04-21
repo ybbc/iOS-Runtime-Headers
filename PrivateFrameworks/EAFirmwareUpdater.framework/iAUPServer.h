@@ -3,6 +3,7 @@
  */
 
 @interface iAUPServer : NSObject <HSModelDelegate> {
+    unsigned short  _accessoryCapabilities;
     bool  _byteEscape;
     <iAUPServerDelegate> * _delegate;
     NSObject<OS_dispatch_queue> * _dispatchQ;
@@ -12,9 +13,11 @@
     HSModel * _hsModel;
     int  _parserState;
     int  _serverState;
+    bool  _startEventSent;
     unsigned char  _telegramChecksum;
     NSMutableData * _telegramDataIn;
     unsigned int  _telegramLength;
+    unsigned int  _totalBytesDownloadedInCurrentSession;
     unsigned short  objectBlockTransferSizes;
 }
 
@@ -33,6 +36,7 @@
 - (id)delegate;
 - (id)dispatchQ;
 - (id)firmwareBundle;
+- (id)getNumberOfBytesDownloadedInCurrentSession;
 - (id)initInstance;
 - (void)logCommand:(unsigned char)arg1 payload:(char *)arg2 length:(unsigned int)arg3;
 - (int)parserState;
@@ -54,6 +58,7 @@
 - (void)setFirmwareBundle:(id)arg1;
 - (void)setHSModel:(id)arg1 fallbackModel:(id)arg2 error:(id)arg3;
 - (void)setParserState:(int)arg1;
+- (void)setResumeInfo:(char *)arg1 length:(unsigned int)arg2;
 - (unsigned int)supportedTargetProductIDCode;
 
 @end

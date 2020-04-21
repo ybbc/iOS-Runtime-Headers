@@ -39,6 +39,7 @@
 - (void)notifyUserVoiceProfileUploadComplete;
 - (double)remoteVoiceTriggerDelayTime;
 - (double)remoteVoiceTriggerEndpointTimeoutWithDefault:(double)arg1;
+- (bool)secondPassAudioLoggingEnabled;
 - (void)setAudioInjectionFilePath:(id)arg1;
 - (void)setFileLoggingIsEnabled:(bool)arg1;
 - (void)setFileLoggingLevel:(id)arg1;

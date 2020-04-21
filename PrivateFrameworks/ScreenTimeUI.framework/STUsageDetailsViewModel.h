@@ -24,6 +24,7 @@
 + (id)keyPathsForValuesAffectingSelectedUsageReport;
 
 - (void).cxx_destruct;
+- (void)_setRawUsageItems:(id)arg1 lastUpdatedDate:(id)arg2 firstPickupOnReferenceDate:(id)arg3 referenceDate:(id)arg4;
 - (bool)hasUsageData;
 - (id)init;
 - (id)lastUpdatedDate;

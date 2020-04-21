@@ -4,7 +4,7 @@
 
 @interface HDDataExternalSyncIdentifierEntity : HDHealthEntity
 
-+ (const struct { id x1; unsigned char x2; }*)columnDefinitionsWithCount:(unsigned long long*)arg1;
++ (const struct { id x1; id x2; unsigned char x3; }*)columnDefinitionsWithCount:(unsigned long long*)arg1;
 + (id)databaseTable;
 + (bool)enumerateValuesWithProfile:(id)arg1 error:(id*)arg2 handler:(id /* block */)arg3;
 + (id)foreignKeys;

@@ -43,7 +43,7 @@
     CKOperationGroup * _syncDownGroup;
     BRCSyncDownOperation * _syncDownOperation;
     BRCSyncOperationThrottle * _syncDownThrottle;
-    unsigned int  _syncState;
+    _Atomic unsigned int  _syncState;
     NSArray * _syncThrottles;
     float  _syncUpBatchSizeMultiplier;
     BRCSyncBudgetThrottle * _syncUpBudget;
@@ -194,6 +194,8 @@
 - (bool)hasHighPriorityWatchers;
 - (bool)hasInitialFaultsEverLive;
 - (bool)hasInitialFaultsLive;
+- (bool)hasItems;
+- (bool)hasItemsWithInFlightDiffs;
 - (unsigned long long)hash;
 - (id)init;
 - (id)initWithMangledID:(id)arg1 dbRowID:(id)arg2 db:(id)arg3 plist:(id)arg4 session:(id)arg5 initialCreation:(bool)arg6;

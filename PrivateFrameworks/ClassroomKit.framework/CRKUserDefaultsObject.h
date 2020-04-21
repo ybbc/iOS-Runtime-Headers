@@ -9,7 +9,7 @@
 
 @property (nonatomic, readonly) NSUserDefaults *defaults;
 @property (nonatomic, readonly, copy) NSString *key;
-@property (retain) id value;
+@property (copy) id value;
 
 - (void).cxx_destruct;
 - (id)defaults;

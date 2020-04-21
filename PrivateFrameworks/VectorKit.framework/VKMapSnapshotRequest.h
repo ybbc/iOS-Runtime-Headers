@@ -30,7 +30,7 @@
 @property (nonatomic) unsigned int scale;
 @property (nonatomic) struct CGSize { double x1; double x2; } size;
 
-- (struct VKRequestKey { struct { struct { double x_1_2_1; double x_1_2_2; } x_1_1_1; struct { double x_2_2_1; double x_2_2_2; } x_1_1_2; } x1; long long x2; struct CGSize { double x_3_1_1; double x_3_1_2; } x3; id x4; })_requestKey;
+- (struct VKRequestKey { struct { struct { double x_1_2_1; double x_1_2_2; } x_1_1_1; struct { double x_2_2_1; double x_2_2_2; } x_1_1_2; } x1; long long x2; struct CGSize { double x_3_1_1; double x_3_1_2; } x3; id x4; unsigned short x5; })_requestKey;
 - (void)dealloc;
 - (id)description;
 - (unsigned long long)hash;

@@ -3,7 +3,7 @@
  */
 
 @interface _NSCFURLProtocol : NSURLProtocol {
-    struct NSCFURLProtocolClient { int (**x1)(); int (**x2)(); id x3; } * _client;
+    struct NSCFURLProtocolClient { int (**x1)(); int (**x2)(); id x3; id x4; } * _client;
     struct _CFURLProtocol { } * _prot;
 }
 

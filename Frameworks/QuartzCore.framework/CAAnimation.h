@@ -130,8 +130,10 @@
 
 // Image: /System/Library/PrivateFrameworks/LocalAuthenticationPrivateUI.framework/LocalAuthenticationPrivateUI
 
+- (id /* block */)laui_didStartHandler;
+- (id /* block */)laui_didStopHandler;
+- (void)laui_setDidStartHandler:(id /* block */)arg1;
 - (void)laui_setDidStopHandler:(id /* block */)arg1;
-- (id /* block */)pkui_didStopHandler;
 
 // Image: /System/Library/PrivateFrameworks/PassKitCore.framework/PassKitCore
 

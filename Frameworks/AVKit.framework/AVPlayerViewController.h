@@ -4,6 +4,7 @@
 
 @interface AVPlayerViewController : UIViewController <AVContentTransitioningDelegate, AVFullScreenViewControllerDelegate, AVPictureInPictureControllerDelegate, AVPlaybackControlsVisibilityControllerDelegate, AVTransitionControllerDelegate, UIGestureRecognizerDelegate, UIPopoverPresentationControllerDelegate> {
     bool  __hasBegunObservation;
+    NSMutableDictionary * __localizedDiscoverabilityTitleForKeyCommandLocalizationKey;
     long long  __numberOfTrackedUserInteractions;
     AVObservationController * __observationController;
     NSMutableDictionary * __targetVideoGravitiesForLayoutClass;
@@ -35,20 +36,21 @@
     bool  _hasClientSetVideoGravity;
     id /* block */  _interactiveDismissalCompletionHandler;
     UIPopoverPresentationController * _mediaSelectionPopoverPresentationController;
+    NSString * _overrideRouteContextUID;
+    unsigned long long  _overrideRouteSharingPolicy;
     AVPictureInPictureController * _pictureInPictureController;
     NSDictionary * _pixelBufferAttributes;
     AVPlaybackControlsController * _playbackControlsController;
     bool  _playbackControlsIncludeVolumeControls;
     bool  _playbackControlsViewControllerPictureInPictureButtonEnabled;
     AVPlaybackControlsVisibilityController * _playbackControlsVisibilityController;
-    UIScreen * _playbackTargetScreen;
     AVPlayer * _player;
     AVPlayerController * _playerController;
     __AVPlayerLayerView * _playerLayerView;
     bool  _playerShouldAutoplay;
     AVPlayerView * _playerViewControllerView;
     bool  _requiresLinearPlayback;
-    UIWindow * _secondScreenWindow;
+    AVSecondScreenConnection * _secondScreenConnection;
     bool  _shouldUseNetworkingResourcesForLiveStreamingWhilePaused;
     bool  _showsExitFullScreenButton;
     bool  _showsPlaybackControls;
@@ -61,6 +63,7 @@
 }
 
 @property (nonatomic) bool _hasBegunObservation;
+@property (nonatomic, readonly) NSMutableDictionary *_localizedDiscoverabilityTitleForKeyCommandLocalizationKey;
 @property (setter=_setNumberOfTrackedUserInteractions:, nonatomic) long long _numberOfTrackedUserInteractions;
 @property (nonatomic, readonly) AVObservationController *_observationController;
 @property (nonatomic, readonly) NSMutableDictionary *_targetVideoGravitiesForLayoutClass;
@@ -95,6 +98,8 @@
 @property (nonatomic, readonly) UIView *iAdPrerollView;
 @property (nonatomic, readonly) UIView *interactiveContentOverlayView;
 @property (nonatomic, copy) id /* block */ interactiveDismissalCompletionHandler;
+@property (nonatomic, copy) NSString *overrideRouteContextUID;
+@property (nonatomic) unsigned long long overrideRouteSharingPolicy;
 @property (getter=isPictureInPictureActive, nonatomic, readonly) bool pictureInPictureActive;
 @property (getter=isPictureInPicturePossible, nonatomic, readonly) bool pictureInPicturePossible;
 @property (getter=isPictureInPictureSuspended, nonatomic, readonly) bool pictureInPictureSuspended;
@@ -105,7 +110,6 @@
 @property (nonatomic) bool playbackControlsIncludeTransportControls;
 @property (nonatomic) bool playbackControlsIncludeVolumeControls;
 @property (nonatomic, readonly) AVPlaybackControlsVisibilityController *playbackControlsVisibilityController;
-@property (nonatomic, retain) UIScreen *playbackTargetScreen;
 @property (nonatomic, retain) AVPlayer *player;
 @property (nonatomic, retain) AVPlayerController *playerController;
 @property (nonatomic) long long preferredUnobscuredArea;
@@ -113,7 +117,6 @@
 @property (getter=isPresentingFullScreenFromInline, nonatomic, readonly) bool presentingFullScreenFromInline;
 @property (getter=isReadyForDisplay, nonatomic, readonly) bool readyForDisplay;
 @property (nonatomic) bool requiresLinearPlayback;
-@property (nonatomic, retain) UIWindow *secondScreenWindow;
 @property (nonatomic) bool shouldUseNetworkingResourcesForLiveStreamingWhilePaused;
 @property (nonatomic) bool showsExitFullScreenButton;
 @property (nonatomic) bool showsMinimalPlaybackControlsWhenEmbeddedInline;
@@ -171,6 +174,7 @@
 - (bool)_isTrackingUserInteractionWithInteractiveView;
 - (bool)_isTransitioningToOrFromFullScreen;
 - (bool)_isUnsupportedContent;
+- (id)_localizedDiscoverabilityTitleForKeyCommandLocalizationKey;
 - (void)_mediaSelectionDoneButtonTapped:(id)arg1;
 - (bool)_modalPresentationStyleIsFullScreen;
 - (void)_notifyDelegateOfMetricsCollectionEvent:(long long)arg1;
@@ -260,6 +264,8 @@
 - (void)loadView;
 - (void)mediaSelectionButtonTapped:(id)arg1;
 - (bool)modalPresentationCapturesStatusBarAppearance;
+- (id)overrideRouteContextUID;
+- (unsigned long long)overrideRouteSharingPolicy;
 - (void)pictureInPictureButtonTapped:(id)arg1;
 - (void)pictureInPictureController:(id)arg1 failedToStartPictureInPictureWithError:(id)arg2;
 - (void)pictureInPictureController:(id)arg1 restoreUserInterfaceForPictureInPictureStopWithCompletionHandler:(id /* block */)arg2;
@@ -278,7 +284,6 @@
 - (id)playbackControlsVisibilityController;
 - (void)playbackControlsVisibilityController:(id)arg1 animateAlongsideVisibilityAnimationsWithAnimationCoordinator:(id)arg2 appearingViews:(id)arg3 disappearingViews:(id)arg4;
 - (void)playbackControlsVisibilityController:(id)arg1 updateStatusBarAppearanceUsingAnimator:(id)arg2;
-- (id)playbackTargetScreen;
 - (id)player;
 - (id)playerController;
 - (void)popoverPresentationControllerDidDismissPopover:(id)arg1;
@@ -292,7 +297,6 @@
 - (void)prepareForFinishingInteractiveTransition:(id /* block */)arg1;
 - (void)prepareForPopoverPresentation:(id)arg1;
 - (bool)requiresLinearPlayback;
-- (id)secondScreenWindow;
 - (void)setAllowsEnteringFullScreen:(bool)arg1;
 - (void)setAllowsPictureInPicturePlayback:(bool)arg1;
 - (void)setCanHideInteractiveContentOverlayView:(bool)arg1;
@@ -308,17 +312,17 @@
 - (void)setExitsFullScreenWhenPlaybackEnds:(bool)arg1;
 - (void)setFinishPreparingForInteractiveDismissalHandler:(id /* block */)arg1;
 - (void)setInteractiveDismissalCompletionHandler:(id /* block */)arg1;
+- (void)setOverrideRouteContextUID:(id)arg1;
+- (void)setOverrideRouteSharingPolicy:(unsigned long long)arg1;
 - (void)setPixelBufferAttributes:(id)arg1;
 - (void)setPlayButtonHandlerForLazyPlayerLoading:(id /* block */)arg1;
 - (void)setPlaybackControlsIncludeDisplayModeControls:(bool)arg1;
 - (void)setPlaybackControlsIncludeTransportControls:(bool)arg1;
 - (void)setPlaybackControlsIncludeVolumeControls:(bool)arg1;
-- (void)setPlaybackTargetScreen:(id)arg1;
 - (void)setPlayer:(id)arg1;
 - (void)setPlayerController:(id)arg1;
 - (void)setPreferredUnobscuredArea:(long long)arg1;
 - (void)setRequiresLinearPlayback:(bool)arg1;
-- (void)setSecondScreenWindow:(id)arg1;
 - (void)setShouldUseNetworkingResourcesForLiveStreamingWhilePaused:(bool)arg1;
 - (void)setShowsExitFullScreenButton:(bool)arg1;
 - (void)setShowsMinimalPlaybackControlsWhenEmbeddedInline:(bool)arg1;
@@ -332,6 +336,7 @@
 - (void)setVideoGravityForTransitioningContent:(id)arg1;
 - (void)setView:(id)arg1;
 - (void)setVolumeControlsCanShowSlider:(bool)arg1;
+- (void)setWebKitOverrideRouteSharingPolicy:(unsigned long long)arg1 routingContextUID:(id)arg2;
 - (void)set_hasBegunObservation:(bool)arg1;
 - (bool)shouldUseNetworkingResourcesForLiveStreamingWhilePaused;
 - (void)showFullScreenPresentationFromView:(id)arg1 completion:(id /* block */)arg2;

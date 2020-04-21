@@ -32,7 +32,7 @@
 - (bool)_prepareDBStatements;
 - (void)cleanupAndShutdown_Lock;
 - (id)createCachedResponseDictForTransmissionWithKey:(id)arg1 objectVersion:(long long)arg2 storagePolicy:(int)arg3 responseObjectBytes:(char *)arg4 responseObjectBytesLength:(int)arg5 protoProps:(char *)arg6 protoPropsLength:(int)arg7 receiverDataBytes:(char *)arg8 receiverDataLength:(int)arg9 requestObjectBytes:(char *)arg10 requestObjectBytesLength:(int)arg11 userInfoBytes:(const char *)arg12 useInfoLength:(int)arg13 isDataOnFS:(bool)arg14 cacheDirPath:(id)arg15 cacheFileName:(id)arg16;
-- (struct _CFCachedURLResponse { struct __CFRuntimeBase { unsigned long long x_1_1_1; unsigned long long x_1_1_2; } x1; struct __CFCachedURLResponse {} *x2; }*)createCachedResponseForKey:(id)arg1 cacheDataPath:(id*)arg2 cacheDataFile:(id*)arg3 caller:(struct _CFURLCache { struct __CFRuntimeBase { unsigned long long x_1_1_1; unsigned long long x_1_1_2; } x1; struct shared_ptr<__CFURLCache> { struct __CFURLCache {} *x_2_1_1; struct __shared_weak_count {} *x_2_1_2; } x2; }*)arg4;
+- (struct _CFCachedURLResponse { struct __CFRuntimeBase { unsigned long long x_1_1_1; _Atomic unsigned long long x_1_1_2; } x1; struct __CFCachedURLResponse {} *x2; }*)createCachedResponseForKey:(id)arg1 cacheDataPath:(id*)arg2 cacheDataFile:(id*)arg3 caller:(struct _CFURLCache { struct __CFRuntimeBase { unsigned long long x_1_1_1; _Atomic unsigned long long x_1_1_2; } x1; struct shared_ptr<__CFURLCache> { struct __CFURLCache {} *x_2_1_1; struct __shared_weak_count {} *x_2_1_2; } x2; }*)arg4;
 - (id)dbPathDirectory;
 - (id)dbPathFile;
 - (void)dealloc;
@@ -41,7 +41,7 @@
 - (id)initWithDBPath:(id)arg1 maxSize:(long long)arg2;
 - (bool)isDBOpen;
 - (bool)openAndPrepareReadCacheDB;
-- (void)performTimeRelativeLookupWithInitialTime:(id)arg1 caller:(struct _CFURLCache { struct __CFRuntimeBase { unsigned long long x_1_1_1; unsigned long long x_1_1_2; } x1; struct shared_ptr<__CFURLCache> { struct __CFURLCache {} *x_2_1_1; struct __shared_weak_count {} *x_2_1_2; } x2; }*)arg2;
+- (void)performTimeRelativeLookupWithInitialTime:(id)arg1 caller:(struct _CFURLCache { struct __CFRuntimeBase { unsigned long long x_1_1_1; _Atomic unsigned long long x_1_1_2; } x1; struct shared_ptr<__CFURLCache> { struct __CFURLCache {} *x_2_1_1; struct __shared_weak_count {} *x_2_1_2; } x2; }*)arg2;
 - (unsigned char)performTimeRelativeLookups;
 - (id)recentTimeStampLookups;
 - (void)setDbPathDirectory:(id)arg1;

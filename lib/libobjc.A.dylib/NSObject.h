@@ -154,33 +154,6 @@
 - (id)debugHierarchyPropertyDescriptions;
 - (id)debugHierarchyValueForPropertyWithName:(id)arg1;
 
-// Image: /System/Library/AccessibilityBundles/QuickSpeak.bundle/QuickSpeak
-
-- (void)_accessibilityCacheContentIfNecessary;
-- (void)_accessibilityHandleFinishSpeaking;
-- (void)_accessibilityPauseSpeaking:(id)arg1;
-- (bool)_accessibilityQScanPerformAction:(SEL)arg1 withSender:(id)arg2;
-- (bool)_accessibilityQuickSpeakContentIsSpeakable;
-- (void)_accessibilityQuickSpeakTextRectsWithRange:(struct _NSRange { unsigned long long x1; unsigned long long x2; })arg1 string:(id)arg2 highlightRects:(id)arg3 sentenceRects:(id)arg4 singleTextRect:(struct CGRect { struct CGPoint { double x_1_1_1; double x_1_1_2; } x1; struct CGSize { double x_2_1_1; double x_2_1_2; } x2; }*)arg5;
-- (bool)_accessibilityShouldShowPauseBubble;
-- (bool)_accessibilityShouldShowSpeakBubble;
-- (bool)_accessibilityShouldShowSpeakLanguageBubble;
-- (bool)_accessibilityShouldShowSpeakSpellOut;
-- (bool)_accessibilityShouldUpdateQuickSpeakContent;
-- (void)_accessibilitySpeak:(id)arg1;
-- (void)_accessibilitySpeakLanguageSelection:(id)arg1;
-- (id)_accessibilitySpeakSelectionAssociatedScrollView;
-- (id)_accessibilitySpeakSelectionTextInputResponder;
-- (void)_accessibilitySpeakSentence:(id)arg1;
-- (void)_accessibilitySpeakSpellOut:(id)arg1;
-- (void)_accessibilitySpeakWithLanguage:(id)arg1;
-- (bool)_accessibilitySystemShouldShowPauseBubble;
-- (bool)_accessibilitySystemShouldShowSpeakBubble;
-- (bool)_accessibilitySystemShouldShowSpeakBubbleCommon;
-- (bool)_accessibilitySystemShouldShowSpeakLanguageBubble;
-- (bool)_accessibilitySystemShouldShowSpeakSentence;
-- (bool)_accessibilitySystemShouldShowSpeakSpellOut;
-
 // Image: /System/Library/Frameworks/CloudKit.framework/CloudKit
 
 + (id)CKSQLiteClassName;
@@ -379,6 +352,7 @@
 
 // Image: /System/Library/Frameworks/Intents.framework/Intents
 
+- (id)_intents_indexingRepresentation;
 - (id)_intents_localizedCopyForLanguage:(id)arg1;
 - (id)_intents_readableDescriptionForLanguage:(id)arg1;
 - (SEL)_intents_setterForPropertyWithName:(id)arg1;
@@ -491,6 +465,10 @@
 - (void)_accessibilitySetValue:(id)arg1 forKey:(id)arg2 storageMode:(int)arg3;
 - (unsigned long long)_accessibilityUnsignedIntegerValueForKey:(id)arg1;
 - (id)_accessibilityValueForKey:(id)arg1;
+- (bool)_axIsWrappedPointer;
+- (bool)_axIsWrappedPointer;
+- (void)_axSetIsWrappedPointer:(bool)arg1;
+- (void)_axSetIsWrappedPointer:(bool)arg1;
 - (void)_ax_appendPrettyDescriptionToString:(id)arg1 indentationString:(id)arg2 visitedCollections:(id)arg3;
 - (id)_safeValidatedValueForKey:(id)arg1 expectedClass:(Class)arg2 expectedTypeEncoding:(const char *)arg3;
 - (id)_safeValidatedValueForKey:(id)arg1 expectedClass:(Class)arg2 possibleExpectedTypeEncodings:(const char *)arg3;
@@ -568,12 +546,9 @@
 + (id)bs_secureDecodedFromData:(id)arg1 withAdditionalClasses:(id)arg2;
 + (id)bs_secureObjectFromData:(id)arg1 ofClass:(Class)arg2;
 + (id)bs_secureObjectFromData:(id)arg1 ofClasses:(id)arg2;
-+ (bool)bs_synchronousWrapper:(id /* block */)arg1 timeout:(double)arg2;
 
 - (id)bs_encoded;
 - (bool)bs_isPlistableType;
-- (bool)bs_performSynchronously:(id /* block */)arg1;
-- (bool)bs_performSynchronously:(id /* block */)arg1 timeout:(double)arg2;
 - (id)bs_secureEncoded;
 
 // Image: /System/Library/PrivateFrameworks/BulletinBoard.framework/BulletinBoard
@@ -1051,8 +1026,8 @@
 
 // Image: /System/Library/PrivateFrameworks/Swift/libswiftFoundation.dylib
 
-+ (bool)_old_unswizzled_automaticallyNotifiesObserversForKey;
-+ (id)_old_unswizzled_keyPathsForValuesAffectingValueForKey;
++ (bool)_old_unswizzled_automaticallyNotifiesObserversForKey:(id)arg1;
++ (id)_old_unswizzled_keyPathsForValuesAffectingValueForKey:(id)arg1;
 
 // Image: /System/Library/PrivateFrameworks/Swift/libswiftObjectiveC.dylib
 
@@ -1104,7 +1079,6 @@
 + (void)_accessibilityUpdateOpaqueFocusStateForTechnology:(id)arg1 oldElement:(id)arg2 newElement:(id)arg3;
 + (id)accessibilityBundles;
 + (void)accessibilityInitializeBundle;
-+ (Class)safeCategoryBaseClass;
 
 - (bool)__accessibilityReadAllOnFocus;
 - (id)__accessibilityRetrieveFrameOrPathDelegate;
@@ -1120,6 +1094,7 @@
 - (id)_accessibilityAccessibleDescendants;
 - (void)_accessibilityActionBlock:(id /* block */*)arg1 andValue:(id*)arg2 forKey:(unsigned int)arg3;
 - (bool)_accessibilityActivateDragWithDescriptorDictionary:(id)arg1 forAssistiveTechnology:(id)arg2;
+- (bool)_accessibilityActivateParagraphInTextViewRange:(struct _NSRange { unsigned long long x1; unsigned long long x2; })arg1;
 - (float)_accessibilityActivationDelay;
 - (id)_accessibilityActiveKeyboard;
 - (id)_accessibilityActiveURL;
@@ -1211,6 +1186,7 @@
 - (unsigned int)_accessibilityContextId;
 - (id)_accessibilityControlDescendantWithAction:(SEL)arg1;
 - (id)_accessibilityControlDescendantWithTarget:(id)arg1;
+- (bool)_accessibilityControlShouldPerformAccessibilityActivate;
 - (struct CGPoint { double x1; double x2; })_accessibilityConvertPointToViewSpace:(struct CGPoint { double x1; double x2; })arg1;
 - (void)_accessibilityConvertStyleAttributesToAccessibility:(id)arg1;
 - (id)_accessibilityConvertSystemBoundedPathToContextSpace:(id)arg1;
@@ -1415,7 +1391,6 @@
 - (bool)_accessibilityIsStarkElement;
 - (bool)_accessibilityIsStrongPasswordField;
 - (bool)_accessibilityIsTableCell;
-- (bool)_accessibilityIsTextInput;
 - (bool)_accessibilityIsTitleElement;
 - (bool)_accessibilityIsTouchContainer;
 - (bool)_accessibilityIsTourGuideRunning;
@@ -1543,9 +1518,6 @@
 - (id)_accessibilityPublicCustomRotorName:(id)arg1;
 - (bool)_accessibilityPublicCustomRotorVisibleInTouchRotor:(id)arg1;
 - (id)_accessibilityPublicCustomRotors;
-- (id)_accessibilityQuickSpeakContent;
-- (id)_accessibilityQuickSpeakEnclosingSentence:(id*)arg1;
-- (id)_accessibilityQuickSpeakTokenizer;
 - (struct _NSRange { unsigned long long x1; unsigned long long x2; })_accessibilityRangeForLineNumber:(long long)arg1;
 - (struct _NSRange { unsigned long long x1; unsigned long long x2; })_accessibilityRangeForLineNumberAndColumn:(id)arg1;
 - (struct _NSRange { unsigned long long x1; unsigned long long x2; })_accessibilityRangeForTextMarker:(id)arg1;
@@ -1644,6 +1616,7 @@
 - (void)_accessibilitySetBlock:(void*)arg1 forAttribute:(long long)arg2;
 - (void)_accessibilitySetCameraIrisOpen:(bool)arg1;
 - (void)_accessibilitySetContextDescriptors:(id)arg1;
+- (void)_accessibilitySetControlShouldPerformAccessibilityActivate:(bool)arg1;
 - (void)_accessibilitySetCurrentGesture:(id)arg1;
 - (void)_accessibilitySetCurrentWordInPageContext:(id)arg1;
 - (void)_accessibilitySetElementHelp:(id)arg1;
@@ -1868,6 +1841,8 @@
 - (id)_axOutermostScrollParent;
 - (struct CGRect { struct CGPoint { double x_1_1_1; double x_1_1_2; } x1; struct CGSize { double x_2_1_1; double x_2_1_2; } x2; })_axScreenBoundsForBoundsCheck;
 - (void)_axSetCachedHasTabBarAncestor:(id)arg1;
+- (void)_axSetStoredControlShouldPerformAccessibilityActivate:(id)arg1;
+- (id)_axStoredControlShouldPerformAccessibilityActivate;
 - (id)_axSuperviews;
 - (void)_cleanupRotorCache;
 - (id)_getAccessibilityAttributedString;
@@ -1877,6 +1852,7 @@
 - (id)_privateAccessibilityCustomActions;
 - (id)_retrieveCustomActions;
 - (void)_setAccessibilityActivateBlock:(id /* block */)arg1;
+- (void)_setAccessibilityActivateParagraphInTextViewRangeBlock:(id /* block */)arg1;
 - (void)_setAccessibilityActivationPointBlock:(id /* block */)arg1;
 - (void)_setAccessibilityAdditionalTraitsBlock:(id /* block */)arg1;
 - (void)_setAccessibilityDecrementBlock:(id /* block */)arg1;
@@ -2124,6 +2100,10 @@
 - (id)storedAccessibilityViewIsModal;
 - (id)storedIsAccessibilityElement;
 - (id)storedShouldGroupAccessibilityChildren;
+
+// Image: /System/Library/PrivateFrameworks/VisualVoicemail.framework/VisualVoicemail
+
++ (id)vm_classIdentifier;
 
 // Image: /System/Library/PrivateFrameworks/VoiceShortcuts.framework/VoiceShortcuts
 

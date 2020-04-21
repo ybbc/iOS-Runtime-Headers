@@ -23,8 +23,8 @@
 
 - (id).cxx_construct;
 - (void).cxx_destruct;
-- (void)_configureEntityValueContextOutput:(id)arg1 forEntry:(const /* Warning: unhandled struct encoding: '{EditingEntityProviderEntry=qq@}' */ struct EditingEntityProviderEntry { long long x1; long long x2; id x3; }*)arg2;
-- (id)_entityValueProviderForEntry:(const /* Warning: unhandled struct encoding: '{EditingEntityProviderEntry=qq@}' */ struct EditingEntityProviderEntry { long long x1; long long x2; id x3; }*)arg1;
+- (void)_configureEntityValueContextOutput:(id)arg1 forEntry:(const struct EditingEntityProviderEntry { long long x1; long long x2; id x3; }*)arg2;
+- (id)_entityValueProviderForEntry:(const struct EditingEntityProviderEntry { long long x1; long long x2; id x3; }*)arg1;
 - (void)_registerChangeRecord:(id)arg1;
 - (void)_resetEntityValueContextOutput:(id)arg1;
 - (id)changeRecords;

@@ -847,14 +847,6 @@
 - (id)willGenerateCancelPreview;
 - (void)willMoveToWindow:(id)arg1;
 
-// Image: /System/Library/AccessibilityBundles/QuickSpeak.bundle/QuickSpeak
-
-+ (Class)safeCategoryBaseClass;
-
-- (id)_accessibilityQuickSpeakContent;
-- (id)_accessibilityQuickSpeakTokenizer;
-- (bool)_accessibilitySystemShouldShowSpeakBubbleCommon;
-
 // Image: /System/Library/Frameworks/ContactsUI.framework/ContactsUI
 
 - (void)_cnui_applyContactStyle;

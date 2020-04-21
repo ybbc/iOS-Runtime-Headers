@@ -16,11 +16,11 @@
     int  fLatencyAlertThreshold;
     int  fLockScreenToken;
     int  fMeasureLatencyState;
-    /* Warning: unhandled struct encoding: '{Dispatcher=^^?@}' */ struct Dispatcher { int (**x1)(); id x2; } * fPowerStateDispatcher;
+    struct Dispatcher { int (**x1)(); id x2; } * fPowerStateDispatcher;
     NSObject<OS_dispatch_queue> * fPrivateQueue;
     NSString * fProcessName;
     int  fScreenDimmingNotificationToken;
-    /* Warning: unhandled struct encoding: '{Dispatcher=^^?@}' */ struct Dispatcher { int (**x1)(); id x2; } * fWakeDispatcher;
+    struct Dispatcher { int (**x1)(); id x2; } * fWakeDispatcher;
     struct unique_ptr<CMWakeGestureVisitor, std::__1::default_delete<CMWakeGestureVisitor> > { 
         struct __compressed_pair<CMWakeGestureVisitor *, std::__1::default_delete<CMWakeGestureVisitor> > { 
             struct CMWakeGestureVisitor {} *__value_; 

@@ -26,7 +26,7 @@
     bool  _requirePasscode;
     bool  _requireRestrictionsCode;
     bool  _returningFromPINSheetWithSuccess;
-    bool  _shouldEraseDataPlans;
+    bool  _shouldEraseCellularPlans;
     bool  _shouldEraseWithFMiP;
     bool  _shouldSkipBasebandStatusCheck;
     bool  _shouldSkipCloudStatusCheck;

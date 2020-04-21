@@ -16,18 +16,18 @@
     NSString * __name;
     BOOL  __nameBuffer;
     int  __numExecOps;
-    unsigned long long  __operationCount;
-    unsigned char  __operationCountObserverCount;
-    unsigned char  __operationsObserverCount;
-    bool  __overcommit;
+    _Atomic unsigned long long  __operationCount;
+    _Atomic unsigned char  __operationCountObserverCount;
+    _Atomic unsigned char  __operationsObserverCount;
+    _Atomic bool  __overcommit;
     NSOperation * __pendingFirstOperation;
     NSOperation * __pendingLastOperation;
-    unsigned char  __propertyQoS;
+    _Atomic unsigned char  __propertyQoS;
     struct os_unfair_lock_s { 
         unsigned int _os_unfair_lock_opaque; 
     }  __queueLock;
-    bool  __suspended;
-    unsigned char  __suspendedObserverCount;
+    _Atomic bool  __suspended;
+    _Atomic unsigned char  __suspendedObserverCount;
 }
 
 - (void)dealloc;

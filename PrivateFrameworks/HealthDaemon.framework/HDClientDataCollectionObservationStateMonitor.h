@@ -5,7 +5,7 @@
 @interface HDClientDataCollectionObservationStateMonitor : NSObject <HDProcessStateObserver> {
     HDXPCClient * _client;
     <HDClientDataCollectionObservationStateMonitorDelegate> * _delegate;
-    bool  _invalidated;
+    _Atomic bool  _invalidated;
     NSLock * _lock;
     HDProfile * _profile;
 }

@@ -9,11 +9,11 @@
 @property (nonatomic, readonly) long long length;
 
 - (const unsigned short*)_fastCharacterContents;
-- (unsigned short)characterAtIndex;
-- (id)copyWithZone;
-- (void)getCharactersrange;
+- (unsigned short)characterAtIndex:(long long)arg1;
+- (id)copyWithZone:(void*)arg1;
+- (void)getCharacters:(unsigned short*)arg1 range:(struct { long long x1; long long x2; })arg2;
 - (id)init;
-- (id)initWithCoder;
+- (id)initWithCoder:(id)arg1;
 - (long long)length;
 
 @end

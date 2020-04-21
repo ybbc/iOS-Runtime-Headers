@@ -80,6 +80,8 @@
 - (double)notificationsPromotingEngageRateThreshold;
 - (double)notificationsQuietingEngageRateStd;
 - (double)notificationsQuietingEngageRateThreshold;
+- (double)notificationsQuietingProbabilityThreshold;
+- (bool)notificationsQuietingUseLogisticRegression;
 - (double)notificationsSeedSamplingRate;
 - (double)nsuaDonationWeight;
 - (int)numberOfActionsToKeepForLogging;

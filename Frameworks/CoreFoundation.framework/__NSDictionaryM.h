@@ -3,7 +3,7 @@
  */
 
 @interface __NSDictionaryM : NSMutableDictionary {
-    /* Warning: Unrecognized filer type: '^' using 'void*' */ void* cow;
+    _Atomic struct __cow_state_t {} * cow;
     /* Warning: unhandled struct encoding: '{?="buffer"^@"state"(?=""{?="mutations"Q}""{?="muts"I"used"b25"kvo"b1"szidx"b6})}' */ struct { 
         state **buffer; 
     }  storage;
@@ -21,7 +21,7 @@
 - (void)_mutate;
 - (id)copyWithZone:(struct _NSZone { }*)arg1;
 - (unsigned long long)count;
-- (unsigned long long)countByEnumeratingWithState:(struct { unsigned long long x1; id *x2; unsigned long long x3; unsigned long long x4[5]; }*)arg1 objects:(id*)arg2 count:(unsigned long long)arg3;
+- (unsigned long long)countByEnumeratingWithState:(struct { unsigned long long x1; id *x2; unsigned long long *x3; unsigned long long x4[5]; }*)arg1 objects:(id*)arg2 count:(unsigned long long)arg3;
 - (void)dealloc;
 - (void)enumerateKeysAndObjectsWithOptions:(unsigned long long)arg1 usingBlock:(id /* block */)arg2;
 - (void)getObjects:(id*)arg1 andKeys:(id*)arg2 count:(unsigned long long)arg3;

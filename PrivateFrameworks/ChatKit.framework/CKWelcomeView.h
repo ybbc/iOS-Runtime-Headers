@@ -8,8 +8,6 @@
     double  _buttonViewBottomAnchorLayoutConstraintConstant;
     NSLayoutConstraint * _buttonViewLeadingAnchorLayoutConstraint;
     double  _buttonViewLeadingAnchorLayoutConstraintConstant;
-    NSLayoutConstraint * _buttonViewTopAnchorLayoutConstraint;
-    double  _buttonViewTopAnchorLayoutConstraintConstant;
     NSLayoutConstraint * _buttonViewTrailingAnchorLayoutConstraint;
     double  _buttonViewTrailingAnchorLayoutConstraintConstant;
     UIButton * _cancelButton;
@@ -46,8 +44,6 @@
 @property (nonatomic, readonly) double buttonViewBottomAnchorLayoutConstraintConstant;
 @property (nonatomic) NSLayoutConstraint *buttonViewLeadingAnchorLayoutConstraint;
 @property (nonatomic, readonly) double buttonViewLeadingAnchorLayoutConstraintConstant;
-@property (nonatomic) NSLayoutConstraint *buttonViewTopAnchorLayoutConstraint;
-@property (nonatomic, readonly) double buttonViewTopAnchorLayoutConstraintConstant;
 @property (nonatomic) NSLayoutConstraint *buttonViewTrailingAnchorLayoutConstraint;
 @property (nonatomic, readonly) double buttonViewTrailingAnchorLayoutConstraintConstant;
 @property (nonatomic, readonly) UIButton *cancelButton;
@@ -103,8 +99,6 @@
 - (double)buttonViewBottomAnchorLayoutConstraintConstant;
 - (id)buttonViewLeadingAnchorLayoutConstraint;
 - (double)buttonViewLeadingAnchorLayoutConstraintConstant;
-- (id)buttonViewTopAnchorLayoutConstraint;
-- (double)buttonViewTopAnchorLayoutConstraintConstant;
 - (id)buttonViewTrailingAnchorLayoutConstraint;
 - (double)buttonViewTrailingAnchorLayoutConstraintConstant;
 - (id)cancelButton;
@@ -152,11 +146,11 @@
 - (id)initWithFrame:(struct CGRect { struct CGPoint { double x_1_1_1; double x_1_1_2; } x1; struct CGSize { double x_2_1_1; double x_2_1_2; } x2; })arg1;
 - (bool)isCancelButtonHidden;
 - (bool)isConstraintsLoaded;
+- (void)layoutSubviews;
 - (void)loadConstraints;
 - (id)scrollView;
 - (void)setButtonViewBottomAnchorLayoutConstraint:(id)arg1;
 - (void)setButtonViewLeadingAnchorLayoutConstraint:(id)arg1;
-- (void)setButtonViewTopAnchorLayoutConstraint:(id)arg1;
 - (void)setButtonViewTrailingAnchorLayoutConstraint:(id)arg1;
 - (void)setCancelButtonFirstBaselineAnchorLayoutConstraint:(id)arg1;
 - (void)setCancelButtonHeightAnchorLayoutConstraint:(id)arg1;

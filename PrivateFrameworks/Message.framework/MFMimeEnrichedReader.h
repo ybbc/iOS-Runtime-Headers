@@ -43,13 +43,13 @@
 - (void)dealloc;
 - (id)description;
 - (void)endCommand:(id)arg1;
-- (void)handleNoParameterCommand:(const struct { id x1; /* Warning: Unrecognized filer type: '1' using 'void*' */ void*x2; unsigned int x3 : 1; unsigned int x4 : 1; unsigned int x5 : 2; }*)arg1;
+- (void)handleNoParameterCommand:(const struct { id x1; unsigned int x2 : 1; unsigned int x3 : 1; unsigned int x4 : 1; unsigned int x5 : 2; }*)arg1;
 - (void)mismatchError:(id)arg1;
 - (void)nowWouldBeAGoodTimeToAppendToTheAttributedString;
 - (void)parseParameterString:(id)arg1;
 - (int)readTokenInto:(id*)arg1;
 - (void)resetStateWithString:(id)arg1 outputString:(id)arg2;
 - (void)setWantsHTML:(bool)arg1;
-- (void)setupFontStackEntry:(/* Warning: unhandled struct encoding: '{_CommandStackEntry=^{?}@}' */ struct _CommandStackEntry { struct { /* ? */ } *x1; id x2; }*)arg1;
+- (void)setupFontStackEntry:(struct _CommandStackEntry { struct { /* ? */ } *x1; id x2; }*)arg1;
 
 @end

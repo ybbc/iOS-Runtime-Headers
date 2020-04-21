@@ -3,7 +3,7 @@
  */
 
 @interface FigSubtitleBackdropCALayerContentLayer : FigBaseCALayer {
-    /* Warning: unhandled struct encoding: '{OpaqueFigSubtitleBackdropCALayerContentLayerInternal=@}' */ struct OpaqueFigSubtitleBackdropCALayerContentLayerInternal { id x1; } * layerInternal;
+    struct OpaqueFigSubtitleBackdropCALayerContentLayerInternal { id x1; } * layerInternal;
 }
 
 - (id)actionForLayer:(id)arg1 forKey:(id)arg2;

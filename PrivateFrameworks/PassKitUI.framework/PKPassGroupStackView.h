@@ -5,6 +5,7 @@
 @interface PKPassGroupStackView : UIScrollView <PKPassDeleteAnimationControllerDelegate, PKPassDeleteHandler, PKPassFooterViewDelegate, PKPassGroupViewDelegate, PKPaymentServiceDelegate> {
     NSMutableDictionary * _animatorsByGroupID;
     NSTimer * _autoscrollTimer;
+    long long  _coachingState;
     UIColor * _currentPageIndicatorTintColor;
     int  _currentTestReps;
     <PKPassGroupStackViewDatasource> * _datasource;
@@ -101,6 +102,7 @@
     bool  _wantsBacklightRamping;
 }
 
+@property (nonatomic, readonly) long long coachingState;
 @property (nonatomic, copy) UIColor *currentPageIndicatorTintColor;
 @property (nonatomic) <PKPassGroupStackViewDatasource> *datasource;
 @property (readonly, copy) NSString *debugDescription;
@@ -227,6 +229,7 @@
 - (void)_transitionSuccessful:(bool)arg1;
 - (void)_undoUserReorderWithReorderedGroupView:(id)arg1;
 - (void)_updateBottomContentSeparatorVisibilityAnimated:(bool)arg1;
+- (void)_updateCoachingState;
 - (void)_updateContentSize;
 - (void)_updateContentSizeAndLayout:(bool)arg1;
 - (void)_updateContentSizeAndLayout:(bool)arg1 forceUpdate:(bool)arg2;
@@ -258,6 +261,7 @@
 - (double)_yPositionForGroupAtIndex:(unsigned long long)arg1 forState:(long long)arg2;
 - (void)beginScrollCardListTest;
 - (void)beginSelectCardTest;
+- (long long)coachingState;
 - (id)currentPageIndicatorTintColor;
 - (id)datasource;
 - (void)dealloc;
@@ -301,6 +305,7 @@
 - (void)moveGroup:(id)arg1 fromIndex:(unsigned long long)arg2 toIndex:(unsigned long long)arg3;
 - (void)noteDidEndScrollingForTesting;
 - (id)pageIndicatorTintColor;
+- (void)passFooterViewDidChangeCoachingState:(id)arg1;
 - (void)passFooterViewDidChangeUserIntentRequirement:(id)arg1;
 - (void)passFooterViewDidChangeUserIntentRequirement:(id)arg1 withContext:(id)arg2;
 - (void)paymentDeviceDidBecomeAvailable;

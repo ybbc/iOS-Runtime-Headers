@@ -12,6 +12,7 @@
     bool  _bypassAuthenticator;
     UIBarButtonItem * _cancelBarButtonItem;
     bool  _cancelButtonDisabled;
+    long long  _coachingState;
     NSMutableSet * _completionHandlers;
     UIView * _contentView;
     NSLayoutConstraint * _contentViewRightConstraint;
@@ -21,6 +22,8 @@
     struct __IOHIDEventSystemClient { } * _hidSystemClient;
     bool  _hostApplicationEnteredBackground;
     bool  _hostApplicationResignedActive;
+    long long  _internalCoachingState;
+    long long  _internalPearlState;
     bool  _isPad;
     double  _keyboardHeight;
     CNContact * _lastUnservicableAddress;
@@ -33,6 +36,7 @@
     UIViewController * _passphraseViewController;
     PKPaymentAuthorizationPasswordButtonView * _passwordButtonView;
     PKPaymentPreferencesViewController * _paymentCardPreferencesController;
+    unsigned int  _pearlCameraEdge;
     PKPeerPaymentAccount * _peerPaymentAccount;
     bool  _peerPaymentBalanceIsInsufficient;
     LAUIPhysicalButtonView * _physicalButtonView;
@@ -53,6 +57,7 @@
 
 @property (nonatomic, retain) PKAuthenticator *authenticator;
 @property (nonatomic, readonly) bool blockingHardwareCancels;
+@property (nonatomic, readonly) long long coachingState;
 @property (readonly, copy) NSString *debugDescription;
 @property (nonatomic) <PKPaymentAuthorizationServiceViewControllerDelegate><PKPaymentAuthorizationHostProtocol> *delegate;
 @property (readonly, copy) NSString *description;
@@ -108,6 +113,7 @@
 - (void)_updateAvailableCardsPreferences;
 - (void)_updateBackgroundedState:(bool)arg1;
 - (void)_updateCancelButtonEnabledForState:(unsigned long long)arg1 param:(id)arg2;
+- (void)_updateCoachingInstruction;
 - (void)_updateFooterStateForBiometricMatchMissIfNecessary;
 - (void)_updatePendingTransaction:(id)arg1 withAuthorizationStateParam:(id)arg2;
 - (void)_updatePhysicalButtonInstruction;
@@ -118,6 +124,7 @@
 - (Class)_viewPresenterClassForDataItem:(id)arg1;
 - (id)authenticator;
 - (void)authenticator:(id)arg1 didRequestUserAction:(long long)arg2;
+- (void)authenticator:(id)arg1 didTransitionToCoachingState:(long long)arg2;
 - (void)authenticator:(id)arg1 didTransitionToPearlState:(long long)arg2;
 - (void)authenticatorDidEncounterBiometricLockout:(id)arg1;
 - (void)authenticatorDidEncounterFingerOff:(id)arg1;
@@ -136,6 +143,7 @@
 - (void)biometricAttemptFailed;
 - (bool)blockingHardwareCancels;
 - (void)cancelPressed:(id)arg1;
+- (long long)coachingState;
 - (void)contextWillBeginPresentingSecondaryUI:(id)arg1;
 - (void)dealloc;
 - (id)delegate;

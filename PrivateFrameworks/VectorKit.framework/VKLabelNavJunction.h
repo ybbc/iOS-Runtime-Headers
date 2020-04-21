@@ -19,7 +19,7 @@
     bool  _isVisibilityCached;
     bool  _isVisible;
     VKLabelNavRoadLabel * _junctionSign;
-    struct { struct { id x_1_1_1; unsigned long long x_1_1_2; unsigned long long x_1_1_3; unsigned long long x_1_1_4; unsigned long long x_1_1_5; unsigned int x_1_1_6; unsigned long long x_1_1_7; bool x_1_1_8; unsigned long long x_1_1_9; float x_1_1_10; unsigned long long x_1_1_11; id x_1_1_12; } x1; struct { float x_2_1_1; float x_2_1_2; } x2; struct { float x_3_1_1; float x_3_1_2; } x3; unsigned long long x4; unsigned long long x5; unsigned long long x6; unsigned long long x7; short x8; unsigned char x9; struct { /* ? */ } *x10; float x11; float x12; unsigned int x13; unsigned char x14; bool x15; bool x16; bool x17; } * _labelFeature;
+    struct { struct { id x_1_1_1; char *x_1_1_2; unsigned long long x_1_1_3; unsigned long long x_1_1_4; unsigned long long x_1_1_5; unsigned long long x_1_1_6; unsigned int x_1_1_7; unsigned long long x_1_1_8; bool x_1_1_9; unsigned long long x_1_1_10; float x_1_1_11; unsigned long long x_1_1_12; id x_1_1_13; int x_1_1_14; } x1; struct { float x_2_1_1; float x_2_1_2; } x2; struct { float x_3_1_1; float x_3_1_2; } x3; unsigned long long x4; unsigned long long x5; unsigned long long x6; unsigned long long x7; short x8; unsigned char x9; struct { /* ? */ } *x10; float x11; float x12; unsigned int x13; unsigned char x14; bool x15; bool x16; bool x17; } * _labelFeature;
     int  _largestRoadClass;
     NSString * _name;
     VKLabelNavRoad * _outgoingRoad;

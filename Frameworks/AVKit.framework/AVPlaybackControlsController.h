@@ -57,6 +57,7 @@
     UIAlertController * _routePickerAlertController;
     AVScrollViewObserver * _scrollViewObserver;
     bool  _scrubbingOrSeeking;
+    AVSecondScreenContentViewConnection * _secondScreenConnection;
     bool  _shouldIgnoreTimeResolverUpdates;
     bool  _showsDoneButtonWhenFullScreen;
     bool  _showsLoadingIndicator;
@@ -138,6 +139,7 @@
 @property (nonatomic) UIAlertController *routePickerAlertController;
 @property (nonatomic, retain) AVScrollViewObserver *scrollViewObserver;
 @property (getter=isScrubbingOrSeeking, nonatomic) bool scrubbingOrSeeking;
+@property (nonatomic, retain) AVSecondScreenContentViewConnection *secondScreenConnection;
 @property (getter=isSeekingEnabled, nonatomic, readonly) bool seekingEnabled;
 @property (nonatomic, readonly) bool shouldEnterFullScreenWhenPlaybackBegins;
 @property (nonatomic) bool shouldIgnoreTimeResolverUpdates;
@@ -210,6 +212,7 @@
 - (void)_updatePreferredPlaybackControlsLoadedStatusNotifyingContentViewOfChanges:(bool)arg1;
 - (void)_updatePrefersInspectionSuspended;
 - (void)_updateScrubberAndTimeLabels;
+- (void)_updateSecondScreenConnectionReadyToConnect;
 - (void)_updateVideoGravityButtonType;
 - (void)_updateVolumeButtonGlyph;
 - (void)_updateVolumeSliderValueWithSystemVolume:(float)arg1 animated:(bool)arg2;
@@ -292,6 +295,9 @@
 - (void)routePickerViewWillBeginPresentingRoutes:(id)arg1;
 - (id)scrollViewObserver;
 - (void)scrollViewObserverValuesDidChange:(id)arg1;
+- (id)secondScreenConnection;
+- (void)secondScreenConnectionDidBecomeActive:(id)arg1;
+- (void)secondScreenConnectionDidResignActive:(id)arg1;
 - (void)setAVRouteDetectorCoordinatorMultipleRoutesDetectedObserver:(id)arg1;
 - (void)setAllowsEnteringFullScreen:(bool)arg1;
 - (void)setCollapseExpandSliderAnimator:(id)arg1;
@@ -331,6 +337,7 @@
 - (void)setRoutePickerAlertController:(id)arg1;
 - (void)setScrollViewObserver:(id)arg1;
 - (void)setScrubbingOrSeeking:(bool)arg1;
+- (void)setSecondScreenConnection:(id)arg1;
 - (void)setShouldIgnoreTimeResolverUpdates:(bool)arg1;
 - (void)setShowsDoneButtonWhenFullScreen:(bool)arg1;
 - (void)setShowsLoadingIndicator:(bool)arg1;

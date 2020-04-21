@@ -14,22 +14,22 @@
 - (bool)_isCompact;
 - (bool)_providesConcreteBacking;
 - (void*)bytes;
-- (id)copyWithZone;
+- (id)copyWithZone:(void*)arg1;
 - (id)init;
-- (id)initWithBase64EncodedDataoptions;
-- (id)initWithBase64EncodedStringoptions;
-- (id)initWithByteslength;
-- (id)initWithBytesNoCopylength;
-- (id)initWithBytesNoCopylengthdeallocator;
-- (id)initWithBytesNoCopylengthfreeWhenDone;
-- (id)initWithCoder;
-- (id)initWithContentsOfFile;
-- (id)initWithContentsOfFileoptionserror;
-- (id)initWithContentsOfMappedFile;
-- (id)initWithContentsOfURL;
-- (id)initWithContentsOfURLoptionserror;
-- (id)initWithData;
+- (id)initWithBase64EncodedData:(id)arg1 options:(unsigned long long)arg2;
+- (id)initWithBase64EncodedString:(id)arg1 options:(unsigned long long)arg2;
+- (id)initWithBytes:(void*)arg1 length:(long long)arg2;
+- (id)initWithBytesNoCopy:(void*)arg1 length:(long long)arg2;
+- (id)initWithBytesNoCopy:(void*)arg1 length:(long long)arg2 deallocator:(id /* block */)arg3;
+- (id)initWithBytesNoCopy:(void*)arg1 length:(long long)arg2 freeWhenDone:(bool)arg3;
+- (id)initWithCoder:(id)arg1;
+- (id)initWithContentsOfFile:(id)arg1;
+- (id)initWithContentsOfFile:(id)arg1 options:(unsigned long long)arg2 error:(id*)arg3;
+- (id)initWithContentsOfMappedFile:(id)arg1;
+- (id)initWithContentsOfURL:(id)arg1;
+- (id)initWithContentsOfURL:(id)arg1 options:(unsigned long long)arg2 error:(id*)arg3;
+- (id)initWithData:(id)arg1;
 - (long long)length;
-- (id)mutableCopyWithZone;
+- (id)mutableCopyWithZone:(void*)arg1;
 
 @end

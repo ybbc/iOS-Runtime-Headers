@@ -58,7 +58,7 @@
 
 @property (nonatomic, readonly) NSMutableOrderedSet *annotationViews;
 @property (nonatomic, readonly) MKPinAnnotationView *bubblePin;
-@property (nonatomic, readonly) struct { long long x1; struct CLLocationCoordinate2D { double x_2_1_1; double x_2_1_2; } x2; struct CGPoint { double x_3_1_1; double x_3_1_2; } x3; struct CGPoint { double x_4_1_1; double x_4_1_2; } x4; id x5; } currentComparisonContext;
+@property (nonatomic, readonly) struct { long long x1; struct CLLocationCoordinate2D { double x_2_1_1; double x_2_1_2; } x2; struct CGPoint { double x_3_1_1; double x_3_1_2; } x3; struct CGPoint { double x_4_1_1; double x_4_1_2; } x4; id x5; bool x6; } currentComparisonContext;
 @property (readonly, copy) NSString *debugDescription;
 @property (nonatomic) <MKAnnotationContainerViewDelegate> *delegate;
 @property (readonly, copy) NSString *description;
@@ -109,7 +109,7 @@
 - (id)clusterStyleAttributes;
 - (struct CGPoint { double x1; double x2; })convertCoordinate:(struct CLLocationCoordinate2D { double x1; double x2; })arg1 toPointToView:(id)arg2;
 - (struct CLLocationCoordinate2D { double x1; double x2; })coordinateForAnnotationView:(id)arg1;
-- (struct { long long x1; struct CLLocationCoordinate2D { double x_2_1_1; double x_2_1_2; } x2; struct CGPoint { double x_3_1_1; double x_3_1_2; } x3; struct CGPoint { double x_4_1_1; double x_4_1_2; } x4; id x5; })currentComparisonContext;
+- (struct { long long x1; struct CLLocationCoordinate2D { double x_2_1_1; double x_2_1_2; } x2; struct CGPoint { double x_3_1_1; double x_3_1_2; } x3; struct CGPoint { double x_4_1_1; double x_4_1_2; } x4; id x5; bool x6; })currentComparisonContext;
 - (void)dealloc;
 - (id)delegate;
 - (void)deselectAnnotationView:(id)arg1 animated:(bool)arg2;

@@ -4,7 +4,7 @@
 
 @interface PPXPCClientPipelinedBatchQueryManager : NSObject {
     NSMutableDictionary * _queryContexts;
-    unsigned long long  _queryId;
+    _Atomic unsigned long long  _queryId;
 }
 
 + (void)assertBatch:(id)arg1 forQueryName:(id)arg2 hasExpectedContainedType:(Class)arg3;

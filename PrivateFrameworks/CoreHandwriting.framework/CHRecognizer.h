@@ -21,9 +21,9 @@
     void * _characterLanguageModel;
     struct _LXLexicon { } * _customLexicon;
     void * _dynamicLexicon;
-    struct CHNeuralNetwork { char *x1; unsigned long long x2; unsigned int *x3; unsigned int x4; unsigned int x5; unsigned int x6; unsigned int x7; id x8; } * _engine;
+    struct CHNeuralNetwork { char *x1; unsigned long long x2; unsigned int *x3; unsigned int x4; unsigned int x5; unsigned int x6; unsigned int x7; id x8; id x9; } * _engine;
     struct Network { struct basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > { struct __compressed_pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__rep, std::__1::allocator<char> > { struct __rep { union { struct __long { char *x_1_5_1; unsigned long long x_1_5_2; unsigned long long x_1_5_3; } x_1_4_1; struct __short { BOOL x_2_5_1[23]; struct { unsigned char x_2_6_1; } x_2_5_2; } x_1_4_2; struct __raw { unsigned long long x_3_5_1[3]; } x_1_4_3; } x_1_3_1; } x_1_2_1; } x_1_1_1; } x1; unsigned long long x2; struct vector<NetworkNode, std::__1::allocator<NetworkNode> > { struct NetworkNode {} *x_3_1_1; struct NetworkNode {} *x_3_1_2; struct __compressed_pair<NetworkNode *, std::__1::allocator<NetworkNode> > { struct NetworkNode {} *x_3_2_1; } x_3_1_3; } x3; struct set<unsigned long, std::__1::less<unsigned long>, std::__1::allocator<unsigned long> > { struct __tree<unsigned long, std::__1::less<unsigned long>, std::__1::allocator<unsigned long> > { struct __tree_end_node<std::__1::__tree_node_base<void *> *> {} *x_1_2_1; struct __compressed_pair<std::__1::__tree_end_node<std::__1::__tree_node_base<void *> *>, std::__1::allocator<std::__1::__tree_node<unsigned long, void *> > > { struct __tree_end_node<std::__1::__tree_node_base<void *> *> { struct __tree_node_base<void *> {} *x_1_4_1; } x_2_3_1; } x_1_2_2; struct __compressed_pair<unsigned long, std::__1::less<unsigned long> > { unsigned long long x_3_3_1; } x_1_2_3; } x_4_1_1; } x4; } * _formatGrammarFST;
-    struct CHNeuralNetwork { char *x1; unsigned long long x2; unsigned int *x3; unsigned int x4; unsigned int x5; unsigned int x6; unsigned int x7; id x8; } * _freeformEngine;
+    struct CHNeuralNetwork { char *x1; unsigned long long x2; unsigned int *x3; unsigned int x4; unsigned int x5; unsigned int x6; unsigned int x7; id x8; id x9; } * _freeformEngine;
     void ** _icuTransliterator;
     void * _languageModel;
     unsigned long long  _lastCharacterStrokeCount;
@@ -54,9 +54,9 @@
 @property (nonatomic) void*characterLanguageModel;
 @property (nonatomic) struct _LXLexicon { }*customLexicon;
 @property (nonatomic) void*dynamicLexicon;
-@property (nonatomic) struct CHNeuralNetwork { char *x1; unsigned long long x2; unsigned int *x3; unsigned int x4; unsigned int x5; unsigned int x6; unsigned int x7; id x8; }*engine;
+@property (nonatomic) struct CHNeuralNetwork { char *x1; unsigned long long x2; unsigned int *x3; unsigned int x4; unsigned int x5; unsigned int x6; unsigned int x7; id x8; id x9; }*engine;
 @property (nonatomic) /* Warning: unhandled struct encoding: '{Network={basic_string<char' */ struct *formatGrammarFST; /* unknown property attribute:  std::__1::less<uint128> >=Q}}}^IQ} */
-@property (nonatomic) struct CHNeuralNetwork { char *x1; unsigned long long x2; unsigned int *x3; unsigned int x4; unsigned int x5; unsigned int x6; unsigned int x7; id x8; }*freeformEngine;
+@property (nonatomic) struct CHNeuralNetwork { char *x1; unsigned long long x2; unsigned int *x3; unsigned int x4; unsigned int x5; unsigned int x6; unsigned int x7; id x8; id x9; }*freeformEngine;
 @property (nonatomic) void**icuTransliterator;
 @property (nonatomic) void*languageModel;
 @property (nonatomic) unsigned long long lastCharacterStrokeCount;
@@ -129,9 +129,9 @@
 - (void*)dynamicLexicon;
 - (id)ellipseCandidateResultForDrawing:(id)arg1 candidate:(struct CHCandidateResult { unsigned int x1; float x2; }*)arg2;
 - (void)endpointsForDrawing:(id)arg1 startLocation:(struct CGPoint { double x1; double x2; }*)arg2 endLocation:(struct CGPoint { double x1; double x2; }*)arg3;
-- (struct CHNeuralNetwork { char *x1; unsigned long long x2; unsigned int *x3; unsigned int x4; unsigned int x5; unsigned int x6; unsigned int x7; id x8; }*)engine;
+- (struct CHNeuralNetwork { char *x1; unsigned long long x2; unsigned int *x3; unsigned int x4; unsigned int x5; unsigned int x6; unsigned int x7; id x8; id x9; }*)engine;
 - (struct Network { struct basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > { struct __compressed_pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__rep, std::__1::allocator<char> > { struct __rep { union { struct __long { char *x_1_5_1; unsigned long long x_1_5_2; unsigned long long x_1_5_3; } x_1_4_1; struct __short { BOOL x_2_5_1[23]; struct { unsigned char x_2_6_1; } x_2_5_2; } x_1_4_2; struct __raw { unsigned long long x_3_5_1[3]; } x_1_4_3; } x_1_3_1; } x_1_2_1; } x_1_1_1; } x1; unsigned long long x2; struct vector<NetworkNode, std::__1::allocator<NetworkNode> > { struct NetworkNode {} *x_3_1_1; struct NetworkNode {} *x_3_1_2; struct __compressed_pair<NetworkNode *, std::__1::allocator<NetworkNode> > { struct NetworkNode {} *x_3_2_1; } x_3_1_3; } x3; struct set<unsigned long, std::__1::less<unsigned long>, std::__1::allocator<unsigned long> > { struct __tree<unsigned long, std::__1::less<unsigned long>, std::__1::allocator<unsigned long> > { struct __tree_end_node<std::__1::__tree_node_base<void *> *> {} *x_1_2_1; struct __compressed_pair<std::__1::__tree_end_node<std::__1::__tree_node_base<void *> *>, std::__1::allocator<std::__1::__tree_node<unsigned long, void *> > > { struct __tree_end_node<std::__1::__tree_node_base<void *> *> { struct __tree_node_base<void *> {} *x_1_4_1; } x_2_3_1; } x_1_2_2; struct __compressed_pair<unsigned long, std::__1::less<unsigned long> > { unsigned long long x_3_3_1; } x_1_2_3; } x_4_1_1; } x4; }*)formatGrammarFST;
-- (struct CHNeuralNetwork { char *x1; unsigned long long x2; unsigned int *x3; unsigned int x4; unsigned int x5; unsigned int x6; unsigned int x7; id x8; }*)freeformEngine;
+- (struct CHNeuralNetwork { char *x1; unsigned long long x2; unsigned int *x3; unsigned int x4; unsigned int x5; unsigned int x6; unsigned int x7; id x8; id x9; }*)freeformEngine;
 - (struct CGSize { double x1; double x2; })getMinimumDrawingSize;
 - (void**)icuTransliterator;
 - (id)initWithType:(int)arg1 mode:(int)arg2;
@@ -177,9 +177,9 @@
 - (void)setCharacterLanguageModel:(void*)arg1;
 - (void)setCustomLexicon:(struct _LXLexicon { }*)arg1;
 - (void)setDynamicLexicon:(void*)arg1;
-- (void)setEngine:(struct CHNeuralNetwork { char *x1; unsigned long long x2; unsigned int *x3; unsigned int x4; unsigned int x5; unsigned int x6; unsigned int x7; id x8; }*)arg1;
+- (void)setEngine:(struct CHNeuralNetwork { char *x1; unsigned long long x2; unsigned int *x3; unsigned int x4; unsigned int x5; unsigned int x6; unsigned int x7; id x8; id x9; }*)arg1;
 - (void)setFormatGrammarFST:(struct Network { struct basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > { struct __compressed_pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__rep, std::__1::allocator<char> > { struct __rep { union { struct __long { char *x_1_5_1; unsigned long long x_1_5_2; unsigned long long x_1_5_3; } x_1_4_1; struct __short { BOOL x_2_5_1[23]; struct { unsigned char x_2_6_1; } x_2_5_2; } x_1_4_2; struct __raw { unsigned long long x_3_5_1[3]; } x_1_4_3; } x_1_3_1; } x_1_2_1; } x_1_1_1; } x1; unsigned long long x2; struct vector<NetworkNode, std::__1::allocator<NetworkNode> > { struct NetworkNode {} *x_3_1_1; struct NetworkNode {} *x_3_1_2; struct __compressed_pair<NetworkNode *, std::__1::allocator<NetworkNode> > { struct NetworkNode {} *x_3_2_1; } x_3_1_3; } x3; struct set<unsigned long, std::__1::less<unsigned long>, std::__1::allocator<unsigned long> > { struct __tree<unsigned long, std::__1::less<unsigned long>, std::__1::allocator<unsigned long> > { struct __tree_end_node<std::__1::__tree_node_base<void *> *> {} *x_1_2_1; struct __compressed_pair<std::__1::__tree_end_node<std::__1::__tree_node_base<void *> *>, std::__1::allocator<std::__1::__tree_node<unsigned long, void *> > > { struct __tree_end_node<std::__1::__tree_node_base<void *> *> { struct __tree_node_base<void *> {} *x_1_4_1; } x_2_3_1; } x_1_2_2; struct __compressed_pair<unsigned long, std::__1::less<unsigned long> > { unsigned long long x_3_3_1; } x_1_2_3; } x_4_1_1; } x4; }*)arg1;
-- (void)setFreeformEngine:(struct CHNeuralNetwork { char *x1; unsigned long long x2; unsigned int *x3; unsigned int x4; unsigned int x5; unsigned int x6; unsigned int x7; id x8; }*)arg1;
+- (void)setFreeformEngine:(struct CHNeuralNetwork { char *x1; unsigned long long x2; unsigned int *x3; unsigned int x4; unsigned int x5; unsigned int x6; unsigned int x7; id x8; id x9; }*)arg1;
 - (void)setIcuTransliterator:(void**)arg1;
 - (void)setLanguageModel:(void*)arg1;
 - (void)setLastCharacterStrokeCount:(unsigned long long)arg1;

@@ -3,7 +3,7 @@
  */
 
 @interface PKPaymentService : NSObject <PKPaymentServiceExportedInterface, PKXPCServiceDelegate> {
-    bool  _cachedFieldPropertiesValid;
+    _Atomic bool  _cachedFieldPropertiesValid;
     <PKPaymentServiceDelegate> * _delegate;
     bool  _forceConnectionOnResume;
     bool  _hasPaymentDeviceFieldProperties;

@@ -27,7 +27,7 @@
     bool  _isInInteractiveMode;
     bool  _isPreview;
     bool  _isRecording;
-    struct atomic<unsigned int> { unsigned int x1; } * _loadCount;
+    struct atomic<unsigned int> { _Atomic unsigned int x1; } * _loadCount;
     bool  _useLocalLoopTime;
 }
 

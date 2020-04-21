@@ -5,7 +5,7 @@
 @interface WKScrollView : UIScrollView {
     bool  _contentInsetAdjustmentBehaviorWasExternallyOverridden;
     WKScrollViewDelegateForwarder * _delegateForwarder;
-    /* Warning: unhandled struct encoding: '{WeakObjCPtr<id<UIScrollViewDelegate> >="m_weakReference"@}' */ struct WeakObjCPtr<id<UIScrollViewDelegate> > { 
+    struct WeakObjCPtr<id<UIScrollViewDelegate> > { 
         id m_weakReference; 
     }  _externalDelegate;
     WKWebView<UIScrollViewDelegate> * _internalDelegate;

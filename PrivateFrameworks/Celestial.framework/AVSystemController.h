@@ -3,7 +3,7 @@
  */
 
 @interface AVSystemController : NSObject {
-    struct AVSystemControllerPrivate { bool x1; bool x2; float x3; id x4; struct OpaqueFigPlayer {} x5; } * _priv;
+    struct AVSystemControllerPrivate { bool x1; bool x2; float x3; id x4; struct OpaqueFigPlayer {} *x5; } * _priv;
 }
 
 + (void)initialize;

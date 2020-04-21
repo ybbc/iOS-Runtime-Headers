@@ -52,7 +52,7 @@
     <CAMSuggestionDelegate> * _suggestionDelegate;
     bool  _torchActive;
     bool  _torchAvailable;
-    int  _uniqueRequestIDForConfigurationChange;
+    _Atomic int  _uniqueRequestIDForConfigurationChange;
     <CAMZoomDelegate> * _zoomDelegate;
 }
 
@@ -129,7 +129,7 @@
 - (void)_availabilityResultChangedForKeyPath:(id)arg1 ofObject:(id)arg2 change:(id)arg3;
 - (void)_beginTrackingVideoRecordingForStillImageRequest:(id)arg1;
 - (id)_burstController;
-- (void)_cancelDelayedFocusAndExposureReset;
+- (void)_cancelDelayedFocusAndExposureResetIncludingResetAfterLivePhotoVideoCapture:(bool)arg1;
 - (id)_captureEngine;
 - (bool)_captureStillImageWithRequest:(id)arg1;
 - (id)_capturingPanoramaRequest;

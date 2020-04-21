@@ -10,7 +10,7 @@
     long long  __styleToPlayWhenReady;
     NSDate * __vitalityTimeoutDate;
     long long  _currentPlaybackStyle;
-    int  _fadeInRequestID;
+    _Atomic int  _fadeInRequestID;
     bool  _hinting;
     bool  _immediatelyShowsPhotoWhenPlaybackEnds;
     struct { 

@@ -13,7 +13,7 @@
     unsigned int  _fairPlayDeviceType;
     NSString * _hardwarePlatform;
     struct atomic_flag { 
-        bool _Value; 
+        _Atomic bool _Value; 
     }  _hasRegisteredForNameNotifications;
     struct CGSize { 
         double width; 

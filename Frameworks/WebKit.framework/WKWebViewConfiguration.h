@@ -11,7 +11,7 @@
     bool  _allowsJavaScriptMarkup;
     bool  _allowsMetaRefresh;
     bool  _allowsPictureInPictureMediaPlayback;
-    /* Warning: unhandled struct encoding: '{WeakObjCPtr<WKWebView>="m_weakReference"@}' */ struct WeakObjCPtr<WKWebView> { 
+    struct WeakObjCPtr<WKWebView> { 
         id m_weakReference; 
     }  _alternateWebViewForNavigationGestures;
     bool  _alwaysRunsAtForegroundPriority;
@@ -72,7 +72,7 @@
             void *m_ptr; 
         } m_value; 
     }  _processPool;
-    /* Warning: unhandled struct encoding: '{WeakObjCPtr<WKWebView>="m_weakReference"@}' */ struct WeakObjCPtr<WKWebView> { 
+    struct WeakObjCPtr<WKWebView> { 
         id m_weakReference; 
     }  _relatedWebView;
     bool  _respectsImageOrientation;
@@ -301,7 +301,7 @@
 
 // Image: /System/Library/Frameworks/iAd.framework/iAd
 
-+ (id)_createSharedConfiguration:(bool)arg1 forVideo:(bool)arg2;
++ (id)_newSharedConfiguration:(bool)arg1 forVideo:(bool)arg2;
 + (bool)excludeCustomJavaScript;
 + (id)sharedAdvertisingConfiguration:(bool)arg1;
 + (id)sharedAdvertisingConfigurationForVideo:(bool)arg1;

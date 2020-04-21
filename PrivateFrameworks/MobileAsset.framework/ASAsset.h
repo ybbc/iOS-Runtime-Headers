@@ -5,7 +5,7 @@
 @interface ASAsset : NSObject {
     NSString * _assetType;
     NSDictionary * _attributes;
-    struct __MobileAsset { struct __CFRuntimeBase { unsigned long long x_1_1_1; unsigned long long x_1_1_2; } x1; struct __CFString {} *x2; struct __CFDictionary {} *x3; struct __MobileAssetQuery {} *x4; struct __MobileAssetQuery {} *x5; unsigned char x6; } * _cfAsset;
+    struct __MobileAsset { struct __CFRuntimeBase { unsigned long long x_1_1_1; _Atomic unsigned long long x_1_1_2; } x1; struct __CFString {} *x2; struct __CFDictionary {} *x3; struct __MobileAssetQuery {} *x4; struct __MobileAssetQuery {} *x5; unsigned char x6; } * _cfAsset;
     NSString * _clientName;
     NSDictionary * _downloadOptions;
     NSString * _identifier;
@@ -52,7 +52,7 @@
 - (bool)isEqual:(id)arg1;
 - (bool)isPresentOnDisk;
 - (id)localURL;
-- (struct __MobileAsset { struct __CFRuntimeBase { unsigned long long x_1_1_1; unsigned long long x_1_1_2; } x1; struct __CFString {} *x2; struct __CFDictionary {} *x3; struct __MobileAssetQuery {} *x4; struct __MobileAssetQuery {} *x5; unsigned char x6; }*)mobileAsset;
+- (struct __MobileAsset { struct __CFRuntimeBase { unsigned long long x_1_1_1; _Atomic unsigned long long x_1_1_2; } x1; struct __CFString {} *x2; struct __CFDictionary {} *x3; struct __MobileAssetQuery {} *x4; struct __MobileAssetQuery {} *x5; unsigned char x6; }*)mobileAsset;
 - (void)pauseDownload:(id /* block */)arg1;
 - (bool)pauseDownloadAndReturnError:(id*)arg1;
 - (id /* block */)progressHandler;

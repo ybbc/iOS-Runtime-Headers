@@ -4,7 +4,7 @@
 
 @interface SGXpcTransaction : NSObject {
     struct atomic_flag { 
-        bool _Value; 
+        _Atomic bool _Value; 
     }  _done;
     NSObject<OS_os_transaction> * _transaction;
 }

@@ -4,7 +4,7 @@
 
 @interface HDDataAggregator : NSObject <HDHealthDaemonReadyObserver> {
     HDDataCollectionManager * _dataCollectionManager;
-    bool  _hasStartedCollectors;
+    _Atomic bool  _hasStartedCollectors;
     NSLock * _lock;
     bool  _lock_canStartCollectors;
     NSMapTable * _lock_collectorRegistry;

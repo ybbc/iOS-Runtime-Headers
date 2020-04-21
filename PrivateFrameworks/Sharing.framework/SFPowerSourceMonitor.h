@@ -4,16 +4,13 @@
 
 @interface SFPowerSourceMonitor : NSObject {
     bool  _activateCalled;
-    NSMutableDictionary * _aggregateSources;
     unsigned int  _changeFlags;
     NSObject<OS_dispatch_queue> * _dispatchQueue;
     id /* block */  _invalidationHandler;
-    NSMutableDictionary * _pendingAddedAggregates;
-    NSMutableDictionary * _pendingChangedAggregates;
-    id /* block */  _powerSourceChangedHandler;
-    id /* block */  _powerSourceFoundHandler;
-    id /* block */  _powerSourceLostHandler;
     NSMutableDictionary * _powerSources;
+    id /* block */  _powerSourcesChangedHandler;
+    id /* block */  _powerSourcesFoundHandler;
+    id /* block */  _powerSourcesLostHandler;
     int  _psNotifyTokenAccessoryAttach;
     int  _psNotifyTokenAccessoryPowerSource;
     int  _psNotifyTokenAccessoryTimeRemaining;
@@ -24,20 +21,19 @@
 @property (nonatomic) unsigned int changeFlags;
 @property (nonatomic, retain) NSObject<OS_dispatch_queue> *dispatchQueue;
 @property (nonatomic, copy) id /* block */ invalidationHandler;
-@property (nonatomic, copy) id /* block */ powerSourceChangedHandler;
-@property (nonatomic, copy) id /* block */ powerSourceFoundHandler;
-@property (nonatomic, copy) id /* block */ powerSourceLostHandler;
+@property (nonatomic, copy) id /* block */ powerSourcesChangedHandler;
+@property (nonatomic, copy) id /* block */ powerSourcesFoundHandler;
+@property (nonatomic, copy) id /* block */ powerSourcesLostHandler;
 
 - (void).cxx_destruct;
-- (void)_aggregatePowerSourceComponentFound:(id)arg1;
-- (void)_aggregatePowerSourceComponentLost:(id)arg1;
-- (void)_aggregatePowerSourceUpdate:(id)arg1 desc:(id)arg2;
 - (void)_cleanup;
-- (void)_handlePowerSourceFound:(id)arg1 desc:(id)arg2 adapterDesc:(id)arg3;
-- (void)_handlePowerSourceLost:(id)arg1 sourceID:(id)arg2;
-- (void)_handlePowerSourceUpdate:(id)arg1 desc:(id)arg2 adapterDesc:(id)arg3;
+- (void)_foundPowerSource:(id)arg1 desc:(id)arg2 adapterDesc:(id)arg3;
+- (void)_handlePowerSourcesChanged:(id)arg1 changes:(unsigned int)arg2;
+- (void)_handlePowerSourcesFound:(id)arg1;
+- (void)_handlePowerSourcesLost:(id)arg1;
 - (void)_triggerUpdatePowerSources;
 - (void)_update;
+- (void)_updatePowerSource:(id)arg1 desc:(id)arg2 adapterDesc:(id)arg3;
 - (void)_updatePowerSources;
 - (void)activateWithCompletion:(id /* block */)arg1;
 - (unsigned int)changeFlags;
@@ -46,14 +42,14 @@
 - (id)init;
 - (void)invalidate;
 - (id /* block */)invalidationHandler;
-- (id /* block */)powerSourceChangedHandler;
-- (id /* block */)powerSourceFoundHandler;
-- (id /* block */)powerSourceLostHandler;
+- (id /* block */)powerSourcesChangedHandler;
+- (id /* block */)powerSourcesFoundHandler;
+- (id /* block */)powerSourcesLostHandler;
 - (void)setChangeFlags:(unsigned int)arg1;
 - (void)setDispatchQueue:(id)arg1;
 - (void)setInvalidationHandler:(id /* block */)arg1;
-- (void)setPowerSourceChangedHandler:(id /* block */)arg1;
-- (void)setPowerSourceFoundHandler:(id /* block */)arg1;
-- (void)setPowerSourceLostHandler:(id /* block */)arg1;
+- (void)setPowerSourcesChangedHandler:(id /* block */)arg1;
+- (void)setPowerSourcesFoundHandler:(id /* block */)arg1;
+- (void)setPowerSourcesLostHandler:(id /* block */)arg1;
 
 @end

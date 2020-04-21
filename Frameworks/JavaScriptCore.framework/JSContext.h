@@ -35,10 +35,10 @@
 - (void)_setDebuggerRunLoop:(struct __CFRunLoop { }*)arg1;
 - (void)_setIncludesNativeCallStackWhenReportingExceptions:(bool)arg1;
 - (void)_setRemoteInspectionEnabled:(bool)arg1;
-- (void)beginCallbackWithData:(/* Warning: unhandled struct encoding: '{CallbackData=^{CallbackData}@@^{OpaqueJSValue}^{OpaqueJSValue}Q^^{OpaqueJSValue}@}' */ struct CallbackData { struct CallbackData {} *x1; id x2; struct OpaqueJSValue {} *x3; struct OpaqueJSValue {} *x4; unsigned long long x5; struct OpaqueJSValue {} **x6; id x7; }*)arg1 calleeValue:(struct OpaqueJSValue { }*)arg2 thisValue:(struct OpaqueJSValue { }*)arg3 argumentCount:(unsigned long long)arg4 arguments:(const struct OpaqueJSValue {}**)arg5;
+- (void)beginCallbackWithData:(struct CallbackData { struct CallbackData {} *x1; id x2; id x3; struct OpaqueJSValue {} *x4; struct OpaqueJSValue {} *x5; unsigned long long x6; struct OpaqueJSValue {} **x7; id x8; }*)arg1 calleeValue:(struct OpaqueJSValue { }*)arg2 thisValue:(struct OpaqueJSValue { }*)arg3 argumentCount:(unsigned long long)arg4 arguments:(const struct OpaqueJSValue {}**)arg5;
 - (bool)boolFromNotifyException:(struct OpaqueJSValue { }*)arg1;
 - (void)dealloc;
-- (void)endCallbackWithData:(/* Warning: unhandled struct encoding: '{CallbackData=^{CallbackData}@@^{OpaqueJSValue}^{OpaqueJSValue}Q^^{OpaqueJSValue}@}' */ struct CallbackData { struct CallbackData {} *x1; id x2; struct OpaqueJSValue {} *x3; struct OpaqueJSValue {} *x4; unsigned long long x5; struct OpaqueJSValue {} **x6; id x7; }*)arg1;
+- (void)endCallbackWithData:(struct CallbackData { struct CallbackData {} *x1; id x2; id x3; struct OpaqueJSValue {} *x4; struct OpaqueJSValue {} *x5; unsigned long long x6; struct OpaqueJSValue {} **x7; id x8; }*)arg1;
 - (void)ensureWrapperMap;
 - (id)evaluateScript:(id)arg1;
 - (id)evaluateScript:(id)arg1 withSourceURL:(id)arg2;

@@ -6,8 +6,8 @@
     long long  _activationState;
     NSUUID * _activationUUID;
     NSObject<OS_dispatch_queue> * _clientQueue;
-    int  _deactivateCallCount;
-    bool  _deactivating;
+    _Atomic int  _deactivateCallCount;
+    _Atomic bool  _deactivating;
     <HKQueryDelegate> * _delegate;
     _HKFilter * _filter;
     bool  _hasBeenExecuted;

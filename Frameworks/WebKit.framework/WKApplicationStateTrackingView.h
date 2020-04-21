@@ -8,7 +8,7 @@
             struct ApplicationStateTracker {} *__value_; 
         } __ptr_; 
     }  _applicationStateTracker;
-    /* Warning: unhandled struct encoding: '{WeakObjCPtr<WKWebView>="m_weakReference"@}' */ struct WeakObjCPtr<WKWebView> { 
+    struct WeakObjCPtr<WKWebView> { 
         id m_weakReference; 
     }  _webView;
 }

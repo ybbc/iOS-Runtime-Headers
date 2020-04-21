@@ -68,7 +68,7 @@
 + (id)todayMessageCriterion;
 + (id)unreadMessageCriterion;
 
-- (id)SQLExpressionWithContext:(struct { id x1; unsigned int x2; unsigned int x3; bool x4; bool x5; bool x6; }*)arg1 depth:(unsigned int)arg2;
+- (id)SQLExpressionWithContext:(struct { id x1; id x2; unsigned int x3; unsigned int x4; bool x5; bool x6; bool x7; }*)arg1 depth:(unsigned int)arg2;
 - (id)SQLExpressionWithTables:(unsigned int*)arg1 baseTable:(unsigned int)arg2 protectedDataAvailable:(bool)arg3 searchableIndex:(id)arg4 mailboxIDs:(id)arg5;
 - (id)_SQLExpressionForMailboxCriterion;
 - (void)_addCriteriaSatisfyingPredicate:(int (*)arg1 toCollector:(id)arg2;

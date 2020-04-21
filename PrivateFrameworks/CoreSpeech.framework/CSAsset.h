@@ -51,6 +51,7 @@
 @property (nonatomic, readonly) float VTSecondPassAnalyzerTrailingAudioTime;
 @property (nonatomic, readonly) NSString *VTSecondPassConfigPathNDAPI;
 @property (nonatomic, readonly) NSString *VTSecondPassConfigPathRecognizer;
+@property (nonatomic, readonly) bool VTSecondPassConfigPathRecognizerExist;
 @property (nonatomic, readonly) float VTSecondPassLoggingThreshold;
 @property (nonatomic, readonly) float VTSecondPassPreTriggerAudioTime;
 @property (nonatomic, readonly) float VTSecondPassRecognizerScoreScaleFactor;
@@ -123,6 +124,7 @@
 - (float)VTSecondPassAnalyzerTrailingAudioTime;
 - (id)VTSecondPassConfigPathNDAPI;
 - (id)VTSecondPassConfigPathRecognizer;
+- (bool)VTSecondPassConfigPathRecognizerExist;
 - (float)VTSecondPassLoggingThreshold;
 - (float)VTSecondPassPreTriggerAudioTime;
 - (float)VTSecondPassRecognizerScoreScaleFactor;
@@ -136,6 +138,7 @@
 - (id)_sha1:(id)arg1;
 - (id)_sha256:(id)arg1;
 - (id)configVersion;
+- (bool)containsKey:(id)arg1 category:(id)arg2;
 - (id)description;
 - (id)dictionary;
 - (bool)getBoolForKey:(id)arg1 category:(id)arg2 default:(bool)arg3;

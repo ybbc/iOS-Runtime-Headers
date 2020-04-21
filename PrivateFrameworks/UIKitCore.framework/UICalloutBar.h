@@ -149,6 +149,7 @@
 - (void)applicationDidAddDeactivationReason:(id)arg1;
 - (int)arrowDirection;
 - (void)buttonHighlighted:(id)arg1 highlighted:(bool)arg2;
+- (void)buttonPressed:(id)arg1;
 - (bool)calculateControlFrameForCalloutSize:(struct CGSize { double x1; double x2; })arg1 below:(bool)arg2;
 - (bool)calculateControlFrameForCalloutSize:(struct CGSize { double x1; double x2; })arg1 right:(bool)arg2;
 - (bool)calculateControlFrameInsideTargetRect:(struct CGSize { double x1; double x2; })arg1;
@@ -161,9 +162,11 @@
 - (id)currentAppearOrFadeContext;
 - (id)delegate;
 - (id)extraItems;
+- (void)fade;
 - (void)fadeAnimationDidStopWithContext:(id)arg1 finished:(bool)arg2;
 - (void)fadeIfTargetView:(id)arg1;
 - (bool)hasReplacements;
+- (void)hide;
 - (void)hideIfTargetView:(id)arg1;
 - (id)hitTest:(struct CGPoint { double x1; double x2; })arg1 withEvent:(id)arg2;
 - (id)initWithFrame:(struct CGRect { struct CGPoint { double x_1_1_1; double x_1_1_2; } x1; struct CGSize { double x_2_1_1; double x_2_1_2; } x2; })arg1;
@@ -221,21 +224,12 @@
 - (id)untruncatedString;
 - (void)update;
 - (void)updateAnimated:(bool)arg1;
+- (void)updateAvailableButtons;
 - (void)updateForCurrentHorizontalPage;
 - (void)updateForCurrentPage;
 - (void)updateForCurrentVerticalPage;
 - (id)verticalScrollView;
 - (id)verticalStackView;
 - (bool)visible;
-
-// Image: /System/Library/AccessibilityBundles/QuickSpeak.bundle/QuickSpeak
-
-+ (Class)safeCategoryBaseClass;
-
-- (void)_accessibilityAddSpeakItemToExtras:(id)arg1 selector:(SEL)arg2;
-- (void)buttonPressed:(id)arg1;
-- (void)fade;
-- (void)hide;
-- (void)updateAvailableButtons;
 
 @end

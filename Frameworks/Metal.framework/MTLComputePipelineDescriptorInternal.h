@@ -17,7 +17,7 @@
     }  _private;
 }
 
-- (const struct MTLComputePipelineDescriptorPrivate { id x1; bool x2; unsigned short x3; id x4; id x5; bool x6; unsigned int x7; }*)_descriptorPrivate;
+- (const struct MTLComputePipelineDescriptorPrivate { id x1; id x2; bool x3; unsigned short x4; id x5; id x6; id x7; id x8; bool x9; unsigned int x10; }*)_descriptorPrivate;
 - (id)buffers;
 - (id)computeFunction;
 - (id)copyWithZone:(struct _NSZone { }*)arg1;

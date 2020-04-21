@@ -7,6 +7,7 @@
 @property (readonly) long long ITUCountryCode;
 @property (readonly) long long _calendarDirection;
 @property (readonly, copy) NSArray *availableNumberingSystems;
+@property (nonatomic, readonly) bool hk_isUSLocale;
 @property (nonatomic, readonly) NSString *languageIdentifier;
 @property (readonly) NSString *languageIdentifier;
 @property (readonly, copy) NSString *numberingSystem;
@@ -109,6 +110,8 @@
 + (bool)hk_isUSLocale;
 + (void)hk_setTestLocale:(id)arg1;
 + (id)hk_testableAutoupdatingCurrentLocale;
+
+- (bool)hk_isUSLocale;
 
 // Image: /System/Library/Frameworks/PhotosUI.framework/PhotosUI
 

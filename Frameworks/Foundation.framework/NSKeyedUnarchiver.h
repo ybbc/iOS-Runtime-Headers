@@ -208,7 +208,7 @@
 
 // Image: /System/Library/PrivateFrameworks/Swift/libswiftFoundation.dylib
 
-+ (int)_swift_checkClassAndWarnForKeyedArchivingoperation;
++ (int)_swift_checkClassAndWarnForKeyedArchiving:(Class)arg1 operation:(int)arg2;
 
 // Image: /System/Library/PrivateFrameworks/iWorkImport.framework/iWorkImport
 

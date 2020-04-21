@@ -11,7 +11,7 @@
 }
 
 @property (setter=_setAllowsCellularAccess:, nonatomic) bool _allowsCellularAccess;
-@property (readonly) /* Warning: unhandled struct encoding: '{Object=^^?@}' */ struct Object { int (**x1)(); id x2; }*_apiObject;
+@property (readonly) struct Object { int (**x1)(); id x2; }*_apiObject;
 @property (setter=_setBoundInterfaceIdentifier:, nonatomic) NSString *_boundInterfaceIdentifier;
 @property (setter=_setCacheStorageDirectory:, nonatomic) NSString *_cacheStorageDirectory;
 @property (setter=_setCacheStoragePerOriginQuota:, nonatomic) unsigned long long _cacheStoragePerOriginQuota;
@@ -31,13 +31,14 @@
 + (id)_allWebsiteDataTypesIncludingPrivate;
 + (void)_allowWebsiteDataRecordsForAllOrigins;
 + (bool)_defaultDataStoreExists;
++ (void)_deleteDefaultDataStoreForTesting;
 + (id)allWebsiteDataTypes;
 + (id)defaultDataStore;
 + (id)nonPersistentDataStore;
 + (bool)supportsSecureCoding;
 
 - (bool)_allowsCellularAccess;
-- (/* Warning: unhandled struct encoding: '{Object=^^?@}' */ struct Object { int (**x1)(); id x2; }*)_apiObject;
+- (struct Object { int (**x1)(); id x2; }*)_apiObject;
 - (id)_boundInterfaceIdentifier;
 - (id)_cacheStorageDirectory;
 - (unsigned long long)_cacheStoragePerOriginQuota;

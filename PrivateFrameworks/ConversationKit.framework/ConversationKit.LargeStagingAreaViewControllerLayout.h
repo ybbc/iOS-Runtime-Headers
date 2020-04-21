@@ -8,6 +8,7 @@
     void currentConstraints;
     void currentDeviceOrientation;
     void currentSize;
+    void effectsConstraintManagers;
 }
 
 @end

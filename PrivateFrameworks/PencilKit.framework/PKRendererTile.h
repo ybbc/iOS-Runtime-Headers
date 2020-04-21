@@ -19,7 +19,7 @@
         double y; 
     }  _offset;
     bool  _outOfDate;
-    long long  _renderCount;
+    _Atomic long long  _renderCount;
     NSArray * _renderedStrokes;
     <PKRendererControllerProtocol> * _rendererController;
 }

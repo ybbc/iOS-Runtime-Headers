@@ -24,7 +24,7 @@
     unsigned char  _imageHash;
     struct CGImage { } * _imageRef;
     struct atomic<bool> { 
-        bool __a_; 
+        _Atomic bool __a_; 
     }  _isImageReady;
     bool  _isTextureReady;
     NSString * _name;

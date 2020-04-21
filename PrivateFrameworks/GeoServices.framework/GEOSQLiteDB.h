@@ -8,7 +8,7 @@
     bool  _didEncounterExternalResourceErrorInTransaction;
     union { 
         struct atomic_flag { 
-            bool _Value; 
+            _Atomic bool _Value; 
         } flag; 
         int dummy; 
     }  _didTearDown;

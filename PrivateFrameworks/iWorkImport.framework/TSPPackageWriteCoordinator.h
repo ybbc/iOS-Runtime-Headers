@@ -36,7 +36,7 @@
     TSPDataAttributesSnapshot * _dataAttributesSnapshot;
     NSMutableArray * _dataFinalizeHandlers;
     bool  _didWriteMetadata;
-    bool  _didWriteObjectContainer;
+    _Atomic bool  _didWriteObjectContainer;
     bool  _didWriteRootObject;
     TSPDocumentRevision * _documentRevision;
     NSURL * _documentTargetURL;

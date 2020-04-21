@@ -16,6 +16,7 @@
     _CDMutablePerfMetric * _perfMetric;
     _DKSync2Policy * _policy;
     NSDate * _startDate;
+    NSArray * _streamNames;
     <_DKSyncRemoteKnowledgeStorage> * _transport;
     _DKSyncType * _type;
 }

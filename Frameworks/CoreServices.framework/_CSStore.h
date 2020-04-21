@@ -21,7 +21,7 @@
 - (id)initWithCoder:(id)arg1;
 - (id)initWithContentsOfURL:(id)arg1 error:(id*)arg2;
 - (id)initWithError:(id*)arg1;
-- (id)initWithStoreNoCopy:(struct Store { id x1; /* Warning: Unrecognized filer type: 'a' using 'void*' */ void*x2; const const void*x3; void*x4; void*x5; void*x6; in short x7; int x8; void*x9; in void*x10; double x11; void*x12; int x13; in void*x14; void*x15; void*x16; void*x17; void*x18; void*x19; void*x20; unsigned int x21[64]; }*)arg1;
+- (id)initWithStoreNoCopy:(struct Store { id x1; struct array<unsigned int, 64> { unsigned int x_2_1_1[64]; } x2; struct atomic<long long> { _Atomic long long x_3_1_1; } x3; struct atomic<long long> { _Atomic long long x_4_1_1; } x4; }*)arg1;
 - (id)mutableCopyWithZone:(struct _NSZone { }*)arg1;
 - (id)mutableCopyWithZone:(struct _NSZone { }*)arg1 error:(id*)arg2;
 - (void)setExpectedAccessQueue:(id)arg1;

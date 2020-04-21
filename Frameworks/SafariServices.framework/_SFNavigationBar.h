@@ -47,6 +47,7 @@
     bool  _preferredBarTintColorIsDark;
     bool  _preferredBarTintColorIsExtreme;
     bool  _preferredBarTintColorIsGreen;
+    bool  _preferredBarTintColorIsRed;
     UIColor * _preferredControlsTintColor;
     _SFFluidProgressView * _progressView;
     _SFDimmingButton * _readerAppearanceButton;
@@ -156,6 +157,8 @@
 - (double)_minimumXForLabelOfWidth:(double)arg1 centeredInOutlineOfWidth:(double)arg2 leftAlignedToMinimumX:(double)arg3 maximumX:(double)arg4;
 - (id)_navigationBarTrailingButtonWithType:(long long)arg1;
 - (id)_newNavigationButtonWithImage:(id)arg1 insets:(struct UIEdgeInsets { double x1; double x2; double x3; double x4; })arg2 action:(SEL)arg3;
+- (id)_notSecureWarningColor;
+- (id)_notSecureWarningRed;
 - (id)_placeholderColor;
 - (id)_placeholderText;
 - (long long)_preferredLeadingButtonType;

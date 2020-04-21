@@ -4,15 +4,15 @@
 
 @interface SGDHarvestQueueOnDisk : SGDHarvestQueue {
     NSObject<OS_dispatch_queue> * _backingQueue;
-    unsigned long long  _count;
-    unsigned long long  _countHighPriority;
+    _Atomic unsigned long long  _count;
+    _Atomic unsigned long long  _countHighPriority;
     SGSqliteDatabase * _db;
     NSString * _dirPath;
     long long  _idCounter;
     id  _lockStateChangeToken;
-    unsigned long long  _maxPendingWrites;
-    unsigned long long  _maxQueueItems;
-    unsigned long long  _pendingWrites;
+    _Atomic unsigned long long  _maxPendingWrites;
+    _Atomic unsigned long long  _maxQueueItems;
+    _Atomic unsigned long long  _pendingWrites;
     NSObject<OS_dispatch_queue> * _queue;
     SGDHarvestQueueFileReader * _reader;
     SGDHarvestQueueFileWriter * _writerHighPriority;

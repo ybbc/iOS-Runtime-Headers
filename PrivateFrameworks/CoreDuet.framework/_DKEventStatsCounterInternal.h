@@ -9,7 +9,7 @@
     NSString * _eventType;
     bool  _hasResult;
     bool  _hasType;
-    struct XSPerfCollection { struct _opaque_pthread_mutex_t { long long x_1_1_1; BOOL x_1_1_2[56]; } x1; unsigned int x2; unsigned int x3; unsigned int x4; unsigned short x5; struct XSPerfCounter {} *x6; struct XSPerfMetric {} *x7; struct XSPerfString {} *x8; char *x9; } * _stats;
+    struct XSPerfCollection { struct _opaque_pthread_mutex_t { long long x_1_1_1; BOOL x_1_1_2[56]; } x1; unsigned int x2; unsigned int x3; unsigned int x4; _Atomic unsigned short x5; struct XSPerfCounter {} *x6; struct XSPerfMetric {} *x7; struct XSPerfString {} *x8; char *x9; } * _stats;
     NSArray * _typeValues;
 }
 

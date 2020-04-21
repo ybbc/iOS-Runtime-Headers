@@ -18,6 +18,7 @@
 @property (readonly) unsigned long long hash;
 @property (getter=isInExitState, nonatomic) bool inExitState;
 @property (nonatomic, readonly) IMKeyValueCollection *keyValueCollection;
+@property (nonatomic, copy) NSDate *lastCompleteSyncedDBDate;
 @property (nonatomic, copy) NSDate *lastSyncDate;
 @property (getter=isRemovedFromBackup, nonatomic) bool removedFromBackup;
 @property (getter=isStartingEnabledSettingChange, nonatomic) bool startingEnabledSettingChange;
@@ -62,6 +63,7 @@
 - (id)keyValueCollection;
 - (void)keyValueCollection:(id)arg1 didUpdateValues:(id)arg2;
 - (void)keyValueCollection:(id)arg1 willUpdateValues:(id)arg2;
+- (id)lastCompleteSyncedDBDate;
 - (id)lastSyncDate;
 - (id)logHandle;
 - (id)serializedRepresentation;
@@ -74,6 +76,7 @@
 - (void)setExitDate:(id)arg1;
 - (void)setFeatureEnabled:(bool)arg1;
 - (void)setInExitState:(bool)arg1;
+- (void)setLastCompleteSyncedDBDate:(id)arg1;
 - (void)setLastSyncDate:(id)arg1;
 - (void)setRemovedFromBackup:(bool)arg1;
 - (void)setStartingEnabledSettingChange:(bool)arg1;

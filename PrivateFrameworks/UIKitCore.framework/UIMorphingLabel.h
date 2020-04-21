@@ -55,6 +55,7 @@
 
 // Image: /System/Library/PrivateFrameworks/UIKitCore.framework/UIKitCore
 
+- (bool)_isRTL;
 - (double)_rippleDurationForEndInsertion:(bool)arg1;
 - (void)dealloc;
 

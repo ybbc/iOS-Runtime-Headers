@@ -9,7 +9,6 @@
     FCContextConfiguration * _contextConfiguration;
     NSHashTable * _coreConfigObservers;
     <FCNewsAppConfiguration> * _currentAppConfiguration;
-    RCConfigurationSettings * _currentSettings;
     <FCFeldsparIDProvider> * _feldsparIDProvider;
     FCKeyValueStore * _localStore;
     RCConfigurationManager * _remoteConfigurationManager;
@@ -30,7 +29,6 @@
 @property (nonatomic, retain) NSHashTable *coreConfigObservers;
 @property (nonatomic, copy) <FCNewsAppConfiguration> *currentAppConfiguration;
 @property (nonatomic, readonly, copy) NSNumber *currentModdedBucketID;
-@property (nonatomic, copy) RCConfigurationSettings *currentSettings;
 @property (readonly, copy) NSString *debugDescription;
 @property (readonly, copy) NSString *description;
 @property (nonatomic, readonly, copy) NSString *feldsparID;
@@ -57,7 +55,8 @@
 - (id)_configurationSettingsWithRequestInfos:(id)arg1 feldsparID:(id)arg2 storefrontID:(id)arg3 contextConfiguration:(id)arg4 useBackgroundRefreshRate:(bool)arg5;
 - (unsigned long long)_configurationSourceForSourceName:(id)arg1;
 - (id)_deserializeChangeTags:(id)arg1;
-- (void)_fetchAppConfigurationIfNeededWithCompletionQueue:(id)arg1 completion:(id /* block */)arg2;
+- (void)_fetchAppConfigurationIfNeededWithCompletionQueue:(id)arg1 shouldRefresh:(bool)arg2 completion:(id /* block */)arg3;
+- (void)_fetchAppConfigurationWithConfigurationSettings:(id)arg1 completionQueue:(id)arg2 completion:(id /* block */)arg3;
 - (void)_fetchAppWidgetConfigurationIfNeededUseBackgroundRefreshRate:(bool)arg1 completionQueue:(id)arg2 completion:(id /* block */)arg3;
 - (void)_loadConfigurationFromStore:(id)arg1;
 - (id)_permanentURLForRequestKey:(id)arg1 storefrontID:(id)arg2;
@@ -78,7 +77,6 @@
 - (id)contextConfiguration;
 - (id)coreConfigObservers;
 - (id)currentAppConfiguration;
-- (id)currentSettings;
 - (id)feldsparID;
 - (id)feldsparIDProvider;
 - (void)feldsparIDProviderDidChangeFeldsparID:(id)arg1;
@@ -102,7 +100,6 @@
 - (void)setAttemptedAppConfigFetch:(bool)arg1;
 - (void)setCoreConfigObservers:(id)arg1;
 - (void)setCurrentAppConfiguration:(id)arg1;
-- (void)setCurrentSettings:(id)arg1;
 - (void)setLocalStore:(id)arg1;
 - (void)setSegmentSetIDs:(id)arg1;
 - (void)setShouldIgnoreCache:(bool)arg1;

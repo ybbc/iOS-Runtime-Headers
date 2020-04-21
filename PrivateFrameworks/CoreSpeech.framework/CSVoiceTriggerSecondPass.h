@@ -2,11 +2,12 @@
    Image: /System/Library/PrivateFrameworks/CoreSpeech.framework/CoreSpeech
  */
 
-@interface CSVoiceTriggerSecondPass : NSObject <CSAudioServerCrashMonitorGibraltarDelegate, CSKeywordAnalyzerNDAPIScoreDelegate, CSKeywordAnalyzerQuasarScoreDelegate, CSSpeakerDetectorNDAPIDelegate, CSSpeechManagerDelegate, CSVoiceTriggerEnabledMonitorDelegate, CSVoiceTriggerFirstPassDelegate> {
+@interface CSVoiceTriggerSecondPass : NSObject <CSAudioServerCrashMonitorGibraltarDelegate, CSKeywordAnalyzerNDAPIScoreDelegate, CSKeywordAnalyzerNDEAPIScoreDelegate, CSKeywordAnalyzerQuasarScoreDelegate, CSSpeakerDetectorNDAPIDelegate, CSSpeechManagerDelegate, CSVoiceTriggerEnabledMonitorDelegate, CSVoiceTriggerFirstPassDelegate> {
     unsigned long long  _activeChannel;
     unsigned long long  _analyzerPrependingSamples;
     unsigned long long  _analyzerTrailingSamples;
     CSAudioCircularBuffer * _audioBuffer;
+    CSPlainAudioFileWriter * _audioFileWriter;
     double  _cumulativeDowntime;
     double  _cumulativeUptime;
     CSAsset * _currentAsset;
@@ -23,9 +24,11 @@
     unsigned long long  _firstPassTriggerFireSampleCount;
     unsigned long long  _firstPassTriggerStartSampleCount;
     bool  _hasPendingNearMiss;
+    bool  _hasReceivedNDEAPIResult;
     bool  _hasTriggerCandidate;
     bool  _isRunningRecognizer;
     CSKeywordAnalyzerNDAPI * _keywordAnalyzerNDAPI;
+    CSKeywordAnalyzerNDEAPI * _keywordAnalyzerNDEAPI;
     CSKeywordAnalyzerQuasar * _keywordAnalyzerQuasar;
     float  _keywordLoggingThreshold;
     float  _keywordThreshold;
@@ -56,6 +59,7 @@
 @property (nonatomic) unsigned long long analyzerPrependingSamples;
 @property (nonatomic) unsigned long long analyzerTrailingSamples;
 @property (nonatomic) CSAudioCircularBuffer *audioBuffer;
+@property (nonatomic, retain) CSPlainAudioFileWriter *audioFileWriter;
 @property (nonatomic) double cumulativeDowntime;
 @property (nonatomic) double cumulativeUptime;
 @property (nonatomic, retain) CSAsset *currentAsset;
@@ -74,10 +78,12 @@
 @property (nonatomic) unsigned long long firstPassTriggerFireSampleCount;
 @property (nonatomic) unsigned long long firstPassTriggerStartSampleCount;
 @property (nonatomic) bool hasPendingNearMiss;
+@property (nonatomic) bool hasReceivedNDEAPIResult;
 @property (nonatomic) bool hasTriggerCandidate;
 @property (readonly) unsigned long long hash;
 @property (nonatomic) bool isRunningRecognizer;
 @property (nonatomic, retain) CSKeywordAnalyzerNDAPI *keywordAnalyzerNDAPI;
+@property (nonatomic, retain) CSKeywordAnalyzerNDEAPI *keywordAnalyzerNDEAPI;
 @property (nonatomic, retain) CSKeywordAnalyzerQuasar *keywordAnalyzerQuasar;
 @property (nonatomic) float keywordLoggingThreshold;
 @property (nonatomic) float keywordThreshold;
@@ -104,6 +110,10 @@
 @property (readonly) Class superclass;
 @property (nonatomic) bool useSAT;
 
++ (id)secondPassAudioLogDirectory;
++ (id)secondPassAudioLoggingFilePath;
++ (id)timeStampString;
+
 - (void).cxx_destruct;
 - (void)CSVoiceTriggerEnabledMonitor:(id)arg1 didReceiveEnabled:(bool)arg2;
 - (void)_analyzeForKeywordDetection:(id)arg1 result:(id)arg2 forChannel:(unsigned long long)arg3 forceMaximized:(bool)arg4;
@@ -122,6 +132,7 @@
 - (unsigned long long)analyzerPrependingSamples;
 - (unsigned long long)analyzerTrailingSamples;
 - (id)audioBuffer;
+- (id)audioFileWriter;
 - (double)cumulativeDowntime;
 - (double)cumulativeUptime;
 - (id)currentAsset;
@@ -139,11 +150,14 @@
 - (unsigned long long)firstPassTriggerStartSampleCount;
 - (void)handleServerDidRestart;
 - (bool)hasPendingNearMiss;
+- (bool)hasReceivedNDEAPIResult;
 - (bool)hasTriggerCandidate;
 - (id)initWithManager:(id)arg1 asset:(id)arg2 audioBuffer:(id)arg3;
 - (bool)isRunningRecognizer;
 - (id)keywordAnalyzerNDAPI;
 - (void)keywordAnalyzerNDAPI:(id)arg1 hasResultAvailable:(id)arg2 forChannel:(unsigned long long)arg3;
+- (id)keywordAnalyzerNDEAPI;
+- (void)keywordAnalyzerNDEAPI:(id)arg1 hasResultAvailable:(id)arg2 forChannel:(unsigned long long)arg3;
 - (id)keywordAnalyzerQuasar;
 - (void)keywordAnalyzerQuasar:(id)arg1 hasResultAvailable:(id)arg2 forChannel:(unsigned long long)arg3;
 - (float)keywordLoggingThreshold;
@@ -170,6 +184,7 @@
 - (void)setAnalyzerTrailingSamples:(unsigned long long)arg1;
 - (void)setAsset:(id)arg1;
 - (void)setAudioBuffer:(id)arg1;
+- (void)setAudioFileWriter:(id)arg1;
 - (void)setCumulativeDowntime:(double)arg1;
 - (void)setCumulativeUptime:(double)arg1;
 - (void)setCurrentAsset:(id)arg1;
@@ -186,9 +201,11 @@
 - (void)setFirstPassTriggerFireSampleCount:(unsigned long long)arg1;
 - (void)setFirstPassTriggerStartSampleCount:(unsigned long long)arg1;
 - (void)setHasPendingNearMiss:(bool)arg1;
+- (void)setHasReceivedNDEAPIResult:(bool)arg1;
 - (void)setHasTriggerCandidate:(bool)arg1;
 - (void)setIsRunningRecognizer:(bool)arg1;
 - (void)setKeywordAnalyzerNDAPI:(id)arg1;
+- (void)setKeywordAnalyzerNDEAPI:(id)arg1;
 - (void)setKeywordAnalyzerQuasar:(id)arg1;
 - (void)setKeywordLoggingThreshold:(float)arg1;
 - (void)setKeywordThreshold:(float)arg1;

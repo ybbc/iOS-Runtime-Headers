@@ -22,7 +22,7 @@
     }  mSceneInfo;
 }
 
-+ (void)addObjectsToSceneWithSceneInfo:(const struct ChartSceneInfo { id x1; id x2; struct { bool x_3_1_1; bool x_3_1_2; bool x_3_1_3; bool x_3_1_4; bool x_3_1_5; bool x_3_1_6; bool x_3_1_7; long long x_3_1_8; unsigned long long x_3_1_9; } x3; }*)arg1;
++ (void)addObjectsToSceneWithSceneInfo:(const struct ChartSceneInfo { id x1; id x2; id x3; id x4; struct { bool x_5_1_1; bool x_5_1_2; bool x_5_1_3; bool x_5_1_4; bool x_5_1_5; bool x_5_1_6; bool x_5_1_7; long long x_5_1_8; unsigned long long x_5_1_9; } x5; }*)arg1;
 + (bool)supportsValueAxisLabelAlignmentCaching;
 
 - (void)addAllLabelsToScene;
@@ -34,7 +34,7 @@
 - (void)adjustSceneSettings;
 - (id)chartInfo;
 - (id)chartType;
-- (id)initWithSceneInfo:(const struct ChartSceneInfo { id x1; id x2; struct { bool x_3_1_1; bool x_3_1_2; bool x_3_1_3; bool x_3_1_4; bool x_3_1_5; bool x_3_1_6; bool x_3_1_7; long long x_3_1_8; unsigned long long x_3_1_9; } x3; }*)arg1;
+- (id)initWithSceneInfo:(const struct ChartSceneInfo { id x1; id x2; id x3; id x4; struct { bool x_5_1_1; bool x_5_1_2; bool x_5_1_3; bool x_5_1_4; bool x_5_1_5; bool x_5_1_6; bool x_5_1_7; long long x_5_1_8; unsigned long long x_5_1_9; } x5; }*)arg1;
 - (const struct { bool x1; bool x2; bool x3; bool x4; bool x5; bool x6; bool x7; long long x8; unsigned long long x9; }*)layoutSettings;
 - (id)scene;
 - (id)seriesType;

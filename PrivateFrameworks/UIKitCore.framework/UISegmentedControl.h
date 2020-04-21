@@ -120,7 +120,7 @@
 - (void)_setNeedsAppearanceUpdate;
 - (void)_setOptionsBackgroundImage:(id)arg1;
 - (void)_setOptionsShadowHidden:(bool)arg1;
-- (void)_setSegmentedControlAppearance:(struct { id x1; double x2; struct { id x_3_1_1; id x_3_1_2; id x_3_1_3; unsigned char x_3_1_4; /* Warning: Unrecognized filer type: 'G' using 'void*' */ void*x_3_1_5; unsigned short x_3_1_6; int x_3_1_7; void*x_3_1_8; void*x_3_1_9; void*x_3_1_10; double x_3_1_11; double x_3_1_12; } x3; }*)arg1;
+- (void)_setSegmentedControlAppearance:(struct { id x1; double x2; double x3; struct { id x_4_1_1; id x_4_1_2; id x_4_1_3; id x_4_1_4; id x_4_1_5; struct CGSize { double x_6_2_1; double x_6_2_2; } x_4_1_6; } x4; struct { id x_5_1_1; id x_5_1_2; id x_5_1_3; id x_5_1_4; id x_5_1_5; struct CGSize { double x_6_2_1; double x_6_2_2; } x_5_1_6; } x5; struct { id x_6_1_1; id x_6_1_2; id x_6_1_3; id x_6_1_4; id x_6_1_5; struct CGSize { double x_6_2_1; double x_6_2_2; } x_6_1_6; } x6; struct { id x_7_1_1; id x_7_1_2; id x_7_1_3; id x_7_1_4; id x_7_1_5; struct CGSize { double x_6_2_1; double x_6_2_2; } x_7_1_6; } x7; bool x8; }*)arg1;
 - (void)_setSelected:(bool)arg1 forSegmentAtIndex:(int)arg2 forceInfoDisplay:(bool)arg3;
 - (void)_setSelectedSegmentIndex:(long long)arg1 notify:(bool)arg2;
 - (void)_setSelectedSegmentIndex:(long long)arg1 notify:(bool)arg2 animate:(bool)arg3;

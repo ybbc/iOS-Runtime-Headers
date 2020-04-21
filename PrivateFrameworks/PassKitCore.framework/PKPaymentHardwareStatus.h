@@ -9,6 +9,7 @@
     bool  _inFailForward;
 }
 
+@property (getter=_isDemoModeActive, nonatomic, readonly) bool _isDemoModeActive;
 @property (nonatomic, readonly) bool canMakeLocalPayments;
 @property (nonatomic, readonly) bool canMakePayments;
 @property (nonatomic) bool canMakeRemotePayments;
@@ -18,6 +19,7 @@
 
 + (bool)supportsSecureCoding;
 
+- (bool)_isDemoModeActive;
 - (bool)canMakeLocalPayments;
 - (bool)canMakePayments;
 - (bool)canMakeRemotePayments;

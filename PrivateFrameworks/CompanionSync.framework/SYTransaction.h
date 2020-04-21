@@ -7,7 +7,7 @@
     id /* block */  _completion;
     NSDictionary * _contextInfo;
     NSDictionary * _idsOptions;
-    bool  _inTransaction;
+    _Atomic bool  _inTransaction;
     SYLegacyStore * _store;
 }
 

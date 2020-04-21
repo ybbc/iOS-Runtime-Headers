@@ -47,7 +47,7 @@
 - (void)addInfoToLog:(NSString *)arg1;
 - (void)barrier;
 - (void)blockEngineElement:(NSString *)arg1;
-- (void)cloudCacheGetDescriptionForRecordWithScopedIdentifier:(void *)arg1 related:(void *)arg2 completionHandler:(void *)arg3; // needs 3 arg types, found 9: CPLScopedIdentifier *, bool, id /* block */, /* Warning: Unrecognized filer type: '<' using 'void*' */ void*, void, id /* block */, id, NSError *, void*
+- (void)cloudCacheGetDescriptionForRecordWithScopedIdentifier:(void *)arg1 related:(void *)arg2 completionHandler:(void *)arg3; // needs 3 arg types, found 10: CPLScopedIdentifier *, bool, id /* block */, /* Warning: Unrecognized filer type: '<' using 'void*' */ void*, void, id /* block */, id, id, NSError *, void*
 - (void)compactFileCacheWithCompletionHandler:(void *)arg1; // needs 1 arg types, found 6: id /* block */, /* Warning: Unrecognized filer type: '<' using 'void*' */ void*, void, id /* block */, NSError *, void*
 - (void)deleteResources:(void *)arg1 checkServerIfNecessary:(void *)arg2 completionHandler:(void *)arg3; // needs 3 arg types, found 9: NSArray *, bool, id /* block */, /* Warning: Unrecognized filer type: '<' using 'void*' */ void*, void, id /* block */, NSArray *, NSDictionary *, void*
 - (void)getCloudCacheForRecordWithScopedIdentifier:(void *)arg1 completionHandler:(void *)arg2; // needs 2 arg types, found 8: CPLScopedIdentifier *, id /* block */, /* Warning: Unrecognized filer type: '<' using 'void*' */ void*, void, id /* block */, CPLRecordChange *, NSError *, void*

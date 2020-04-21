@@ -58,7 +58,7 @@
 - (void)_maybeSaveJSONRepresentationWithDictionary:(id)arg1;
 - (bool)_persistOnlyInMemoryEnabled;
 - (void)_queueSave;
-- (void)_saveAsyncWithCompletionHandler:(id /* block */)arg1;
+- (void)_saveAsyncWithQualityOfService:(long long)arg1 completionHandler:(id /* block */)arg2;
 - (bool)_shouldMigrateOnUpgrade;
 - (void)addAllEntriesToDictionary:(id)arg1;
 - (void)addEntriesFromDictionary:(id)arg1;
@@ -92,6 +92,7 @@
 - (void)removeAllObjects;
 - (void)removeObjectForKey:(id)arg1;
 - (void)removeObjectsForKeys:(id)arg1;
+- (void)save;
 - (id)saveThrottler;
 - (void)saveWithCompletionHandler:(id /* block */)arg1;
 - (void)setArrayObjectHandler:(id /* block */)arg1;

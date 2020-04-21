@@ -147,6 +147,7 @@
 - (double)_wheelShift;
 - (void)_willPlayClickSound;
 - (void)dealloc;
+- (void)setBackgroundColor:(id)arg1;
 
 // Image: /Developer/Library/PrivateFrameworks/DTDDISupport.framework/libViewDebuggerSupport.dylib
 
@@ -155,6 +156,7 @@
 
 // Image: /Developer/usr/lib/libMainThreadChecker.dylib
 
+- (void)_UIAppearance_setBackgroundColor:(id)arg1;
 - (bool)allowsMultipleSelection;
 - (long long)columnForTableView:(id)arg1;
 - (id)createDividerWithFrame:(struct CGRect { struct CGPoint { double x_1_1_1; double x_1_1_2; } x1; struct CGSize { double x_2_1_1; double x_2_1_2; } x2; })arg1;
@@ -188,7 +190,6 @@
 - (int)selectedRowForColumn:(int)arg1;
 - (long long)selectedRowInComponent:(long long)arg1;
 - (void)setAllowsMultipleSelection:(bool)arg1;
-- (void)setBackgroundColor:(id)arg1;
 - (void)setBounds:(struct CGRect { struct CGPoint { double x_1_1_1; double x_1_1_2; } x1; struct CGSize { double x_2_1_1; double x_2_1_2; } x2; })arg1;
 - (void)setDataSource:(id)arg1;
 - (void)setDelegate:(id)arg1;

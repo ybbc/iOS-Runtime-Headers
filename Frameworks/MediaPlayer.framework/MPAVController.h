@@ -348,10 +348,10 @@
 - (bool)canSeekBackwards;
 - (bool)canSeekForwards;
 - (bool)canSkipToSeekableEnd;
-- (void)changePlaybackIndexBy:(long long)arg1;
-- (void)changePlaybackIndexBy:(long long)arg1 deltaType:(long long)arg2;
-- (void)changePlaybackIndexBy:(long long)arg1 deltaType:(long long)arg2 ignoreElapsedTime:(bool)arg3;
-- (void)changePlaybackIndexBy:(long long)arg1 deltaType:(long long)arg2 ignoreElapsedTime:(bool)arg3 allowSkippingUnskippableContent:(bool)arg4;
+- (bool)changePlaybackIndexBy:(long long)arg1;
+- (bool)changePlaybackIndexBy:(long long)arg1 deltaType:(long long)arg2;
+- (bool)changePlaybackIndexBy:(long long)arg1 deltaType:(long long)arg2 ignoreElapsedTime:(bool)arg3;
+- (bool)changePlaybackIndexBy:(long long)arg1 deltaType:(long long)arg2 ignoreElapsedTime:(bool)arg3 allowSkippingUnskippableContent:(bool)arg4;
 - (bool)changePlaybackIndexBy:(long long)arg1 deltaType:(long long)arg2 ignoreElapsedTime:(bool)arg3 allowSkippingUnskippableContent:(bool)arg4 error:(id*)arg5;
 - (id)currentItem;
 - (id)currentMediaItem;
